@@ -1,0 +1,528 @@
+{
+  "unit": "B2U1",
+  "theme": "科技与创新",
+  "cards": [
+    {
+      "id": "B2U1-w01",
+      "cat": "word",
+      "zh": "（尤指通过努力）完成，实现",
+      "en": "accomplish",
+      "use": "accomplish a goal / accomplish feats once thought impossible",
+      "eg": "With AI-assisted tools, small teams can accomplish in weeks what once required hundreds of workers."
+    },
+    {
+      "id": "B2U1-w02",
+      "cat": "word",
+      "zh": "突破；重大进展",
+      "en": "breakthrough",
+      "use": "make a breakthrough in / a major breakthrough",
+      "eg": "The lab's breakthrough in battery storage could make electric cars cheaper than petrol ones."
+    },
+    {
+      "id": "B2U1-w03",
+      "cat": "word",
+      "zh": "快速增长，蓬勃发展",
+      "en": "burgeon",
+      "use": "an industry burgeons into / burgeon over the past decade",
+      "eg": "In the past decade, the app economy has burgeoned into one of the city's largest employers."
+    },
+    {
+      "id": "B2U1-w04",
+      "cat": "word",
+      "zh": "能力；容量",
+      "en": "capacity",
+      "use": "have the capacity to do / build up one's capacity",
+      "eg": "Today's data centres have the capacity to train models no human team could finish in a lifetime."
+    },
+    {
+      "id": "B2U1-w05",
+      "cat": "word",
+      "zh": "共识；一致看法",
+      "en": "consensus",
+      "use": "reach a consensus on / a growing consensus that",
+      "eg": "There is now a broad consensus that data privacy needs clear global rules."
+    },
+    {
+      "id": "B2U1-w06",
+      "cat": "word",
+      "zh": "使人气馁的；艰巨的",
+      "en": "daunting",
+      "use": "a daunting challenge / daunting though the risks are",
+      "eg": "Turning a raw idea into a marketable product remains a daunting task for first-time founders."
+    },
+    {
+      "id": "B2U1-w07",
+      "cat": "word",
+      "zh": "认为，视为",
+      "en": "deem",
+      "use": "deem sth essential / be deemed impossible",
+      "eg": "Many economists deem automation the greatest boost to productivity since the assembly line."
+    },
+    {
+      "id": "B2U1-w08",
+      "cat": "word",
+      "zh": "想象，展望（尤指美好的事）",
+      "en": "envision",
+      "use": "envision a future in which / few could have envisioned",
+      "eg": "Few engineers in the 1980s could have envisioned a world where every phone carries artificial intelligence."
+    },
+    {
+      "id": "B2U1-w09",
+      "cat": "word",
+      "zh": "逐步形成；逐渐演变",
+      "en": "evolve",
+      "use": "evolve from a novelty into a pillar / evolve rapidly",
+      "eg": "Online shopping has evolved from a curiosity into a pillar of the global economy."
+    },
+    {
+      "id": "B2U1-w10",
+      "cat": "word",
+      "zh": "功绩；壮举",
+      "en": "feat",
+      "use": "an impressive feat / pull off a feat",
+      "eg": "Landing a rover on Mars is a feat that once seemed the stuff of science fiction."
+    },
+    {
+      "id": "B2U1-w11",
+      "cat": "word",
+      "zh": "推动力；促进",
+      "en": "impetus",
+      "use": "give fresh impetus to / act as an impetus for",
+      "eg": "The pandemic gave fresh impetus to e-commerce and contactless payment."
+    },
+    {
+      "id": "B2U1-w12",
+      "cat": "word",
+      "zh": "动力；势头",
+      "en": "momentum",
+      "use": "gather momentum / riding the momentum of",
+      "eg": "Momentum is building behind green technology as production costs fall year by year."
+    },
+    {
+      "id": "B2U1-w13",
+      "cat": "word",
+      "zh": "现象；非凡的人或事物",
+      "en": "phenomenon",
+      "use": "a global phenomenon / a curious phenomenon",
+      "eg": "The cashless lifestyle is a phenomenon that would have baffled shoppers just twenty years ago."
+    },
+    {
+      "id": "B2U1-w14",
+      "cat": "word",
+      "zh": "深远的；重大的；巨大的",
+      "en": "profound",
+      "use": "exert a profound influence on / a profound change",
+      "eg": "Artificial intelligence will exert a profound influence on the way we work."
+    },
+    {
+      "id": "B2U1-w15",
+      "cat": "word",
+      "zh": "使改观；使转化",
+      "en": "transform",
+      "use": "transform the way we do sth / be transformed into",
+      "eg": "Streaming services transformed the entertainment industry almost overnight."
+    },
+    {
+      "id": "B2U1-w16",
+      "cat": "word",
+      "zh": "老练的；精密复杂的",
+      "en": "sophisticated",
+      "use": "sophisticated consumers / sophisticated algorithms",
+      "eg": "Sophisticated algorithms now spot financial fraud faster than any human auditor."
+    },
+    {
+      "id": "B2U1-w17",
+      "cat": "word",
+      "zh": "创新；新方法；新发明",
+      "en": "innovation",
+      "use": "drive innovation / foster a culture of innovation",
+      "eg": "Sustained innovation, not cheap labour, is what lifts an economy out of hardship."
+    },
+    {
+      "id": "B2U1-w18",
+      "cat": "word",
+      "zh": "企业家",
+      "en": "entrepreneur",
+      "use": "an ambitious entrepreneur / young entrepreneurs",
+      "eg": "Every successful entrepreneur has faced the day when the whole project seems doomed to fail."
+    },
+    {
+      "id": "B2U1-t01",
+      "cat": "term",
+      "zh": "人工智能",
+      "en": "artificial intelligence",
+      "use": "正文中可缩写为 AI，作主语或定语",
+      "eg": "Artificial intelligence is moving out of the lab and into factories, hospitals and homes."
+    },
+    {
+      "id": "B2U1-t02",
+      "cat": "term",
+      "zh": "算法",
+      "en": "algorithm",
+      "use": "a recommendation algorithm / train an algorithm",
+      "eg": "Recommendation algorithms quietly decide what millions of users see each morning."
+    },
+    {
+      "id": "B2U1-t03",
+      "cat": "term",
+      "zh": "自动化",
+      "en": "automation",
+      "use": "industrial automation / the automation of routine work",
+      "eg": "Automation has lifted output while forcing the workforce to retrain for new roles."
+    },
+    {
+      "id": "B2U1-t04",
+      "cat": "term",
+      "zh": "知识产权",
+      "en": "intellectual property",
+      "use": "protect intellectual property / intellectual property rights",
+      "eg": "Strong protection of intellectual property is the bedrock of any innovation-driven economy."
+    },
+    {
+      "id": "B2U1-t05",
+      "cat": "term",
+      "zh": "全球创新指数",
+      "en": "the Global Innovation Index",
+      "use": "议论文里引用创新排名的权威数据源",
+      "eg": "Switzerland has topped the Global Innovation Index for more than a decade."
+    },
+    {
+      "id": "B2U1-t06",
+      "cat": "term",
+      "zh": "机器学习",
+      "en": "machine learning",
+      "use": "a machine learning model，作 AI 的下位概念",
+      "eg": "Machine learning lets software improve its own performance without being rewritten."
+    },
+    {
+      "id": "B2U1-t07",
+      "cat": "term",
+      "zh": "研究与发展（研发）",
+      "en": "research and development",
+      "use": "spend on research and development / R&D investment",
+      "eg": "Firms that reinvest profits in research and development steadily outpace their rivals."
+    },
+    {
+      "id": "B2U1-t08",
+      "cat": "term",
+      "zh": "电子商务",
+      "en": "e-commerce",
+      "use": "cross-border e-commerce / the e-commerce sector",
+      "eg": "E-commerce has turned remote villages into warehouses for the world market."
+    },
+    {
+      "id": "B2U1-t09",
+      "cat": "term",
+      "zh": "数字经济",
+      "en": "digital economy",
+      "use": "grow the digital economy / a driver of the digital economy",
+      "eg": "The digital economy now accounts for a considerable share of national output."
+    },
+    {
+      "id": "B2U1-t10",
+      "cat": "term",
+      "zh": "风险投资",
+      "en": "venture capital",
+      "use": "attract venture capital / a venture capital firm",
+      "eg": "Startups in tech hubs survive on venture capital until they turn a profit."
+    },
+    {
+      "id": "B2U1-t11",
+      "cat": "term",
+      "zh": "专利；专利权",
+      "en": "patent",
+      "use": "file a patent / patent protection",
+      "eg": "A single patent can keep a small research firm afloat for years."
+    },
+    {
+      "id": "B2U1-t12",
+      "cat": "term",
+      "zh": "国内生产总值",
+      "en": "gross domestic product",
+      "use": "缩写 GDP；论证投入规模时用 as a share of GDP",
+      "eg": "Many advanced economies now spend over two per cent of GDP on public research each year."
+    },
+    {
+      "id": "B2U1-p01",
+      "cat": "phrase",
+      "zh": "相比于",
+      "en": "as compared to",
+      "use": "句首作比较状语：as compared to + 名词，主句给出变化数据",
+      "eg": "As compared to a decade ago, battery prices have plunged by nearly ninety per cent."
+    },
+    {
+      "id": "B2U1-p02",
+      "cat": "phrase",
+      "zh": "与……形成对照；相比之下",
+      "en": "in contrast to",
+      "use": "对比论证句：in contrast to + 旧事物，主句写新事物",
+      "eg": "In contrast to traditional factories, smart plants retool their lines within hours."
+    },
+    {
+      "id": "B2U1-p03",
+      "cat": "phrase",
+      "zh": "从长远来看",
+      "en": "in the long term",
+      "use": "结论句常用：pay off / benefit sb in the long term",
+      "eg": "Cutting research budgets saves money today but weakens the economy in the long term."
+    },
+    {
+      "id": "B2U1-p04",
+      "cat": "phrase",
+      "zh": "主宰；称雄；呈极盛之势",
+      "en": "reign supreme",
+      "use": "主语 + reign supreme in + 领域，描述领先地位",
+      "eg": "For years, a handful of giant platforms have reigned supreme in online retail."
+    },
+    {
+      "id": "B2U1-p05",
+      "cat": "phrase",
+      "zh": "难怪；不足为奇",
+      "en": "it is no wonder that",
+      "use": "前句摆事实，后接 it is no wonder that 引出结论",
+      "eg": "One breakthrough followed another all year; it is no wonder that the young team was hailed nationwide."
+    },
+    {
+      "id": "B2U1-p06",
+      "cat": "phrase",
+      "zh": "充满……的；挤满",
+      "en": "packed with",
+      "use": "be packed with possibilities / gadgets / crowds",
+      "eg": "The exhibition hall was packed with gadgets that visionaries had promised for decades."
+    },
+    {
+      "id": "B2U1-p07",
+      "cat": "phrase",
+      "zh": "与……产生共鸣；触动",
+      "en": "speak to",
+      "use": "sth speaks to a broad audience / to younger users",
+      "eg": "Simple design speaks to users of any age, while technical jargon often does not."
+    },
+    {
+      "id": "B2U1-p08",
+      "cat": "phrase",
+      "zh": "目前；暂时",
+      "en": "for now",
+      "use": "让步或结论中平衡观点：for now, ...",
+      "eg": "For now, regulators favor guiding new technology rather than banning it outright."
+    },
+    {
+      "id": "B2U1-p09",
+      "cat": "phrase",
+      "zh": "除了……以外",
+      "en": "other than",
+      "use": "no assets / nothing / no one other than + 名词",
+      "eg": "The startup had no assets other than three engineers and a bold idea."
+    },
+    {
+      "id": "B2U1-p10",
+      "cat": "phrase",
+      "zh": "随着……的到来",
+      "en": "with the advent of",
+      "use": "开头背景状语：with the advent of + 技术",
+      "eg": "With the advent of affordable sensors, homes began collecting data on every habit."
+    },
+    {
+      "id": "B2U1-p11",
+      "cat": "phrase",
+      "zh": "在……中起关键作用",
+      "en": "play a pivotal role in",
+      "use": "升级 play an important role in",
+      "eg": "Semiconductors play a pivotal role in everything from phones to power grids."
+    },
+    {
+      "id": "B2U1-p12",
+      "cat": "phrase",
+      "zh": "引起；催生",
+      "en": "give rise to",
+      "use": "升级 cause / lead to，主语多为趋势或技术",
+      "eg": "Cheap computing has given rise to an entire industry of data services."
+    },
+    {
+      "id": "B2U1-p13",
+      "cat": "phrase",
+      "zh": "为……铺平道路",
+      "en": "pave the way for",
+      "use": "升级 make sth possible，写因果链条",
+      "eg": "Open technical standards paved the way for the global app economy."
+    },
+    {
+      "id": "B2U1-p14",
+      "cat": "phrase",
+      "zh": "双刃剑",
+      "en": "a double-edged sword",
+      "use": "利弊兼论段的过渡：sth is a double-edged sword",
+      "eg": "Automation is a double-edged sword: it multiplies output yet displaces drivers and clerks."
+    },
+    {
+      "id": "B2U1-a01",
+      "cat": "advanced",
+      "zh": "技术变革如此迅速，今日奇观将成明日寻常",
+      "en": "So rapid is technological change that today's marvels will be tomorrow's routines.",
+      "use": "So…that 倒装，升级 Technological change is very fast, so..."
+    },
+    {
+      "id": "B2U1-a02",
+      "cat": "advanced",
+      "zh": "真正改变经济的不是机器而是驾驭机器的人",
+      "en": "It is not the machine but the mind behind it that transforms an economy.",
+      "use": "强调句 It is ... that ...，升级 The mind behind the machine transforms an economy."
+    },
+    {
+      "id": "B2U1-a03",
+      "cat": "advanced",
+      "zh": "竞争对手争相自动化，没有企业敢原地踏步",
+      "en": "With rivals racing to automate, no firm can afford to stand still.",
+      "use": "with 复合结构作状语，升级 Because rivals are racing to automate, ..."
+    },
+    {
+      "id": "B2U1-a04",
+      "cat": "advanced",
+      "zh": "在公共资金推动下，基础研究逐步变成改变世界的产品",
+      "en": "Fueled by public funding, basic research evolved into world-changing products.",
+      "use": "过去分词短语作状语，升级 Basic research was funded by the state and evolved into ..."
+    },
+    {
+      "id": "B2U1-a05",
+      "cat": "advanced",
+      "zh": "人们日益达成共识：创新政策必须以人为本",
+      "en": "There is a growing consensus that innovation policy must put people first.",
+      "use": "升级 More and more people think that ..."
+    },
+    {
+      "id": "B2U1-a06",
+      "cat": "advanced",
+      "zh": "一项疗法很可能成为整个行业的转折点",
+      "en": "A cure for one disease may well prove a turning point for whole industries.",
+      "use": "may well prove 升级 may become，语气更书面"
+    },
+    {
+      "id": "B2U1-a07",
+      "cat": "advanced",
+      "zh": "软件非但没有让文员失业，反而创造了十年前无人想象的工作",
+      "en": "Far from putting clerks out of work, software has created jobs no one envisioned a decade ago.",
+      "use": "Far from + 动名词，升级 Software does not put clerks out of work; instead, it ..."
+    },
+    {
+      "id": "B2U1-a08",
+      "cat": "advanced",
+      "zh": "昔日令人生畏的壮举已成今日的日常",
+      "en": "What once seemed a daunting feat has become an everyday routine.",
+      "use": "what 引导主语从句，升级 It used to be difficult, but now it is easy."
+    },
+    {
+      "id": "B2U1-a09",
+      "cat": "advanced",
+      "zh": "直到规则跟上发明，公众才会真正信任技术",
+      "en": "Not until rules keep pace with invention will the public truly trust it.",
+      "use": "Not until 置于句首引发倒装，升级 The public will trust invention only after rules catch up."
+    },
+    {
+      "id": "B2U1-a10",
+      "cat": "advanced",
+      "zh": "十年爆发式增长的催化剂",
+      "en": "a catalyst for a decade of explosive growth",
+      "use": "名词 catalyst 升级 a cause of / a reason for rapid growth",
+      "eg": "The first smartphone acted as a catalyst for a decade of explosive growth."
+    },
+    {
+      "id": "B2U1-a11",
+      "cat": "advanced",
+      "zh": "今天的便利在很大程度上归功于昨天的潜心研究",
+      "en": "Today's convenience owes a great deal to yesterday's patient research.",
+      "use": "owe ... to ... 归因句型，升级 ... because of yesterday's research"
+    },
+    {
+      "id": "B2U1-a12",
+      "cat": "advanced",
+      "zh": "站在新创新浪潮的最前沿",
+      "en": "at the forefront of the new wave of innovation",
+      "use": "升级 leading in innovation / in the front",
+      "eg": "Research universities sit at the forefront of the new wave of innovation."
+    },
+    {
+      "id": "B2U1-s01",
+      "cat": "sentence",
+      "zh": "我们正亲历一场悄然改写日常生活规则的技术革命。",
+      "en": "We are living through a technological revolution that is quietly rewriting the rules of daily life.",
+      "use": "开头点题句"
+    },
+    {
+      "id": "B2U1-s02",
+      "cat": "sentence",
+      "zh": "过去十年创新势头如此之强，普通家庭的消费方式已面目一新。",
+      "en": "Innovation has gathered such momentum in the past decade that the way ordinary families spend money is barely recognizable.",
+      "use": "背景趋势句，such...that 结果句"
+    },
+    {
+      "id": "B2U1-s03",
+      "cat": "sentence",
+      "zh": "试举一例：人工智能如今能在人眼察觉之前就标记出疾病。",
+      "en": "A case in point is artificial intelligence, which now flags diseases years before a tired human eye can.",
+      "use": "举例句，A case in point is ..."
+    },
+    {
+      "id": "B2U1-s04",
+      "cat": "sentence",
+      "zh": "硅谷的崛起表明，一次突破就足以在一夜之间改变整个行业。",
+      "en": "The rise of Silicon Valley shows that a single breakthrough can transform an entire sector almost overnight.",
+      "use": "举例句，引用本单元专有名词"
+    },
+    {
+      "id": "B2U1-s05",
+      "cat": "sentence",
+      "zh": "与集市货摊不同，电商平台不拥有一家店铺也能服务数百万顾客。",
+      "en": "In contrast to a market stall, an e-commerce platform can serve millions of customers without owning a single shop.",
+      "use": "对比论证句，复用词表短语 in contrast to"
+    },
+    {
+      "id": "B2U1-s06",
+      "cat": "sentence",
+      "zh": "与十年前相比，如今的年轻人是更懂技术也更没耐心的消费者。",
+      "en": "As compared to a decade ago, today's youngsters are far savvier and far less patient consumers.",
+      "use": "比较句，复用词表短语 as compared to"
+    },
+    {
+      "id": "B2U1-s07",
+      "cat": "sentence",
+      "zh": "在持续创新的推动下，该行业连续三年以每年百分之十增长。",
+      "en": "Fueled by relentless innovation, the sector has grown by ten per cent per annum for three consecutive years.",
+      "use": "因果句，分词状语开头"
+    },
+    {
+      "id": "B2U1-s08",
+      "cat": "sentence",
+      "zh": "对研发的巨额投入为小作坊成为行业枢纽注入了动力。",
+      "en": "A considerable investment in research and development gave the small workshop the impetus to become an industry hub.",
+      "use": "因果句，impetus / hub 为本单元词表词"
+    },
+    {
+      "id": "B2U1-s09",
+      "cat": "sentence",
+      "zh": "尽管风险令人却步，暂停创新绝非蓄势待发之国的选项。",
+      "en": "Daunting though the risks may be, pausing innovation is not an option for a nation poised for progress.",
+      "use": "让步句，形容词提前倒装，转折引出立场"
+    },
+    {
+      "id": "B2U1-s10",
+      "cat": "sentence",
+      "zh": "人工智能专利多于其他任何领域，难怪它在最新全球创新指数中独冠群雄。",
+      "en": "AI patents outnumber those in every other field; it is no wonder that artificial intelligence reigns supreme in the latest Global Innovation Index.",
+      "use": "用 no wonder that 收束论据得出结论"
+    },
+    {
+      "id": "B2U1-s11",
+      "cat": "sentence",
+      "zh": "长远来看，创新的成果不以新奇论高下，而以其惠及人群的广狭来衡量。",
+      "en": "In the long term, the fruits of innovation will be measured not by their novelty but by how widely they are shared.",
+      "use": "结论句，not by ... but by ... 对称结构"
+    },
+    {
+      "id": "B2U1-s12",
+      "cat": "sentence",
+      "zh": "唯有让创造力与责任同行，我们才能确保技术服务于人类而非相反。",
+      "en": "Only by pairing creativity with responsibility can we make sure that technology serves humanity rather than the reverse.",
+      "use": "结尾倡议句，Only by ... 引发倒装"
+    }
+  ]
+}

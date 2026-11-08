@@ -1,0 +1,2151 @@
+{
+  "units": [
+    {
+      "id": "B2U1",
+      "label": "第2册 Unit 1",
+      "theme": "科技与创新",
+      "cards": [
+        {
+          "id": "B2U1-w01",
+          "cat": "word",
+          "zh": "（尤指通过努力）完成，实现",
+          "en": "accomplish",
+          "use": "accomplish a goal / accomplish feats once thought impossible",
+          "eg": "With AI-assisted tools, small teams can accomplish in weeks what once required hundreds of workers."
+        },
+        {
+          "id": "B2U1-w02",
+          "cat": "word",
+          "zh": "突破；重大进展",
+          "en": "breakthrough",
+          "use": "make a breakthrough in / a major breakthrough",
+          "eg": "The lab's breakthrough in battery storage could make electric cars cheaper than petrol ones."
+        },
+        {
+          "id": "B2U1-w03",
+          "cat": "word",
+          "zh": "快速增长，蓬勃发展",
+          "en": "burgeon",
+          "use": "an industry burgeons into / burgeon over the past decade",
+          "eg": "In the past decade, the app economy has burgeoned into one of the city's largest employers."
+        },
+        {
+          "id": "B2U1-w04",
+          "cat": "word",
+          "zh": "能力；容量",
+          "en": "capacity",
+          "use": "have the capacity to do / build up one's capacity",
+          "eg": "Today's data centres have the capacity to train models no human team could finish in a lifetime."
+        },
+        {
+          "id": "B2U1-w05",
+          "cat": "word",
+          "zh": "共识；一致看法",
+          "en": "consensus",
+          "use": "reach a consensus on / a growing consensus that",
+          "eg": "There is now a broad consensus that data privacy needs clear global rules."
+        },
+        {
+          "id": "B2U1-w06",
+          "cat": "word",
+          "zh": "使人气馁的；艰巨的",
+          "en": "daunting",
+          "use": "a daunting challenge / daunting though the risks are",
+          "eg": "Turning a raw idea into a marketable product remains a daunting task for first-time founders."
+        },
+        {
+          "id": "B2U1-w07",
+          "cat": "word",
+          "zh": "认为，视为",
+          "en": "deem",
+          "use": "deem sth essential / be deemed impossible",
+          "eg": "Many economists deem automation the greatest boost to productivity since the assembly line."
+        },
+        {
+          "id": "B2U1-w08",
+          "cat": "word",
+          "zh": "想象，展望（尤指美好的事）",
+          "en": "envision",
+          "use": "envision a future in which / few could have envisioned",
+          "eg": "Few engineers in the 1980s could have envisioned a world where every phone carries artificial intelligence."
+        },
+        {
+          "id": "B2U1-w09",
+          "cat": "word",
+          "zh": "逐步形成；逐渐演变",
+          "en": "evolve",
+          "use": "evolve from a novelty into a pillar / evolve rapidly",
+          "eg": "Online shopping has evolved from a curiosity into a pillar of the global economy."
+        },
+        {
+          "id": "B2U1-w10",
+          "cat": "word",
+          "zh": "功绩；壮举",
+          "en": "feat",
+          "use": "an impressive feat / pull off a feat",
+          "eg": "Landing a rover on Mars is a feat that once seemed the stuff of science fiction."
+        },
+        {
+          "id": "B2U1-w11",
+          "cat": "word",
+          "zh": "推动力；促进",
+          "en": "impetus",
+          "use": "give fresh impetus to / act as an impetus for",
+          "eg": "The pandemic gave fresh impetus to e-commerce and contactless payment."
+        },
+        {
+          "id": "B2U1-w12",
+          "cat": "word",
+          "zh": "动力；势头",
+          "en": "momentum",
+          "use": "gather momentum / riding the momentum of",
+          "eg": "Momentum is building behind green technology as production costs fall year by year."
+        },
+        {
+          "id": "B2U1-w13",
+          "cat": "word",
+          "zh": "现象；非凡的人或事物",
+          "en": "phenomenon",
+          "use": "a global phenomenon / a curious phenomenon",
+          "eg": "The cashless lifestyle is a phenomenon that would have baffled shoppers just twenty years ago."
+        },
+        {
+          "id": "B2U1-w14",
+          "cat": "word",
+          "zh": "深远的；重大的；巨大的",
+          "en": "profound",
+          "use": "exert a profound influence on / a profound change",
+          "eg": "Artificial intelligence will exert a profound influence on the way we work."
+        },
+        {
+          "id": "B2U1-w15",
+          "cat": "word",
+          "zh": "使改观；使转化",
+          "en": "transform",
+          "use": "transform the way we do sth / be transformed into",
+          "eg": "Streaming services transformed the entertainment industry almost overnight."
+        },
+        {
+          "id": "B2U1-w16",
+          "cat": "word",
+          "zh": "老练的；精密复杂的",
+          "en": "sophisticated",
+          "use": "sophisticated consumers / sophisticated algorithms",
+          "eg": "Sophisticated algorithms now spot financial fraud faster than any human auditor."
+        },
+        {
+          "id": "B2U1-w17",
+          "cat": "word",
+          "zh": "创新；新方法；新发明",
+          "en": "innovation",
+          "use": "drive innovation / foster a culture of innovation",
+          "eg": "Sustained innovation, not cheap labour, is what lifts an economy out of hardship."
+        },
+        {
+          "id": "B2U1-w18",
+          "cat": "word",
+          "zh": "企业家",
+          "en": "entrepreneur",
+          "use": "an ambitious entrepreneur / young entrepreneurs",
+          "eg": "Every successful entrepreneur has faced the day when the whole project seems doomed to fail."
+        },
+        {
+          "id": "B2U1-t01",
+          "cat": "term",
+          "zh": "人工智能",
+          "en": "artificial intelligence",
+          "use": "正文中可缩写为 AI，作主语或定语",
+          "eg": "Artificial intelligence is moving out of the lab and into factories, hospitals and homes."
+        },
+        {
+          "id": "B2U1-t02",
+          "cat": "term",
+          "zh": "算法",
+          "en": "algorithm",
+          "use": "a recommendation algorithm / train an algorithm",
+          "eg": "Recommendation algorithms quietly decide what millions of users see each morning."
+        },
+        {
+          "id": "B2U1-t03",
+          "cat": "term",
+          "zh": "自动化",
+          "en": "automation",
+          "use": "industrial automation / the automation of routine work",
+          "eg": "Automation has lifted output while forcing the workforce to retrain for new roles."
+        },
+        {
+          "id": "B2U1-t04",
+          "cat": "term",
+          "zh": "知识产权",
+          "en": "intellectual property",
+          "use": "protect intellectual property / intellectual property rights",
+          "eg": "Strong protection of intellectual property is the bedrock of any innovation-driven economy."
+        },
+        {
+          "id": "B2U1-t05",
+          "cat": "term",
+          "zh": "全球创新指数",
+          "en": "the Global Innovation Index",
+          "use": "议论文里引用创新排名的权威数据源",
+          "eg": "Switzerland has topped the Global Innovation Index for more than a decade."
+        },
+        {
+          "id": "B2U1-t06",
+          "cat": "term",
+          "zh": "机器学习",
+          "en": "machine learning",
+          "use": "a machine learning model，作 AI 的下位概念",
+          "eg": "Machine learning lets software improve its own performance without being rewritten."
+        },
+        {
+          "id": "B2U1-t07",
+          "cat": "term",
+          "zh": "研究与发展（研发）",
+          "en": "research and development",
+          "use": "spend on research and development / R&D investment",
+          "eg": "Firms that reinvest profits in research and development steadily outpace their rivals."
+        },
+        {
+          "id": "B2U1-t08",
+          "cat": "term",
+          "zh": "电子商务",
+          "en": "e-commerce",
+          "use": "cross-border e-commerce / the e-commerce sector",
+          "eg": "E-commerce has turned remote villages into warehouses for the world market."
+        },
+        {
+          "id": "B2U1-t09",
+          "cat": "term",
+          "zh": "数字经济",
+          "en": "digital economy",
+          "use": "grow the digital economy / a driver of the digital economy",
+          "eg": "The digital economy now accounts for a considerable share of national output."
+        },
+        {
+          "id": "B2U1-t10",
+          "cat": "term",
+          "zh": "风险投资",
+          "en": "venture capital",
+          "use": "attract venture capital / a venture capital firm",
+          "eg": "Startups in tech hubs survive on venture capital until they turn a profit."
+        },
+        {
+          "id": "B2U1-t11",
+          "cat": "term",
+          "zh": "专利；专利权",
+          "en": "patent",
+          "use": "file a patent / patent protection",
+          "eg": "A single patent can keep a small research firm afloat for years."
+        },
+        {
+          "id": "B2U1-t12",
+          "cat": "term",
+          "zh": "国内生产总值",
+          "en": "gross domestic product",
+          "use": "缩写 GDP；论证投入规模时用 as a share of GDP",
+          "eg": "Many advanced economies now spend over two per cent of GDP on public research each year."
+        },
+        {
+          "id": "B2U1-p01",
+          "cat": "phrase",
+          "zh": "相比于",
+          "en": "as compared to",
+          "use": "句首作比较状语：as compared to + 名词，主句给出变化数据",
+          "eg": "As compared to a decade ago, battery prices have plunged by nearly ninety per cent."
+        },
+        {
+          "id": "B2U1-p02",
+          "cat": "phrase",
+          "zh": "与……形成对照；相比之下",
+          "en": "in contrast to",
+          "use": "对比论证句：in contrast to + 旧事物，主句写新事物",
+          "eg": "In contrast to traditional factories, smart plants retool their lines within hours."
+        },
+        {
+          "id": "B2U1-p03",
+          "cat": "phrase",
+          "zh": "从长远来看",
+          "en": "in the long term",
+          "use": "结论句常用：pay off / benefit sb in the long term",
+          "eg": "Cutting research budgets saves money today but weakens the economy in the long term."
+        },
+        {
+          "id": "B2U1-p04",
+          "cat": "phrase",
+          "zh": "主宰；称雄；呈极盛之势",
+          "en": "reign supreme",
+          "use": "主语 + reign supreme in + 领域，描述领先地位",
+          "eg": "For years, a handful of giant platforms have reigned supreme in online retail."
+        },
+        {
+          "id": "B2U1-p05",
+          "cat": "phrase",
+          "zh": "难怪；不足为奇",
+          "en": "it is no wonder that",
+          "use": "前句摆事实，后接 it is no wonder that 引出结论",
+          "eg": "One breakthrough followed another all year; it is no wonder that the young team was hailed nationwide."
+        },
+        {
+          "id": "B2U1-p06",
+          "cat": "phrase",
+          "zh": "充满……的；挤满",
+          "en": "packed with",
+          "use": "be packed with possibilities / gadgets / crowds",
+          "eg": "The exhibition hall was packed with gadgets that visionaries had promised for decades."
+        },
+        {
+          "id": "B2U1-p07",
+          "cat": "phrase",
+          "zh": "与……产生共鸣；触动",
+          "en": "speak to",
+          "use": "sth speaks to a broad audience / to younger users",
+          "eg": "Simple design speaks to users of any age, while technical jargon often does not."
+        },
+        {
+          "id": "B2U1-p08",
+          "cat": "phrase",
+          "zh": "目前；暂时",
+          "en": "for now",
+          "use": "让步或结论中平衡观点：for now, ...",
+          "eg": "For now, regulators favor guiding new technology rather than banning it outright."
+        },
+        {
+          "id": "B2U1-p09",
+          "cat": "phrase",
+          "zh": "除了……以外",
+          "en": "other than",
+          "use": "no assets / nothing / no one other than + 名词",
+          "eg": "The startup had no assets other than three engineers and a bold idea."
+        },
+        {
+          "id": "B2U1-p10",
+          "cat": "phrase",
+          "zh": "随着……的到来",
+          "en": "with the advent of",
+          "use": "开头背景状语：with the advent of + 技术",
+          "eg": "With the advent of affordable sensors, homes began collecting data on every habit."
+        },
+        {
+          "id": "B2U1-p11",
+          "cat": "phrase",
+          "zh": "在……中起关键作用",
+          "en": "play a pivotal role in",
+          "use": "升级 play an important role in",
+          "eg": "Semiconductors play a pivotal role in everything from phones to power grids."
+        },
+        {
+          "id": "B2U1-p12",
+          "cat": "phrase",
+          "zh": "引起；催生",
+          "en": "give rise to",
+          "use": "升级 cause / lead to，主语多为趋势或技术",
+          "eg": "Cheap computing has given rise to an entire industry of data services."
+        },
+        {
+          "id": "B2U1-p13",
+          "cat": "phrase",
+          "zh": "为……铺平道路",
+          "en": "pave the way for",
+          "use": "升级 make sth possible，写因果链条",
+          "eg": "Open technical standards paved the way for the global app economy."
+        },
+        {
+          "id": "B2U1-p14",
+          "cat": "phrase",
+          "zh": "双刃剑",
+          "en": "a double-edged sword",
+          "use": "利弊兼论段的过渡：sth is a double-edged sword",
+          "eg": "Automation is a double-edged sword: it multiplies output yet displaces drivers and clerks."
+        },
+        {
+          "id": "B2U1-a01",
+          "cat": "advanced",
+          "zh": "技术变革如此迅速，今日奇观将成明日寻常",
+          "en": "So rapid is technological change that today's marvels will be tomorrow's routines.",
+          "use": "So…that 倒装，升级 Technological change is very fast, so..."
+        },
+        {
+          "id": "B2U1-a02",
+          "cat": "advanced",
+          "zh": "真正改变经济的不是机器而是驾驭机器的人",
+          "en": "It is not the machine but the mind behind it that transforms an economy.",
+          "use": "强调句 It is ... that ...，升级 The mind behind the machine transforms an economy."
+        },
+        {
+          "id": "B2U1-a03",
+          "cat": "advanced",
+          "zh": "竞争对手争相自动化，没有企业敢原地踏步",
+          "en": "With rivals racing to automate, no firm can afford to stand still.",
+          "use": "with 复合结构作状语，升级 Because rivals are racing to automate, ..."
+        },
+        {
+          "id": "B2U1-a04",
+          "cat": "advanced",
+          "zh": "在公共资金推动下，基础研究逐步变成改变世界的产品",
+          "en": "Fueled by public funding, basic research evolved into world-changing products.",
+          "use": "过去分词短语作状语，升级 Basic research was funded by the state and evolved into ..."
+        },
+        {
+          "id": "B2U1-a05",
+          "cat": "advanced",
+          "zh": "人们日益达成共识：创新政策必须以人为本",
+          "en": "There is a growing consensus that innovation policy must put people first.",
+          "use": "升级 More and more people think that ..."
+        },
+        {
+          "id": "B2U1-a06",
+          "cat": "advanced",
+          "zh": "一项疗法很可能成为整个行业的转折点",
+          "en": "A cure for one disease may well prove a turning point for whole industries.",
+          "use": "may well prove 升级 may become，语气更书面"
+        },
+        {
+          "id": "B2U1-a07",
+          "cat": "advanced",
+          "zh": "软件非但没有让文员失业，反而创造了十年前无人想象的工作",
+          "en": "Far from putting clerks out of work, software has created jobs no one envisioned a decade ago.",
+          "use": "Far from + 动名词，升级 Software does not put clerks out of work; instead, it ..."
+        },
+        {
+          "id": "B2U1-a08",
+          "cat": "advanced",
+          "zh": "昔日令人生畏的壮举已成今日的日常",
+          "en": "What once seemed a daunting feat has become an everyday routine.",
+          "use": "what 引导主语从句，升级 It used to be difficult, but now it is easy."
+        },
+        {
+          "id": "B2U1-a09",
+          "cat": "advanced",
+          "zh": "直到规则跟上发明，公众才会真正信任技术",
+          "en": "Not until rules keep pace with invention will the public truly trust it.",
+          "use": "Not until 置于句首引发倒装，升级 The public will trust invention only after rules catch up."
+        },
+        {
+          "id": "B2U1-a10",
+          "cat": "advanced",
+          "zh": "十年爆发式增长的催化剂",
+          "en": "a catalyst for a decade of explosive growth",
+          "use": "名词 catalyst 升级 a cause of / a reason for rapid growth",
+          "eg": "The first smartphone acted as a catalyst for a decade of explosive growth."
+        },
+        {
+          "id": "B2U1-a11",
+          "cat": "advanced",
+          "zh": "今天的便利在很大程度上归功于昨天的潜心研究",
+          "en": "Today's convenience owes a great deal to yesterday's patient research.",
+          "use": "owe ... to ... 归因句型，升级 ... because of yesterday's research"
+        },
+        {
+          "id": "B2U1-a12",
+          "cat": "advanced",
+          "zh": "站在新创新浪潮的最前沿",
+          "en": "at the forefront of the new wave of innovation",
+          "use": "升级 leading in innovation / in the front",
+          "eg": "Research universities sit at the forefront of the new wave of innovation."
+        },
+        {
+          "id": "B2U1-s01",
+          "cat": "sentence",
+          "zh": "我们正亲历一场悄然改写日常生活规则的技术革命。",
+          "en": "We are living through a technological revolution that is quietly rewriting the rules of daily life.",
+          "use": "开头点题句"
+        },
+        {
+          "id": "B2U1-s02",
+          "cat": "sentence",
+          "zh": "过去十年创新势头如此之强，普通家庭的消费方式已面目一新。",
+          "en": "Innovation has gathered such momentum in the past decade that the way ordinary families spend money is barely recognizable.",
+          "use": "背景趋势句，such...that 结果句"
+        },
+        {
+          "id": "B2U1-s03",
+          "cat": "sentence",
+          "zh": "试举一例：人工智能如今能在人眼察觉之前就标记出疾病。",
+          "en": "A case in point is artificial intelligence, which now flags diseases years before a tired human eye can.",
+          "use": "举例句，A case in point is ..."
+        },
+        {
+          "id": "B2U1-s04",
+          "cat": "sentence",
+          "zh": "硅谷的崛起表明，一次突破就足以在一夜之间改变整个行业。",
+          "en": "The rise of Silicon Valley shows that a single breakthrough can transform an entire sector almost overnight.",
+          "use": "举例句，引用本单元专有名词"
+        },
+        {
+          "id": "B2U1-s05",
+          "cat": "sentence",
+          "zh": "与集市货摊不同，电商平台不拥有一家店铺也能服务数百万顾客。",
+          "en": "In contrast to a market stall, an e-commerce platform can serve millions of customers without owning a single shop.",
+          "use": "对比论证句，复用词表短语 in contrast to"
+        },
+        {
+          "id": "B2U1-s06",
+          "cat": "sentence",
+          "zh": "与十年前相比，如今的年轻人是更懂技术也更没耐心的消费者。",
+          "en": "As compared to a decade ago, today's youngsters are far savvier and far less patient consumers.",
+          "use": "比较句，复用词表短语 as compared to"
+        },
+        {
+          "id": "B2U1-s07",
+          "cat": "sentence",
+          "zh": "在持续创新的推动下，该行业连续三年以每年百分之十增长。",
+          "en": "Fueled by relentless innovation, the sector has grown by ten per cent per annum for three consecutive years.",
+          "use": "因果句，分词状语开头"
+        },
+        {
+          "id": "B2U1-s08",
+          "cat": "sentence",
+          "zh": "对研发的巨额投入为小作坊成为行业枢纽注入了动力。",
+          "en": "A considerable investment in research and development gave the small workshop the impetus to become an industry hub.",
+          "use": "因果句，impetus / hub 为本单元词表词"
+        },
+        {
+          "id": "B2U1-s09",
+          "cat": "sentence",
+          "zh": "尽管风险令人却步，暂停创新绝非蓄势待发之国的选项。",
+          "en": "Daunting though the risks may be, pausing innovation is not an option for a nation poised for progress.",
+          "use": "让步句，形容词提前倒装，转折引出立场"
+        },
+        {
+          "id": "B2U1-s10",
+          "cat": "sentence",
+          "zh": "人工智能专利多于其他任何领域，难怪它在最新全球创新指数中独冠群雄。",
+          "en": "AI patents outnumber those in every other field; it is no wonder that artificial intelligence reigns supreme in the latest Global Innovation Index.",
+          "use": "用 no wonder that 收束论据得出结论"
+        },
+        {
+          "id": "B2U1-s11",
+          "cat": "sentence",
+          "zh": "长远来看，创新的成果不以新奇论高下，而以其惠及人群的广狭来衡量。",
+          "en": "In the long term, the fruits of innovation will be measured not by their novelty but by how widely they are shared.",
+          "use": "结论句，not by ... but by ... 对称结构"
+        },
+        {
+          "id": "B2U1-s12",
+          "cat": "sentence",
+          "zh": "唯有让创造力与责任同行，我们才能确保技术服务于人类而非相反。",
+          "en": "Only by pairing creativity with responsibility can we make sure that technology serves humanity rather than the reverse.",
+          "use": "结尾倡议句，Only by ... 引发倒装"
+        }
+      ]
+    },
+    {
+      "id": "B2U2",
+      "label": "第2册 Unit 2",
+      "theme": "旅行与行走",
+      "cards": [
+        {
+          "id": "B2U2-w01",
+          "cat": "word",
+          "zh": "漫步；四处游走",
+          "en": "roam",
+          "use": "roam the cobbled streets / roam freely，写远足见闻的首选动词",
+          "eg": "On my first morning in Copenhagen I simply roamed the cobbled streets beside the harbour, following no map at all."
+        },
+        {
+          "id": "B2U2-w02",
+          "cat": "word",
+          "zh": "珍视；珍爱",
+          "en": "cherish",
+          "use": "cherish a memory / cherish local traditions，观点句与结论段常用",
+          "eg": "We should cherish the quiet villages before crowds and commerce change them for good."
+        },
+        {
+          "id": "B2U2-w03",
+          "cat": "word",
+          "zh": "持久的；经得起时间考验的",
+          "en": "enduring",
+          "use": "an enduring appeal / enduring value，常与 charm, influence 搭配",
+          "eg": "Fossils have an enduring power: they make us feel how short a single life is."
+        },
+        {
+          "id": "B2U2-w04",
+          "cat": "word",
+          "zh": "迷住；吸引力，魅力",
+          "en": "charm",
+          "use": "vt. charm visitors / n. the charm of an old town",
+          "eg": "The charm of a small city often lies in things no guidebook thinks worth listing."
+        },
+        {
+          "id": "B2U2-w05",
+          "cat": "word",
+          "zh": "领会；理解力",
+          "en": "grasp",
+          "use": "grasp why... / come to a grasp of，写旅行所得",
+          "eg": "Only after walking the same path did I begin to grasp why the poet loved these hills."
+        },
+        {
+          "id": "B2U2-w06",
+          "cat": "word",
+          "zh": "冲动；一时的念头",
+          "en": "impulse",
+          "use": "an impulse to travel / out of impulse，起因段用",
+          "eg": "Booking that ticket was pure impulse, and the trip turned out to be the best I have ever taken."
+        },
+        {
+          "id": "B2U2-w07",
+          "cat": "word",
+          "zh": "过渡；转变",
+          "en": "transition",
+          "use": "the transition from A to B，写城市到乡野的心态变化",
+          "eg": "Hiking forces a slow transition from the noise of the city to the rhythms of the countryside."
+        },
+        {
+          "id": "B2U2-w08",
+          "cat": "word",
+          "zh": "使最大化；充分利用",
+          "en": "maximize",
+          "use": "maximize the benefit of a journey，与 minimize 对举",
+          "eg": "Backpackers often stay two nights in one town to maximize what they can learn about it."
+        },
+        {
+          "id": "B2U2-w09",
+          "cat": "word",
+          "zh": "危及；使处于险境",
+          "en": "endanger",
+          "use": "endanger wildlife / endanger local culture，问题段",
+          "eg": "Feeding wild goats near the trail may seem kind, but it endangers both the animals and the hikers who come too close."
+        },
+        {
+          "id": "B2U2-w10",
+          "cat": "word",
+          "zh": "无知的；不了解的",
+          "en": "ignorant",
+          "use": "be ignorant of local customs / tourists ignorant of...",
+          "eg": "Tourists ignorant of local customs often mistake a quiet village for an empty one."
+        },
+        {
+          "id": "B2U2-w11",
+          "cat": "word",
+          "zh": "随意的；不经意的",
+          "en": "casual",
+          "use": "a casual conversation / a casual glance，写偶遇",
+          "eg": "A casual conversation with a chambermaid in Oslo taught me more about the city than any museum had."
+        },
+        {
+          "id": "B2U2-w12",
+          "cat": "word",
+          "zh": "深思熟虑的；体贴的",
+          "en": "thoughtful",
+          "use": "a thoughtful traveler / a thoughtful account，建议段",
+          "eg": "A thoughtful traveler thinks about the footprint a trip leaves behind as well as the photographs it produces."
+        },
+        {
+          "id": "B2U2-w13",
+          "cat": "word",
+          "zh": "热情的；热衷的",
+          "en": "passionate",
+          "use": "be passionate about sth.，写兴趣与志向",
+          "eg": "She became so passionate about fossils that every weekend found her on a different riverbank."
+        },
+        {
+          "id": "B2U2-w14",
+          "cat": "word",
+          "zh": "画速写；概述，草图",
+          "en": "sketch",
+          "use": "sketch a scene / a rough sketch of，替换 draw",
+          "eg": "He stopped every hour to sketch a birch or a roofline, and the walk quietly became a lesson in looking."
+        },
+        {
+          "id": "B2U2-w15",
+          "cat": "word",
+          "zh": "快照；掠影，简要描述",
+          "en": "snapshot",
+          "use": "a snapshot of daily life，比喻用法比本义更出彩",
+          "eg": "The night market in Ho Chi Minh City is a snapshot of how ordinary people feed a city of ten million."
+        },
+        {
+          "id": "B2U2-w16",
+          "cat": "word",
+          "zh": "未经过滤的；原汁原味的",
+          "en": "unfiltered",
+          "use": "unfiltered reality / an unfiltered picture，对比社交媒体",
+          "eg": "Living with a family in a Russian village for a week gives you an unfiltered picture that no tour bus can offer."
+        },
+        {
+          "id": "B2U2-w17",
+          "cat": "word",
+          "zh": "摄影；摄影术",
+          "en": "photography",
+          "use": "travel / landscape photography，讨论拍照与体验之争",
+          "eg": "Landscape photography made this muddy valley famous, although few visitors ever look closely at the rocks themselves."
+        },
+        {
+          "id": "B2U2-w18",
+          "cat": "word",
+          "zh": "（迅速而吃力地）爬；争夺",
+          "en": "scramble",
+          "use": "scramble up a rocky slope，远足叙事的动作词",
+          "eg": "We scrambled up the last slope as the fog lifted, and the whole valley opened out beneath us."
+        },
+        {
+          "id": "B2U2-t01",
+          "cat": "term",
+          "zh": "化石",
+          "en": "fossil",
+          "use": "fossil beds / a fossil of...，自然与时间话题的论据",
+          "eg": "In Oregon, fossils of ancient forests lie preserved in layers of hardened volcanic ash."
+        },
+        {
+          "id": "B2U2-t02",
+          "cat": "term",
+          "zh": "化石记录",
+          "en": "the fossil record",
+          "use": "the fossil record shows...，论证深时与变迁",
+          "eg": "The fossil record at John Day preserves, layer by layer, tens of millions of years of climate change."
+        },
+        {
+          "id": "B2U2-t03",
+          "cat": "term",
+          "zh": "地层；地质层",
+          "en": "geological layer",
+          "use": "read the layers / laid down over centuries，比 rock 更正式",
+          "eg": "Each geological layer on the cliff marks a different age, and together they read like a diary of the earth."
+        },
+        {
+          "id": "B2U2-t04",
+          "cat": "term",
+          "zh": "国家遗址；国家纪念地",
+          "en": "national monument",
+          "use": "protected as a national monument，谈保护与开发",
+          "eg": "Because the site is managed as a national monument, visitors may photograph the fossils but may not take them home."
+        },
+        {
+          "id": "B2U2-t05",
+          "cat": "term",
+          "zh": "自然遗产",
+          "en": "natural heritage",
+          "use": "a shared natural heritage，升华段的世界视角",
+          "eg": "The loss of one species is a wound to the natural heritage of the whole planet."
+        },
+        {
+          "id": "B2U2-t06",
+          "cat": "term",
+          "zh": "文化遗产",
+          "en": "cultural heritage",
+          "use": "safeguard cultural heritage，与 natural heritage 对举",
+          "eg": "The old quarter of a city like Vidin is cultural heritage; once demolished, it cannot be rebuilt."
+        },
+        {
+          "id": "B2U2-t07",
+          "cat": "term",
+          "zh": "保护；保存",
+          "en": "preservation",
+          "use": "the preservation of old towns，比 protection 更专指原物留存",
+          "eg": "The preservation of the windmill cost less than a replica would and kept its original timber."
+        },
+        {
+          "id": "B2U2-t08",
+          "cat": "term",
+          "zh": "生态旅游",
+          "en": "ecotourism",
+          "use": "develop / earn a living through ecotourism，解决方案段",
+          "eg": "Villages beside the monument now earn a living through ecotourism rather than cutting timber."
+        },
+        {
+          "id": "B2U2-t09",
+          "cat": "term",
+          "zh": "（景区的）环境承载力",
+          "en": "carrying capacity",
+          "use": "exceed the carrying capacity of...，论证过度旅游",
+          "eg": "When daily visitors exceed the carrying capacity of the trail, the meadow beside it begins to die."
+        },
+        {
+          "id": "B2U2-t10",
+          "cat": "term",
+          "zh": "可持续旅游",
+          "en": "sustainable tourism",
+          "use": "a model of sustainable tourism，结论段关键词",
+          "eg": "Sustainable tourism means that a town can welcome a million guests a year without losing the character that drew them."
+        },
+        {
+          "id": "B2U2-t11",
+          "cat": "term",
+          "zh": "碳足迹；碳排放量",
+          "en": "carbon footprint",
+          "use": "cut / leave a smaller carbon footprint，交通方式对比",
+          "eg": "A night train leaves a far smaller carbon footprint than the same journey made by plane."
+        },
+        {
+          "id": "B2U2-t12",
+          "cat": "term",
+          "zh": "商业化",
+          "en": "commercialization",
+          "use": "the commercialization of historic streets，批判段",
+          "eg": "The commercialization of the old quarter turned family workshops into shops selling identical souvenirs."
+        },
+        {
+          "id": "B2U2-p01",
+          "cat": "phrase",
+          "zh": "就我而言；在我看来",
+          "en": "as far as I am concerned",
+          "use": "开头亮观点，替换 I think；sb. 可换成 he / they",
+          "eg": "As far as I am concerned, a weekend in the hills does more for a tired student than a week at the seaside."
+        },
+        {
+          "id": "B2U2-p02",
+          "cat": "phrase",
+          "zh": "使回忆起；带回",
+          "en": "bring back",
+          "use": "bring back memories / bring back stories，由景生情",
+          "eg": "The smell of chestnuts roasting beside a roadside stall in Russia brought back my childhood winters."
+        },
+        {
+          "id": "B2U2-p03",
+          "cat": "phrase",
+          "zh": "步某人的后尘；继承其事业",
+          "en": "follow in one's footsteps",
+          "use": "follow in a parent's / a teacher's footsteps，写传承",
+          "eg": "Her grandfather walked these trails for forty years, and now she is following in his footsteps as a park guide."
+        },
+        {
+          "id": "B2U2-p04",
+          "cat": "phrase",
+          "zh": "（消息）传开",
+          "en": "get around",
+          "use": "word / news got around，写秘境被游客发现",
+          "eg": "News of the fossil find soon got around, and a road that had been empty for a decade began to fill with cars."
+        },
+        {
+          "id": "B2U2-p05",
+          "cat": "phrase",
+          "zh": "起步成功；取得进展",
+          "en": "get off the ground",
+          "use": "a plan / a project gets off the ground，建议与成效段",
+          "eg": "The village's first hiking festival finally got off the ground, thanks to two retired teachers and a borrowed tent."
+        },
+        {
+          "id": "B2U2-p06",
+          "cat": "phrase",
+          "zh": "掌握…的窍门",
+          "en": "get the hang of something",
+          "use": "get the hang of doing sth.，写学习过程与适应期",
+          "eg": "It took me two days to get the hang of reading the layers in the cliff; after that, the rocks seemed to talk."
+        },
+        {
+          "id": "B2U2-p07",
+          "cat": "phrase",
+          "zh": "实时地；当场",
+          "en": "in real time",
+          "use": "watch / identify sth. in real time，写科技与导览",
+          "eg": "The guide used an app that identified each fossil in real time, so even small children felt like researchers."
+        },
+        {
+          "id": "B2U2-p08",
+          "cat": "phrase",
+          "zh": "最后；终于",
+          "en": "in the end",
+          "use": "结尾收束，替换 finally，语气更有总结感",
+          "eg": "We argued over the map for an hour, and in the end the farmer we asked simply walked us to the gate."
+        },
+        {
+          "id": "B2U2-p09",
+          "cat": "phrase",
+          "zh": "偶然发现；偶遇",
+          "en": "stumble upon",
+          "use": "stumble upon a place / a fact，远足叙事首选",
+          "eg": "Rounding a bend in the French hills, I stumbled upon a stone farmhouse that appeared on no map."
+        },
+        {
+          "id": "B2U2-p10",
+          "cat": "phrase",
+          "zh": "与…一样都不；根本不",
+          "en": "no more ... than",
+          "use": "否定类比，替换 not at all，论证更锋利",
+          "eg": "A snapshot is no more a journey than a menu is a meal."
+        },
+        {
+          "id": "B2U2-p11",
+          "cat": "phrase",
+          "zh": "（车辆或司机）停车",
+          "en": "pull up",
+          "use": "a taxi pulled up beside us，叙事转场用",
+          "eg": "A pickup truck pulled up beside us, and the driver offered to carry our packs to the next town."
+        },
+        {
+          "id": "B2U2-p12",
+          "cat": "phrase",
+          "zh": "开阔眼界",
+          "en": "broaden one's horizons",
+          "use": "旅行收益段的必用搭配，替换 make one know more",
+          "eg": "Walking alone through unfamiliar streets broadened my horizons more than any textbook did."
+        },
+        {
+          "id": "B2U2-p13",
+          "cat": "phrase",
+          "zh": "沉浸于当地生活",
+          "en": "immerse oneself in local life",
+          "use": "替换 experience the local culture，主语性数要一致",
+          "eg": "She rented a room above a bakery, immersed herself in local life, and learned more in a week than in a semester."
+        },
+        {
+          "id": "B2U2-p14",
+          "cat": "phrase",
+          "zh": "远离人迹的；不落俗套的",
+          "en": "off the beaten track",
+          "use": "写小众旅行，替换 in a remote place",
+          "eg": "Our guide took us off the beaten track, to a village whose only road is a mule path along the river."
+        },
+        {
+          "id": "B2U2-a01",
+          "cat": "advanced",
+          "zh": "机缘巧合；意外之喜",
+          "en": "serendipity",
+          "use": "升级 a lucky accident / by chance，旅行类高分词",
+          "eg": "The best find of the trip was pure serendipity: we took the wrong turning and met a festival we had never heard of."
+        },
+        {
+          "id": "B2U2-a02",
+          "cat": "advanced",
+          "zh": "蜿蜒而行；缓缓迂回",
+          "en": "meander",
+          "use": "升级 walk slowly without a plan；小路、河流皆可作主语",
+          "eg": "We let the path meander up through the birches and stopped worrying about the clock."
+        },
+        {
+          "id": "B2U2-a03",
+          "cat": "advanced",
+          "zh": "历史悠久的",
+          "en": "time-honored",
+          "use": "升级 very old / with a long history，形容名城与手艺",
+          "eg": "In a time-honored bookshop by Oslo's harbour, the owner still repairs bindings by hand."
+        },
+        {
+          "id": "B2U2-a04",
+          "cat": "advanced",
+          "zh": "令人敬畏的；壮美的",
+          "en": "awe-inspiring",
+          "use": "升级 very beautiful / wonderful，写自然景观",
+          "eg": "The scar left by the mudflow is awe-inspiring in the way that all old disasters are: silent and enormous."
+        },
+        {
+          "id": "B2U2-a05",
+          "cat": "advanced",
+          "zh": "迷住；深深吸引",
+          "en": "captivate",
+          "use": "升级 attract many visitors / interest people",
+          "eg": "Few things captivate a child as completely as a stone that was once a leaf."
+        },
+        {
+          "id": "B2U2-a06",
+          "cat": "advanced",
+          "zh": "一个说明问题的细节",
+          "en": "a telling detail",
+          "use": "升级 a detail that shows...，举例论证时引出证据",
+          "eg": "The worn stone step at the door is a telling detail: for three centuries the same families have walked in and out."
+        },
+        {
+          "id": "B2U2-a07",
+          "cat": "advanced",
+          "zh": "几乎；实际上",
+          "en": "virtually",
+          "use": "升级 almost，常接 impossible / cut off / unknown",
+          "eg": "After the last bus left, the valley was virtually cut off from the outside world."
+        },
+        {
+          "id": "B2U2-a08",
+          "cat": "advanced",
+          "zh": "（否定倒装）游客与行者看到的从不是同一条街",
+          "en": "Rarely do tourists and travelers see the same street.",
+          "use": "句首否定倒装，升级 Tourists and travelers rarely see the same street.",
+          "eg": "Rarely do we understand a foreign custom until we have to live by it."
+        },
+        {
+          "id": "B2U2-a09",
+          "cat": "advanced",
+          "zh": "（分词状语）小路穿过桦林，终于通到山脊",
+          "en": "Winding through the birches, the path finally opens onto the ridge.",
+          "use": "分词作状语，升级 The path winds through the birches and it finally opens onto the ridge.",
+          "eg": "Tucked between two hills, the village sleeps through most of the tourist season."
+        },
+        {
+          "id": "B2U2-a10",
+          "cat": "advanced",
+          "zh": "（with 复合结构）火山灰层层封存五千万年",
+          "en": "with layers of volcanic ash holding millions of years of history",
+          "use": "with 复合结构，升级 and there are layers of ash that hold...，描写地貌",
+          "eg": "We stood there with the sun dropping and the ancient sea floor glowing at our feet."
+        },
+        {
+          "id": "B2U2-a11",
+          "cat": "advanced",
+          "zh": "（as 让步倒装）化石虽惊人，多数游客却匆匆走过",
+          "en": "Striking as the fossil beds are, most visitors hurry past them.",
+          "use": "让步倒装，升级 Although the fossil beds are striking, most visitors hurry past them.",
+          "eg": "Lonely as the trail was, none of us wanted to turn back before the summit."
+        },
+        {
+          "id": "B2U2-a12",
+          "cat": "advanced",
+          "zh": "（强调句）改变我们的是行走而非抵达",
+          "en": "It is the walking, not the arriving, that changes us.",
+          "use": "强调句型，升级 Walking changes us more than arriving does，结尾点题",
+          "eg": "It was the chambermaid's quiet pride that I remembered longest."
+        },
+        {
+          "id": "B2U2-s01",
+          "cat": "sentence",
+          "zh": "旅行从地图结束、脚步开始的地方起步。",
+          "en": "Travel begins where the map ends and the walking starts.",
+          "use": "首段点题句；可用同类句式改写主题词"
+        },
+        {
+          "id": "B2U2-s02",
+          "cat": "sentence",
+          "zh": "越来越多的年轻人放弃拥挤的旅游大巴，改选穿越乡间的慢速徒步。",
+          "en": "More and more young people are trading crowded tour buses for slow hikes through the countryside.",
+          "use": "现象背景句，用于首段引出话题"
+        },
+        {
+          "id": "B2U2-s03",
+          "cat": "sentence",
+          "zh": "就我而言，以脚步丈量的旅程比以照片丈量的旅程更能教人。",
+          "en": "As far as I am concerned, a journey measured in footsteps teaches more than one measured in photographs.",
+          "use": "观点句，首段末或第二段开头"
+        },
+        {
+          "id": "B2U2-s04",
+          "cat": "sentence",
+          "zh": "在俄勒冈的克拉诺区，火山灰层仍保存着亚热带森林的化石，游人读它如读页面。",
+          "en": "In the Clarno Unit of Oregon, layers of volcanic ash still hold fossils of subtropical forests, and visitors read them like pages.",
+          "use": "举例段：用具体地点与细节支撑论点"
+        },
+        {
+          "id": "B2U2-s05",
+          "cat": "sentence",
+          "zh": "正如一位旅行者所写，旅行最好的纪念品是看待自家街道的全新眼光。",
+          "en": "As one traveler wrote, 'the best souvenir of a journey is a new way of seeing your own street.'",
+          "use": "引言句，作题记或论证的收束引用"
+        },
+        {
+          "id": "B2U2-s06",
+          "cat": "sentence",
+          "zh": "游客从车窗拍下大教堂，步行者却留意到六个世纪前刻进石头里的石匠标记。",
+          "en": "Tourists photograph a cathedral from the coach window, while walkers notice the mason's mark cut into its stone six centuries ago.",
+          "use": "对比论证句，while 连接两侧"
+        },
+        {
+          "id": "B2U2-s07",
+          "cat": "sentence",
+          "zh": "正因村子远离主干道，它的方言、烤炉与旧日礼节能存续过去五十年。",
+          "en": "Because the village lies off the main road, its dialect, its bread ovens and its old manners have survived the past fifty years.",
+          "use": "因果论证句，解释现象成因"
+        },
+        {
+          "id": "B2U2-s08",
+          "cat": "sentence",
+          "zh": "旅游虽给历史小城带来钱财，人流却可能磨蚀吸引他们前来的街道本身。",
+          "en": "Although tourism brings money to historic towns, the crowds may wear down the very streets that draw them there.",
+          "use": "让步句，双面分析段的首句"
+        },
+        {
+          "id": "B2U2-s09",
+          "cat": "sentence",
+          "zh": "在哥本哈根，近半数通勤仍靠自行车完成，每日上班路本身就是一堂可持续的课。",
+          "en": "In Copenhagen, where nearly half of all commutes are made by bicycle, the daily journey to work is itself a lesson in sustainability.",
+          "use": "事实例证句，用名城作论据"
+        },
+        {
+          "id": "B2U2-s10",
+          "cat": "sentence",
+          "zh": "我在荷兰一座村庄外偶然遇见了一座任何旅游手册都不曾提到的风车。",
+          "en": "I stumbled upon a windmill outside a village in the Netherlands, and no guidebook had ever mentioned it.",
+          "use": "记叙句，个人经历段"
+        },
+        {
+          "id": "B2U2-s11",
+          "cat": "sentence",
+          "zh": "若想让本土文化延续，就该珍视每座城市的独特，而不是把每条街都变成礼品店。",
+          "en": "If we want local culture to endure, we should cherish what makes each city different rather than turning every street into a gift shop.",
+          "use": "建议句，措施段或倒数第二段"
+        },
+        {
+          "id": "B2U2-s12",
+          "cat": "sentence",
+          "zh": "最终，旅行教会我们对别处的生活保持好奇，并小心不将其毁坏。",
+          "en": "In the end, travel teaches us to be curious about other lives and careful not to damage them.",
+          "use": "结论升华句，末段收束"
+        }
+      ]
+    },
+    {
+      "id": "B2U3",
+      "label": "第2册 Unit 3",
+      "theme": "现代生活与幸福感",
+      "cards": [
+        {
+          "id": "B2U3-w01",
+          "cat": "word",
+          "zh": "上瘾；沉迷",
+          "en": "addiction",
+          "use": "addiction to shopping / social media addiction",
+          "eg": "Shopping addiction drives many consumers to run out of savings long before payday."
+        },
+        {
+          "id": "B2U3-w02",
+          "cat": "word",
+          "zh": "一次性的；用完即弃的",
+          "en": "disposable",
+          "use": "disposable income / a throwaway, disposable mindset",
+          "eg": "A disposable mindset fills landfills and leaves people feeling just as empty as the products they toss."
+        },
+        {
+          "id": "B2U3-w03",
+          "cat": "word",
+          "zh": "不满的；不满足的",
+          "en": "discontented",
+          "use": "a discontented workforce / feel discontented with",
+          "eg": "Even well-paid employees grow discontented when long hours leave no room for family or rest."
+        },
+        {
+          "id": "B2U3-w04",
+          "cat": "word",
+          "zh": "使人分心的事物；消遣",
+          "en": "distraction",
+          "use": "a constant distraction / digital distractions",
+          "eg": "Every notification is a tiny distraction that pulls attention away from deep, fulfilling work."
+        },
+        {
+          "id": "B2U3-w05",
+          "cat": "word",
+          "zh": "双重性；两面性",
+          "en": "duality",
+          "use": "the duality of modern life / material and spiritual duality",
+          "eg": "The duality of prosperity and anxiety defines our age: wealth has grown, yet contentment has not."
+        },
+        {
+          "id": "B2U3-w06",
+          "cat": "word",
+          "zh": "改善；增强",
+          "en": "enhance",
+          "use": "enhance well-being / enhance the quality of life",
+          "eg": "Brief walks in nature can enhance mood far more effectively than another round of online shopping."
+        },
+        {
+          "id": "B2U3-w07",
+          "cat": "word",
+          "zh": "成就感；充实感",
+          "en": "fulfillment",
+          "use": "a sense of fulfillment / find fulfillment in",
+          "eg": "Volunteers often report a deeper sense of fulfillment than they do on promotion day."
+        },
+        {
+          "id": "B2U3-w08",
+          "cat": "word",
+          "zh": "脆弱；不稳定性",
+          "en": "fragility",
+          "use": "the fragility of happiness / emotional fragility",
+          "eg": "A recession exposes the fragility of lifestyles built entirely on borrowed income."
+        },
+        {
+          "id": "B2U3-w09",
+          "cat": "word",
+          "zh": "易得到的；可获取的",
+          "en": "accessible",
+          "use": "make happiness accessible / accessible to all",
+          "eg": "Meditation apps have made mindfulness techniques accessible to people who once dismissed them as luxuries."
+        },
+        {
+          "id": "B2U3-w10",
+          "cat": "word",
+          "zh": "不可避免的；必然的",
+          "en": "inevitable",
+          "use": "an inevitable consequence / it is inevitable that",
+          "eg": "Stress is an inevitable part of ambition, but chronic burnout is not."
+        },
+        {
+          "id": "B2U3-w11",
+          "cat": "word",
+          "zh": "诱惑；诱使",
+          "en": "tempt",
+          "use": "tempt consumers into / be tempted to do",
+          "eg": "Flash-sale ads tempt even frugal shoppers into buying items they had planned to resist."
+        },
+        {
+          "id": "B2U3-w12",
+          "cat": "word",
+          "zh": "应对；处理（难题）",
+          "en": "tackle",
+          "use": "tackle the root causes of / tackle a problem",
+          "eg": "Schools that teach mindfulness help teenagers tackle exam pressure before it becomes unbearable."
+        },
+        {
+          "id": "B2U3-w13",
+          "cat": "word",
+          "zh": "繁荣；昌盛",
+          "en": "prosperity",
+          "use": "material prosperity / a barrier to prosperity",
+          "eg": "National prosperity no longer measures only GDP; it also counts how freely citizens pursue what fulfills them."
+        },
+        {
+          "id": "B2U3-w14",
+          "cat": "word",
+          "zh": "生产率；生产力",
+          "en": "productivity",
+          "use": "sacrifice productivity / a productivity-obsessed culture",
+          "eg": "A productivity-obsessed culture quietly ruins health by treating every idle minute as wasted time."
+        },
+        {
+          "id": "B2U3-w15",
+          "cat": "word",
+          "zh": "富有的",
+          "en": "wealthy",
+          "use": "the wealthy / ever-wealthy consumers",
+          "eg": "Wealthy suburbs show no immunity to the same anxiety that grips lower-income neighbourhoods."
+        },
+        {
+          "id": "B2U3-w16",
+          "cat": "word",
+          "zh": "抵挡；忍住",
+          "en": "resist",
+          "use": "resist the urge to / resist temptation",
+          "eg": "Most people find it hard to resist the urge to check their phones within seconds of a buzz."
+        },
+        {
+          "id": "B2U3-w17",
+          "cat": "word",
+          "zh": "等同于；视……与……相等",
+          "en": "equate",
+          "use": "equate happiness with success / be wrongly equated with",
+          "eg": "When people equate self-worth with a paycheck, every setback feels like a personal failure."
+        },
+        {
+          "id": "B2U3-w18",
+          "cat": "word",
+          "zh": "障碍；困难",
+          "en": "hurdle",
+          "use": "overcome a hurdle / a major hurdle to well-being",
+          "eg": "The hardest hurdle for young graduates is standing on their own feet while the job market shrinks."
+        },
+        {
+          "id": "B2U3-t01",
+          "cat": "term",
+          "zh": "物质主义；拜物倾向",
+          "en": "materialism",
+          "use": "consumer materialism / a culture of materialism",
+          "eg": "Psychologists link higher materialism to lower life satisfaction across dozens of cultures."
+        },
+        {
+          "id": "B2U3-t02",
+          "cat": "term",
+          "zh": "即时满足（追求）",
+          "en": "instant gratification",
+          "use": "the pursuit of instant gratification",
+          "eg": "Streaming and same-day delivery feed a habit of instant gratification that erodes patience and depth."
+        },
+        {
+          "id": "B2U3-t03",
+          "cat": "term",
+          "zh": "工作与生活的平衡",
+          "en": "work-life balance",
+          "use": "maintain a healthy work-life balance",
+          "eg": "Companies that enforce true work-life balance see lower turnover and higher productivity."
+        },
+        {
+          "id": "B2U3-t04",
+          "cat": "term",
+          "zh": "数字断舍离",
+          "en": "digital detox",
+          "use": "go on a digital detox",
+          "eg": "A weekend digital detox helped her rediscover the meditative calm that scrolling had stolen."
+        },
+        {
+          "id": "B2U3-t05",
+          "cat": "term",
+          "zh": "享乐适应（幸福跑步机）",
+          "en": "hedonic treadmill",
+          "use": "stuck on the hedonic treadmill",
+          "eg": "The more we buy, the faster we run on the hedonic treadmill without ever gaining lasting joy."
+        },
+        {
+          "id": "B2U3-t06",
+          "cat": "term",
+          "zh": "消费文化",
+          "en": "consumer culture",
+          "use": "critique consumer culture",
+          "eg": "Consumer culture persuades us to equate a fuller life with a fuller shopping cart."
+        },
+        {
+          "id": "B2U3-t07",
+          "cat": "term",
+          "zh": "主观幸福感",
+          "en": "subjective well-being",
+          "use": "research on subjective well-being",
+          "eg": "Surveys of subjective well-being suggest that strong social bonds matter more than any pay rise."
+        },
+        {
+          "id": "B2U3-t08",
+          "cat": "term",
+          "zh": "职业倦怠；精疲力竭",
+          "en": "burnout",
+          "use": "suffer from chronic burnout",
+          "eg": "Chronic burnout is not a badge of honour but a signal that boundaries have collapsed."
+        },
+        {
+          "id": "B2U3-t09",
+          "cat": "term",
+          "zh": "地位焦虑",
+          "en": "status anxiety",
+          "use": "fuelled by status anxiety",
+          "eg": "Status anxiety drives young professionals to sacrifice sleep for titles they never truly wanted."
+        },
+        {
+          "id": "B2U3-t10",
+          "cat": "term",
+          "zh": "慢生活（理念）",
+          "en": "slow living",
+          "use": "embrace slow living",
+          "eg": "The slow living movement argues that a richer life comes from fewer, deeper commitments."
+        },
+        {
+          "id": "B2U3-t11",
+          "cat": "term",
+          "zh": "自我实现",
+          "en": "self-actualization",
+          "use": "pursue self-actualization",
+          "eg": "Once basic security is met, people naturally look to self-actualization for lasting fulfillment."
+        },
+        {
+          "id": "B2U3-t12",
+          "cat": "term",
+          "zh": "边际效用递减",
+          "en": "diminishing returns",
+          "use": "hit the point of diminishing returns",
+          "eg": "Beyond a certain income, each extra dollar brings diminishing returns to happiness."
+        },
+        {
+          "id": "B2U3-p01",
+          "cat": "phrase",
+          "zh": "出于自愿；主动选择",
+          "en": "by choice",
+          "use": "stay home by choice / live simply by choice — 对比 not by choice",
+          "eg": "Few workers endure eighty-hour weeks by choice; most do so because rent leaves them no alternative."
+        },
+        {
+          "id": "B2U3-p02",
+          "cat": "phrase",
+          "zh": "生性；本性上",
+          "en": "by nature",
+          "use": "by nature social / by nature restless — 描述人性本论",
+          "eg": "Humans are by nature social creatures, yet modern routines isolate us more than any plague once did."
+        },
+        {
+          "id": "B2U3-p03",
+          "cat": "phrase",
+          "zh": "做某事很艰难",
+          "en": "have a hard time doing sth.",
+          "use": "have a hard time relaxing / focusing / sleeping",
+          "eg": "Overworked students often have a hard time distinguishing genuine curiosity from exam-driven panic."
+        },
+        {
+          "id": "B2U3-p04",
+          "cat": "phrase",
+          "zh": "导致某人做某事",
+          "en": "lead sb. to do sth.",
+          "use": "pressure leads people to compromise / this leads consumers to overspend",
+          "eg": "Endless comparison on social media leads many young people to chase careers that never fulfill them."
+        },
+        {
+          "id": "B2U3-p05",
+          "cat": "phrase",
+          "zh": "继续前行；转向新的方向",
+          "en": "move on",
+          "use": "move on from failure / move on to the next stage",
+          "eg": "A lost job is a bump in the road, not a wall; learning to move on preserves mental health."
+        },
+        {
+          "id": "B2U3-p06",
+          "cat": "phrase",
+          "zh": "用完；耗尽",
+          "en": "run out of",
+          "use": "run out of energy / patience / savings",
+          "eg": "By the fifth consecutive deadline, she had run out of both sleep and optimism."
+        },
+        {
+          "id": "B2U3-p07",
+          "cat": "phrase",
+          "zh": "自立；独立自主",
+          "en": "stand on one's own feet",
+          "use": "learn to stand on one's own feet — 青年话题常用",
+          "eg": "Graduates who stand on their own feet report higher fulfillment than those shielded by family wealth."
+        },
+        {
+          "id": "B2U3-p08",
+          "cat": "phrase",
+          "zh": "前进路上的小挫折",
+          "en": "a bump in the road",
+          "use": "treat failure as a bump in the road — 让步或安慰语境",
+          "eg": "A single recession is a bump in the road for a society that values well-being over mere GDP growth."
+        },
+        {
+          "id": "B2U3-p09",
+          "cat": "phrase",
+          "zh": "以……为代价",
+          "en": "at the expense of",
+          "use": "at the expense of health / family / happiness",
+          "eg": "Climbing the corporate ladder at the expense of sleep and friendship rarely brings peace."
+        },
+        {
+          "id": "B2U3-p10",
+          "cat": "phrase",
+          "zh": "在追求……的过程中",
+          "en": "in the pursuit of",
+          "use": "in the pursuit of happiness / wealth — 议论文万能框架",
+          "eg": "In the pursuit of happiness, people often overlook the small, accessible joys already around them."
+        },
+        {
+          "id": "B2U3-p11",
+          "cat": "phrase",
+          "zh": "受……支配；任由……摆布",
+          "en": "at the mercy of",
+          "use": "at the mercy of algorithms / the market",
+          "eg": "Freelancers live at the mercy of the next contract, which keeps anxiety permanently in the background."
+        },
+        {
+          "id": "B2U3-p12",
+          "cat": "phrase",
+          "zh": "优先于；比……更重要",
+          "en": "take precedence over",
+          "use": "well-being should take precedence over profit",
+          "eg": "In a humane workplace, mental health must take precedence over quarterly output targets."
+        },
+        {
+          "id": "B2U3-p13",
+          "cat": "phrase",
+          "zh": "摆脱；挣脱",
+          "en": "break free from",
+          "use": "break free from the cycle of consumption",
+          "eg": "She decided to break free from the habit of buying comfort goods and started journaling instead."
+        },
+        {
+          "id": "B2U3-p14",
+          "cat": "phrase",
+          "zh": "指望；依靠",
+          "en": "look to",
+          "use": "look to sb. for comfort / look to spirituality — 本单元词表",
+          "eg": "When material life fails to console them, many young people look to meditation and community for peace."
+        },
+        {
+          "id": "B2U3-a01",
+          "cat": "advanced",
+          "zh": "逐渐削弱，破坏",
+          "en": "undermine",
+          "use": "替换 harm / damage / make ... weaker",
+          "eg": "Constant comparison with strangers online can quietly undermine a person's satisfaction with ordinary life."
+        },
+        {
+          "id": "B2U3-a02",
+          "cat": "advanced",
+          "zh": "Only by… can…（倒装强调）",
+          "en": "Only by redefining success can society escape the hedonic treadmill.",
+          "use": "升级 'Society can escape the hedonic treadmill only by redefining success'",
+          "eg": "Only by redefining success can a generation born into consumption learn to find fulfillment elsewhere."
+        },
+        {
+          "id": "B2U3-a03",
+          "cat": "advanced",
+          "zh": "Far from doing…（让步倒装）",
+          "en": "Far from bringing satisfaction, relentless buying quietly corrodes the peace it promises.",
+          "use": "升级 'Relentless buying does not bring satisfaction; instead it corrodes peace'",
+          "eg": "Far from relieving stress, endless scrolling often intensifies the discontent it was supposed to cure."
+        },
+        {
+          "id": "B2U3-a04",
+          "cat": "advanced",
+          "zh": "With + 名词 + 分词（独立主格）",
+          "en": "With material needs met yet inner voids widening, a growing number of people feel oddly hollow.",
+          "use": "升级 'Although material needs are met, inner voids widen, so many feel hollow'",
+          "eg": "With wages rising but hours lengthening, young workers find themselves earning more and living less."
+        },
+        {
+          "id": "B2U3-a05",
+          "cat": "advanced",
+          "zh": "What引导的主语从句（强调）",
+          "en": "What fuels the modern consumer's discontent is not scarcity but endless comparison.",
+          "use": "升级 'Endless comparison, not scarcity, fuels the modern consumer's discontent'",
+          "eg": "What makes burnout unbearable is not the workload itself but the silence around it."
+        },
+        {
+          "id": "B2U3-a06",
+          "cat": "advanced",
+          "zh": "同位语从句",
+          "en": "the paradox that prosperity coexists with pervasive anxiety",
+          "use": "升级 'the contradiction that people are rich but anxious'",
+          "eg": "The paradox that prosperity coexists with pervasive anxiety has challenged economists for decades."
+        },
+        {
+          "id": "B2U3-a07",
+          "cat": "advanced",
+          "zh": "It is… that…（强调句）",
+          "en": "It is consumer culture itself, rather than any personal failing, that traps us on the hedonic treadmill.",
+          "use": "升级 'Consumer culture, not personal failing, traps us'",
+          "eg": "It is the relentless pace of work, not a lack of discipline, that deprives people of restorative leisure."
+        },
+        {
+          "id": "B2U3-a08",
+          "cat": "advanced",
+          "zh": "分词短语作状语",
+          "en": "Battered by deadlines and bills alike, young professionals often have a hard time finding inner stillness.",
+          "use": "升级 'Young professionals are battered by deadlines and bills, and they struggle to find inner stillness'",
+          "eg": "Raised amid constant competition, this generation equates rest with losing ground."
+        },
+        {
+          "id": "B2U3-a09",
+          "cat": "advanced",
+          "zh": "a growing proportion of（升级 many people）",
+          "en": "a growing proportion of",
+          "use": "替换 more and more people / an increasing number of people",
+          "eg": "A growing proportion of city dwellers now treat weekend hikes as a form of digital detox."
+        },
+        {
+          "id": "B2U3-a10",
+          "cat": "advanced",
+          "zh": "indispensable to（升级 very important for）",
+          "en": "indispensable to",
+          "use": "替换 very important for / essential to",
+          "eg": "A sense of purpose is indispensable to lasting happiness; no amount of money can substitute for it."
+        },
+        {
+          "id": "B2U3-a11",
+          "cat": "advanced",
+          "zh": "detrimental（升级 very bad/harmful）",
+          "en": "detrimental",
+          "use": "替换 harmful / damaging / bad for",
+          "eg": "Sleep deprivation proves detrimental not only to productivity but to emotional resilience."
+        },
+        {
+          "id": "B2U3-a12",
+          "cat": "advanced",
+          "zh": "Hard-pressed as sb. may be…（让步倒装）",
+          "en": "Hard-pressed as they are by rent and loans, many young people still refuse to trade meaning for a higher paycheck.",
+          "use": "升级 'Although they are hard-pressed by rent and loans, many young people still...'",
+          "eg": "Hard-pressed as she was by overtime demands, she carved out an hour each evening for painting."
+        },
+        {
+          "id": "B2U3-s01",
+          "cat": "sentence",
+          "zh": "在物质空前丰富的时代，幸福感反而成了人们热议却难解的难题。",
+          "en": "In an era of unprecedented material abundance, happiness has paradoxically become the most debated and least understood problem of daily life.",
+          "use": "开头段·点题（unprecedented, paradoxically 增强对比）"
+        },
+        {
+          "id": "B2U3-s02",
+          "cat": "sentence",
+          "zh": "对财富的无尽追求往往导致年轻人将幸福等同于消费能力。",
+          "en": "The relentless pursuit of wealth often leads young people to equate happiness with their capacity to consume.",
+          "use": "因果段·论述核心问题（lead sb. to do + equate A with B）"
+        },
+        {
+          "id": "B2U3-s03",
+          "cat": "sentence",
+          "zh": "尽管繁荣让数亿人摆脱了贫困，一种挥之不去的不满却在最富裕的社会里蔓延。",
+          "en": "While prosperity has lifted millions out of poverty, a creeping discontent has spread through the very wealthiest societies.",
+          "use": "对比段·让步（While 引导，凸显 duality）"
+        },
+        {
+          "id": "B2U3-s04",
+          "cat": "sentence",
+          "zh": "一个典型的例子是所谓的996工作文化，它让从业者几乎没有时间放松或陪伴家人。",
+          "en": "A case in point is the so-called 996 work culture, where practitioners have a hard time finding even one hour for rest or family.",
+          "use": "举例段·具体例证（A case in point is… + have a hard time doing）"
+        },
+        {
+          "id": "B2U3-s05",
+          "cat": "sentence",
+          "zh": "诚然，经济保障对幸福感不可或缺，但它绝不能以健康和人际关系为代价。",
+          "en": "Admittedly, financial security is indispensable to well-being; it must never, however, come at the expense of health or relationships.",
+          "use": "让步+观点段·辩证（Admittedly… however 让步框架）"
+        },
+        {
+          "id": "B2U3-s06",
+          "cat": "sentence",
+          "zh": "唯有重新定义成功，社会才能让个体摆脱那条永远奔跑却原地踏步的幸福跑步机。",
+          "en": "Only by redefining success can a society free its citizens from a hedonic treadmill on which running faster means staying exactly where they are.",
+          "use": "结论段·升华（Only by… 倒装 + 定语从句）"
+        },
+        {
+          "id": "B2U3-s07",
+          "cat": "sentence",
+          "zh": "当人们把自我价值等同于工资单上的数字时，每一次拒绝都成了对人格的否定。",
+          "en": "When people equate their self-worth with the figure on a paycheck, every rejection becomes a verdict on who they are.",
+          "use": "因果段·心理分析（equate…with + every…becomes 概括）"
+        },
+        {
+          "id": "B2U3-s08",
+          "cat": "sentence",
+          "zh": "研究表明，那些选择简朴生活而非炫耀性消费的人往往报告出更高的充实感。",
+          "en": "Research indicates that individuals who choose simplicity over conspicuous consumption consistently report a deeper sense of fulfillment.",
+          "use": "论据段·引用数据或研究（Research indicates that…）"
+        },
+        {
+          "id": "B2U3-s09",
+          "cat": "sentence",
+          "zh": "在快节奏生活的压力下，一次数字断舍离或许并非奢侈而是维系心智的必需。",
+          "en": "Under the relentless pressure of a fast-paced life, a digital detox may be less a luxury than a necessity for preserving mental clarity.",
+          "use": "建议段·提出对策（less a…than a… 并列否定强调）"
+        },
+        {
+          "id": "B2U3-s10",
+          "cat": "sentence",
+          "zh": "正如一句谚语所言：金钱能买到舒适，却买不到那种唯有热爱和归属才能带来的宁静。",
+          "en": "As the saying goes, money can purchase comfort but never the quiet that only passion and belonging can bestow.",
+          "use": "举例或结论段·引用谚语增强说服力（As the saying goes…）"
+        },
+        {
+          "id": "B2U3-s11",
+          "cat": "sentence",
+          "zh": "物质带来的愉悦稍纵即逝，而精神上的满足——无论是创造、学习还是关爱——则历久弥新。",
+          "en": "Pleasure drawn from possessions evaporates almost as quickly as it arrives, whereas spiritual fulfillment, born of creating, learning, or caring, deepens with time.",
+          "use": "对比段·核心论点（whereas + born of 分词）"
+        },
+        {
+          "id": "B2U3-s12",
+          "cat": "sentence",
+          "zh": "因此，政策制定者在衡量繁荣时若只盯着经济指标而忽视主观幸福感，便无法回应人民内心真正的渴望。",
+          "en": "Therefore, policymakers who measure prosperity solely through economic indicators while ignoring subjective well-being fail to answer the deepest longings of their people.",
+          "use": "结论段·呼吁行动（Therefore + who 定语 + fail to）"
+        }
+      ]
+    },
+    {
+      "id": "B2U4",
+      "label": "第2册 Unit 4",
+      "theme": "性别、身份与文化传承",
+      "cards": [
+        {
+          "id": "B2U4-w01",
+          "cat": "word",
+          "zh": "偏见；成见",
+          "en": "bias",
+          "use": "cultural bias / unconscious bias，指媒体、教材中的倾向性",
+          "eg": "Textbooks still show a bias toward naming men when they describe discovery and public life."
+        },
+        {
+          "id": "B2U4-w02",
+          "cat": "word",
+          "zh": "歧视",
+          "en": "discrimination",
+          "use": "gender discrimination / employment discrimination，多用于问题段",
+          "eg": "Legal reform alone cannot end discrimination that is woven into ordinary routines."
+        },
+        {
+          "id": "B2U4-w03",
+          "cat": "word",
+          "zh": "（文化）遗产；传统",
+          "en": "heritage",
+          "use": "cultural heritage / safeguard a region's heritage",
+          "eg": "The villagers treat their irrigation canals as heritage rather than as an obstacle to new roads."
+        },
+        {
+          "id": "B2U4-w04",
+          "cat": "word",
+          "zh": "继承（财产、传统）；经遗传获得",
+          "en": "inherit",
+          "use": "inherit a tradition / inherit assumptions，可用于文化传承段",
+          "eg": "We inherit not only our ancestors' property but also their unexamined beliefs."
+        },
+        {
+          "id": "B2U4-w05",
+          "cat": "word",
+          "zh": "认出；识别；确认身份",
+          "en": "identify",
+          "use": "identify A as B / identify with，身份认同话题高频",
+          "eg": "Teenagers readily identify with fictional characters who defy the roles assigned to them."
+        },
+        {
+          "id": "B2U4-w06",
+          "cat": "word",
+          "zh": "本能的；直觉的；天性的",
+          "en": "instinctive",
+          "use": "an instinctive reaction / instinctive behaviour，反驳天性论时用",
+          "eg": "Caregiving was long called instinctive, although every generation must be taught how to do it."
+        },
+        {
+          "id": "B2U4-w07",
+          "cat": "word",
+          "zh": "不平等；不平衡",
+          "en": "inequality",
+          "use": "gender inequality / widening inequality",
+          "eg": "Inequality appears not only in pay but in who is expected to work without pay."
+        },
+        {
+          "id": "B2U4-w08",
+          "cat": "word",
+          "zh": "（片面的）概括；泛论",
+          "en": "generalization",
+          "use": "draw a generalization from / an over-broad generalization，让步段常用",
+          "eg": "One memorable story can tempt a writer into a generalization that the data cannot support."
+        },
+        {
+          "id": "B2U4-w09",
+          "cat": "word",
+          "zh": "模式化的思想；旧框框",
+          "en": "stereotype",
+          "use": "break a stereotype / challenge a stereotype",
+          "eg": "A stereotype survives because repeating it is cheaper than testing it."
+        },
+        {
+          "id": "B2U4-w10",
+          "cat": "word",
+          "zh": "（关于某主题的）论述；话语",
+          "en": "discourse",
+          "use": "public discourse / shape the discourse on family life",
+          "eg": "The public discourse on marriage has shifted from duty to mutual care."
+        },
+        {
+          "id": "B2U4-w11",
+          "cat": "word",
+          "zh": "人类学家",
+          "en": "anthropologist",
+          "use": "作论据来源：an anthropologist argues / fieldwork evidence",
+          "eg": "The anthropologist lived in the village for two years before drawing any conclusion about its rituals."
+        },
+        {
+          "id": "B2U4-w12",
+          "cat": "word",
+          "zh": "以实验（或经验）为依据的；实证的",
+          "en": "empirical",
+          "use": "empirical evidence / an empirical study，用于加强论证可信度",
+          "eg": "Her claim rests on empirical findings rather than on intuition about how people behave."
+        },
+        {
+          "id": "B2U4-w13",
+          "cat": "word",
+          "zh": "性别",
+          "en": "gender",
+          "use": "gender equality / the gender gap，本单元核心主语",
+          "eg": "Gender helps determine how much free time a person has, not only which job she holds."
+        },
+        {
+          "id": "B2U4-w14",
+          "cat": "word",
+          "zh": "（许多人相信的）错误观念；荒诞说法",
+          "en": "myth",
+          "use": "dispel a myth / the myth that ...，开头批驳式立意",
+          "eg": "The myth that boys outperform girls in mathematics collapses wherever girls are taught first."
+        },
+        {
+          "id": "B2U4-w15",
+          "cat": "word",
+          "zh": "趋势；趋向；倾向",
+          "en": "tendency",
+          "use": "a tendency to do sth / a growing tendency toward",
+          "eg": "There is a tendency to explain away discrimination as nothing more than personal preference."
+        },
+        {
+          "id": "B2U4-w16",
+          "cat": "word",
+          "zh": "（性格中的）特性，特质",
+          "en": "trait",
+          "use": "a personality trait / traits attributed to one sex",
+          "eg": "Few traits are evenly split between the sexes, and none defines either sex entirely."
+        },
+        {
+          "id": "B2U4-w17",
+          "cat": "word",
+          "zh": "符合逻辑；正当；有效性",
+          "en": "validity",
+          "use": "the validity of a claim / question the validity of a tradition",
+          "eg": "The validity of a custom should be judged by whether it still serves the people who keep it."
+        },
+        {
+          "id": "B2U4-w18",
+          "cat": "word",
+          "zh": "代表；代表性",
+          "en": "representation",
+          "use": "political representation / the representation of women in the media",
+          "eg": "A committee that mirrors the public is a matter of representation, not of courtesy."
+        },
+        {
+          "id": "B2U4-t01",
+          "cat": "term",
+          "zh": "性别角色（社会期待的行为模式）",
+          "en": "gender role",
+          "use": "rigid gender roles / conform to traditional gender roles",
+          "eg": "Children acquire gender roles from toys and classroom routines long before anyone lectures them."
+        },
+        {
+          "id": "B2U4-t02",
+          "cat": "term",
+          "zh": "性别刻板印象",
+          "en": "gender stereotype",
+          "use": "challenge a gender stereotype，比单个 stereotype 更正式",
+          "eg": "Challenging a gender stereotype in the classroom begins with counting who gets called on."
+        },
+        {
+          "id": "B2U4-t03",
+          "cat": "term",
+          "zh": "父权制；男性主导的社会结构",
+          "en": "patriarchy",
+          "use": "a patriarchal family / patriarchal authority，学术化表述",
+          "eg": "Patriarchy endures less through force than through habits everyone has learned to call natural."
+        },
+        {
+          "id": "B2U4-t04",
+          "cat": "term",
+          "zh": "内隐偏见；无意识的偏好",
+          "en": "implicit bias",
+          "use": "reduce / curb implicit bias，对应本单元 unconscious 概念",
+          "eg": "Hiring panels can curb implicit bias by reviewing applications with the names removed."
+        },
+        {
+          "id": "B2U4-t05",
+          "cat": "term",
+          "zh": "系统性歧视（制度层面的歧视）",
+          "en": "systemic discrimination",
+          "use": "expose systemic discrimination，比 individual bias 更有力",
+          "eg": "When identical applications succeed under a male name, the fault is systemic rather than personal."
+        },
+        {
+          "id": "B2U4-t06",
+          "cat": "term",
+          "zh": "性别薪酬差距",
+          "en": "gender pay gap",
+          "use": "narrow / close the gender pay gap，数据例证常配",
+          "eg": "The gender pay gap widens fastest in the years when a couple's first child arrives."
+        },
+        {
+          "id": "B2U4-t07",
+          "cat": "term",
+          "zh": "玻璃天花板（无形的晋升壁垒）",
+          "en": "glass ceiling",
+          "use": "break through the glass ceiling，比喻性术语",
+          "eg": "In several industries the executive suite remains the final floor of the glass ceiling."
+        },
+        {
+          "id": "B2U4-t08",
+          "cat": "term",
+          "zh": "非物质文化遗产",
+          "en": "intangible cultural heritage",
+          "use": "safeguard / list intangible cultural heritage，遗产话题必备",
+          "eg": "Inscribing the craft as intangible cultural heritage commits the state to keeping it alive."
+        },
+        {
+          "id": "B2U4-t09",
+          "cat": "term",
+          "zh": "文化认同；身份认同",
+          "en": "cultural identity",
+          "use": "shape / strengthen one's cultural identity",
+          "eg": "Migrant children often rebuild their cultural identity from the festivals their grandparents refuse to abandon."
+        },
+        {
+          "id": "B2U4-t10",
+          "cat": "term",
+          "zh": "集体记忆（群体共享的历史印象）",
+          "en": "collective memory",
+          "use": "shape collective memory / sites of collective memory",
+          "eg": "Monuments shape collective memory, which is why quarrels over them are never only about stone."
+        },
+        {
+          "id": "B2U4-t11",
+          "cat": "term",
+          "zh": "文化同化（融入主流而丧失自身特征）",
+          "en": "cultural assimilation",
+          "use": "pressure toward cultural assimilation，与 heritage 对比使用",
+          "eg": "Cultural assimilation once promised belonging while quietly demanding that minority children abandon their language."
+        },
+        {
+          "id": "B2U4-t12",
+          "cat": "term",
+          "zh": "社会流动性（阶层上下流动的可能）",
+          "en": "social mobility",
+          "use": "upward social mobility / education as a ladder of mobility",
+          "eg": "Public libraries offered the only dependable ladder of social mobility in towns built around a single mine."
+        },
+        {
+          "id": "B2U4-p01",
+          "cat": "phrase",
+          "zh": "适用于；对……有效",
+          "en": "apply to",
+          "use": "apply to sb / The rule applies to both sexes.",
+          "eg": "Arguments about talent apply to every field, yet we invoke them mainly about women."
+        },
+        {
+          "id": "B2U4-p02",
+          "cat": "phrase",
+          "zh": "处于危险中；利害攸关",
+          "en": "at stake",
+          "use": "多后置：careers at stake / so much is at stake",
+          "eg": "When a daughter's inheritance is at stake, a family's openness to change is truly tested."
+        },
+        {
+          "id": "B2U4-p03",
+          "cat": "phrase",
+          "zh": "与……一致；符合",
+          "en": "in line with",
+          "use": "keep policy in line with principle / bring A in line with B",
+          "eg": "Parental leave for fathers brings workplace rules in line with how families actually live."
+        },
+        {
+          "id": "B2U4-p04",
+          "cat": "phrase",
+          "zh": "就……而言；在……方面",
+          "en": "in terms of",
+          "use": "比较维度：in terms of income / time / access",
+          "eg": "In terms of unpaid housework, the gap between the sexes has barely moved in two decades."
+        },
+        {
+          "id": "B2U4-p05",
+          "cat": "phrase",
+          "zh": "开始受人瞩目；崭露头角",
+          "en": "rise to prominence",
+          "use": "rise to prominence as / under，写人物或群体的崛起",
+          "eg": "Several women novelists rose to prominence under male pen names, since publishers assumed a woman's name would sell fewer copies."
+        },
+        {
+          "id": "B2U4-p06",
+          "cat": "phrase",
+          "zh": "关于……；就……而言",
+          "en": "with respect to",
+          "use": "正式过渡：with respect to education / access",
+          "eg": "With respect to school access, the difference between rural boys and rural girls has narrowed sharply."
+        },
+        {
+          "id": "B2U4-p07",
+          "cat": "phrase",
+          "zh": "不惜一切代价",
+          "en": "at all costs",
+          "use": "preserve / defend sth at all costs；相关框架 at the cost of",
+          "eg": "No tradition deserves to be preserved at all costs, for some customs survive only by silencing those they harm."
+        },
+        {
+          "id": "B2U4-p08",
+          "cat": "phrase",
+          "zh": "源于；由……引起",
+          "en": "stem from",
+          "use": "因果分析首选：prejudice stems from ...",
+          "eg": "Much modern bias stems from job descriptions written for a household that no longer exists."
+        },
+        {
+          "id": "B2U4-p09",
+          "cat": "phrase",
+          "zh": "使……受到质疑，动摇……的可信度",
+          "en": "call a claim into question",
+          "use": "call sth into question / be called into question，升级 doubt",
+          "eg": "Years of fieldwork have called into question the old idea that caregiving is a woman's instinct."
+        },
+        {
+          "id": "B2U4-p10",
+          "cat": "phrase",
+          "zh": "在……之间取得平衡",
+          "en": "strike a balance between",
+          "use": "strike a balance between A and B：传统与现代、保护与利用",
+          "eg": "Old cities must strike a balance between preserving their heritage and meeting the needs of the living."
+        },
+        {
+          "id": "B2U4-p11",
+          "cat": "phrase",
+          "zh": "经得起审视与检验",
+          "en": "stand up to scrutiny",
+          "use": "论证评价：a claim / custom stands up to scrutiny",
+          "eg": "Few inherited hierarchies stand up to scrutiny once outsiders are allowed to ask why."
+        },
+        {
+          "id": "B2U4-p12",
+          "cat": "phrase",
+          "zh": "缩小……之间的差距",
+          "en": "narrow the gap between",
+          "use": "narrow the gap between A and B，对策段常用",
+          "eg": "Affordable childcare narrows the gap between what women are hired for and what they are trained for."
+        },
+        {
+          "id": "B2U4-p13",
+          "cat": "phrase",
+          "zh": "塑造（改变）对……的态度",
+          "en": "shape attitudes toward",
+          "use": "shape public attitudes toward difference / ageing，升级 influence",
+          "eg": "Commercials shape attitudes toward women more quietly than any statute changes them."
+        },
+        {
+          "id": "B2U4-p14",
+          "cat": "phrase",
+          "zh": "把……代代相传",
+          "en": "hand down",
+          "use": "hand sth down to sb；被动亦可：customs handed down for centuries",
+          "eg": "Grandmothers hand down recipes whose proportions exist nowhere but in memory."
+        },
+        {
+          "id": "B2U4-a01",
+          "cat": "advanced",
+          "zh": "使（不良现象）延续、使永存",
+          "en": "perpetuate",
+          "use": "升级 keep up / pass on：perpetuate stereotypes / inequality",
+          "eg": "Advertising that shows only mothers tidying perpetuates a rule no legislature ever wrote."
+        },
+        {
+          "id": "B2U4-a02",
+          "cat": "advanced",
+          "zh": "根深蒂固的，难以动摇的",
+          "en": "entrenched",
+          "use": "升级 deep-rooted / firmly fixed：entrenched attitudes",
+          "eg": "Decades of custom left entrenched patterns that one directive cannot unravel."
+        },
+        {
+          "id": "B2U4-a03",
+          "cat": "advanced",
+          "zh": "使边缘化，使处于无关紧要的地位",
+          "en": "marginalize",
+          "use": "升级 push aside / treat as unimportant：marginalize rural workers",
+          "eg": "A city that plans only for commuters marginalizes everyone who cannot travel at peak hours."
+        },
+        {
+          "id": "B2U4-a04",
+          "cat": "advanced",
+          "zh": "强调；凸显，使更明显",
+          "en": "underscore",
+          "use": "升级 show / stress：data underscore the point",
+          "eg": "The ministry's own figures underscore the point its spokesperson declined to make."
+        },
+        {
+          "id": "B2U4-a05",
+          "cat": "advanced",
+          "zh": "逐步拆除、废除（制度、壁垒）",
+          "en": "dismantle",
+          "use": "升级 remove / break down：dismantle barriers",
+          "eg": "Dismantling formal barriers is quicker than dismantling the customs that outlive them."
+        },
+        {
+          "id": "B2U4-a06",
+          "cat": "advanced",
+          "zh": "把……归因于……",
+          "en": "ascribe a difference to upbringing",
+          "use": "升级 put down to / blame on，语气更书面",
+          "eg": "We ascribe the pay difference to free choice, rarely asking who was taught to choose modestly."
+        },
+        {
+          "id": "B2U4-a07",
+          "cat": "advanced",
+          "zh": "同位语或插入语补充说明，合并两个短句",
+          "en": "Anthropologists, who spend years inside the communities they study, keep finding change where outsiders expected permanence.",
+          "use": "升级两个简单句并列：插入语交代身份，再给结论",
+          "eg": "George Eliot, the pen name of Mary Ann Evans, was assumed for years to belong to a man."
+        },
+        {
+          "id": "B2U4-a08",
+          "cat": "advanced",
+          "zh": "强调句型：不是……而是……",
+          "en": "It is the household ledger, not the marriage vow, that reveals who really decides.",
+          "use": "升级普通主谓句：用强调句凸显真正原因",
+          "eg": "It was not talent but access that raised one generation of women into the professions."
+        },
+        {
+          "id": "B2U4-a09",
+          "cat": "advanced",
+          "zh": "否定词置于句首引起部分倒装，加强论断",
+          "en": "Rarely has a prejudice survived the day it was named aloud.",
+          "use": "升级 Seldom / Hardly 开头的正常语序句",
+          "eg": "Not until the 1970s did historians begin to treat ordinary households as evidence."
+        },
+        {
+          "id": "B2U4-a10",
+          "cat": "advanced",
+          "zh": "过去分词短语作状语，替代原因从句",
+          "en": "Raised on tales of female passivity, girls learn discretion before they learn ambition.",
+          "use": "升级 because 从句：句首分词给背景，主句给后果",
+          "eg": "Loaded with unpaid work after dark, many caregivers never attend the meetings where decisions are made."
+        },
+        {
+          "id": "B2U4-a11",
+          "cat": "advanced",
+          "zh": "表伴随或原因的复合状语，凝练背景信息",
+          "en": "With so much heritage at stake, silence is itself a decision.",
+          "use": "with + 名词 + 补语：升级 because / while 从句",
+          "eg": "With the candidate list drawn from one half of the population, the result cannot claim to represent both."
+        },
+        {
+          "id": "B2U4-a12",
+          "cat": "advanced",
+          "zh": "让步倒装：尽管……显得……",
+          "en": "Startling as the statistics look, they persuade only once we explain what they measure.",
+          "use": "升级 Although the statistics are startling，倒装更凝练",
+          "eg": "Ancient as the custom is, it cannot claim authority merely by age."
+        },
+        {
+          "id": "B2U4-s01",
+          "cat": "sentence",
+          "zh": "性别平等与其说是立法问题，不如说是日常文化中根深蒂固的假设问题。",
+          "en": "Gender equality depends less on statutes than on the quiet assumptions embedded in everyday culture.",
+          "use": "开头点题：用 less A than B 表明立意"
+        },
+        {
+          "id": "B2U4-s02",
+          "cat": "sentence",
+          "zh": "人类学家长期以来证明：我们视为天性固定的特质往往是后天习得的。",
+          "en": "Anthropologists have long shown that what we treat as fixed by nature is often learned.",
+          "use": "引入学科视角，作第二段主题句"
+        },
+        {
+          "id": "B2U4-s03",
+          "cat": "sentence",
+          "zh": "刻板印象是思维走的捷径，而正义恰恰最容不得捷径。",
+          "en": "A stereotype is a shortcut of the mind, and justice is precisely what cannot afford shortcuts.",
+          "use": "偏见类话题的主题句，定义加评判"
+        },
+        {
+          "id": "B2U4-s04",
+          "cat": "sentence",
+          "zh": "在许多国家，女性在技能与责任完全相同的工作中所得仍明显更低。",
+          "en": "In many countries, women still earn markedly less for work that is identical in skill and responsibility.",
+          "use": "举例段：薪酬差距的事实陈述"
+        },
+        {
+          "id": "B2U4-s05",
+          "cat": "sentence",
+          "zh": "来自三十个社会的实证研究指向同一方向：家务劳动分配得极不公平。",
+          "en": "Empirical studies drawn from thirty societies point in the same direction: domestic work is divided with striking unfairness.",
+          "use": "引用研究作论据，冒号引出结论"
+        },
+        {
+          "id": "B2U4-s06",
+          "cat": "sentence",
+          "zh": "全球化让人们消费的东西趋于一致，却很少让人们自我认同的方式趋于一致。",
+          "en": "Globalization homogenizes what people consume; it rarely homogenizes how they identify themselves.",
+          "use": "对比段：分号并置两个相反判断"
+        },
+        {
+          "id": "B2U4-s07",
+          "cat": "sentence",
+          "zh": "许多职场歧视源于一个未经审视的假设：总得有人留在家里照顾孩子，而那人通常是女性。",
+          "en": "Much workplace discrimination stems from an unexamined assumption: that someone, usually a woman, will always be the one who stays home.",
+          "use": "因果段：揭示隐性成因"
+        },
+        {
+          "id": "B2U4-s08",
+          "cat": "sentence",
+          "zh": "遗产不是博物馆里的展品，而是祖先与后代之间一场持续进行的对话。",
+          "en": "Heritage is not a museum piece but a living dialogue between ancestors and their descendants.",
+          "use": "文化遗产段主题句：not A but B"
+        },
+        {
+          "id": "B2U4-s09",
+          "cat": "sentence",
+          "zh": "承认生理差异，并不等于把这些差异当作对个人前途的判决。",
+          "en": "Acknowledging biological differences does not license treating them as a verdict on individual opportunity.",
+          "use": "让步后立论，适合反驳段结尾"
+        },
+        {
+          "id": "B2U4-s10",
+          "cat": "sentence",
+          "zh": "修订教材以反映女性的成就，能让教育与我们希望建成的社会保持一致。",
+          "en": "Revising textbooks to reflect women's achievements puts education in line with the society we claim to want.",
+          "use": "对策段：动名词开头，给出可行措施"
+        },
+        {
+          "id": "B2U4-s11",
+          "cat": "sentence",
+          "zh": "不加解释地原样传承仪式，文化会失去感召力；彻底抛弃仪式，社会会失去记忆。",
+          "en": "A culture that hands its rituals down without explanation loses their authority; one that discards them entirely loses its memory.",
+          "use": "结论前段：两极对照，引出折中主张"
+        },
+        {
+          "id": "B2U4-s12",
+          "cat": "sentence",
+          "zh": "衡量一种文明的尺度，不是它多响亮地宣称平等，而是它多安静地兑现平等。",
+          "en": "The measure of a civilization is not how loudly it proclaims equality, but how quietly it delivers it.",
+          "use": "结尾升华：对称结构收束全文"
+        }
+      ]
+    }
+  ],
+  "total": 272
+}

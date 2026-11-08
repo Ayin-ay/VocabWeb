@@ -1,0 +1,538 @@
+{
+  "unit": "B2U4",
+  "theme": "性别、身份与文化传承",
+  "cards": [
+    {
+      "id": "B2U4-w01",
+      "cat": "word",
+      "zh": "偏见；成见",
+      "en": "bias",
+      "use": "cultural bias / unconscious bias，指媒体、教材中的倾向性",
+      "eg": "Textbooks still show a bias toward naming men when they describe discovery and public life."
+    },
+    {
+      "id": "B2U4-w02",
+      "cat": "word",
+      "zh": "歧视",
+      "en": "discrimination",
+      "use": "gender discrimination / employment discrimination，多用于问题段",
+      "eg": "Legal reform alone cannot end discrimination that is woven into ordinary routines."
+    },
+    {
+      "id": "B2U4-w03",
+      "cat": "word",
+      "zh": "（文化）遗产；传统",
+      "en": "heritage",
+      "use": "cultural heritage / safeguard a region's heritage",
+      "eg": "The villagers treat their irrigation canals as heritage rather than as an obstacle to new roads."
+    },
+    {
+      "id": "B2U4-w04",
+      "cat": "word",
+      "zh": "继承（财产、传统）；经遗传获得",
+      "en": "inherit",
+      "use": "inherit a tradition / inherit assumptions，可用于文化传承段",
+      "eg": "We inherit not only our ancestors' property but also their unexamined beliefs."
+    },
+    {
+      "id": "B2U4-w05",
+      "cat": "word",
+      "zh": "认出；识别；确认身份",
+      "en": "identify",
+      "use": "identify A as B / identify with，身份认同话题高频",
+      "eg": "Teenagers readily identify with fictional characters who defy the roles assigned to them."
+    },
+    {
+      "id": "B2U4-w06",
+      "cat": "word",
+      "zh": "本能的；直觉的；天性的",
+      "en": "instinctive",
+      "use": "an instinctive reaction / instinctive behaviour，反驳天性论时用",
+      "eg": "Caregiving was long called instinctive, although every generation must be taught how to do it."
+    },
+    {
+      "id": "B2U4-w07",
+      "cat": "word",
+      "zh": "不平等；不平衡",
+      "en": "inequality",
+      "use": "gender inequality / widening inequality",
+      "eg": "Inequality appears not only in pay but in who is expected to work without pay."
+    },
+    {
+      "id": "B2U4-w08",
+      "cat": "word",
+      "zh": "（片面的）概括；泛论",
+      "en": "generalization",
+      "use": "draw a generalization from / an over-broad generalization，让步段常用",
+      "eg": "One memorable story can tempt a writer into a generalization that the data cannot support."
+    },
+    {
+      "id": "B2U4-w09",
+      "cat": "word",
+      "zh": "模式化的思想；旧框框",
+      "en": "stereotype",
+      "use": "break a stereotype / challenge a stereotype",
+      "eg": "A stereotype survives because repeating it is cheaper than testing it."
+    },
+    {
+      "id": "B2U4-w10",
+      "cat": "word",
+      "zh": "（关于某主题的）论述；话语",
+      "en": "discourse",
+      "use": "public discourse / shape the discourse on family life",
+      "eg": "The public discourse on marriage has shifted from duty to mutual care."
+    },
+    {
+      "id": "B2U4-w11",
+      "cat": "word",
+      "zh": "人类学家",
+      "en": "anthropologist",
+      "use": "作论据来源：an anthropologist argues / fieldwork evidence",
+      "eg": "The anthropologist lived in the village for two years before drawing any conclusion about its rituals."
+    },
+    {
+      "id": "B2U4-w12",
+      "cat": "word",
+      "zh": "以实验（或经验）为依据的；实证的",
+      "en": "empirical",
+      "use": "empirical evidence / an empirical study，用于加强论证可信度",
+      "eg": "Her claim rests on empirical findings rather than on intuition about how people behave."
+    },
+    {
+      "id": "B2U4-w13",
+      "cat": "word",
+      "zh": "性别",
+      "en": "gender",
+      "use": "gender equality / the gender gap，本单元核心主语",
+      "eg": "Gender helps determine how much free time a person has, not only which job she holds."
+    },
+    {
+      "id": "B2U4-w14",
+      "cat": "word",
+      "zh": "（许多人相信的）错误观念；荒诞说法",
+      "en": "myth",
+      "use": "dispel a myth / the myth that ...，开头批驳式立意",
+      "eg": "The myth that boys outperform girls in mathematics collapses wherever girls are taught first."
+    },
+    {
+      "id": "B2U4-w15",
+      "cat": "word",
+      "zh": "趋势；趋向；倾向",
+      "en": "tendency",
+      "use": "a tendency to do sth / a growing tendency toward",
+      "eg": "There is a tendency to explain away discrimination as nothing more than personal preference."
+    },
+    {
+      "id": "B2U4-w16",
+      "cat": "word",
+      "zh": "（性格中的）特性，特质",
+      "en": "trait",
+      "use": "a personality trait / traits attributed to one sex",
+      "eg": "Few traits are evenly split between the sexes, and none defines either sex entirely."
+    },
+    {
+      "id": "B2U4-w17",
+      "cat": "word",
+      "zh": "符合逻辑；正当；有效性",
+      "en": "validity",
+      "use": "the validity of a claim / question the validity of a tradition",
+      "eg": "The validity of a custom should be judged by whether it still serves the people who keep it."
+    },
+    {
+      "id": "B2U4-w18",
+      "cat": "word",
+      "zh": "代表；代表性",
+      "en": "representation",
+      "use": "political representation / the representation of women in the media",
+      "eg": "A committee that mirrors the public is a matter of representation, not of courtesy."
+    },
+    {
+      "id": "B2U4-t01",
+      "cat": "term",
+      "zh": "性别角色（社会期待的行为模式）",
+      "en": "gender role",
+      "use": "rigid gender roles / conform to traditional gender roles",
+      "eg": "Children acquire gender roles from toys and classroom routines long before anyone lectures them."
+    },
+    {
+      "id": "B2U4-t02",
+      "cat": "term",
+      "zh": "性别刻板印象",
+      "en": "gender stereotype",
+      "use": "challenge a gender stereotype，比单个 stereotype 更正式",
+      "eg": "Challenging a gender stereotype in the classroom begins with counting who gets called on."
+    },
+    {
+      "id": "B2U4-t03",
+      "cat": "term",
+      "zh": "父权制；男性主导的社会结构",
+      "en": "patriarchy",
+      "use": "a patriarchal family / patriarchal authority，学术化表述",
+      "eg": "Patriarchy endures less through force than through habits everyone has learned to call natural."
+    },
+    {
+      "id": "B2U4-t04",
+      "cat": "term",
+      "zh": "内隐偏见；无意识的偏好",
+      "en": "implicit bias",
+      "use": "reduce / curb implicit bias，对应本单元 unconscious 概念",
+      "eg": "Hiring panels can curb implicit bias by reviewing applications with the names removed."
+    },
+    {
+      "id": "B2U4-t05",
+      "cat": "term",
+      "zh": "系统性歧视（制度层面的歧视）",
+      "en": "systemic discrimination",
+      "use": "expose systemic discrimination，比 individual bias 更有力",
+      "eg": "When identical applications succeed under a male name, the fault is systemic rather than personal."
+    },
+    {
+      "id": "B2U4-t06",
+      "cat": "term",
+      "zh": "性别薪酬差距",
+      "en": "gender pay gap",
+      "use": "narrow / close the gender pay gap，数据例证常配",
+      "eg": "The gender pay gap widens fastest in the years when a couple's first child arrives."
+    },
+    {
+      "id": "B2U4-t07",
+      "cat": "term",
+      "zh": "玻璃天花板（无形的晋升壁垒）",
+      "en": "glass ceiling",
+      "use": "break through the glass ceiling，比喻性术语",
+      "eg": "In several industries the executive suite remains the final floor of the glass ceiling."
+    },
+    {
+      "id": "B2U4-t08",
+      "cat": "term",
+      "zh": "非物质文化遗产",
+      "en": "intangible cultural heritage",
+      "use": "safeguard / list intangible cultural heritage，遗产话题必备",
+      "eg": "Inscribing the craft as intangible cultural heritage commits the state to keeping it alive."
+    },
+    {
+      "id": "B2U4-t09",
+      "cat": "term",
+      "zh": "文化认同；身份认同",
+      "en": "cultural identity",
+      "use": "shape / strengthen one's cultural identity",
+      "eg": "Migrant children often rebuild their cultural identity from the festivals their grandparents refuse to abandon."
+    },
+    {
+      "id": "B2U4-t10",
+      "cat": "term",
+      "zh": "集体记忆（群体共享的历史印象）",
+      "en": "collective memory",
+      "use": "shape collective memory / sites of collective memory",
+      "eg": "Monuments shape collective memory, which is why quarrels over them are never only about stone."
+    },
+    {
+      "id": "B2U4-t11",
+      "cat": "term",
+      "zh": "文化同化（融入主流而丧失自身特征）",
+      "en": "cultural assimilation",
+      "use": "pressure toward cultural assimilation，与 heritage 对比使用",
+      "eg": "Cultural assimilation once promised belonging while quietly demanding that minority children abandon their language."
+    },
+    {
+      "id": "B2U4-t12",
+      "cat": "term",
+      "zh": "社会流动性（阶层上下流动的可能）",
+      "en": "social mobility",
+      "use": "upward social mobility / education as a ladder of mobility",
+      "eg": "Public libraries offered the only dependable ladder of social mobility in towns built around a single mine."
+    },
+    {
+      "id": "B2U4-p01",
+      "cat": "phrase",
+      "zh": "适用于；对……有效",
+      "en": "apply to",
+      "use": "apply to sb / The rule applies to both sexes.",
+      "eg": "Arguments about talent apply to every field, yet we invoke them mainly about women."
+    },
+    {
+      "id": "B2U4-p02",
+      "cat": "phrase",
+      "zh": "处于危险中；利害攸关",
+      "en": "at stake",
+      "use": "多后置：careers at stake / so much is at stake",
+      "eg": "When a daughter's inheritance is at stake, a family's openness to change is truly tested."
+    },
+    {
+      "id": "B2U4-p03",
+      "cat": "phrase",
+      "zh": "与……一致；符合",
+      "en": "in line with",
+      "use": "keep policy in line with principle / bring A in line with B",
+      "eg": "Parental leave for fathers brings workplace rules in line with how families actually live."
+    },
+    {
+      "id": "B2U4-p04",
+      "cat": "phrase",
+      "zh": "就……而言；在……方面",
+      "en": "in terms of",
+      "use": "比较维度：in terms of income / time / access",
+      "eg": "In terms of unpaid housework, the gap between the sexes has barely moved in two decades."
+    },
+    {
+      "id": "B2U4-p05",
+      "cat": "phrase",
+      "zh": "开始受人瞩目；崭露头角",
+      "en": "rise to prominence",
+      "use": "rise to prominence as / under，写人物或群体的崛起",
+      "eg": "Several women novelists rose to prominence under male pen names, since publishers assumed a woman's name would sell fewer copies."
+    },
+    {
+      "id": "B2U4-p06",
+      "cat": "phrase",
+      "zh": "关于……；就……而言",
+      "en": "with respect to",
+      "use": "正式过渡：with respect to education / access",
+      "eg": "With respect to school access, the difference between rural boys and rural girls has narrowed sharply."
+    },
+    {
+      "id": "B2U4-p07",
+      "cat": "phrase",
+      "zh": "不惜一切代价",
+      "en": "at all costs",
+      "use": "preserve / defend sth at all costs；相关框架 at the cost of",
+      "eg": "No tradition deserves to be preserved at all costs, for some customs survive only by silencing those they harm."
+    },
+    {
+      "id": "B2U4-p08",
+      "cat": "phrase",
+      "zh": "源于；由……引起",
+      "en": "stem from",
+      "use": "因果分析首选：prejudice stems from ...",
+      "eg": "Much modern bias stems from job descriptions written for a household that no longer exists."
+    },
+    {
+      "id": "B2U4-p09",
+      "cat": "phrase",
+      "zh": "使……受到质疑，动摇……的可信度",
+      "en": "call a claim into question",
+      "use": "call sth into question / be called into question，升级 doubt",
+      "eg": "Years of fieldwork have called into question the old idea that caregiving is a woman's instinct."
+    },
+    {
+      "id": "B2U4-p10",
+      "cat": "phrase",
+      "zh": "在……之间取得平衡",
+      "en": "strike a balance between",
+      "use": "strike a balance between A and B：传统与现代、保护与利用",
+      "eg": "Old cities must strike a balance between preserving their heritage and meeting the needs of the living."
+    },
+    {
+      "id": "B2U4-p11",
+      "cat": "phrase",
+      "zh": "经得起审视与检验",
+      "en": "stand up to scrutiny",
+      "use": "论证评价：a claim / custom stands up to scrutiny",
+      "eg": "Few inherited hierarchies stand up to scrutiny once outsiders are allowed to ask why."
+    },
+    {
+      "id": "B2U4-p12",
+      "cat": "phrase",
+      "zh": "缩小……之间的差距",
+      "en": "narrow the gap between",
+      "use": "narrow the gap between A and B，对策段常用",
+      "eg": "Affordable childcare narrows the gap between what women are hired for and what they are trained for."
+    },
+    {
+      "id": "B2U4-p13",
+      "cat": "phrase",
+      "zh": "塑造（改变）对……的态度",
+      "en": "shape attitudes toward",
+      "use": "shape public attitudes toward difference / ageing，升级 influence",
+      "eg": "Commercials shape attitudes toward women more quietly than any statute changes them."
+    },
+    {
+      "id": "B2U4-p14",
+      "cat": "phrase",
+      "zh": "把……代代相传",
+      "en": "hand down",
+      "use": "hand sth down to sb；被动亦可：customs handed down for centuries",
+      "eg": "Grandmothers hand down recipes whose proportions exist nowhere but in memory."
+    },
+    {
+      "id": "B2U4-a01",
+      "cat": "advanced",
+      "zh": "使（不良现象）延续、使永存",
+      "en": "perpetuate",
+      "use": "升级 keep up / pass on：perpetuate stereotypes / inequality",
+      "eg": "Advertising that shows only mothers tidying perpetuates a rule no legislature ever wrote."
+    },
+    {
+      "id": "B2U4-a02",
+      "cat": "advanced",
+      "zh": "根深蒂固的，难以动摇的",
+      "en": "entrenched",
+      "use": "升级 deep-rooted / firmly fixed：entrenched attitudes",
+      "eg": "Decades of custom left entrenched patterns that one directive cannot unravel."
+    },
+    {
+      "id": "B2U4-a03",
+      "cat": "advanced",
+      "zh": "使边缘化，使处于无关紧要的地位",
+      "en": "marginalize",
+      "use": "升级 push aside / treat as unimportant：marginalize rural workers",
+      "eg": "A city that plans only for commuters marginalizes everyone who cannot travel at peak hours."
+    },
+    {
+      "id": "B2U4-a04",
+      "cat": "advanced",
+      "zh": "强调；凸显，使更明显",
+      "en": "underscore",
+      "use": "升级 show / stress：data underscore the point",
+      "eg": "The ministry's own figures underscore the point its spokesperson declined to make."
+    },
+    {
+      "id": "B2U4-a05",
+      "cat": "advanced",
+      "zh": "逐步拆除、废除（制度、壁垒）",
+      "en": "dismantle",
+      "use": "升级 remove / break down：dismantle barriers",
+      "eg": "Dismantling formal barriers is quicker than dismantling the customs that outlive them."
+    },
+    {
+      "id": "B2U4-a06",
+      "cat": "advanced",
+      "zh": "把……归因于……",
+      "en": "ascribe a difference to upbringing",
+      "use": "升级 put down to / blame on，语气更书面",
+      "eg": "We ascribe the pay difference to free choice, rarely asking who was taught to choose modestly."
+    },
+    {
+      "id": "B2U4-a07",
+      "cat": "advanced",
+      "zh": "同位语或插入语补充说明，合并两个短句",
+      "en": "Anthropologists, who spend years inside the communities they study, keep finding change where outsiders expected permanence.",
+      "use": "升级两个简单句并列：插入语交代身份，再给结论",
+      "eg": "George Eliot, the pen name of Mary Ann Evans, was assumed for years to belong to a man."
+    },
+    {
+      "id": "B2U4-a08",
+      "cat": "advanced",
+      "zh": "强调句型：不是……而是……",
+      "en": "It is the household ledger, not the marriage vow, that reveals who really decides.",
+      "use": "升级普通主谓句：用强调句凸显真正原因",
+      "eg": "It was not talent but access that raised one generation of women into the professions."
+    },
+    {
+      "id": "B2U4-a09",
+      "cat": "advanced",
+      "zh": "否定词置于句首引起部分倒装，加强论断",
+      "en": "Rarely has a prejudice survived the day it was named aloud.",
+      "use": "升级 Seldom / Hardly 开头的正常语序句",
+      "eg": "Not until the 1970s did historians begin to treat ordinary households as evidence."
+    },
+    {
+      "id": "B2U4-a10",
+      "cat": "advanced",
+      "zh": "过去分词短语作状语，替代原因从句",
+      "en": "Raised on tales of female passivity, girls learn discretion before they learn ambition.",
+      "use": "升级 because 从句：句首分词给背景，主句给后果",
+      "eg": "Loaded with unpaid work after dark, many caregivers never attend the meetings where decisions are made."
+    },
+    {
+      "id": "B2U4-a11",
+      "cat": "advanced",
+      "zh": "表伴随或原因的复合状语，凝练背景信息",
+      "en": "With so much heritage at stake, silence is itself a decision.",
+      "use": "with + 名词 + 补语：升级 because / while 从句",
+      "eg": "With the candidate list drawn from one half of the population, the result cannot claim to represent both."
+    },
+    {
+      "id": "B2U4-a12",
+      "cat": "advanced",
+      "zh": "让步倒装：尽管……显得……",
+      "en": "Startling as the statistics look, they persuade only once we explain what they measure.",
+      "use": "升级 Although the statistics are startling，倒装更凝练",
+      "eg": "Ancient as the custom is, it cannot claim authority merely by age."
+    },
+    {
+      "id": "B2U4-s01",
+      "cat": "sentence",
+      "zh": "性别平等与其说是立法问题，不如说是日常文化中根深蒂固的假设问题。",
+      "en": "Gender equality depends less on statutes than on the quiet assumptions embedded in everyday culture.",
+      "use": "开头点题：用 less A than B 表明立意"
+    },
+    {
+      "id": "B2U4-s02",
+      "cat": "sentence",
+      "zh": "人类学家长期以来证明：我们视为天性固定的特质往往是后天习得的。",
+      "en": "Anthropologists have long shown that what we treat as fixed by nature is often learned.",
+      "use": "引入学科视角，作第二段主题句"
+    },
+    {
+      "id": "B2U4-s03",
+      "cat": "sentence",
+      "zh": "刻板印象是思维走的捷径，而正义恰恰最容不得捷径。",
+      "en": "A stereotype is a shortcut of the mind, and justice is precisely what cannot afford shortcuts.",
+      "use": "偏见类话题的主题句，定义加评判"
+    },
+    {
+      "id": "B2U4-s04",
+      "cat": "sentence",
+      "zh": "在许多国家，女性在技能与责任完全相同的工作中所得仍明显更低。",
+      "en": "In many countries, women still earn markedly less for work that is identical in skill and responsibility.",
+      "use": "举例段：薪酬差距的事实陈述"
+    },
+    {
+      "id": "B2U4-s05",
+      "cat": "sentence",
+      "zh": "来自三十个社会的实证研究指向同一方向：家务劳动分配得极不公平。",
+      "en": "Empirical studies drawn from thirty societies point in the same direction: domestic work is divided with striking unfairness.",
+      "use": "引用研究作论据，冒号引出结论"
+    },
+    {
+      "id": "B2U4-s06",
+      "cat": "sentence",
+      "zh": "全球化让人们消费的东西趋于一致，却很少让人们自我认同的方式趋于一致。",
+      "en": "Globalization homogenizes what people consume; it rarely homogenizes how they identify themselves.",
+      "use": "对比段：分号并置两个相反判断"
+    },
+    {
+      "id": "B2U4-s07",
+      "cat": "sentence",
+      "zh": "许多职场歧视源于一个未经审视的假设：总得有人留在家里照顾孩子，而那人通常是女性。",
+      "en": "Much workplace discrimination stems from an unexamined assumption: that someone, usually a woman, will always be the one who stays home.",
+      "use": "因果段：揭示隐性成因"
+    },
+    {
+      "id": "B2U4-s08",
+      "cat": "sentence",
+      "zh": "遗产不是博物馆里的展品，而是祖先与后代之间一场持续进行的对话。",
+      "en": "Heritage is not a museum piece but a living dialogue between ancestors and their descendants.",
+      "use": "文化遗产段主题句：not A but B"
+    },
+    {
+      "id": "B2U4-s09",
+      "cat": "sentence",
+      "zh": "承认生理差异，并不等于把这些差异当作对个人前途的判决。",
+      "en": "Acknowledging biological differences does not license treating them as a verdict on individual opportunity.",
+      "use": "让步后立论，适合反驳段结尾"
+    },
+    {
+      "id": "B2U4-s10",
+      "cat": "sentence",
+      "zh": "修订教材以反映女性的成就，能让教育与我们希望建成的社会保持一致。",
+      "en": "Revising textbooks to reflect women's achievements puts education in line with the society we claim to want.",
+      "use": "对策段：动名词开头，给出可行措施"
+    },
+    {
+      "id": "B2U4-s11",
+      "cat": "sentence",
+      "zh": "不加解释地原样传承仪式，文化会失去感召力；彻底抛弃仪式，社会会失去记忆。",
+      "en": "A culture that hands its rituals down without explanation loses their authority; one that discards them entirely loses its memory.",
+      "use": "结论前段：两极对照，引出折中主张"
+    },
+    {
+      "id": "B2U4-s12",
+      "cat": "sentence",
+      "zh": "衡量一种文明的尺度，不是它多响亮地宣称平等，而是它多安静地兑现平等。",
+      "en": "The measure of a civilization is not how loudly it proclaims equality, but how quietly it delivers it.",
+      "use": "结尾升华：对称结构收束全文"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+B1U1 words:63 phrases:19 names:3
+B1U2 words:66 phrases:12 names:8
+B1U3 words:56 phrases:9
+B1U4 words:60 phrases:9 names:1
+B2U1 words:80 phrases:9 names:5
+B2U2 words:83 phrases:18 names:17
+B2U3 words:72 phrases:12
+B2U4 words:62 phrases:8 names:7
+
+total=679
+pos=a. a. & ad. a. / n. ad. ad. / a. ad./prep. n. n. / v. n. / vi. n. / vt. prep. prep. / ad. & prep. v. v. / a. v. / n. vi. vi. / n. vi. / v. vi. / vt. vt. vt. / n. vt. / v. vt. / vi.
+
+skipped=1
+B2U1 words #67：simultaneously (原图无，跳过)
+
+problems=0
+

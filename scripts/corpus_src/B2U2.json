@@ -1,0 +1,538 @@
+{
+  "unit": "B2U2",
+  "theme": "旅行与行走",
+  "cards": [
+    {
+      "id": "B2U2-w01",
+      "cat": "word",
+      "zh": "漫步；四处游走",
+      "en": "roam",
+      "use": "roam the cobbled streets / roam freely，写远足见闻的首选动词",
+      "eg": "On my first morning in Copenhagen I simply roamed the cobbled streets beside the harbour, following no map at all."
+    },
+    {
+      "id": "B2U2-w02",
+      "cat": "word",
+      "zh": "珍视；珍爱",
+      "en": "cherish",
+      "use": "cherish a memory / cherish local traditions，观点句与结论段常用",
+      "eg": "We should cherish the quiet villages before crowds and commerce change them for good."
+    },
+    {
+      "id": "B2U2-w03",
+      "cat": "word",
+      "zh": "持久的；经得起时间考验的",
+      "en": "enduring",
+      "use": "an enduring appeal / enduring value，常与 charm, influence 搭配",
+      "eg": "Fossils have an enduring power: they make us feel how short a single life is."
+    },
+    {
+      "id": "B2U2-w04",
+      "cat": "word",
+      "zh": "迷住；吸引力，魅力",
+      "en": "charm",
+      "use": "vt. charm visitors / n. the charm of an old town",
+      "eg": "The charm of a small city often lies in things no guidebook thinks worth listing."
+    },
+    {
+      "id": "B2U2-w05",
+      "cat": "word",
+      "zh": "领会；理解力",
+      "en": "grasp",
+      "use": "grasp why... / come to a grasp of，写旅行所得",
+      "eg": "Only after walking the same path did I begin to grasp why the poet loved these hills."
+    },
+    {
+      "id": "B2U2-w06",
+      "cat": "word",
+      "zh": "冲动；一时的念头",
+      "en": "impulse",
+      "use": "an impulse to travel / out of impulse，起因段用",
+      "eg": "Booking that ticket was pure impulse, and the trip turned out to be the best I have ever taken."
+    },
+    {
+      "id": "B2U2-w07",
+      "cat": "word",
+      "zh": "过渡；转变",
+      "en": "transition",
+      "use": "the transition from A to B，写城市到乡野的心态变化",
+      "eg": "Hiking forces a slow transition from the noise of the city to the rhythms of the countryside."
+    },
+    {
+      "id": "B2U2-w08",
+      "cat": "word",
+      "zh": "使最大化；充分利用",
+      "en": "maximize",
+      "use": "maximize the benefit of a journey，与 minimize 对举",
+      "eg": "Backpackers often stay two nights in one town to maximize what they can learn about it."
+    },
+    {
+      "id": "B2U2-w09",
+      "cat": "word",
+      "zh": "危及；使处于险境",
+      "en": "endanger",
+      "use": "endanger wildlife / endanger local culture，问题段",
+      "eg": "Feeding wild goats near the trail may seem kind, but it endangers both the animals and the hikers who come too close."
+    },
+    {
+      "id": "B2U2-w10",
+      "cat": "word",
+      "zh": "无知的；不了解的",
+      "en": "ignorant",
+      "use": "be ignorant of local customs / tourists ignorant of...",
+      "eg": "Tourists ignorant of local customs often mistake a quiet village for an empty one."
+    },
+    {
+      "id": "B2U2-w11",
+      "cat": "word",
+      "zh": "随意的；不经意的",
+      "en": "casual",
+      "use": "a casual conversation / a casual glance，写偶遇",
+      "eg": "A casual conversation with a chambermaid in Oslo taught me more about the city than any museum had."
+    },
+    {
+      "id": "B2U2-w12",
+      "cat": "word",
+      "zh": "深思熟虑的；体贴的",
+      "en": "thoughtful",
+      "use": "a thoughtful traveler / a thoughtful account，建议段",
+      "eg": "A thoughtful traveler thinks about the footprint a trip leaves behind as well as the photographs it produces."
+    },
+    {
+      "id": "B2U2-w13",
+      "cat": "word",
+      "zh": "热情的；热衷的",
+      "en": "passionate",
+      "use": "be passionate about sth.，写兴趣与志向",
+      "eg": "She became so passionate about fossils that every weekend found her on a different riverbank."
+    },
+    {
+      "id": "B2U2-w14",
+      "cat": "word",
+      "zh": "画速写；概述，草图",
+      "en": "sketch",
+      "use": "sketch a scene / a rough sketch of，替换 draw",
+      "eg": "He stopped every hour to sketch a birch or a roofline, and the walk quietly became a lesson in looking."
+    },
+    {
+      "id": "B2U2-w15",
+      "cat": "word",
+      "zh": "快照；掠影，简要描述",
+      "en": "snapshot",
+      "use": "a snapshot of daily life，比喻用法比本义更出彩",
+      "eg": "The night market in Ho Chi Minh City is a snapshot of how ordinary people feed a city of ten million."
+    },
+    {
+      "id": "B2U2-w16",
+      "cat": "word",
+      "zh": "未经过滤的；原汁原味的",
+      "en": "unfiltered",
+      "use": "unfiltered reality / an unfiltered picture，对比社交媒体",
+      "eg": "Living with a family in a Russian village for a week gives you an unfiltered picture that no tour bus can offer."
+    },
+    {
+      "id": "B2U2-w17",
+      "cat": "word",
+      "zh": "摄影；摄影术",
+      "en": "photography",
+      "use": "travel / landscape photography，讨论拍照与体验之争",
+      "eg": "Landscape photography made this muddy valley famous, although few visitors ever look closely at the rocks themselves."
+    },
+    {
+      "id": "B2U2-w18",
+      "cat": "word",
+      "zh": "（迅速而吃力地）爬；争夺",
+      "en": "scramble",
+      "use": "scramble up a rocky slope，远足叙事的动作词",
+      "eg": "We scrambled up the last slope as the fog lifted, and the whole valley opened out beneath us."
+    },
+    {
+      "id": "B2U2-t01",
+      "cat": "term",
+      "zh": "化石",
+      "en": "fossil",
+      "use": "fossil beds / a fossil of...，自然与时间话题的论据",
+      "eg": "In Oregon, fossils of ancient forests lie preserved in layers of hardened volcanic ash."
+    },
+    {
+      "id": "B2U2-t02",
+      "cat": "term",
+      "zh": "化石记录",
+      "en": "the fossil record",
+      "use": "the fossil record shows...，论证深时与变迁",
+      "eg": "The fossil record at John Day preserves, layer by layer, tens of millions of years of climate change."
+    },
+    {
+      "id": "B2U2-t03",
+      "cat": "term",
+      "zh": "地层；地质层",
+      "en": "geological layer",
+      "use": "read the layers / laid down over centuries，比 rock 更正式",
+      "eg": "Each geological layer on the cliff marks a different age, and together they read like a diary of the earth."
+    },
+    {
+      "id": "B2U2-t04",
+      "cat": "term",
+      "zh": "国家遗址；国家纪念地",
+      "en": "national monument",
+      "use": "protected as a national monument，谈保护与开发",
+      "eg": "Because the site is managed as a national monument, visitors may photograph the fossils but may not take them home."
+    },
+    {
+      "id": "B2U2-t05",
+      "cat": "term",
+      "zh": "自然遗产",
+      "en": "natural heritage",
+      "use": "a shared natural heritage，升华段的世界视角",
+      "eg": "The loss of one species is a wound to the natural heritage of the whole planet."
+    },
+    {
+      "id": "B2U2-t06",
+      "cat": "term",
+      "zh": "文化遗产",
+      "en": "cultural heritage",
+      "use": "safeguard cultural heritage，与 natural heritage 对举",
+      "eg": "The old quarter of a city like Vidin is cultural heritage; once demolished, it cannot be rebuilt."
+    },
+    {
+      "id": "B2U2-t07",
+      "cat": "term",
+      "zh": "保护；保存",
+      "en": "preservation",
+      "use": "the preservation of old towns，比 protection 更专指原物留存",
+      "eg": "The preservation of the windmill cost less than a replica would and kept its original timber."
+    },
+    {
+      "id": "B2U2-t08",
+      "cat": "term",
+      "zh": "生态旅游",
+      "en": "ecotourism",
+      "use": "develop / earn a living through ecotourism，解决方案段",
+      "eg": "Villages beside the monument now earn a living through ecotourism rather than cutting timber."
+    },
+    {
+      "id": "B2U2-t09",
+      "cat": "term",
+      "zh": "（景区的）环境承载力",
+      "en": "carrying capacity",
+      "use": "exceed the carrying capacity of...，论证过度旅游",
+      "eg": "When daily visitors exceed the carrying capacity of the trail, the meadow beside it begins to die."
+    },
+    {
+      "id": "B2U2-t10",
+      "cat": "term",
+      "zh": "可持续旅游",
+      "en": "sustainable tourism",
+      "use": "a model of sustainable tourism，结论段关键词",
+      "eg": "Sustainable tourism means that a town can welcome a million guests a year without losing the character that drew them."
+    },
+    {
+      "id": "B2U2-t11",
+      "cat": "term",
+      "zh": "碳足迹；碳排放量",
+      "en": "carbon footprint",
+      "use": "cut / leave a smaller carbon footprint，交通方式对比",
+      "eg": "A night train leaves a far smaller carbon footprint than the same journey made by plane."
+    },
+    {
+      "id": "B2U2-t12",
+      "cat": "term",
+      "zh": "商业化",
+      "en": "commercialization",
+      "use": "the commercialization of historic streets，批判段",
+      "eg": "The commercialization of the old quarter turned family workshops into shops selling identical souvenirs."
+    },
+    {
+      "id": "B2U2-p01",
+      "cat": "phrase",
+      "zh": "就我而言；在我看来",
+      "en": "as far as I am concerned",
+      "use": "开头亮观点，替换 I think；sb. 可换成 he / they",
+      "eg": "As far as I am concerned, a weekend in the hills does more for a tired student than a week at the seaside."
+    },
+    {
+      "id": "B2U2-p02",
+      "cat": "phrase",
+      "zh": "使回忆起；带回",
+      "en": "bring back",
+      "use": "bring back memories / bring back stories，由景生情",
+      "eg": "The smell of chestnuts roasting beside a roadside stall in Russia brought back my childhood winters."
+    },
+    {
+      "id": "B2U2-p03",
+      "cat": "phrase",
+      "zh": "步某人的后尘；继承其事业",
+      "en": "follow in one's footsteps",
+      "use": "follow in a parent's / a teacher's footsteps，写传承",
+      "eg": "Her grandfather walked these trails for forty years, and now she is following in his footsteps as a park guide."
+    },
+    {
+      "id": "B2U2-p04",
+      "cat": "phrase",
+      "zh": "（消息）传开",
+      "en": "get around",
+      "use": "word / news got around，写秘境被游客发现",
+      "eg": "News of the fossil find soon got around, and a road that had been empty for a decade began to fill with cars."
+    },
+    {
+      "id": "B2U2-p05",
+      "cat": "phrase",
+      "zh": "起步成功；取得进展",
+      "en": "get off the ground",
+      "use": "a plan / a project gets off the ground，建议与成效段",
+      "eg": "The village's first hiking festival finally got off the ground, thanks to two retired teachers and a borrowed tent."
+    },
+    {
+      "id": "B2U2-p06",
+      "cat": "phrase",
+      "zh": "掌握…的窍门",
+      "en": "get the hang of something",
+      "use": "get the hang of doing sth.，写学习过程与适应期",
+      "eg": "It took me two days to get the hang of reading the layers in the cliff; after that, the rocks seemed to talk."
+    },
+    {
+      "id": "B2U2-p07",
+      "cat": "phrase",
+      "zh": "实时地；当场",
+      "en": "in real time",
+      "use": "watch / identify sth. in real time，写科技与导览",
+      "eg": "The guide used an app that identified each fossil in real time, so even small children felt like researchers."
+    },
+    {
+      "id": "B2U2-p08",
+      "cat": "phrase",
+      "zh": "最后；终于",
+      "en": "in the end",
+      "use": "结尾收束，替换 finally，语气更有总结感",
+      "eg": "We argued over the map for an hour, and in the end the farmer we asked simply walked us to the gate."
+    },
+    {
+      "id": "B2U2-p09",
+      "cat": "phrase",
+      "zh": "偶然发现；偶遇",
+      "en": "stumble upon",
+      "use": "stumble upon a place / a fact，远足叙事首选",
+      "eg": "Rounding a bend in the French hills, I stumbled upon a stone farmhouse that appeared on no map."
+    },
+    {
+      "id": "B2U2-p10",
+      "cat": "phrase",
+      "zh": "与…一样都不；根本不",
+      "en": "no more ... than",
+      "use": "否定类比，替换 not at all，论证更锋利",
+      "eg": "A snapshot is no more a journey than a menu is a meal."
+    },
+    {
+      "id": "B2U2-p11",
+      "cat": "phrase",
+      "zh": "（车辆或司机）停车",
+      "en": "pull up",
+      "use": "a taxi pulled up beside us，叙事转场用",
+      "eg": "A pickup truck pulled up beside us, and the driver offered to carry our packs to the next town."
+    },
+    {
+      "id": "B2U2-p12",
+      "cat": "phrase",
+      "zh": "开阔眼界",
+      "en": "broaden one's horizons",
+      "use": "旅行收益段的必用搭配，替换 make one know more",
+      "eg": "Walking alone through unfamiliar streets broadened my horizons more than any textbook did."
+    },
+    {
+      "id": "B2U2-p13",
+      "cat": "phrase",
+      "zh": "沉浸于当地生活",
+      "en": "immerse oneself in local life",
+      "use": "替换 experience the local culture，主语性数要一致",
+      "eg": "She rented a room above a bakery, immersed herself in local life, and learned more in a week than in a semester."
+    },
+    {
+      "id": "B2U2-p14",
+      "cat": "phrase",
+      "zh": "远离人迹的；不落俗套的",
+      "en": "off the beaten track",
+      "use": "写小众旅行，替换 in a remote place",
+      "eg": "Our guide took us off the beaten track, to a village whose only road is a mule path along the river."
+    },
+    {
+      "id": "B2U2-a01",
+      "cat": "advanced",
+      "zh": "机缘巧合；意外之喜",
+      "en": "serendipity",
+      "use": "升级 a lucky accident / by chance，旅行类高分词",
+      "eg": "The best find of the trip was pure serendipity: we took the wrong turning and met a festival we had never heard of."
+    },
+    {
+      "id": "B2U2-a02",
+      "cat": "advanced",
+      "zh": "蜿蜒而行；缓缓迂回",
+      "en": "meander",
+      "use": "升级 walk slowly without a plan；小路、河流皆可作主语",
+      "eg": "We let the path meander up through the birches and stopped worrying about the clock."
+    },
+    {
+      "id": "B2U2-a03",
+      "cat": "advanced",
+      "zh": "历史悠久的",
+      "en": "time-honored",
+      "use": "升级 very old / with a long history，形容名城与手艺",
+      "eg": "In a time-honored bookshop by Oslo's harbour, the owner still repairs bindings by hand."
+    },
+    {
+      "id": "B2U2-a04",
+      "cat": "advanced",
+      "zh": "令人敬畏的；壮美的",
+      "en": "awe-inspiring",
+      "use": "升级 very beautiful / wonderful，写自然景观",
+      "eg": "The scar left by the mudflow is awe-inspiring in the way that all old disasters are: silent and enormous."
+    },
+    {
+      "id": "B2U2-a05",
+      "cat": "advanced",
+      "zh": "迷住；深深吸引",
+      "en": "captivate",
+      "use": "升级 attract many visitors / interest people",
+      "eg": "Few things captivate a child as completely as a stone that was once a leaf."
+    },
+    {
+      "id": "B2U2-a06",
+      "cat": "advanced",
+      "zh": "一个说明问题的细节",
+      "en": "a telling detail",
+      "use": "升级 a detail that shows...，举例论证时引出证据",
+      "eg": "The worn stone step at the door is a telling detail: for three centuries the same families have walked in and out."
+    },
+    {
+      "id": "B2U2-a07",
+      "cat": "advanced",
+      "zh": "几乎；实际上",
+      "en": "virtually",
+      "use": "升级 almost，常接 impossible / cut off / unknown",
+      "eg": "After the last bus left, the valley was virtually cut off from the outside world."
+    },
+    {
+      "id": "B2U2-a08",
+      "cat": "advanced",
+      "zh": "（否定倒装）游客与行者看到的从不是同一条街",
+      "en": "Rarely do tourists and travelers see the same street.",
+      "use": "句首否定倒装，升级 Tourists and travelers rarely see the same street.",
+      "eg": "Rarely do we understand a foreign custom until we have to live by it."
+    },
+    {
+      "id": "B2U2-a09",
+      "cat": "advanced",
+      "zh": "（分词状语）小路穿过桦林，终于通到山脊",
+      "en": "Winding through the birches, the path finally opens onto the ridge.",
+      "use": "分词作状语，升级 The path winds through the birches and it finally opens onto the ridge.",
+      "eg": "Tucked between two hills, the village sleeps through most of the tourist season."
+    },
+    {
+      "id": "B2U2-a10",
+      "cat": "advanced",
+      "zh": "（with 复合结构）火山灰层层封存五千万年",
+      "en": "with layers of volcanic ash holding millions of years of history",
+      "use": "with 复合结构，升级 and there are layers of ash that hold...，描写地貌",
+      "eg": "We stood there with the sun dropping and the ancient sea floor glowing at our feet."
+    },
+    {
+      "id": "B2U2-a11",
+      "cat": "advanced",
+      "zh": "（as 让步倒装）化石虽惊人，多数游客却匆匆走过",
+      "en": "Striking as the fossil beds are, most visitors hurry past them.",
+      "use": "让步倒装，升级 Although the fossil beds are striking, most visitors hurry past them.",
+      "eg": "Lonely as the trail was, none of us wanted to turn back before the summit."
+    },
+    {
+      "id": "B2U2-a12",
+      "cat": "advanced",
+      "zh": "（强调句）改变我们的是行走而非抵达",
+      "en": "It is the walking, not the arriving, that changes us.",
+      "use": "强调句型，升级 Walking changes us more than arriving does，结尾点题",
+      "eg": "It was the chambermaid's quiet pride that I remembered longest."
+    },
+    {
+      "id": "B2U2-s01",
+      "cat": "sentence",
+      "zh": "旅行从地图结束、脚步开始的地方起步。",
+      "en": "Travel begins where the map ends and the walking starts.",
+      "use": "首段点题句；可用同类句式改写主题词"
+    },
+    {
+      "id": "B2U2-s02",
+      "cat": "sentence",
+      "zh": "越来越多的年轻人放弃拥挤的旅游大巴，改选穿越乡间的慢速徒步。",
+      "en": "More and more young people are trading crowded tour buses for slow hikes through the countryside.",
+      "use": "现象背景句，用于首段引出话题"
+    },
+    {
+      "id": "B2U2-s03",
+      "cat": "sentence",
+      "zh": "就我而言，以脚步丈量的旅程比以照片丈量的旅程更能教人。",
+      "en": "As far as I am concerned, a journey measured in footsteps teaches more than one measured in photographs.",
+      "use": "观点句，首段末或第二段开头"
+    },
+    {
+      "id": "B2U2-s04",
+      "cat": "sentence",
+      "zh": "在俄勒冈的克拉诺区，火山灰层仍保存着亚热带森林的化石，游人读它如读页面。",
+      "en": "In the Clarno Unit of Oregon, layers of volcanic ash still hold fossils of subtropical forests, and visitors read them like pages.",
+      "use": "举例段：用具体地点与细节支撑论点"
+    },
+    {
+      "id": "B2U2-s05",
+      "cat": "sentence",
+      "zh": "正如一位旅行者所写，旅行最好的纪念品是看待自家街道的全新眼光。",
+      "en": "As one traveler wrote, 'the best souvenir of a journey is a new way of seeing your own street.'",
+      "use": "引言句，作题记或论证的收束引用"
+    },
+    {
+      "id": "B2U2-s06",
+      "cat": "sentence",
+      "zh": "游客从车窗拍下大教堂，步行者却留意到六个世纪前刻进石头里的石匠标记。",
+      "en": "Tourists photograph a cathedral from the coach window, while walkers notice the mason's mark cut into its stone six centuries ago.",
+      "use": "对比论证句，while 连接两侧"
+    },
+    {
+      "id": "B2U2-s07",
+      "cat": "sentence",
+      "zh": "正因村子远离主干道，它的方言、烤炉与旧日礼节能存续过去五十年。",
+      "en": "Because the village lies off the main road, its dialect, its bread ovens and its old manners have survived the past fifty years.",
+      "use": "因果论证句，解释现象成因"
+    },
+    {
+      "id": "B2U2-s08",
+      "cat": "sentence",
+      "zh": "旅游虽给历史小城带来钱财，人流却可能磨蚀吸引他们前来的街道本身。",
+      "en": "Although tourism brings money to historic towns, the crowds may wear down the very streets that draw them there.",
+      "use": "让步句，双面分析段的首句"
+    },
+    {
+      "id": "B2U2-s09",
+      "cat": "sentence",
+      "zh": "在哥本哈根，近半数通勤仍靠自行车完成，每日上班路本身就是一堂可持续的课。",
+      "en": "In Copenhagen, where nearly half of all commutes are made by bicycle, the daily journey to work is itself a lesson in sustainability.",
+      "use": "事实例证句，用名城作论据"
+    },
+    {
+      "id": "B2U2-s10",
+      "cat": "sentence",
+      "zh": "我在荷兰一座村庄外偶然遇见了一座任何旅游手册都不曾提到的风车。",
+      "en": "I stumbled upon a windmill outside a village in the Netherlands, and no guidebook had ever mentioned it.",
+      "use": "记叙句，个人经历段"
+    },
+    {
+      "id": "B2U2-s11",
+      "cat": "sentence",
+      "zh": "若想让本土文化延续，就该珍视每座城市的独特，而不是把每条街都变成礼品店。",
+      "en": "If we want local culture to endure, we should cherish what makes each city different rather than turning every street into a gift shop.",
+      "use": "建议句，措施段或倒数第二段"
+    },
+    {
+      "id": "B2U2-s12",
+      "cat": "sentence",
+      "zh": "最终，旅行教会我们对别处的生活保持好奇，并小心不将其毁坏。",
+      "en": "In the end, travel teaches us to be curious about other lives and careful not to damage them.",
+      "use": "结论升华句，末段收束"
+    }
+  ]
+}

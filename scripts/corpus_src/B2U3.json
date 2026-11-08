@@ -1,0 +1,542 @@
+{
+  "unit": "B2U3",
+  "theme": "现代生活与幸福感",
+  "cards": [
+    {
+      "id": "B2U3-w01",
+      "cat": "word",
+      "zh": "上瘾；沉迷",
+      "en": "addiction",
+      "use": "addiction to shopping / social media addiction",
+      "eg": "Shopping addiction drives many consumers to run out of savings long before payday."
+    },
+    {
+      "id": "B2U3-w02",
+      "cat": "word",
+      "zh": "一次性的；用完即弃的",
+      "en": "disposable",
+      "use": "disposable income / a throwaway, disposable mindset",
+      "eg": "A disposable mindset fills landfills and leaves people feeling just as empty as the products they toss."
+    },
+    {
+      "id": "B2U3-w03",
+      "cat": "word",
+      "zh": "不满的；不满足的",
+      "en": "discontented",
+      "use": "a discontented workforce / feel discontented with",
+      "eg": "Even well-paid employees grow discontented when long hours leave no room for family or rest."
+    },
+    {
+      "id": "B2U3-w04",
+      "cat": "word",
+      "zh": "使人分心的事物；消遣",
+      "en": "distraction",
+      "use": "a constant distraction / digital distractions",
+      "eg": "Every notification is a tiny distraction that pulls attention away from deep, fulfilling work."
+    },
+    {
+      "id": "B2U3-w05",
+      "cat": "word",
+      "zh": "双重性；两面性",
+      "en": "duality",
+      "use": "the duality of modern life / material and spiritual duality",
+      "eg": "The duality of prosperity and anxiety defines our age: wealth has grown, yet contentment has not."
+    },
+    {
+      "id": "B2U3-w06",
+      "cat": "word",
+      "zh": "改善；增强",
+      "en": "enhance",
+      "use": "enhance well-being / enhance the quality of life",
+      "eg": "Brief walks in nature can enhance mood far more effectively than another round of online shopping."
+    },
+    {
+      "id": "B2U3-w07",
+      "cat": "word",
+      "zh": "成就感；充实感",
+      "en": "fulfillment",
+      "use": "a sense of fulfillment / find fulfillment in",
+      "eg": "Volunteers often report a deeper sense of fulfillment than they do on promotion day."
+    },
+    {
+      "id": "B2U3-w08",
+      "cat": "word",
+      "zh": "脆弱；不稳定性",
+      "en": "fragility",
+      "use": "the fragility of happiness / emotional fragility",
+      "eg": "A recession exposes the fragility of lifestyles built entirely on borrowed income."
+    },
+    {
+      "id": "B2U3-w09",
+      "cat": "word",
+      "zh": "易得到的；可获取的",
+      "en": "accessible",
+      "use": "make happiness accessible / accessible to all",
+      "eg": "Meditation apps have made mindfulness techniques accessible to people who once dismissed them as luxuries."
+    },
+    {
+      "id": "B2U3-w10",
+      "cat": "word",
+      "zh": "不可避免的；必然的",
+      "en": "inevitable",
+      "use": "an inevitable consequence / it is inevitable that",
+      "eg": "Stress is an inevitable part of ambition, but chronic burnout is not."
+    },
+    {
+      "id": "B2U3-w11",
+      "cat": "word",
+      "zh": "诱惑；诱使",
+      "en": "tempt",
+      "use": "tempt consumers into / be tempted to do",
+      "eg": "Flash-sale ads tempt even frugal shoppers into buying items they had planned to resist."
+    },
+    {
+      "id": "B2U3-w12",
+      "cat": "word",
+      "zh": "应对；处理（难题）",
+      "en": "tackle",
+      "use": "tackle the root causes of / tackle a problem",
+      "eg": "Schools that teach mindfulness help teenagers tackle exam pressure before it becomes unbearable."
+    },
+    {
+      "id": "B2U3-w13",
+      "cat": "word",
+      "zh": "繁荣；昌盛",
+      "en": "prosperity",
+      "use": "material prosperity / a barrier to prosperity",
+      "eg": "National prosperity no longer measures only GDP; it also counts how freely citizens pursue what fulfills them."
+    },
+    {
+      "id": "B2U3-w14",
+      "cat": "word",
+      "zh": "生产率；生产力",
+      "en": "productivity",
+      "use": "sacrifice productivity / a productivity-obsessed culture",
+      "eg": "A productivity-obsessed culture quietly ruins health by treating every idle minute as wasted time."
+    },
+    {
+      "id": "B2U3-w15",
+      "cat": "word",
+      "zh": "富有的",
+      "en": "wealthy",
+      "use": "the wealthy / ever-wealthy consumers",
+      "eg": "Wealthy suburbs show no immunity to the same anxiety that grips lower-income neighbourhoods."
+    },
+    {
+      "id": "B2U3-w16",
+      "cat": "word",
+      "zh": "抵挡；忍住",
+      "en": "resist",
+      "use": "resist the urge to / resist temptation",
+      "eg": "Most people find it hard to resist the urge to check their phones within seconds of a buzz."
+    },
+    {
+      "id": "B2U3-w17",
+      "cat": "word",
+      "zh": "等同于；视……与……相等",
+      "en": "equate",
+      "use": "equate happiness with success / be wrongly equated with",
+      "eg": "When people equate self-worth with a paycheck, every setback feels like a personal failure."
+    },
+    {
+      "id": "B2U3-w18",
+      "cat": "word",
+      "zh": "障碍；困难",
+      "en": "hurdle",
+      "use": "overcome a hurdle / a major hurdle to well-being",
+      "eg": "The hardest hurdle for young graduates is standing on their own feet while the job market shrinks."
+    },
+
+    {
+      "id": "B2U3-t01",
+      "cat": "term",
+      "zh": "物质主义；拜物倾向",
+      "en": "materialism",
+      "use": "consumer materialism / a culture of materialism",
+      "eg": "Psychologists link higher materialism to lower life satisfaction across dozens of cultures."
+    },
+    {
+      "id": "B2U3-t02",
+      "cat": "term",
+      "zh": "即时满足（追求）",
+      "en": "instant gratification",
+      "use": "the pursuit of instant gratification",
+      "eg": "Streaming and same-day delivery feed a habit of instant gratification that erodes patience and depth."
+    },
+    {
+      "id": "B2U3-t03",
+      "cat": "term",
+      "zh": "工作与生活的平衡",
+      "en": "work-life balance",
+      "use": "maintain a healthy work-life balance",
+      "eg": "Companies that enforce true work-life balance see lower turnover and higher productivity."
+    },
+    {
+      "id": "B2U3-t04",
+      "cat": "term",
+      "zh": "数字断舍离",
+      "en": "digital detox",
+      "use": "go on a digital detox",
+      "eg": "A weekend digital detox helped her rediscover the meditative calm that scrolling had stolen."
+    },
+    {
+      "id": "B2U3-t05",
+      "cat": "term",
+      "zh": "享乐适应（幸福跑步机）",
+      "en": "hedonic treadmill",
+      "use": "stuck on the hedonic treadmill",
+      "eg": "The more we buy, the faster we run on the hedonic treadmill without ever gaining lasting joy."
+    },
+    {
+      "id": "B2U3-t06",
+      "cat": "term",
+      "zh": "消费文化",
+      "en": "consumer culture",
+      "use": "critique consumer culture",
+      "eg": "Consumer culture persuades us to equate a fuller life with a fuller shopping cart."
+    },
+    {
+      "id": "B2U3-t07",
+      "cat": "term",
+      "zh": "主观幸福感",
+      "en": "subjective well-being",
+      "use": "research on subjective well-being",
+      "eg": "Surveys of subjective well-being suggest that strong social bonds matter more than any pay rise."
+    },
+    {
+      "id": "B2U3-t08",
+      "cat": "term",
+      "zh": "职业倦怠；精疲力竭",
+      "en": "burnout",
+      "use": "suffer from chronic burnout",
+      "eg": "Chronic burnout is not a badge of honour but a signal that boundaries have collapsed."
+    },
+    {
+      "id": "B2U3-t09",
+      "cat": "term",
+      "zh": "地位焦虑",
+      "en": "status anxiety",
+      "use": "fuelled by status anxiety",
+      "eg": "Status anxiety drives young professionals to sacrifice sleep for titles they never truly wanted."
+    },
+    {
+      "id": "B2U3-t10",
+      "cat": "term",
+      "zh": "慢生活（理念）",
+      "en": "slow living",
+      "use": "embrace slow living",
+      "eg": "The slow living movement argues that a richer life comes from fewer, deeper commitments."
+    },
+    {
+      "id": "B2U3-t11",
+      "cat": "term",
+      "zh": "自我实现",
+      "en": "self-actualization",
+      "use": "pursue self-actualization",
+      "eg": "Once basic security is met, people naturally look to self-actualization for lasting fulfillment."
+    },
+    {
+      "id": "B2U3-t12",
+      "cat": "term",
+      "zh": "边际效用递减",
+      "en": "diminishing returns",
+      "use": "hit the point of diminishing returns",
+      "eg": "Beyond a certain income, each extra dollar brings diminishing returns to happiness."
+    },
+
+    {
+      "id": "B2U3-p01",
+      "cat": "phrase",
+      "zh": "出于自愿；主动选择",
+      "en": "by choice",
+      "use": "stay home by choice / live simply by choice — 对比 not by choice",
+      "eg": "Few workers endure eighty-hour weeks by choice; most do so because rent leaves them no alternative."
+    },
+    {
+      "id": "B2U3-p02",
+      "cat": "phrase",
+      "zh": "生性；本性上",
+      "en": "by nature",
+      "use": "by nature social / by nature restless — 描述人性本论",
+      "eg": "Humans are by nature social creatures, yet modern routines isolate us more than any plague once did."
+    },
+    {
+      "id": "B2U3-p03",
+      "cat": "phrase",
+      "zh": "做某事很艰难",
+      "en": "have a hard time doing sth.",
+      "use": "have a hard time relaxing / focusing / sleeping",
+      "eg": "Overworked students often have a hard time distinguishing genuine curiosity from exam-driven panic."
+    },
+    {
+      "id": "B2U3-p04",
+      "cat": "phrase",
+      "zh": "导致某人做某事",
+      "en": "lead sb. to do sth.",
+      "use": "pressure leads people to compromise / this leads consumers to overspend",
+      "eg": "Endless comparison on social media leads many young people to chase careers that never fulfill them."
+    },
+    {
+      "id": "B2U3-p05",
+      "cat": "phrase",
+      "zh": "继续前行；转向新的方向",
+      "en": "move on",
+      "use": "move on from failure / move on to the next stage",
+      "eg": "A lost job is a bump in the road, not a wall; learning to move on preserves mental health."
+    },
+    {
+      "id": "B2U3-p06",
+      "cat": "phrase",
+      "zh": "用完；耗尽",
+      "en": "run out of",
+      "use": "run out of energy / patience / savings",
+      "eg": "By the fifth consecutive deadline, she had run out of both sleep and optimism."
+    },
+    {
+      "id": "B2U3-p07",
+      "cat": "phrase",
+      "zh": "自立；独立自主",
+      "en": "stand on one's own feet",
+      "use": "learn to stand on one's own feet — 青年话题常用",
+      "eg": "Graduates who stand on their own feet report higher fulfillment than those shielded by family wealth."
+    },
+    {
+      "id": "B2U3-p08",
+      "cat": "phrase",
+      "zh": "前进路上的小挫折",
+      "en": "a bump in the road",
+      "use": "treat failure as a bump in the road — 让步或安慰语境",
+      "eg": "A single recession is a bump in the road for a society that values well-being over mere GDP growth."
+    },
+    {
+      "id": "B2U3-p09",
+      "cat": "phrase",
+      "zh": "以……为代价",
+      "en": "at the expense of",
+      "use": "at the expense of health / family / happiness",
+      "eg": "Climbing the corporate ladder at the expense of sleep and friendship rarely brings peace."
+    },
+    {
+      "id": "B2U3-p10",
+      "cat": "phrase",
+      "zh": "在追求……的过程中",
+      "en": "in the pursuit of",
+      "use": "in the pursuit of happiness / wealth — 议论文万能框架",
+      "eg": "In the pursuit of happiness, people often overlook the small, accessible joys already around them."
+    },
+    {
+      "id": "B2U3-p11",
+      "cat": "phrase",
+      "zh": "受……支配；任由……摆布",
+      "en": "at the mercy of",
+      "use": "at the mercy of algorithms / the market",
+      "eg": "Freelancers live at the mercy of the next contract, which keeps anxiety permanently in the background."
+    },
+    {
+      "id": "B2U3-p12",
+      "cat": "phrase",
+      "zh": "优先于；比……更重要",
+      "en": "take precedence over",
+      "use": "well-being should take precedence over profit",
+      "eg": "In a humane workplace, mental health must take precedence over quarterly output targets."
+    },
+    {
+      "id": "B2U3-p13",
+      "cat": "phrase",
+      "zh": "摆脱；挣脱",
+      "en": "break free from",
+      "use": "break free from the cycle of consumption",
+      "eg": "She decided to break free from the habit of buying comfort goods and started journaling instead."
+    },
+    {
+      "id": "B2U3-p14",
+      "cat": "phrase",
+      "zh": "指望；依靠",
+      "en": "look to",
+      "use": "look to sb. for comfort / look to spirituality — 本单元词表",
+      "eg": "When material life fails to console them, many young people look to meditation and community for peace."
+    },
+
+    {
+      "id": "B2U3-a01",
+      "cat": "advanced",
+      "zh": "逐渐削弱，破坏",
+      "en": "undermine",
+      "use": "替换 harm / damage / make ... weaker",
+      "eg": "Constant comparison with strangers online can quietly undermine a person's satisfaction with ordinary life."
+    },
+    {
+      "id": "B2U3-a02",
+      "cat": "advanced",
+      "zh": "Only by… can…（倒装强调）",
+      "en": "Only by redefining success can society escape the hedonic treadmill.",
+      "use": "升级 'Society can escape the hedonic treadmill only by redefining success'",
+      "eg": "Only by redefining success can a generation born into consumption learn to find fulfillment elsewhere."
+    },
+    {
+      "id": "B2U3-a03",
+      "cat": "advanced",
+      "zh": "Far from doing…（让步倒装）",
+      "en": "Far from bringing satisfaction, relentless buying quietly corrodes the peace it promises.",
+      "use": "升级 'Relentless buying does not bring satisfaction; instead it corrodes peace'",
+      "eg": "Far from relieving stress, endless scrolling often intensifies the discontent it was supposed to cure."
+    },
+    {
+      "id": "B2U3-a04",
+      "cat": "advanced",
+      "zh": "With + 名词 + 分词（独立主格）",
+      "en": "With material needs met yet inner voids widening, a growing number of people feel oddly hollow.",
+      "use": "升级 'Although material needs are met, inner voids widen, so many feel hollow'",
+      "eg": "With wages rising but hours lengthening, young workers find themselves earning more and living less."
+    },
+    {
+      "id": "B2U3-a05",
+      "cat": "advanced",
+      "zh": "What引导的主语从句（强调）",
+      "en": "What fuels the modern consumer's discontent is not scarcity but endless comparison.",
+      "use": "升级 'Endless comparison, not scarcity, fuels the modern consumer's discontent'",
+      "eg": "What makes burnout unbearable is not the workload itself but the silence around it."
+    },
+    {
+      "id": "B2U3-a06",
+      "cat": "advanced",
+      "zh": "同位语从句",
+      "en": "the paradox that prosperity coexists with pervasive anxiety",
+      "use": "升级 'the contradiction that people are rich but anxious'",
+      "eg": "The paradox that prosperity coexists with pervasive anxiety has challenged economists for decades."
+    },
+    {
+      "id": "B2U3-a07",
+      "cat": "advanced",
+      "zh": "It is… that…（强调句）",
+      "en": "It is consumer culture itself, rather than any personal failing, that traps us on the hedonic treadmill.",
+      "use": "升级 'Consumer culture, not personal failing, traps us'",
+      "eg": "It is the relentless pace of work, not a lack of discipline, that deprives people of restorative leisure."
+    },
+    {
+      "id": "B2U3-a08",
+      "cat": "advanced",
+      "zh": "分词短语作状语",
+      "en": "Battered by deadlines and bills alike, young professionals often have a hard time finding inner stillness.",
+      "use": "升级 'Young professionals are battered by deadlines and bills, and they struggle to find inner stillness'",
+      "eg": "Raised amid constant competition, this generation equates rest with losing ground."
+    },
+    {
+      "id": "B2U3-a09",
+      "cat": "advanced",
+      "zh": "a growing proportion of（升级 many people）",
+      "en": "a growing proportion of",
+      "use": "替换 more and more people / an increasing number of people",
+      "eg": "A growing proportion of city dwellers now treat weekend hikes as a form of digital detox."
+    },
+    {
+      "id": "B2U3-a10",
+      "cat": "advanced",
+      "zh": "indispensable to（升级 very important for）",
+      "en": "indispensable to",
+      "use": "替换 very important for / essential to",
+      "eg": "A sense of purpose is indispensable to lasting happiness; no amount of money can substitute for it."
+    },
+    {
+      "id": "B2U3-a11",
+      "cat": "advanced",
+      "zh": "detrimental（升级 very bad/harmful）",
+      "en": "detrimental",
+      "use": "替换 harmful / damaging / bad for",
+      "eg": "Sleep deprivation proves detrimental not only to productivity but to emotional resilience."
+    },
+    {
+      "id": "B2U3-a12",
+      "cat": "advanced",
+      "zh": "Hard-pressed as sb. may be…（让步倒装）",
+      "en": "Hard-pressed as they are by rent and loans, many young people still refuse to trade meaning for a higher paycheck.",
+      "use": "升级 'Although they are hard-pressed by rent and loans, many young people still...'",
+      "eg": "Hard-pressed as she was by overtime demands, she carved out an hour each evening for painting."
+    },
+
+    {
+      "id": "B2U3-s01",
+      "cat": "sentence",
+      "zh": "在物质空前丰富的时代，幸福感反而成了人们热议却难解的难题。",
+      "en": "In an era of unprecedented material abundance, happiness has paradoxically become the most debated and least understood problem of daily life.",
+      "use": "开头段·点题（unprecedented, paradoxically 增强对比）"
+    },
+    {
+      "id": "B2U3-s02",
+      "cat": "sentence",
+      "zh": "对财富的无尽追求往往导致年轻人将幸福等同于消费能力。",
+      "en": "The relentless pursuit of wealth often leads young people to equate happiness with their capacity to consume.",
+      "use": "因果段·论述核心问题（lead sb. to do + equate A with B）"
+    },
+    {
+      "id": "B2U3-s03",
+      "cat": "sentence",
+      "zh": "尽管繁荣让数亿人摆脱了贫困，一种挥之不去的不满却在最富裕的社会里蔓延。",
+      "en": "While prosperity has lifted millions out of poverty, a creeping discontent has spread through the very wealthiest societies.",
+      "use": "对比段·让步（While 引导，凸显 duality）"
+    },
+    {
+      "id": "B2U3-s04",
+      "cat": "sentence",
+      "zh": "一个典型的例子是所谓的996工作文化，它让从业者几乎没有时间放松或陪伴家人。",
+      "en": "A case in point is the so-called 996 work culture, where practitioners have a hard time finding even one hour for rest or family.",
+      "use": "举例段·具体例证（A case in point is… + have a hard time doing）"
+    },
+    {
+      "id": "B2U3-s05",
+      "cat": "sentence",
+      "zh": "诚然，经济保障对幸福感不可或缺，但它绝不能以健康和人际关系为代价。",
+      "en": "Admittedly, financial security is indispensable to well-being; it must never, however, come at the expense of health or relationships.",
+      "use": "让步+观点段·辩证（Admittedly… however 让步框架）"
+    },
+    {
+      "id": "B2U3-s06",
+      "cat": "sentence",
+      "zh": "唯有重新定义成功，社会才能让个体摆脱那条永远奔跑却原地踏步的幸福跑步机。",
+      "en": "Only by redefining success can a society free its citizens from a hedonic treadmill on which running faster means staying exactly where they are.",
+      "use": "结论段·升华（Only by… 倒装 + 定语从句）"
+    },
+    {
+      "id": "B2U3-s07",
+      "cat": "sentence",
+      "zh": "当人们把自我价值等同于工资单上的数字时，每一次拒绝都成了对人格的否定。",
+      "en": "When people equate their self-worth with the figure on a paycheck, every rejection becomes a verdict on who they are.",
+      "use": "因果段·心理分析（equate…with + every…becomes 概括）"
+    },
+    {
+      "id": "B2U3-s08",
+      "cat": "sentence",
+      "zh": "研究表明，那些选择简朴生活而非炫耀性消费的人往往报告出更高的充实感。",
+      "en": "Research indicates that individuals who choose simplicity over conspicuous consumption consistently report a deeper sense of fulfillment.",
+      "use": "论据段·引用数据或研究（Research indicates that…）"
+    },
+    {
+      "id": "B2U3-s09",
+      "cat": "sentence",
+      "zh": "在快节奏生活的压力下，一次数字断舍离或许并非奢侈而是维系心智的必需。",
+      "en": "Under the relentless pressure of a fast-paced life, a digital detox may be less a luxury than a necessity for preserving mental clarity.",
+      "use": "建议段·提出对策（less a…than a… 并列否定强调）"
+    },
+    {
+      "id": "B2U3-s10",
+      "cat": "sentence",
+      "zh": "正如一句谚语所言：金钱能买到舒适，却买不到那种唯有热爱和归属才能带来的宁静。",
+      "en": "As the saying goes, money can purchase comfort but never the quiet that only passion and belonging can bestow.",
+      "use": "举例或结论段·引用谚语增强说服力（As the saying goes…）"
+    },
+    {
+      "id": "B2U3-s11",
+      "cat": "sentence",
+      "zh": "物质带来的愉悦稍纵即逝，而精神上的满足——无论是创造、学习还是关爱——则历久弥新。",
+      "en": "Pleasure drawn from possessions evaporates almost as quickly as it arrives, whereas spiritual fulfillment, born of creating, learning, or caring, deepens with time.",
+      "use": "对比段·核心论点（whereas + born of 分词）"
+    },
+    {
+      "id": "B2U3-s12",
+      "cat": "sentence",
+      "zh": "因此，政策制定者在衡量繁荣时若只盯着经济指标而忽视主观幸福感，便无法回应人民内心真正的渴望。",
+      "en": "Therefore, policymakers who measure prosperity solely through economic indicators while ignoring subjective well-being fail to answer the deepest longings of their people.",
+      "use": "结论段·呼吁行动（Therefore + who 定语 + fail to）"
+    }
+  ]
+}

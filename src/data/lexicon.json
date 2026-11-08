@@ -1,0 +1,5000 @@
+{
+  "source": "《新视野大学英语》B1U1–B2U4 课后词表（PDF 提取）",
+  "builtAt": "2026-11-08",
+  "total": 679,
+  "units": [
+    {
+      "id": "B1U1",
+      "book": 1,
+      "unit": 1,
+      "label": "第1册 Unit 1",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New Words)",
+          "entries": [
+            {
+              "id": "B1U1-words-1",
+              "num": 1,
+              "en": "adventurous",
+              "pos": "a.",
+              "zh": "喜欢冒险的；有冒险精神的；大胆创新的"
+            },
+            {
+              "id": "B1U1-words-2",
+              "num": 2,
+              "en": "ambition",
+              "pos": "n.",
+              "zh": "抱负；雄心；野心；追求；夙愿；理想"
+            },
+            {
+              "id": "B1U1-words-3",
+              "num": 3,
+              "en": "ambitious",
+              "pos": "a.",
+              "zh": "有抱负的；有雄心的；野心勃勃的"
+            },
+            {
+              "id": "B1U1-words-4",
+              "num": 4,
+              "en": "anymore",
+              "pos": "ad.",
+              "zh": "再也（不）；（不）再"
+            },
+            {
+              "id": "B1U1-words-5",
+              "num": 5,
+              "en": "apologetic",
+              "pos": "a.",
+              "zh": "道歉的；谢罪的；愧疚的"
+            },
+            {
+              "id": "B1U1-words-6",
+              "num": 6,
+              "en": "appealing",
+              "pos": "a.",
+              "zh": "有吸引力的；有趣的"
+            },
+            {
+              "id": "B1U1-words-7",
+              "num": 7,
+              "en": "assign",
+              "pos": "vt.",
+              "zh": "分配，分派，指派（任务）"
+            },
+            {
+              "id": "B1U1-words-8",
+              "num": 8,
+              "en": "attain",
+              "pos": "vt.",
+              "zh": "（通过长时间努力而）得到，获得，赢得"
+            },
+            {
+              "id": "B1U1-words-9",
+              "num": 9,
+              "en": "attainable",
+              "pos": "a.",
+              "zh": "可以达到的；可以获得的"
+            },
+            {
+              "id": "B1U1-words-10",
+              "num": 10,
+              "en": "best-seller",
+              "pos": "n.",
+              "zh": "畅销产品；畅销书"
+            },
+            {
+              "id": "B1U1-words-11",
+              "num": 11,
+              "en": "best-selling",
+              "pos": "a.",
+              "zh": "畅销的"
+            },
+            {
+              "id": "B1U1-words-12",
+              "num": 12,
+              "en": "biology",
+              "pos": "n.",
+              "zh": "生物学"
+            },
+            {
+              "id": "B1U1-words-13",
+              "num": 13,
+              "en": "buddy",
+              "pos": "n.",
+              "zh": "朋友；伙伴"
+            },
+            {
+              "id": "B1U1-words-14",
+              "num": 14,
+              "en": "chaotic",
+              "pos": "a.",
+              "zh": "混乱的；毫无秩序的"
+            },
+            {
+              "id": "B1U1-words-15",
+              "num": 15,
+              "en": "chase",
+              "pos": "v.",
+              "zh": "努力赢得；设法获得；追逐；追赶；追捕"
+            },
+            {
+              "id": "B1U1-words-16",
+              "num": 16,
+              "en": "conflict",
+              "pos": "n.",
+              "zh": "（意见等的）抵触，冲突，矛盾"
+            },
+            {
+              "id": "B1U1-words-17",
+              "num": 17,
+              "en": "consistent",
+              "pos": "a.",
+              "zh": "（行为、态度、标准等）一贯的，一致的"
+            },
+            {
+              "id": "B1U1-words-18",
+              "num": 18,
+              "en": "creativity",
+              "pos": "n.",
+              "zh": "独创性；创造性；创造力"
+            },
+            {
+              "id": "B1U1-words-19",
+              "num": 19,
+              "en": "depression",
+              "pos": "n.",
+              "zh": "忧伤；沮丧；消沉"
+            },
+            {
+              "id": "B1U1-words-20",
+              "num": 20,
+              "en": "desperate",
+              "pos": "a.",
+              "zh": "非常需要…的；极其需要…的；拼命的，绝望的"
+            },
+            {
+              "id": "B1U1-words-21",
+              "num": 21,
+              "en": "determination",
+              "pos": "n.",
+              "zh": "决心；坚韧；毅力"
+            },
+            {
+              "id": "B1U1-words-22",
+              "num": 22,
+              "en": "emotional",
+              "pos": "a.",
+              "zh": "情绪（上）的；情感（上）的"
+            },
+            {
+              "id": "B1U1-words-23",
+              "num": 23,
+              "en": "employee",
+              "pos": "n.",
+              "zh": "受雇者；雇员"
+            },
+            {
+              "id": "B1U1-words-24",
+              "num": 24,
+              "en": "entertaining",
+              "pos": "a.",
+              "zh": "使人愉快的；有趣的"
+            },
+            {
+              "id": "B1U1-words-25",
+              "num": 25,
+              "en": "ethologist",
+              "pos": "n.",
+              "zh": "动物行为学家"
+            },
+            {
+              "id": "B1U1-words-26",
+              "num": 26,
+              "en": "ethos",
+              "pos": "n.",
+              "zh": "（某团体的）精神特质，道德意识"
+            },
+            {
+              "id": "B1U1-words-27",
+              "num": 27,
+              "en": "exotic",
+              "pos": "a.",
+              "zh": "异国风情的；外国情调的"
+            },
+            {
+              "id": "B1U1-words-28",
+              "num": 28,
+              "en": "fated",
+              "pos": "a.",
+              "zh": "命运决定的；命中注定的"
+            },
+            {
+              "id": "B1U1-words-29",
+              "num": 29,
+              "en": "fiction",
+              "pos": "n.",
+              "zh": "小说"
+            },
+            {
+              "id": "B1U1-words-30",
+              "num": 30,
+              "en": "fitness",
+              "pos": "n.",
+              "zh": "健壮；健康"
+            },
+            {
+              "id": "B1U1-words-31",
+              "num": 31,
+              "en": "freshman",
+              "pos": "n.",
+              "zh": "（高中或大学的）一年级学生"
+            },
+            {
+              "id": "B1U1-words-32",
+              "num": 32,
+              "en": "greedy",
+              "pos": "a.",
+              "zh": "贪婪的；贪心的；贪吃的；贪喝的"
+            },
+            {
+              "id": "B1U1-words-33",
+              "num": 33,
+              "en": "grounded",
+              "pos": "a.",
+              "zh": "对自己有清醒认识的；理性的；有理智的；克制的"
+            },
+            {
+              "id": "B1U1-words-34",
+              "num": 34,
+              "en": "heroic",
+              "pos": "a.",
+              "zh": "英雄的；英勇的"
+            },
+            {
+              "id": "B1U1-words-35",
+              "num": 35,
+              "en": "isolation",
+              "pos": "n.",
+              "zh": "孤独；孤单；隔绝；孤立；分离"
+            },
+            {
+              "id": "B1U1-words-36",
+              "num": 36,
+              "en": "jungle",
+              "pos": "n.",
+              "zh": "（热带）丛林"
+            },
+            {
+              "id": "B1U1-words-37",
+              "num": 37,
+              "en": "lessen",
+              "pos": "v.",
+              "zh": "（使）降低；（使）减少"
+            },
+            {
+              "id": "B1U1-words-38",
+              "num": 38,
+              "en": "literally",
+              "pos": "ad.",
+              "zh": "的确；确实；按照原意；根据字面意思"
+            },
+            {
+              "id": "B1U1-words-39",
+              "num": 39,
+              "en": "marathon",
+              "pos": "n.",
+              "zh": "马拉松赛跑"
+            },
+            {
+              "id": "B1U1-words-40",
+              "num": 40,
+              "en": "matter-of-factly",
+              "pos": "ad.",
+              "zh": "就事论事地；不带感情地；实事求是地"
+            },
+            {
+              "id": "B1U1-words-41",
+              "num": 41,
+              "en": "mature",
+              "pos": "a.",
+              "zh": "（尤指小孩或年轻人举止）成熟的，理智的，明白事理的"
+            },
+            {
+              "id": "B1U1-words-42",
+              "num": 42,
+              "en": "maximum",
+              "pos": "a.",
+              "zh": "最大量的；最大限度的；最大值的"
+            },
+            {
+              "id": "B1U1-words-43",
+              "num": 43,
+              "en": "mindset",
+              "pos": "n.",
+              "zh": "思维模式"
+            },
+            {
+              "id": "B1U1-words-44",
+              "num": 44,
+              "en": "obsess",
+              "pos": "vt.",
+              "zh": "使痴迷；使迷恋；使心神不宁（含贬义）"
+            },
+            {
+              "id": "B1U1-words-45",
+              "num": 45,
+              "en": "overdue",
+              "pos": "a.",
+              "zh": "迟到的；延误的；过期未完成的；过期未付的；过期未还的"
+            },
+            {
+              "id": "B1U1-words-46",
+              "num": 46,
+              "en": "overextend",
+              "pos": "vt.",
+              "zh": "把…做得过分；把…使用过头"
+            },
+            {
+              "id": "B1U1-words-47",
+              "num": 47,
+              "en": "paradox",
+              "pos": "n.",
+              "zh": "自相矛盾（的情况）；悖论；似非而是的说法"
+            },
+            {
+              "id": "B1U1-words-48",
+              "num": 48,
+              "en": "pediatrician",
+              "pos": "n.",
+              "zh": "儿科医生"
+            },
+            {
+              "id": "B1U1-words-49",
+              "num": 49,
+              "en": "perceive",
+              "pos": "vt.",
+              "zh": "察觉；注意到；发觉；看待，理解"
+            },
+            {
+              "id": "B1U1-words-50",
+              "num": 50,
+              "en": "perform",
+              "pos": "v.",
+              "zh": "表现得好/差等；表演；演出"
+            },
+            {
+              "id": "B1U1-words-51",
+              "num": 51,
+              "en": "philosopher",
+              "pos": "n.",
+              "zh": "哲学家"
+            },
+            {
+              "id": "B1U1-words-52",
+              "num": 52,
+              "en": "pretend",
+              "pos": "v.",
+              "zh": "假装；装作"
+            },
+            {
+              "id": "B1U1-words-53",
+              "num": 53,
+              "en": "productive",
+              "pos": "a.",
+              "zh": "多产的；丰饶的；富有成效的"
+            },
+            {
+              "id": "B1U1-words-54",
+              "num": 54,
+              "en": "realistic",
+              "pos": "a.",
+              "zh": "现实的；实际的；实事求是的"
+            },
+            {
+              "id": "B1U1-words-55",
+              "num": 55,
+              "en": "resolve",
+              "pos": "vt.",
+              "zh": "解决（问题、困难）"
+            },
+            {
+              "id": "B1U1-words-56",
+              "num": 56,
+              "en": "someday",
+              "pos": "ad.",
+              "zh": "将来会有一天；有朝一日"
+            },
+            {
+              "id": "B1U1-words-57",
+              "num": 57,
+              "en": "strive",
+              "pos": "vi.",
+              "zh": "努力；奋斗"
+            },
+            {
+              "id": "B1U1-words-58",
+              "num": 58,
+              "en": "string",
+              "pos": "n. / vt.",
+              "zh": "一系列；（由几股合成的）线，细绳，带子；用（线、链等）穿起来"
+            },
+            {
+              "id": "B1U1-words-59",
+              "num": 59,
+              "en": "sustainable",
+              "pos": "a.",
+              "zh": "可持续的"
+            },
+            {
+              "id": "B1U1-words-60",
+              "num": 60,
+              "en": "tongue",
+              "pos": "n.",
+              "zh": "舌；舌头"
+            },
+            {
+              "id": "B1U1-words-61",
+              "num": 61,
+              "en": "unfold",
+              "pos": "v.",
+              "zh": "（使）（故事、计划等）展开；逐渐呈现；展示"
+            },
+            {
+              "id": "B1U1-words-62",
+              "num": 62,
+              "en": "unlike",
+              "pos": "prep.",
+              "zh": "与…不同"
+            },
+            {
+              "id": "B1U1-words-63",
+              "num": 63,
+              "en": "workout",
+              "pos": "n.",
+              "zh": "体育锻炼；训练"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B1U1-phrases-1",
+              "num": 1,
+              "en": "add up",
+              "pos": "",
+              "zh": "积累；积少成多"
+            },
+            {
+              "id": "B1U1-phrases-2",
+              "num": 2,
+              "en": "at peace",
+              "pos": "",
+              "zh": "心平气和的"
+            },
+            {
+              "id": "B1U1-phrases-3",
+              "num": 3,
+              "en": "be / get / feel burned out",
+              "pos": "",
+              "zh": "感到精疲力竭"
+            },
+            {
+              "id": "B1U1-phrases-4",
+              "num": 4,
+              "en": "be sb.'s for the asking",
+              "pos": "",
+              "zh": "某人只要提出要求（就可以得到）"
+            },
+            {
+              "id": "B1U1-phrases-5",
+              "num": 5,
+              "en": "come to terms with",
+              "pos": "",
+              "zh": "与某事妥协；对某事让步；接受（令人不快或悲伤的现实）"
+            },
+            {
+              "id": "B1U1-phrases-6",
+              "num": 6,
+              "en": "come up short",
+              "pos": "",
+              "zh": "未能赢取；未能获得"
+            },
+            {
+              "id": "B1U1-phrases-7",
+              "num": 7,
+              "en": "for one reason or another",
+              "pos": "",
+              "zh": "由于这样或那样的原因"
+            },
+            {
+              "id": "B1U1-phrases-8",
+              "num": 8,
+              "en": "grab for / at",
+              "pos": "",
+              "zh": "立即抓住（机会）；立即接受（邀请等）"
+            },
+            {
+              "id": "B1U1-phrases-9",
+              "num": 9,
+              "en": "hit it big",
+              "pos": "",
+              "zh": "大获成功"
+            },
+            {
+              "id": "B1U1-phrases-10",
+              "num": 10,
+              "en": "hold back",
+              "pos": "",
+              "zh": "阻碍某人/某事发展"
+            },
+            {
+              "id": "B1U1-phrases-11",
+              "num": 11,
+              "en": "leave behind",
+              "pos": "",
+              "zh": "忘记带走；留下"
+            },
+            {
+              "id": "B1U1-phrases-12",
+              "num": 12,
+              "en": "prior to",
+              "pos": "",
+              "zh": "在…以前"
+            },
+            {
+              "id": "B1U1-phrases-13",
+              "num": 13,
+              "en": "quite / just the opposite",
+              "pos": "",
+              "zh": "正好/完全相反"
+            },
+            {
+              "id": "B1U1-phrases-14",
+              "num": 14,
+              "en": "roll / trip off the tongue",
+              "pos": "",
+              "zh": "（某个名字或短语）顺口"
+            },
+            {
+              "id": "B1U1-phrases-15",
+              "num": 15,
+              "en": "run / be / go counter to",
+              "pos": "",
+              "zh": "违背某事；与某事背道而驰"
+            },
+            {
+              "id": "B1U1-phrases-16",
+              "num": 16,
+              "en": "sit back",
+              "pos": "",
+              "zh": "不采取行动；袖手旁观"
+            },
+            {
+              "id": "B1U1-phrases-17",
+              "num": 17,
+              "en": "string together",
+              "pos": "",
+              "zh": "把…拼在一起"
+            },
+            {
+              "id": "B1U1-phrases-18",
+              "num": 18,
+              "en": "the here and now",
+              "pos": "",
+              "zh": "现时"
+            },
+            {
+              "id": "B1U1-phrases-19",
+              "num": 19,
+              "en": "to tell (you) the truth",
+              "pos": "",
+              "zh": "老实说；实话对你讲"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "names",
+          "label": "专有名词",
+          "title": "专有名词(Proper names)",
+          "entries": [
+            {
+              "id": "B1U1-names-1",
+              "num": 1,
+              "en": "Beth",
+              "pos": "",
+              "zh": "贝丝（人名）"
+            },
+            {
+              "id": "B1U1-names-2",
+              "num": 2,
+              "en": "Eliud Kipchoge",
+              "pos": "",
+              "zh": "埃利乌德·基普乔盖（肯尼亚马拉松运动员）"
+            },
+            {
+              "id": "B1U1-names-3",
+              "num": 3,
+              "en": "Secretary of State",
+              "pos": "",
+              "zh": "（美国政府的）国务卿（主要负责外交事务）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B1U2",
+      "book": 1,
+      "unit": 2,
+      "label": "第1册 Unit 2",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New words)",
+          "entries": [
+            {
+              "id": "B1U2-words-1",
+              "num": 1,
+              "en": "absurd",
+              "pos": "a.",
+              "zh": "荒唐的；愚蠢的"
+            },
+            {
+              "id": "B1U2-words-2",
+              "num": 2,
+              "en": "abuse",
+              "pos": "n.",
+              "zh": "虐待"
+            },
+            {
+              "id": "B1U2-words-3",
+              "num": 3,
+              "en": "access",
+              "pos": "n.",
+              "zh": "接近；进入"
+            },
+            {
+              "id": "B1U2-words-4",
+              "num": 4,
+              "en": "airline",
+              "pos": "n.",
+              "zh": "航空公司"
+            },
+            {
+              "id": "B1U2-words-5",
+              "num": 5,
+              "en": "badge",
+              "pos": "n.",
+              "zh": "象征；徽章；证章"
+            },
+            {
+              "id": "B1U2-words-6",
+              "num": 6,
+              "en": "commitment",
+              "pos": "n.",
+              "zh": "已承诺（或同意）的事；不得不做的事；承诺"
+            },
+            {
+              "id": "B1U2-words-7",
+              "num": 7,
+              "en": "complain",
+              "pos": "v.",
+              "zh": "抱怨；不满；发牢骚"
+            },
+            {
+              "id": "B1U2-words-8",
+              "num": 8,
+              "en": "conspiracy",
+              "pos": "n.",
+              "zh": "密谋；阴谋"
+            },
+            {
+              "id": "B1U2-words-9",
+              "num": 9,
+              "en": "corridor",
+              "pos": "n.",
+              "zh": "走廊；通道"
+            },
+            {
+              "id": "B1U2-words-10",
+              "num": 10,
+              "en": "crucial",
+              "pos": "a.",
+              "zh": "至关重要的；关键性的"
+            },
+            {
+              "id": "B1U2-words-11",
+              "num": 11,
+              "en": "crush",
+              "pos": "v.",
+              "zh": "（使）变皱，起皱；压坏；压伤；挤压变形"
+            },
+            {
+              "id": "B1U2-words-12",
+              "num": 12,
+              "en": "demonstrate",
+              "pos": "vt.",
+              "zh": "说明；证明；论证；证实"
+            },
+            {
+              "id": "B1U2-words-13",
+              "num": 13,
+              "en": "dispute",
+              "pos": "n.",
+              "zh": "争议；争论；争端；纠纷"
+            },
+            {
+              "id": "B1U2-words-14",
+              "num": 14,
+              "en": "dominate",
+              "pos": "vt.",
+              "zh": "支配；控制；左右；影响"
+            },
+            {
+              "id": "B1U2-words-15",
+              "num": 15,
+              "en": "economics",
+              "pos": "n.",
+              "zh": "经济学"
+            },
+            {
+              "id": "B1U2-words-16",
+              "num": 16,
+              "en": "economist",
+              "pos": "n.",
+              "zh": "经济学家"
+            },
+            {
+              "id": "B1U2-words-17",
+              "num": 17,
+              "en": "economy",
+              "pos": "n.",
+              "zh": "经济"
+            },
+            {
+              "id": "B1U2-words-18",
+              "num": 18,
+              "en": "embarrass",
+              "pos": "vt.",
+              "zh": "（尤指在社交场合）使尴尬，使窘迫"
+            },
+            {
+              "id": "B1U2-words-19",
+              "num": 19,
+              "en": "embarrassed",
+              "pos": "a.",
+              "zh": "窘迫的；尴尬的"
+            },
+            {
+              "id": "B1U2-words-20",
+              "num": 20,
+              "en": "embarrassment",
+              "pos": "n.",
+              "zh": "尴尬；难堪；窘迫"
+            },
+            {
+              "id": "B1U2-words-21",
+              "num": 21,
+              "en": "engage",
+              "pos": "v.",
+              "zh": "（使）从事，参加"
+            },
+            {
+              "id": "B1U2-words-22",
+              "num": 22,
+              "en": "epidemic",
+              "pos": "n.",
+              "zh": "（坏事的突然）泛滥，蔓延；（传染病的）流行，传播"
+            },
+            {
+              "id": "B1U2-words-23",
+              "num": 23,
+              "en": "explanation",
+              "pos": "n.",
+              "zh": "解释；说明"
+            },
+            {
+              "id": "B1U2-words-24",
+              "num": 24,
+              "en": "fee",
+              "pos": "n.",
+              "zh": "报酬；服务费"
+            },
+            {
+              "id": "B1U2-words-25",
+              "num": 25,
+              "en": "fingernail",
+              "pos": "n.",
+              "zh": "手指甲"
+            },
+            {
+              "id": "B1U2-words-26",
+              "num": 26,
+              "en": "finite",
+              "pos": "a.",
+              "zh": "有限的；有限制的"
+            },
+            {
+              "id": "B1U2-words-27",
+              "num": 27,
+              "en": "fuss",
+              "pos": "n.",
+              "zh": "无谓的激动（或忧虑、活动）；大惊小怪"
+            },
+            {
+              "id": "B1U2-words-28",
+              "num": 28,
+              "en": "gut",
+              "pos": "n.",
+              "zh": "（做困难或不愉快的事情所需要的）勇气，魄力，决心"
+            },
+            {
+              "id": "B1U2-words-29",
+              "num": 29,
+              "en": "handle",
+              "pos": "vt.",
+              "zh": "处理；应付"
+            },
+            {
+              "id": "B1U2-words-30",
+              "num": 30,
+              "en": "harvest",
+              "pos": "vt. / n.",
+              "zh": "收割；收割；收获季节"
+            },
+            {
+              "id": "B1U2-words-31",
+              "num": 31,
+              "en": "incoming",
+              "pos": "a.",
+              "zh": "（消息）接收到的"
+            },
+            {
+              "id": "B1U2-words-32",
+              "num": 32,
+              "en": "indicator",
+              "pos": "n.",
+              "zh": "指示物"
+            },
+            {
+              "id": "B1U2-words-33",
+              "num": 33,
+              "en": "indisputable",
+              "pos": "a.",
+              "zh": "无可争辩的；不可否认的"
+            },
+            {
+              "id": "B1U2-words-34",
+              "num": 34,
+              "en": "inevitably",
+              "pos": "ad.",
+              "zh": "不可避免地；必然地"
+            },
+            {
+              "id": "B1U2-words-35",
+              "num": 35,
+              "en": "infect",
+              "pos": "vt.",
+              "zh": "使感染（某种感情）；影响；传染"
+            },
+            {
+              "id": "B1U2-words-36",
+              "num": 36,
+              "en": "infinite",
+              "pos": "a.",
+              "zh": "无限的；（数量或程度上）极大的"
+            },
+            {
+              "id": "B1U2-words-37",
+              "num": 37,
+              "en": "ironic",
+              "pos": "a.",
+              "zh": "（情况）出乎意料的，令人啼笑皆非的"
+            },
+            {
+              "id": "B1U2-words-38",
+              "num": 38,
+              "en": "leisure",
+              "pos": "n.",
+              "zh": "空闲；闲暇"
+            },
+            {
+              "id": "B1U2-words-39",
+              "num": 39,
+              "en": "leisurely",
+              "pos": "ad. / a.",
+              "zh": "不慌不忙地；不慌不忙的"
+            },
+            {
+              "id": "B1U2-words-40",
+              "num": 40,
+              "en": "lifetime",
+              "pos": "n.",
+              "zh": "终身；有生之年；存在期"
+            },
+            {
+              "id": "B1U2-words-41",
+              "num": 41,
+              "en": "locksmith",
+              "pos": "n.",
+              "zh": "锁匠"
+            },
+            {
+              "id": "B1U2-words-42",
+              "num": 42,
+              "en": "luggage",
+              "pos": "n.",
+              "zh": "行李"
+            },
+            {
+              "id": "B1U2-words-43",
+              "num": 43,
+              "en": "manufacture",
+              "pos": "vt. / n.",
+              "zh": "（用机器大量）生产，制造；（大量商品的）生产，制造"
+            },
+            {
+              "id": "B1U2-words-44",
+              "num": 44,
+              "en": "manufacturing",
+              "pos": "n.",
+              "zh": "制造；制造业"
+            },
+            {
+              "id": "B1U2-words-45",
+              "num": 45,
+              "en": "mobile",
+              "pos": "a.",
+              "zh": "与移动电话等技术有关的；可移动的"
+            },
+            {
+              "id": "B1U2-words-46",
+              "num": 46,
+              "en": "occupy",
+              "pos": "vt.",
+              "zh": "使用，占用（空间、面积、时间等）；占据；居住"
+            },
+            {
+              "id": "B1U2-words-47",
+              "num": 47,
+              "en": "overwhelm",
+              "pos": "vt.",
+              "zh": "压垮；使应接不暇；（感情上）使（某人）感到不能自持，使不知所措"
+            },
+            {
+              "id": "B1U2-words-48",
+              "num": 48,
+              "en": "practically",
+              "pos": "ad.",
+              "zh": "几乎；差不多"
+            },
+            {
+              "id": "B1U2-words-49",
+              "num": 49,
+              "en": "priority",
+              "pos": "n.",
+              "zh": "优先处理的事；当务之急"
+            },
+            {
+              "id": "B1U2-words-50",
+              "num": 50,
+              "en": "prioritise",
+              "pos": "vt.",
+              "zh": "(美作prioritize) 优先考虑；优先处理；确定优先次序"
+            },
+            {
+              "id": "B1U2-words-51",
+              "num": 51,
+              "en": "recovery",
+              "pos": "n.",
+              "zh": "恢复；康复；改善；复苏"
+            },
+            {
+              "id": "B1U2-words-52",
+              "num": 52,
+              "en": "regain",
+              "pos": "v.",
+              "zh": "重新获得"
+            },
+            {
+              "id": "B1U2-words-53",
+              "num": 53,
+              "en": "ripe",
+              "pos": "a.",
+              "zh": "（水果或庄稼）成熟的"
+            },
+            {
+              "id": "B1U2-words-54",
+              "num": 54,
+              "en": "scarcity",
+              "pos": "n.",
+              "zh": "不足；短缺"
+            },
+            {
+              "id": "B1U2-words-55",
+              "num": 55,
+              "en": "self",
+              "pos": "n.",
+              "zh": "自身；本身；自己；自我"
+            },
+            {
+              "id": "B1U2-words-56",
+              "num": 56,
+              "en": "snap",
+              "pos": "v.",
+              "zh": "厉声说（话）；（使）啪的一声折断；（给…）拍照"
+            },
+            {
+              "id": "B1U2-words-57",
+              "num": 57,
+              "en": "squeeze",
+              "pos": "vt.",
+              "zh": "挤；捏"
+            },
+            {
+              "id": "B1U2-words-58",
+              "num": 58,
+              "en": "status",
+              "pos": "n.",
+              "zh": "地位；身份；职位"
+            },
+            {
+              "id": "B1U2-words-59",
+              "num": 59,
+              "en": "straightforward",
+              "pos": "a.",
+              "zh": "简单的；易懂的"
+            },
+            {
+              "id": "B1U2-words-60",
+              "num": 60,
+              "en": "stroll",
+              "pos": "vi.",
+              "zh": "散步；闲逛"
+            },
+            {
+              "id": "B1U2-words-61",
+              "num": 61,
+              "en": "stumble",
+              "pos": "vi.",
+              "zh": "绊脚；绊跌"
+            },
+            {
+              "id": "B1U2-words-62",
+              "num": 62,
+              "en": "to-do list",
+              "pos": "n.",
+              "zh": "待办清单"
+            },
+            {
+              "id": "B1U2-words-63",
+              "num": 63,
+              "en": "ulcer",
+              "pos": "n.",
+              "zh": "溃疡"
+            },
+            {
+              "id": "B1U2-words-64",
+              "num": 64,
+              "en": "ultimate",
+              "pos": "a.",
+              "zh": "最好的；极端的；最后的；终极的"
+            },
+            {
+              "id": "B1U2-words-65",
+              "num": 65,
+              "en": "unoccupied",
+              "pos": "a.",
+              "zh": "空着的；闲置的；无人占用的"
+            },
+            {
+              "id": "B1U2-words-66",
+              "num": 66,
+              "en": "wimp",
+              "pos": "n.",
+              "zh": "懦夫；窝囊废"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B1U2-phrases-1",
+              "num": 1,
+              "en": "end up",
+              "pos": "",
+              "zh": "（尤指经历一系列意外后）最终处于，到头来"
+            },
+            {
+              "id": "B1U2-phrases-2",
+              "num": 2,
+              "en": "get through",
+              "pos": "",
+              "zh": "完成（工作）；处理（事情）"
+            },
+            {
+              "id": "B1U2-phrases-3",
+              "num": 3,
+              "en": "in advance (of sth.)",
+              "pos": "",
+              "zh": "预先；提前"
+            },
+            {
+              "id": "B1U2-phrases-4",
+              "num": 4,
+              "en": "in part",
+              "pos": "",
+              "zh": "在某种程度上；部分地"
+            },
+            {
+              "id": "B1U2-phrases-5",
+              "num": 5,
+              "en": "make a fuss (about sth.)",
+              "pos": "",
+              "zh": "（因某事）大吵大闹，大惊小怪"
+            },
+            {
+              "id": "B1U2-phrases-6",
+              "num": 6,
+              "en": "make it",
+              "pos": "",
+              "zh": "（尤指在困难情况下）准时到达，赶上"
+            },
+            {
+              "id": "B1U2-phrases-7",
+              "num": 7,
+              "en": "show up",
+              "pos": "",
+              "zh": "到达（尤指有人在等候之处）"
+            },
+            {
+              "id": "B1U2-phrases-8",
+              "num": 8,
+              "en": "squeeze in",
+              "pos": "",
+              "zh": "为…挤出时间"
+            },
+            {
+              "id": "B1U2-phrases-9",
+              "num": 9,
+              "en": "take off",
+              "pos": "",
+              "zh": "起飞"
+            },
+            {
+              "id": "B1U2-phrases-10",
+              "num": 10,
+              "en": "take on",
+              "pos": "",
+              "zh": "接受（工作）；承担（责任）"
+            },
+            {
+              "id": "B1U2-phrases-11",
+              "num": 11,
+              "en": "throw in",
+              "pos": "",
+              "zh": "额外赠送"
+            },
+            {
+              "id": "B1U2-phrases-12",
+              "num": 12,
+              "en": "weigh down",
+              "pos": "",
+              "zh": "使忧心忡忡"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "names",
+          "label": "专有名词",
+          "title": "专有名词(Proper names)",
+          "entries": [
+            {
+              "id": "B1U2-names-1",
+              "num": 1,
+              "en": "Chicago",
+              "pos": "",
+              "zh": "芝加哥（美国中西部城市）"
+            },
+            {
+              "id": "B1U2-names-2",
+              "num": 2,
+              "en": "Dhahran",
+              "pos": "",
+              "zh": "宰赫兰（沙特阿拉伯东部城市）"
+            },
+            {
+              "id": "B1U2-names-3",
+              "num": 3,
+              "en": "Eldar Shafir",
+              "pos": "",
+              "zh": "埃尔德·沙菲尔（美国普林斯顿大学行为科学和公共政策教授）"
+            },
+            {
+              "id": "B1U2-names-4",
+              "num": 4,
+              "en": "LaGuardia",
+              "pos": "",
+              "zh": "拉瓜迪亚机场（位于美国纽约市）"
+            },
+            {
+              "id": "B1U2-names-5",
+              "num": 5,
+              "en": "O'Hare",
+              "pos": "",
+              "zh": "奥黑尔国际机场（位于美国芝加哥市）"
+            },
+            {
+              "id": "B1U2-names-6",
+              "num": 6,
+              "en": "Saudi Arabia",
+              "pos": "",
+              "zh": "沙特阿拉伯（亚洲西南部国家）"
+            },
+            {
+              "id": "B1U2-names-7",
+              "num": 7,
+              "en": "Sendhil Mullainathan",
+              "pos": "",
+              "zh": "塞德希尔·穆来纳森（美国芝加哥大学经济学教授）"
+            },
+            {
+              "id": "B1U2-names-8",
+              "num": 8,
+              "en": "Thorstein Veblen",
+              "pos": "",
+              "zh": "索尔斯坦·凡勃伦（美国经济学家、社会学家）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B1U3",
+      "book": 1,
+      "unit": 3,
+      "label": "第1册 Unit 3",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New words)",
+          "entries": [
+            {
+              "id": "B1U3-words-1",
+              "num": 1,
+              "en": "athletic",
+              "pos": "a.",
+              "zh": "强壮的；擅长运动的"
+            },
+            {
+              "id": "B1U3-words-2",
+              "num": 2,
+              "en": "athleticism",
+              "pos": "n.",
+              "zh": "运动能力"
+            },
+            {
+              "id": "B1U3-words-3",
+              "num": 3,
+              "en": "brace",
+              "pos": "vt.",
+              "zh": "（使）准备迎接（令人不快的事）"
+            },
+            {
+              "id": "B1U3-words-4",
+              "num": 4,
+              "en": "carton",
+              "pos": "n.",
+              "zh": "硬纸盒；塑料盒"
+            },
+            {
+              "id": "B1U3-words-5",
+              "num": 5,
+              "en": "clipping",
+              "pos": "n.",
+              "zh": "剪报"
+            },
+            {
+              "id": "B1U3-words-6",
+              "num": 6,
+              "en": "clip",
+              "pos": "vt.",
+              "zh": "（从报纸、杂志等上）剪下"
+            },
+            {
+              "id": "B1U3-words-7",
+              "num": 7,
+              "en": "competitive",
+              "pos": "a.",
+              "zh": "好竞争的；求胜心切的"
+            },
+            {
+              "id": "B1U3-words-8",
+              "num": 8,
+              "en": "cuddle",
+              "pos": "v.",
+              "zh": "（尤指表示喜爱而）抱，拥抱，搂抱"
+            },
+            {
+              "id": "B1U3-words-9",
+              "num": 9,
+              "en": "defeat",
+              "pos": "n.",
+              "zh": "失败"
+            },
+            {
+              "id": "B1U3-words-10",
+              "num": 10,
+              "en": "dependent",
+              "pos": "a.",
+              "zh": "取决于某物；依靠的；依赖的"
+            },
+            {
+              "id": "B1U3-words-11",
+              "num": 11,
+              "en": "dresser",
+              "pos": "n.",
+              "zh": "梳妆台；带镜子的衣橱"
+            },
+            {
+              "id": "B1U3-words-12",
+              "num": 12,
+              "en": "drunk",
+              "pos": "a.",
+              "zh": "喝醉的"
+            },
+            {
+              "id": "B1U3-words-13",
+              "num": 13,
+              "en": "elbow",
+              "pos": "n.",
+              "zh": "肘"
+            },
+            {
+              "id": "B1U3-words-14",
+              "num": 14,
+              "en": "embrace",
+              "pos": "n. / v.",
+              "zh": "拥抱；抱；拥抱"
+            },
+            {
+              "id": "B1U3-words-15",
+              "num": 15,
+              "en": "entire",
+              "pos": "a.",
+              "zh": "全部的；整个的"
+            },
+            {
+              "id": "B1U3-words-16",
+              "num": 16,
+              "en": "gasp",
+              "pos": "vi. / v.",
+              "zh": "（由于呼吸困难而）急促吸气；（尤因惊讶或疼痛而）大声吸气，倒抽气"
+            },
+            {
+              "id": "B1U3-words-17",
+              "num": 17,
+              "en": "grapple",
+              "pos": "vi.",
+              "zh": "扭打；搏斗"
+            },
+            {
+              "id": "B1U3-words-18",
+              "num": 18,
+              "en": "grin",
+              "pos": "vi.",
+              "zh": "露齿而笑；咧着嘴笑"
+            },
+            {
+              "id": "B1U3-words-19",
+              "num": 19,
+              "en": "grip",
+              "pos": "n.",
+              "zh": "紧握；紧抓"
+            },
+            {
+              "id": "B1U3-words-20",
+              "num": 20,
+              "en": "handshake",
+              "pos": "n.",
+              "zh": "握手"
+            },
+            {
+              "id": "B1U3-words-21",
+              "num": 21,
+              "en": "handwritten",
+              "pos": "a.",
+              "zh": "手写的"
+            },
+            {
+              "id": "B1U3-words-22",
+              "num": 22,
+              "en": "helmet",
+              "pos": "n.",
+              "zh": "头盔；钢盔；安全帽"
+            },
+            {
+              "id": "B1U3-words-23",
+              "num": 23,
+              "en": "indentation",
+              "pos": "n.",
+              "zh": "凹口；凹陷；缺口"
+            },
+            {
+              "id": "B1U3-words-24",
+              "num": 24,
+              "en": "itchy",
+              "pos": "a.",
+              "zh": "（衣服）令人发痒的；发痒的"
+            },
+            {
+              "id": "B1U3-words-25",
+              "num": 25,
+              "en": "obligation",
+              "pos": "n.",
+              "zh": "（道义或法律上的）义务，职责，责任"
+            },
+            {
+              "id": "B1U3-words-26",
+              "num": 26,
+              "en": "outcome",
+              "pos": "n.",
+              "zh": "（讨论、战争等无法预知的）结果，后果"
+            },
+            {
+              "id": "B1U3-words-27",
+              "num": 27,
+              "en": "oversized",
+              "pos": "a.",
+              "zh": "大于一般的；太大的"
+            },
+            {
+              "id": "B1U3-words-28",
+              "num": 28,
+              "en": "palm",
+              "pos": "n.",
+              "zh": "手掌；掌部"
+            },
+            {
+              "id": "B1U3-words-29",
+              "num": 29,
+              "en": "patio",
+              "pos": "n.",
+              "zh": "（房屋外面的）露台，平台"
+            },
+            {
+              "id": "B1U3-words-30",
+              "num": 30,
+              "en": "porch",
+              "pos": "n.",
+              "zh": "（房屋前后的）游廊，走廊；阳台；（房子或教堂前门外有顶的）入口，门廊"
+            },
+            {
+              "id": "B1U3-words-31",
+              "num": 31,
+              "en": "rail",
+              "pos": "n.",
+              "zh": "铁路系统"
+            },
+            {
+              "id": "B1U3-words-32",
+              "num": 32,
+              "en": "reassure",
+              "pos": "vt.",
+              "zh": "使安心；使放心；使消除疑虑"
+            },
+            {
+              "id": "B1U3-words-33",
+              "num": 33,
+              "en": "recall",
+              "pos": "v.",
+              "zh": "回想，回忆起（某事物）"
+            },
+            {
+              "id": "B1U3-words-34",
+              "num": 34,
+              "en": "rewind",
+              "pos": "vt.",
+              "zh": "倒回（录音带或录像带）"
+            },
+            {
+              "id": "B1U3-words-35",
+              "num": 35,
+              "en": "ritual",
+              "pos": "n.",
+              "zh": "惯例；老规矩；例行公事；（为纪念重要宗教或社会事件举行的）仪式，典礼"
+            },
+            {
+              "id": "B1U3-words-36",
+              "num": 36,
+              "en": "sadness",
+              "pos": "n.",
+              "zh": "悲伤；悲痛"
+            },
+            {
+              "id": "B1U3-words-37",
+              "num": 37,
+              "en": "seagull",
+              "pos": "n.",
+              "zh": "海鸥"
+            },
+            {
+              "id": "B1U3-words-38",
+              "num": 38,
+              "en": "shamelessly",
+              "pos": "ad.",
+              "zh": "无耻地；不知羞耻地"
+            },
+            {
+              "id": "B1U3-words-39",
+              "num": 39,
+              "en": "sip",
+              "pos": "v.",
+              "zh": "小口地喝；抿；呷"
+            },
+            {
+              "id": "B1U3-words-40",
+              "num": 40,
+              "en": "sling",
+              "pos": "vt.",
+              "zh": "（松松垮垮地）挂，吊，悬；（随意而稍用力地）扔，掷，抛"
+            },
+            {
+              "id": "B1U3-words-41",
+              "num": 41,
+              "en": "strain",
+              "pos": "v.",
+              "zh": "使劲；竭力；用尽全力；拉伤；扭伤"
+            },
+            {
+              "id": "B1U3-words-42",
+              "num": 42,
+              "en": "steady",
+              "pos": "a.",
+              "zh": "稳定的；牢固的；不摇晃的；平稳的；持续的；逐渐的"
+            },
+            {
+              "id": "B1U3-words-43",
+              "num": 43,
+              "en": "suck",
+              "pos": "v.",
+              "zh": "吸；吮；啜"
+            },
+            {
+              "id": "B1U3-words-44",
+              "num": 44,
+              "en": "sunglasses",
+              "pos": "n.",
+              "zh": "太阳镜；墨镜"
+            },
+            {
+              "id": "B1U3-words-45",
+              "num": 45,
+              "en": "teen",
+              "pos": "n.",
+              "zh": "青少年时期（13 到19 岁之间的阶段）；（青）少年；十几岁的孩子"
+            },
+            {
+              "id": "B1U3-words-46",
+              "num": 46,
+              "en": "tense",
+              "pos": "v. / a.",
+              "zh": "使（肌肉）绷紧；僵硬；令人紧张的；令人不安的；令人着急的"
+            },
+            {
+              "id": "B1U3-words-47",
+              "num": 47,
+              "en": "throat",
+              "pos": "n.",
+              "zh": "喉咙；咽喉"
+            },
+            {
+              "id": "B1U3-words-48",
+              "num": 48,
+              "en": "thunderstorm",
+              "pos": "n.",
+              "zh": "雷暴；雷雨"
+            },
+            {
+              "id": "B1U3-words-49",
+              "num": 49,
+              "en": "twist",
+              "pos": "v.",
+              "zh": "扭动（身体）"
+            },
+            {
+              "id": "B1U3-words-50",
+              "num": 50,
+              "en": "underline",
+              "pos": "vt.",
+              "zh": "在…之下画线（以示重要）"
+            },
+            {
+              "id": "B1U3-words-51",
+              "num": 51,
+              "en": "unexpected",
+              "pos": "a.",
+              "zh": "想不到的；意外的；突然的"
+            },
+            {
+              "id": "B1U3-words-52",
+              "num": 52,
+              "en": "unsteadily",
+              "pos": "ad.",
+              "zh": "颤抖地；抖动地"
+            },
+            {
+              "id": "B1U3-words-53",
+              "num": 53,
+              "en": "wrap",
+              "pos": "vt.",
+              "zh": "（用手臂、腿或手指）围住（某物）；（用纸或布）包，裹（某物）"
+            },
+            {
+              "id": "B1U3-words-54",
+              "num": 54,
+              "en": "wrestle",
+              "pos": "v.",
+              "zh": "（与某人）摔跤，扭打"
+            },
+            {
+              "id": "B1U3-words-55",
+              "num": 55,
+              "en": "wrist",
+              "pos": "n.",
+              "zh": "腕（关节）"
+            },
+            {
+              "id": "B1U3-words-56",
+              "num": 56,
+              "en": "yield",
+              "pos": "vi. / vt.",
+              "zh": "（因外力或受压而）移动，弯曲，断裂；屈服；让步；产生，得出（结果、答案或消息）"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B1U3-phrases-1",
+              "num": 1,
+              "en": "at the top of one's lungs",
+              "pos": "",
+              "zh": "尽量大声地；放声地"
+            },
+            {
+              "id": "B1U3-phrases-2",
+              "num": 2,
+              "en": "cuddle up",
+              "pos": "",
+              "zh": "偎依"
+            },
+            {
+              "id": "B1U3-phrases-3",
+              "num": 3,
+              "en": "lift off",
+              "pos": "",
+              "zh": "（飞机）起飞；（航天器）升空"
+            },
+            {
+              "id": "B1U3-phrases-4",
+              "num": 4,
+              "en": "on one's mind",
+              "pos": "",
+              "zh": "挂在心上的；惦念的"
+            },
+            {
+              "id": "B1U3-phrases-5",
+              "num": 5,
+              "en": "pick up",
+              "pos": "",
+              "zh": "搭载；接载"
+            },
+            {
+              "id": "B1U3-phrases-6",
+              "num": 6,
+              "en": "settle for",
+              "pos": "",
+              "zh": "勉强接受；将就"
+            },
+            {
+              "id": "B1U3-phrases-7",
+              "num": 7,
+              "en": "stay up",
+              "pos": "",
+              "zh": "熬夜；深夜不睡觉"
+            },
+            {
+              "id": "B1U3-phrases-8",
+              "num": 8,
+              "en": "within walking distance",
+              "pos": "",
+              "zh": "在步行距离之内"
+            },
+            {
+              "id": "B1U3-phrases-9",
+              "num": 9,
+              "en": "work against",
+              "pos": "",
+              "zh": "有效地对抗；击败"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B1U4",
+      "book": 1,
+      "unit": 4,
+      "label": "第1册 Unit 4",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New words)",
+          "entries": [
+            {
+              "id": "B1U4-words-1",
+              "num": 1,
+              "en": "abundant",
+              "pos": "a.",
+              "zh": "充裕的；丰富的"
+            },
+            {
+              "id": "B1U4-words-2",
+              "num": 2,
+              "en": "aisle",
+              "pos": "n.",
+              "zh": "通道；过道"
+            },
+            {
+              "id": "B1U4-words-3",
+              "num": 3,
+              "en": "annoy",
+              "pos": "vt.",
+              "zh": "使恼怒；使生气"
+            },
+            {
+              "id": "B1U4-words-4",
+              "num": 4,
+              "en": "annoying",
+              "pos": "a.",
+              "zh": "讨厌的；令人气恼的"
+            },
+            {
+              "id": "B1U4-words-5",
+              "num": 5,
+              "en": "appeal",
+              "pos": "n.",
+              "zh": "感染力；吸引力；呼吁；恳求"
+            },
+            {
+              "id": "B1U4-words-6",
+              "num": 6,
+              "en": "approval",
+              "pos": "n.",
+              "zh": "赞许；赞成；同意；批准；认可"
+            },
+            {
+              "id": "B1U4-words-7",
+              "num": 7,
+              "en": "argument",
+              "pos": "n.",
+              "zh": "论点；论据；争论；争吵；争辩"
+            },
+            {
+              "id": "B1U4-words-8",
+              "num": 8,
+              "en": "arrow",
+              "pos": "n.",
+              "zh": "（指示方向的）箭号，箭头（符号）；箭；矢"
+            },
+            {
+              "id": "B1U4-words-9",
+              "num": 9,
+              "en": "assumption",
+              "pos": "n.",
+              "zh": "假定；假设"
+            },
+            {
+              "id": "B1U4-words-10",
+              "num": 10,
+              "en": "boast",
+              "pos": "v.",
+              "zh": "夸口；夸耀；吹嘘"
+            },
+            {
+              "id": "B1U4-words-11",
+              "num": 11,
+              "en": "boom",
+              "pos": "n.",
+              "zh": "（生意）繁荣，兴旺，激增"
+            },
+            {
+              "id": "B1U4-words-12",
+              "num": 12,
+              "en": "brainstorm",
+              "pos": "n.",
+              "zh": "头脑风暴；灵感；突然想到的好主意"
+            },
+            {
+              "id": "B1U4-words-13",
+              "num": 13,
+              "en": "browse",
+              "pos": "vi.",
+              "zh": "随意翻阅，浏览（书刊等）"
+            },
+            {
+              "id": "B1U4-words-14",
+              "num": 14,
+              "en": "confusion",
+              "pos": "n.",
+              "zh": "困惑；不确定；混乱"
+            },
+            {
+              "id": "B1U4-words-15",
+              "num": 15,
+              "en": "consult",
+              "pos": "v.",
+              "zh": "当顾问；咨询；请教"
+            },
+            {
+              "id": "B1U4-words-16",
+              "num": 16,
+              "en": "consultation",
+              "pos": "n.",
+              "zh": "商量，磋商；咨询"
+            },
+            {
+              "id": "B1U4-words-17",
+              "num": 17,
+              "en": "contradictory",
+              "pos": "a.",
+              "zh": "矛盾的；抵触的"
+            },
+            {
+              "id": "B1U4-words-18",
+              "num": 18,
+              "en": "cyberspace",
+              "pos": "n.",
+              "zh": "网络空间"
+            },
+            {
+              "id": "B1U4-words-19",
+              "num": 19,
+              "en": "define",
+              "pos": "vt.",
+              "zh": "确定；说明；界定"
+            },
+            {
+              "id": "B1U4-words-20",
+              "num": 20,
+              "en": "demotivate",
+              "pos": "vt.",
+              "zh": "使人失去动力；使人消极"
+            },
+            {
+              "id": "B1U4-words-21",
+              "num": 21,
+              "en": "dominance",
+              "pos": "n.",
+              "zh": "优势；显要；突出"
+            },
+            {
+              "id": "B1U4-words-22",
+              "num": 22,
+              "en": "donkey",
+              "pos": "n.",
+              "zh": "驴"
+            },
+            {
+              "id": "B1U4-words-23",
+              "num": 23,
+              "en": "dusk",
+              "pos": "n.",
+              "zh": "黄昏；傍晚"
+            },
+            {
+              "id": "B1U4-words-24",
+              "num": 24,
+              "en": "educational",
+              "pos": "a.",
+              "zh": "教育的"
+            },
+            {
+              "id": "B1U4-words-25",
+              "num": 25,
+              "en": "executive",
+              "pos": "n.",
+              "zh": "（机构或公司的）主管，经理"
+            },
+            {
+              "id": "B1U4-words-26",
+              "num": 26,
+              "en": "existential",
+              "pos": "a.",
+              "zh": "关于人类存在的；存在主义的"
+            },
+            {
+              "id": "B1U4-words-27",
+              "num": 27,
+              "en": "fatigue",
+              "pos": "n.",
+              "zh": "厌倦；疲劳；疲乏；劳累"
+            },
+            {
+              "id": "B1U4-words-28",
+              "num": 28,
+              "en": "fingertip",
+              "pos": "n.",
+              "zh": "指尖"
+            },
+            {
+              "id": "B1U4-words-29",
+              "num": 29,
+              "en": "fist",
+              "pos": "n.",
+              "zh": "拳头"
+            },
+            {
+              "id": "B1U4-words-30",
+              "num": 30,
+              "en": "fit",
+              "pos": "v.",
+              "zh": "安排时间做（某事）；安排时间见（某人）；找出…的时间(注：此处作动词)"
+            },
+            {
+              "id": "B1U4-words-31",
+              "num": 31,
+              "en": "flick",
+              "pos": "v.",
+              "zh": "（尤指用手快速地）轻击，轻拍，轻拂，轻弹"
+            },
+            {
+              "id": "B1U4-words-32",
+              "num": 32,
+              "en": "format",
+              "pos": "n.",
+              "zh": "（计算机信息存储）格式；总体安排；计划；设计"
+            },
+            {
+              "id": "B1U4-words-33",
+              "num": 33,
+              "en": "foyer",
+              "pos": "n.",
+              "zh": "（公共建筑物入口处的）休息厅，门厅"
+            },
+            {
+              "id": "B1U4-words-34",
+              "num": 34,
+              "en": "gratefully",
+              "pos": "ad.",
+              "zh": "感谢地；感激地"
+            },
+            {
+              "id": "B1U4-words-35",
+              "num": 35,
+              "en": "halfway",
+              "pos": "a. & ad.",
+              "zh": "（空间或时间的）中间（的），半途（的）"
+            },
+            {
+              "id": "B1U4-words-36",
+              "num": 36,
+              "en": "hay",
+              "pos": "n.",
+              "zh": "（作动物饲料用的）干草，饲草"
+            },
+            {
+              "id": "B1U4-words-37",
+              "num": 37,
+              "en": "high-rise",
+              "pos": "a.",
+              "zh": "高耸的；高层的"
+            },
+            {
+              "id": "B1U4-words-38",
+              "num": 38,
+              "en": "invincible",
+              "pos": "a.",
+              "zh": "不可战胜的；无敌的"
+            },
+            {
+              "id": "B1U4-words-39",
+              "num": 39,
+              "en": "invest",
+              "pos": "v.",
+              "zh": "投入（大量时间、精力、金钱等以成就某事）；投资"
+            },
+            {
+              "id": "B1U4-words-40",
+              "num": 40,
+              "en": "logically",
+              "pos": "ad.",
+              "zh": "按照逻辑地；合乎逻辑地"
+            },
+            {
+              "id": "B1U4-words-41",
+              "num": 41,
+              "en": "longing",
+              "pos": "n.",
+              "zh": "渴望；盼望"
+            },
+            {
+              "id": "B1U4-words-42",
+              "num": 42,
+              "en": "lower",
+              "pos": "v.",
+              "zh": "降低；减少"
+            },
+            {
+              "id": "B1U4-words-43",
+              "num": 43,
+              "en": "management",
+              "pos": "n.",
+              "zh": "（对公司或组织的）经营，管理"
+            },
+            {
+              "id": "B1U4-words-44",
+              "num": 44,
+              "en": "motivate",
+              "pos": "vt.",
+              "zh": "激发；激励；成为…的动机"
+            },
+            {
+              "id": "B1U4-words-45",
+              "num": 45,
+              "en": "necessity",
+              "pos": "n.",
+              "zh": "必需品"
+            },
+            {
+              "id": "B1U4-words-46",
+              "num": 46,
+              "en": "oyster",
+              "pos": "n.",
+              "zh": "牡蛎；蚝"
+            },
+            {
+              "id": "B1U4-words-47",
+              "num": 47,
+              "en": "paralysis",
+              "pos": "n.",
+              "zh": "不知所措；（行动、决策、运行等）瘫痪，停顿；瘫痪；麻痹"
+            },
+            {
+              "id": "B1U4-words-48",
+              "num": 48,
+              "en": "pension",
+              "pos": "n.",
+              "zh": "养老金；退休金"
+            },
+            {
+              "id": "B1U4-words-49",
+              "num": 49,
+              "en": "realm",
+              "pos": "n.",
+              "zh": "（知识、活动、思想的）领域，范围"
+            },
+            {
+              "id": "B1U4-words-50",
+              "num": 50,
+              "en": "replicate",
+              "pos": "vt.",
+              "zh": "重做；重复（某项科学研究）；复证（某个结果）"
+            },
+            {
+              "id": "B1U4-words-51",
+              "num": 51,
+              "en": "restlessly",
+              "pos": "ad.",
+              "zh": "（尤指因紧张或厌烦而）不安宁地，烦躁地，不耐烦地"
+            },
+            {
+              "id": "B1U4-words-52",
+              "num": 52,
+              "en": "sacrifice",
+              "pos": "vt.",
+              "zh": "牺牲；献出"
+            },
+            {
+              "id": "B1U4-words-53",
+              "num": 53,
+              "en": "scribble",
+              "pos": "vt.",
+              "zh": "潦草地写"
+            },
+            {
+              "id": "B1U4-words-54",
+              "num": 54,
+              "en": "simultaneously",
+              "pos": "ad.",
+              "zh": "同时发生地；同步地"
+            },
+            {
+              "id": "B1U4-words-55",
+              "num": 55,
+              "en": "stack",
+              "pos": "v. / n.",
+              "zh": "（使）整齐地堆起；摞起；一叠；一堆；一摞"
+            },
+            {
+              "id": "B1U4-words-56",
+              "num": 56,
+              "en": "straddle",
+              "pos": "vt.",
+              "zh": "包括，跨越（不同的活动领域、团体、时间等）；跨坐；跨立"
+            },
+            {
+              "id": "B1U4-words-57",
+              "num": 57,
+              "en": "stuck",
+              "pos": "a.",
+              "zh": "不知所措的；（为某事）犯愁的；卡住的；无法移动的；动不了的"
+            },
+            {
+              "id": "B1U4-words-58",
+              "num": 58,
+              "en": "surrender",
+              "pos": "vt.",
+              "zh": "（被迫）放弃；投降"
+            },
+            {
+              "id": "B1U4-words-59",
+              "num": 59,
+              "en": "trickle",
+              "pos": "vi.",
+              "zh": "（人、车辆、货物等）缓慢而零星地移动；滴；淌；涓涓地流"
+            },
+            {
+              "id": "B1U4-words-60",
+              "num": 60,
+              "en": "unable",
+              "pos": "a.",
+              "zh": "无能力（做某事）的"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B1U4-phrases-1",
+              "num": 1,
+              "en": "by default",
+              "pos": "",
+              "zh": "由于没有采取行动（而发生某事）"
+            },
+            {
+              "id": "B1U4-phrases-2",
+              "num": 2,
+              "en": "fit in",
+              "pos": "",
+              "zh": "安排时间做（某事）；安排时间见（某人）；找出…的时间"
+            },
+            {
+              "id": "B1U4-phrases-3",
+              "num": 3,
+              "en": "have sth. at one's fingertips",
+              "pos": "",
+              "zh": "手头有某物（可供随时使用）；对某物了如指掌"
+            },
+            {
+              "id": "B1U4-phrases-4",
+              "num": 4,
+              "en": "in passing",
+              "pos": "",
+              "zh": "（在谈论别的事情时）顺便说起某事物，附带提及某事物"
+            },
+            {
+              "id": "B1U4-phrases-5",
+              "num": 5,
+              "en": "sb. can't help but do sth.",
+              "pos": "",
+              "zh": "某人忍不住做某事；某人不能停止做某事"
+            },
+            {
+              "id": "B1U4-phrases-6",
+              "num": 6,
+              "en": "set in",
+              "pos": "",
+              "zh": "（尤指不愉快的事）开始，来临"
+            },
+            {
+              "id": "B1U4-phrases-7",
+              "num": 7,
+              "en": "step in",
+              "pos": "",
+              "zh": "介入；干涉；插手"
+            },
+            {
+              "id": "B1U4-phrases-8",
+              "num": 8,
+              "en": "stick with",
+              "pos": "",
+              "zh": "继续做（使用）；不放弃"
+            },
+            {
+              "id": "B1U4-phrases-9",
+              "num": 9,
+              "en": "the world is sb.'s oyster",
+              "pos": "",
+              "zh": "可以随心所欲；想要什么就能得到什么"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "names",
+          "label": "专有名词",
+          "title": "专有名词(Proper names)",
+          "entries": [
+            {
+              "id": "B1U4-names-1",
+              "num": 1,
+              "en": "Indian Ocean",
+              "pos": "",
+              "zh": "印度洋"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B2U1",
+      "book": 2,
+      "unit": 1,
+      "label": "第2册 Unit 1",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New words)",
+          "entries": [
+            {
+              "id": "B2U1-words-1",
+              "num": 1,
+              "en": "accomplish",
+              "pos": "vt.",
+              "zh": "（尤指通过努力）完成，实现"
+            },
+            {
+              "id": "B2U1-words-2",
+              "num": 2,
+              "en": "amazement",
+              "pos": "n.",
+              "zh": "吃惊；惊奇"
+            },
+            {
+              "id": "B2U1-words-3",
+              "num": 3,
+              "en": "artificial",
+              "pos": "a.",
+              "zh": "人造的；人工的"
+            },
+            {
+              "id": "B2U1-words-4",
+              "num": 4,
+              "en": "artificial intelligence",
+              "pos": "n.",
+              "zh": "(abbr. AI) 人工智能"
+            },
+            {
+              "id": "B2U1-words-5",
+              "num": 5,
+              "en": "aspiration",
+              "pos": "n.",
+              "zh": "强烈愿望；志向；抱负"
+            },
+            {
+              "id": "B2U1-words-6",
+              "num": 6,
+              "en": "assemble",
+              "pos": "vt. / v.",
+              "zh": "组装；装配；集合；聚集"
+            },
+            {
+              "id": "B2U1-words-7",
+              "num": 7,
+              "en": "attribute",
+              "pos": "vt.",
+              "zh": "认为…具有…的特征；把…归因于…"
+            },
+            {
+              "id": "B2U1-words-8",
+              "num": 8,
+              "en": "breakthrough",
+              "pos": "n.",
+              "zh": "突破；重大进展"
+            },
+            {
+              "id": "B2U1-words-9",
+              "num": 9,
+              "en": "burgeon",
+              "pos": "vi.",
+              "zh": "快速增长（发展）"
+            },
+            {
+              "id": "B2U1-words-10",
+              "num": 10,
+              "en": "capacity",
+              "pos": "n.",
+              "zh": "能力；才能；容量；容积；容纳人数"
+            },
+            {
+              "id": "B2U1-words-11",
+              "num": 11,
+              "en": "clone",
+              "pos": "vt.",
+              "zh": "复制；模仿；克隆"
+            },
+            {
+              "id": "B2U1-words-12",
+              "num": 12,
+              "en": "coexist",
+              "pos": "vi.",
+              "zh": "共存；共处"
+            },
+            {
+              "id": "B2U1-words-13",
+              "num": 13,
+              "en": "confident",
+              "pos": "a.",
+              "zh": "有信心的；自信的；确信的；有把握的"
+            },
+            {
+              "id": "B2U1-words-14",
+              "num": 14,
+              "en": "consecutive",
+              "pos": "a.",
+              "zh": "连续的；不间断的"
+            },
+            {
+              "id": "B2U1-words-15",
+              "num": 15,
+              "en": "consensus",
+              "pos": "n.",
+              "zh": "共同意见；一致看法；共识"
+            },
+            {
+              "id": "B2U1-words-16",
+              "num": 16,
+              "en": "considerable",
+              "pos": "a.",
+              "zh": "相当大的（尤指能产生影响或很重要）"
+            },
+            {
+              "id": "B2U1-words-17",
+              "num": 17,
+              "en": "consumption",
+              "pos": "n.",
+              "zh": "购买；消费；（能源、油、电等的）消耗量"
+            },
+            {
+              "id": "B2U1-words-18",
+              "num": 18,
+              "en": "cord",
+              "pos": "n.",
+              "zh": "电线；粗线；细绳；索；带"
+            },
+            {
+              "id": "B2U1-words-19",
+              "num": 19,
+              "en": "craze",
+              "pos": "n.",
+              "zh": "时尚；一时的狂热"
+            },
+            {
+              "id": "B2U1-words-20",
+              "num": 20,
+              "en": "daunting",
+              "pos": "a.",
+              "zh": "使人气馁的；吓人的"
+            },
+            {
+              "id": "B2U1-words-21",
+              "num": 21,
+              "en": "deem",
+              "pos": "vt.",
+              "zh": "认为；视为"
+            },
+            {
+              "id": "B2U1-words-22",
+              "num": 22,
+              "en": "downturn",
+              "pos": "n.",
+              "zh": "（经济、商业等活动的）下降，衰退"
+            },
+            {
+              "id": "B2U1-words-23",
+              "num": 23,
+              "en": "drone",
+              "pos": "n. / vi.",
+              "zh": "无人机；发出持续的嗡嗡声；嗡嗡作响"
+            },
+            {
+              "id": "B2U1-words-24",
+              "num": 24,
+              "en": "e-commerce",
+              "pos": "n.",
+              "zh": "电子商务"
+            },
+            {
+              "id": "B2U1-words-25",
+              "num": 25,
+              "en": "entrepreneur",
+              "pos": "n.",
+              "zh": "企业家"
+            },
+            {
+              "id": "B2U1-words-26",
+              "num": 26,
+              "en": "entrepreneurial",
+              "pos": "a.",
+              "zh": "具有创业素质的"
+            },
+            {
+              "id": "B2U1-words-27",
+              "num": 27,
+              "en": "entitled",
+              "pos": "a.",
+              "zh": "（由于自身身份）认为应得的，有权利的，有资格的"
+            },
+            {
+              "id": "B2U1-words-28",
+              "num": 28,
+              "en": "envision",
+              "pos": "vt.",
+              "zh": "想象，展望（尤指美好的事）"
+            },
+            {
+              "id": "B2U1-words-29",
+              "num": 29,
+              "en": "evolve",
+              "pos": "v.",
+              "zh": "逐步形成；逐渐演变；（植物、动物等）进化，进化形成"
+            },
+            {
+              "id": "B2U1-words-30",
+              "num": 30,
+              "en": "feat",
+              "pos": "n.",
+              "zh": "业绩；功绩；壮举"
+            },
+            {
+              "id": "B2U1-words-31",
+              "num": 31,
+              "en": "forecast",
+              "pos": "vt. / n.",
+              "zh": "预测；预报；预测；预报"
+            },
+            {
+              "id": "B2U1-words-32",
+              "num": 32,
+              "en": "furthermore",
+              "pos": "ad.",
+              "zh": "此外；而且；不仅如此；更有甚者"
+            },
+            {
+              "id": "B2U1-words-33",
+              "num": 33,
+              "en": "glimmer",
+              "pos": "n.",
+              "zh": "（希望等的）微弱迹象，一丝"
+            },
+            {
+              "id": "B2U1-words-34",
+              "num": 34,
+              "en": "glitter",
+              "pos": "vi.",
+              "zh": "闪烁；闪光"
+            },
+            {
+              "id": "B2U1-words-35",
+              "num": 35,
+              "en": "glittering",
+              "pos": "a.",
+              "zh": "闪光的；闪耀的"
+            },
+            {
+              "id": "B2U1-words-36",
+              "num": 36,
+              "en": "head-to-head",
+              "pos": "ad. / a.",
+              "zh": "正面交锋地；正面交锋的"
+            },
+            {
+              "id": "B2U1-words-37",
+              "num": 37,
+              "en": "holdout",
+              "pos": "n.",
+              "zh": "抵制者（或组织）；不合作者（或组织）"
+            },
+            {
+              "id": "B2U1-words-38",
+              "num": 38,
+              "en": "hub",
+              "pos": "n.",
+              "zh": "（地域、系统、活动等的）中心，枢纽"
+            },
+            {
+              "id": "B2U1-words-39",
+              "num": 39,
+              "en": "hardship",
+              "pos": "n.",
+              "zh": "艰苦；贫困"
+            },
+            {
+              "id": "B2U1-words-40",
+              "num": 40,
+              "en": "impressively",
+              "pos": "ad.",
+              "zh": "令人钦佩地"
+            },
+            {
+              "id": "B2U1-words-41",
+              "num": 41,
+              "en": "impetus",
+              "pos": "n.",
+              "zh": "刺激；推动（力）；促进"
+            },
+            {
+              "id": "B2U1-words-42",
+              "num": 42,
+              "en": "increasingly",
+              "pos": "ad.",
+              "zh": "不断增加地；越来越多地"
+            },
+            {
+              "id": "B2U1-words-43",
+              "num": 43,
+              "en": "individualistic",
+              "pos": "a.",
+              "zh": "独立独行的；独特的；个人主义的"
+            },
+            {
+              "id": "B2U1-words-44",
+              "num": 44,
+              "en": "innovation",
+              "pos": "n.",
+              "zh": "革新；创新；新观念；新方法；新发明"
+            },
+            {
+              "id": "B2U1-words-45",
+              "num": 45,
+              "en": "lifestyle",
+              "pos": "n.",
+              "zh": "生活方式"
+            },
+            {
+              "id": "B2U1-words-46",
+              "num": 46,
+              "en": "millennial",
+              "pos": "n.",
+              "zh": "千禧一代"
+            },
+            {
+              "id": "B2U1-words-47",
+              "num": 47,
+              "en": "miracle",
+              "pos": "n.",
+              "zh": "意外的幸运事；不可思议的事；奇迹"
+            },
+            {
+              "id": "B2U1-words-48",
+              "num": 48,
+              "en": "mistaken",
+              "pos": "a.",
+              "zh": "意见（或判断）错误的，弄错的"
+            },
+            {
+              "id": "B2U1-words-49",
+              "num": 49,
+              "en": "mistakenly",
+              "pos": "ad.",
+              "zh": "错误地；曲解地；被误解地"
+            },
+            {
+              "id": "B2U1-words-50",
+              "num": 50,
+              "en": "momentum",
+              "pos": "n.",
+              "zh": "动力；势头"
+            },
+            {
+              "id": "B2U1-words-51",
+              "num": 51,
+              "en": "navigate",
+              "pos": "v.",
+              "zh": "理解，应付（困难复杂的情况）；（为…）导航，指引方向"
+            },
+            {
+              "id": "B2U1-words-52",
+              "num": 52,
+              "en": "outpouring",
+              "pos": "n.",
+              "zh": "大量涌现；迸发；（强烈感情的）流露，倾吐"
+            },
+            {
+              "id": "B2U1-words-53",
+              "num": 53,
+              "en": "overnight",
+              "pos": "ad.",
+              "zh": "突然；一下子；夜里；在夜间"
+            },
+            {
+              "id": "B2U1-words-54",
+              "num": 54,
+              "en": "per annum",
+              "pos": "ad.",
+              "zh": "每年"
+            },
+            {
+              "id": "B2U1-words-55",
+              "num": 55,
+              "en": "phenomenon",
+              "pos": "n.",
+              "zh": "现象；非凡的人（事物）；奇才；奇事"
+            },
+            {
+              "id": "B2U1-words-56",
+              "num": 56,
+              "en": "poised",
+              "pos": "a.",
+              "zh": "准备好的；蓄势待发的；（摆好姿势）准备行动的"
+            },
+            {
+              "id": "B2U1-words-57",
+              "num": 57,
+              "en": "profound",
+              "pos": "a.",
+              "zh": "巨大的；重大的；深远的；深切的"
+            },
+            {
+              "id": "B2U1-words-58",
+              "num": 58,
+              "en": "progressive",
+              "pos": "a.",
+              "zh": "（尤指在政治和教育方面）进步的，先进的"
+            },
+            {
+              "id": "B2U1-words-59",
+              "num": 59,
+              "en": "ranking",
+              "pos": "n.",
+              "zh": "排行；排名；名次"
+            },
+            {
+              "id": "B2U1-words-60",
+              "num": 60,
+              "en": "regretfully",
+              "pos": "ad.",
+              "zh": "遗憾地；惋惜地"
+            },
+            {
+              "id": "B2U1-words-61",
+              "num": 61,
+              "en": "reign",
+              "pos": "vi.",
+              "zh": "支配；盛行；为王；为君"
+            },
+            {
+              "id": "B2U1-words-62",
+              "num": 62,
+              "en": "remark",
+              "pos": "v.",
+              "zh": "评论，谈到，说起（尤指刚察觉的事）n. 言论；意见；评论"
+            },
+            {
+              "id": "B2U1-words-63",
+              "num": 63,
+              "en": "reminisce",
+              "pos": "vi.",
+              "zh": "谈论，追忆（快乐的往事）"
+            },
+            {
+              "id": "B2U1-words-64",
+              "num": 64,
+              "en": "savvy",
+              "pos": "a. / n.",
+              "zh": "有见识的；在行的；实际知识和能力；见识"
+            },
+            {
+              "id": "B2U1-words-65",
+              "num": 65,
+              "en": "sector",
+              "pos": "n.",
+              "zh": "（尤指商业、贸易等领域的）部门，行业"
+            },
+            {
+              "id": "B2U1-words-66",
+              "num": 66,
+              "en": "self-centered",
+              "pos": "a.",
+              "zh": "自我中心的；自私的"
+            },
+            {
+              "id": "B2U1-words-68",
+              "num": 68,
+              "en": "sole",
+              "pos": "a.",
+              "zh": "唯一的"
+            },
+            {
+              "id": "B2U1-words-69",
+              "num": 69,
+              "en": "sophisticated",
+              "pos": "a.",
+              "zh": "见多识广的；老练的；练达的"
+            },
+            {
+              "id": "B2U1-words-70",
+              "num": 70,
+              "en": "spontaneous",
+              "pos": "a.",
+              "zh": "自发的；自然而生的；一时冲动的"
+            },
+            {
+              "id": "B2U1-words-71",
+              "num": 71,
+              "en": "spectrum",
+              "pos": "n.",
+              "zh": "（观点、人、情况等的）范围，幅度"
+            },
+            {
+              "id": "B2U1-words-72",
+              "num": 72,
+              "en": "sprawl",
+              "pos": "vi.",
+              "zh": "（建筑群）杂乱地延伸（扩展）；（懒洋洋地或漫不经心地）摊开手脚躺（坐）着"
+            },
+            {
+              "id": "B2U1-words-73",
+              "num": 73,
+              "en": "stall",
+              "pos": "n.",
+              "zh": "（尤指集市上的）货摊，摊位，售货亭"
+            },
+            {
+              "id": "B2U1-words-74",
+              "num": 74,
+              "en": "supreme",
+              "pos": "a.",
+              "zh": "（权力、重要性或影响力）最高的，至高无上的"
+            },
+            {
+              "id": "B2U1-words-75",
+              "num": 75,
+              "en": "transform",
+              "pos": "vt. / vi.",
+              "zh": "使改观；使变形；使转化；改观；变形；转化"
+            },
+            {
+              "id": "B2U1-words-76",
+              "num": 76,
+              "en": "trendy",
+              "pos": "a.",
+              "zh": "时髦的；受新潮思想影响的"
+            },
+            {
+              "id": "B2U1-words-77",
+              "num": 77,
+              "en": "unrecognizable",
+              "pos": "a.",
+              "zh": "（变得）不能识别的，认不出来的"
+            },
+            {
+              "id": "B2U1-words-78",
+              "num": 78,
+              "en": "wander",
+              "pos": "v.",
+              "zh": "徘徊；闲逛；漫步于"
+            },
+            {
+              "id": "B2U1-words-79",
+              "num": 79,
+              "en": "workforce",
+              "pos": "n.",
+              "zh": "（行业的）全体从业人员；（公司的）全体员工；（国家或地区的）劳动力"
+            },
+            {
+              "id": "B2U1-words-80",
+              "num": 80,
+              "en": "wormhole",
+              "pos": "n.",
+              "zh": "虫洞（宇宙中可能存在的连接遥远空间的通道）"
+            },
+            {
+              "id": "B2U1-words-81",
+              "num": 81,
+              "en": "youngster",
+              "pos": "n.",
+              "zh": "孩童；年轻人"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B2U1-phrases-1",
+              "num": 1,
+              "en": "as compared to / with",
+              "pos": "",
+              "zh": "相比于"
+            },
+            {
+              "id": "B2U1-phrases-2",
+              "num": 2,
+              "en": "for now",
+              "pos": "",
+              "zh": "目前；暂时"
+            },
+            {
+              "id": "B2U1-phrases-3",
+              "num": 3,
+              "en": "in / by contrast (to / with)",
+              "pos": "",
+              "zh": "和…形成对照；相比之下"
+            },
+            {
+              "id": "B2U1-phrases-4",
+              "num": 4,
+              "en": "in the long / short / medium term",
+              "pos": "",
+              "zh": "长期/短期/ 中期"
+            },
+            {
+              "id": "B2U1-phrases-5",
+              "num": 5,
+              "en": "other than",
+              "pos": "",
+              "zh": "除了…以外"
+            },
+            {
+              "id": "B2U1-phrases-6",
+              "num": 6,
+              "en": "packed with",
+              "pos": "",
+              "zh": "充满…的"
+            },
+            {
+              "id": "B2U1-phrases-7",
+              "num": 7,
+              "en": "reign supreme",
+              "pos": "",
+              "zh": "主宰；称雄；呈极盛之势"
+            },
+            {
+              "id": "B2U1-phrases-8",
+              "num": 8,
+              "en": "speak to",
+              "pos": "",
+              "zh": "与…产生共鸣；与…产生情感联结"
+            },
+            {
+              "id": "B2U1-phrases-9",
+              "num": 9,
+              "en": "(it's) no / small / little wonder (that)",
+              "pos": "",
+              "zh": "并不奇怪；不足为奇"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "names",
+          "label": "专有名词",
+          "title": "专有名词(Proper names)",
+          "entries": [
+            {
+              "id": "B2U1-names-1",
+              "num": 1,
+              "en": "GDP (gross domestic product)",
+              "pos": "",
+              "zh": "国内生产总值"
+            },
+            {
+              "id": "B2U1-names-2",
+              "num": 2,
+              "en": "Melbourne",
+              "pos": "",
+              "zh": "墨尔本（澳大利亚城市，位于维多利亚州）"
+            },
+            {
+              "id": "B2U1-names-3",
+              "num": 3,
+              "en": "Silicon Valley",
+              "pos": "",
+              "zh": "硅谷（位于美国加利福尼亚州，因计算机和电子工业闻名）"
+            },
+            {
+              "id": "B2U1-names-4",
+              "num": 4,
+              "en": "the Global Innovation Index (GII)",
+              "pos": "",
+              "zh": "全球创新指数"
+            },
+            {
+              "id": "B2U1-names-5",
+              "num": 5,
+              "en": "the World Intellectual Property Organization (WIPO)",
+              "pos": "",
+              "zh": "世界知识产权组织"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B2U2",
+      "book": 2,
+      "unit": 2,
+      "label": "第2册 Unit 2",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New words)",
+          "entries": [
+            {
+              "id": "B2U2-words-1",
+              "num": 1,
+              "en": "aboard",
+              "pos": "ad./prep.",
+              "zh": "在船（飞机、火车）上；上（船、飞机、火车）"
+            },
+            {
+              "id": "B2U2-words-2",
+              "num": 2,
+              "en": "antidote",
+              "pos": "n.",
+              "zh": "缓解方法；对抗手段；解毒剂"
+            },
+            {
+              "id": "B2U2-words-3",
+              "num": 3,
+              "en": "babushka",
+              "pos": "n.",
+              "zh": "（来自俄语）老婆婆；祖母"
+            },
+            {
+              "id": "B2U2-words-4",
+              "num": 4,
+              "en": "birch",
+              "pos": "n.",
+              "zh": "桦树；桦木"
+            },
+            {
+              "id": "B2U2-words-5",
+              "num": 5,
+              "en": "bounce",
+              "pos": "v.",
+              "zh": "（使）弹起；（使）反弹；（使）弹跳"
+            },
+            {
+              "id": "B2U2-words-6",
+              "num": 6,
+              "en": "capability",
+              "pos": "n.",
+              "zh": "能力；才能"
+            },
+            {
+              "id": "B2U2-words-7",
+              "num": 7,
+              "en": "capitalism",
+              "pos": "n.",
+              "zh": "资本主义"
+            },
+            {
+              "id": "B2U2-words-8",
+              "num": 8,
+              "en": "casual",
+              "pos": "a.",
+              "zh": "不认真的；随便的；漫不经心的；不放在心上的"
+            },
+            {
+              "id": "B2U2-words-9",
+              "num": 9,
+              "en": "cathedral",
+              "pos": "n.",
+              "zh": "大教堂；教区总教堂"
+            },
+            {
+              "id": "B2U2-words-10",
+              "num": 10,
+              "en": "chambermaid",
+              "pos": "n.",
+              "zh": "打扫房间的女工；（尤指宾馆里的）客房女服务员"
+            },
+            {
+              "id": "B2U2-words-11",
+              "num": 11,
+              "en": "charm",
+              "pos": "vt. / n.",
+              "zh": "吸引…的兴趣；迷住；魅力；吸引力"
+            },
+            {
+              "id": "B2U2-words-12",
+              "num": 12,
+              "en": "cherish",
+              "pos": "vt.",
+              "zh": "重视；珍视"
+            },
+            {
+              "id": "B2U2-words-13",
+              "num": 13,
+              "en": "chestnut",
+              "pos": "n.",
+              "zh": "栗子；板栗"
+            },
+            {
+              "id": "B2U2-words-14",
+              "num": 14,
+              "en": "childlike",
+              "pos": "a.",
+              "zh": "孩子般的；像孩子似的；天真无邪的"
+            },
+            {
+              "id": "B2U2-words-15",
+              "num": 15,
+              "en": "closely",
+              "pos": "ad.",
+              "zh": "仔细地；严密地；密切地；在很大程度上"
+            },
+            {
+              "id": "B2U2-words-16",
+              "num": 16,
+              "en": "critic",
+              "pos": "n.",
+              "zh": "（艺术、音乐、电影等的）评论家，批评家；批评者"
+            },
+            {
+              "id": "B2U2-words-17",
+              "num": 17,
+              "en": "devour",
+              "pos": "vt.",
+              "zh": "如饥似渴地阅读；津津有味地看；狼吞虎咽地吃"
+            },
+            {
+              "id": "B2U2-words-18",
+              "num": 18,
+              "en": "disobey",
+              "pos": "v.",
+              "zh": "不服从；不顺从；违抗"
+            },
+            {
+              "id": "B2U2-words-19",
+              "num": 19,
+              "en": "dock-side",
+              "pos": "n.",
+              "zh": "码头边；坞边"
+            },
+            {
+              "id": "B2U2-words-20",
+              "num": 20,
+              "en": "double-decker",
+              "pos": "n.",
+              "zh": "双层公共汽车"
+            },
+            {
+              "id": "B2U2-words-21",
+              "num": 21,
+              "en": "echo",
+              "pos": "vi.",
+              "zh": "附和（别人的观点）n. 回声；回音"
+            },
+            {
+              "id": "B2U2-words-22",
+              "num": 22,
+              "en": "endanger",
+              "pos": "vt.",
+              "zh": "使处于险境；危及"
+            },
+            {
+              "id": "B2U2-words-23",
+              "num": 23,
+              "en": "endure",
+              "pos": "vt. / vi.",
+              "zh": "持续存在；忍耐；忍受"
+            },
+            {
+              "id": "B2U2-words-24",
+              "num": 24,
+              "en": "enduring",
+              "pos": "a.",
+              "zh": "持久的；耐久的"
+            },
+            {
+              "id": "B2U2-words-25",
+              "num": 25,
+              "en": "excite",
+              "pos": "vt.",
+              "zh": "引起；激起；使兴奋；使激动"
+            },
+            {
+              "id": "B2U2-words-26",
+              "num": 26,
+              "en": "existence",
+              "pos": "n.",
+              "zh": "生活；生活方式；存在；实有"
+            },
+            {
+              "id": "B2U2-words-27",
+              "num": 27,
+              "en": "fossil",
+              "pos": "n.",
+              "zh": "化石"
+            },
+            {
+              "id": "B2U2-words-28",
+              "num": 28,
+              "en": "fossilize",
+              "pos": "v.",
+              "zh": "（使）成化石，石化；（使）（人、思想、体制等）僵化"
+            },
+            {
+              "id": "B2U2-words-29",
+              "num": 29,
+              "en": "fretful",
+              "pos": "a.",
+              "zh": "令人烦恼的；烦恼的；发牢骚的"
+            },
+            {
+              "id": "B2U2-words-30",
+              "num": 30,
+              "en": "goat",
+              "pos": "n.",
+              "zh": "山羊"
+            },
+            {
+              "id": "B2U2-words-31",
+              "num": 31,
+              "en": "grasp",
+              "pos": "n. / vt.",
+              "zh": "（对复杂想法、情况或问题的）理解力，领悟力；抓牢；握紧"
+            },
+            {
+              "id": "B2U2-words-32",
+              "num": 32,
+              "en": "humour",
+              "pos": "n.",
+              "zh": "幽默感；幽默"
+            },
+            {
+              "id": "B2U2-words-33",
+              "num": 33,
+              "en": "ignorant",
+              "pos": "a.",
+              "zh": "无知的；愚昧的"
+            },
+            {
+              "id": "B2U2-words-34",
+              "num": 34,
+              "en": "impulse",
+              "pos": "n.",
+              "zh": "冲动；突然的欲望"
+            },
+            {
+              "id": "B2U2-words-35",
+              "num": 35,
+              "en": "layer",
+              "pos": "vt. / n.",
+              "zh": "铺一层…；分层放置；表层；层"
+            },
+            {
+              "id": "B2U2-words-36",
+              "num": 36,
+              "en": "lifeboat",
+              "pos": "n.",
+              "zh": "（船上备用的）救生艇；（海上）救生艇（船）"
+            },
+            {
+              "id": "B2U2-words-37",
+              "num": 37,
+              "en": "maximize",
+              "pos": "vt.",
+              "zh": "使增加到最大限度；使最大化"
+            },
+            {
+              "id": "B2U2-words-38",
+              "num": 38,
+              "en": "metro",
+              "pos": "n.",
+              "zh": "地铁"
+            },
+            {
+              "id": "B2U2-words-39",
+              "num": 39,
+              "en": "mudflow",
+              "pos": "n.",
+              "zh": "泥流"
+            },
+            {
+              "id": "B2U2-words-40",
+              "num": 40,
+              "en": "musing",
+              "pos": "n.",
+              "zh": "沉思；诉说想法"
+            },
+            {
+              "id": "B2U2-words-41",
+              "num": 41,
+              "en": "mustache",
+              "pos": "n.",
+              "zh": "髭；小胡子"
+            },
+            {
+              "id": "B2U2-words-42",
+              "num": 42,
+              "en": "obey",
+              "pos": "v.",
+              "zh": "服从；遵守；顺从"
+            },
+            {
+              "id": "B2U2-words-43",
+              "num": 43,
+              "en": "orderly",
+              "pos": "a.",
+              "zh": "有条理的；整齐的"
+            },
+            {
+              "id": "B2U2-words-44",
+              "num": 44,
+              "en": "overloaded",
+              "pos": "a.",
+              "zh": "超载的；超负荷的"
+            },
+            {
+              "id": "B2U2-words-45",
+              "num": 45,
+              "en": "packet",
+              "pos": "n.",
+              "zh": "（装商品的）小包，小袋，小盒"
+            },
+            {
+              "id": "B2U2-words-46",
+              "num": 46,
+              "en": "passionate",
+              "pos": "a.",
+              "zh": "感情强烈的；热情的"
+            },
+            {
+              "id": "B2U2-words-47",
+              "num": 47,
+              "en": "photography",
+              "pos": "n.",
+              "zh": "摄影；摄影业；摄影术"
+            },
+            {
+              "id": "B2U2-words-48",
+              "num": 48,
+              "en": "puzzle",
+              "pos": "vt. / n.",
+              "zh": "使困惑；使迷惑；拼图游戏；拼图玩具"
+            },
+            {
+              "id": "B2U2-words-49",
+              "num": 49,
+              "en": "queue",
+              "pos": "vi.",
+              "zh": "排队（等候）n. 队，行列"
+            },
+            {
+              "id": "B2U2-words-50",
+              "num": 50,
+              "en": "quotation",
+              "pos": "n.",
+              "zh": "引文；引语；语录"
+            },
+            {
+              "id": "B2U2-words-51",
+              "num": 51,
+              "en": "refugee",
+              "pos": "n.",
+              "zh": "难民；避难者"
+            },
+            {
+              "id": "B2U2-words-52",
+              "num": 52,
+              "en": "reliably",
+              "pos": "ad.",
+              "zh": "可靠地；可信赖地"
+            },
+            {
+              "id": "B2U2-words-53",
+              "num": 53,
+              "en": "reunion",
+              "pos": "n.",
+              "zh": "团圆；重逢；聚会"
+            },
+            {
+              "id": "B2U2-words-54",
+              "num": 54,
+              "en": "roam",
+              "pos": "v.",
+              "zh": "闲逛；漫步；漫步于"
+            },
+            {
+              "id": "B2U2-words-55",
+              "num": 55,
+              "en": "sake",
+              "pos": "n.",
+              "zh": "为某事本身的缘故；鉴于某事本身的价值；为了某人/某事的缘故"
+            },
+            {
+              "id": "B2U2-words-56",
+              "num": 56,
+              "en": "scramble",
+              "pos": "vi.",
+              "zh": "争夺；抢夺；（迅速而吃力地）爬，攀登"
+            },
+            {
+              "id": "B2U2-words-57",
+              "num": 57,
+              "en": "serendipity",
+              "pos": "n.",
+              "zh": "（有趣或有价值事物的）碰巧发现，机缘巧合"
+            },
+            {
+              "id": "B2U2-words-58",
+              "num": 58,
+              "en": "shell",
+              "pos": "n.",
+              "zh": "（禽蛋、坚果、种子的）壳"
+            },
+            {
+              "id": "B2U2-words-59",
+              "num": 59,
+              "en": "sidewalk",
+              "pos": "n.",
+              "zh": "人行道"
+            },
+            {
+              "id": "B2U2-words-60",
+              "num": 60,
+              "en": "singular",
+              "pos": "a.",
+              "zh": "单个的；独一无二的；（词形）单数的"
+            },
+            {
+              "id": "B2U2-words-61",
+              "num": 61,
+              "en": "sketch",
+              "pos": "v. / n.",
+              "zh": "（给…）画速写；（给…）画素描；素描；速写；草图"
+            },
+            {
+              "id": "B2U2-words-62",
+              "num": 62,
+              "en": "sniff",
+              "pos": "v.",
+              "zh": "嗅；闻；（因哭泣、感冒等）抽鼻子"
+            },
+            {
+              "id": "B2U2-words-63",
+              "num": 63,
+              "en": "snapshot",
+              "pos": "n.",
+              "zh": "简要描述；简介；快照"
+            },
+            {
+              "id": "B2U2-words-64",
+              "num": 64,
+              "en": "snugly",
+              "pos": "ad.",
+              "zh": "温暖舒适地"
+            },
+            {
+              "id": "B2U2-words-65",
+              "num": 65,
+              "en": "spiky",
+              "pos": "a.",
+              "zh": "带尖刺的；有刺的"
+            },
+            {
+              "id": "B2U2-words-66",
+              "num": 66,
+              "en": "stern",
+              "pos": "a.",
+              "zh": "严厉的；严格的；苛刻的"
+            },
+            {
+              "id": "B2U2-words-67",
+              "num": 67,
+              "en": "stripe",
+              "pos": "n.",
+              "zh": "条纹；线条"
+            },
+            {
+              "id": "B2U2-words-68",
+              "num": 68,
+              "en": "striped",
+              "pos": "a.",
+              "zh": "有（彩色）条纹的"
+            },
+            {
+              "id": "B2U2-words-69",
+              "num": 69,
+              "en": "sway",
+              "pos": "vi.",
+              "zh": "摇摆；摇动；摇晃"
+            },
+            {
+              "id": "B2U2-words-70",
+              "num": 70,
+              "en": "telling",
+              "pos": "a.",
+              "zh": "说明问题的；显露真相的"
+            },
+            {
+              "id": "B2U2-words-71",
+              "num": 71,
+              "en": "thoughtful",
+              "pos": "a.",
+              "zh": "经缜密思考的；注意的；想得周到的；体贴的；关心的"
+            },
+            {
+              "id": "B2U2-words-72",
+              "num": 72,
+              "en": "throes",
+              "pos": "n.",
+              "zh": "处于…的困境中"
+            },
+            {
+              "id": "B2U2-words-73",
+              "num": 73,
+              "en": "toothbrush",
+              "pos": "n.",
+              "zh": "牙刷"
+            },
+            {
+              "id": "B2U2-words-74",
+              "num": 74,
+              "en": "transition",
+              "pos": "n. / vi.",
+              "zh": "过渡；转变；变迁；过渡；转变"
+            },
+            {
+              "id": "B2U2-words-75",
+              "num": 75,
+              "en": "tuck",
+              "pos": "vt.",
+              "zh": "把…放起来；把（衣服等的末端）塞进"
+            },
+            {
+              "id": "B2U2-words-76",
+              "num": 76,
+              "en": "unfiltered",
+              "pos": "a.",
+              "zh": "（信息）未经过滤的；未过滤的"
+            },
+            {
+              "id": "B2U2-words-77",
+              "num": 77,
+              "en": "upside down",
+              "pos": "ad.",
+              "zh": "倒置地；颠倒地"
+            },
+            {
+              "id": "B2U2-words-78",
+              "num": 78,
+              "en": "Victorian",
+              "pos": "a.",
+              "zh": "英国维多利亚（女王）时代的"
+            },
+            {
+              "id": "B2U2-words-79",
+              "num": 79,
+              "en": "virtually",
+              "pos": "ad.",
+              "zh": "几乎；虚拟地；模拟地"
+            },
+            {
+              "id": "B2U2-words-80",
+              "num": 80,
+              "en": "volcanic",
+              "pos": "a.",
+              "zh": "火山的；由火山作用引起的"
+            },
+            {
+              "id": "B2U2-words-81",
+              "num": 81,
+              "en": "wherever",
+              "pos": "ad.",
+              "zh": "无论去哪里；无论在哪里；无论什么情况下"
+            },
+            {
+              "id": "B2U2-words-82",
+              "num": 82,
+              "en": "whisperer",
+              "pos": "n.",
+              "zh": "（通过低声耳语和轻柔的身体动作）训练动物的人"
+            },
+            {
+              "id": "B2U2-words-83",
+              "num": 83,
+              "en": "windmill",
+              "pos": "n.",
+              "zh": "风车；风车磨坊"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B2U2-phrases-1",
+              "num": 1,
+              "en": "as far as sb. is concerned",
+              "pos": "",
+              "zh": "在某人看来；就某人而言"
+            },
+            {
+              "id": "B2U2-phrases-2",
+              "num": 2,
+              "en": "bring back",
+              "pos": "",
+              "zh": "使回忆起（想起）"
+            },
+            {
+              "id": "B2U2-phrases-3",
+              "num": 3,
+              "en": "bring up",
+              "pos": "",
+              "zh": "提起（话题）"
+            },
+            {
+              "id": "B2U2-phrases-4",
+              "num": 4,
+              "en": "follow in sb.'s footsteps",
+              "pos": "",
+              "zh": "步某人的后尘；走某人走过的路；继承事业"
+            },
+            {
+              "id": "B2U2-phrases-5",
+              "num": 5,
+              "en": "for instance",
+              "pos": "",
+              "zh": "例如"
+            },
+            {
+              "id": "B2U2-phrases-6",
+              "num": 6,
+              "en": "get around",
+              "pos": "",
+              "zh": "（新闻或消息）传开"
+            },
+            {
+              "id": "B2U2-phrases-7",
+              "num": 7,
+              "en": "get off the ground",
+              "pos": "",
+              "zh": "开始获得成功；取得进展"
+            },
+            {
+              "id": "B2U2-phrases-8",
+              "num": 8,
+              "en": "get the hang of sth.",
+              "pos": "",
+              "zh": "掌握…的窍门"
+            },
+            {
+              "id": "B2U2-phrases-9",
+              "num": 9,
+              "en": "if not",
+              "pos": "",
+              "zh": "甚至可能（用于提出更极端的说法）"
+            },
+            {
+              "id": "B2U2-phrases-10",
+              "num": 10,
+              "en": "in real time",
+              "pos": "",
+              "zh": "立刻；实时"
+            },
+            {
+              "id": "B2U2-phrases-11",
+              "num": 11,
+              "en": "in the end",
+              "pos": "",
+              "zh": "最后；终于"
+            },
+            {
+              "id": "B2U2-phrases-12",
+              "num": 12,
+              "en": "no more ... than",
+              "pos": "",
+              "zh": "根本不…；完全不…"
+            },
+            {
+              "id": "B2U2-phrases-13",
+              "num": 13,
+              "en": "pull up",
+              "pos": "",
+              "zh": "（车辆或司机）停车"
+            },
+            {
+              "id": "B2U2-phrases-14",
+              "num": 14,
+              "en": "stumble upon / on / across",
+              "pos": "",
+              "zh": "偶然发现（碰见）"
+            },
+            {
+              "id": "B2U2-phrases-15",
+              "num": 15,
+              "en": "touch up",
+              "pos": "",
+              "zh": "修改；改进；润色"
+            },
+            {
+              "id": "B2U2-phrases-16",
+              "num": 16,
+              "en": "tuck away",
+              "pos": "",
+              "zh": "把（尤指钱）存放在安全处"
+            },
+            {
+              "id": "B2U2-phrases-17",
+              "num": 17,
+              "en": "wash out",
+              "pos": "",
+              "zh": "洗净（尤指容器内壁）"
+            },
+            {
+              "id": "B2U2-phrases-18",
+              "num": 18,
+              "en": "win out (over)",
+              "pos": "",
+              "zh": "终于成功；胜出"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "names",
+          "label": "专有名词",
+          "title": "专有名词(Proper names)",
+          "entries": [
+            {
+              "id": "B2U2-names-1",
+              "num": 1,
+              "en": "Bulgaria",
+              "pos": "",
+              "zh": "保加利亚（欧洲国家）"
+            },
+            {
+              "id": "B2U2-names-2",
+              "num": 2,
+              "en": "Cévennes",
+              "pos": "",
+              "zh": "塞文山脉（位于法国南部）"
+            },
+            {
+              "id": "B2U2-names-3",
+              "num": 3,
+              "en": "Clarno Unit",
+              "pos": "",
+              "zh": "克拉诺区（约翰迪化石层国家遗址的三个区块之一）"
+            },
+            {
+              "id": "B2U2-names-4",
+              "num": 4,
+              "en": "Copenhagen",
+              "pos": "",
+              "zh": "哥本哈根（丹麦首都）"
+            },
+            {
+              "id": "B2U2-names-5",
+              "num": 5,
+              "en": "Denmark",
+              "pos": "",
+              "zh": "丹麦（欧洲国家）"
+            },
+            {
+              "id": "B2U2-names-6",
+              "num": 6,
+              "en": "Ho Chi Minh City",
+              "pos": "",
+              "zh": "胡志明市（越南城市，位于东南部）"
+            },
+            {
+              "id": "B2U2-names-7",
+              "num": 7,
+              "en": "John Day Fossil Beds National Monument",
+              "pos": "",
+              "zh": "约翰迪化石层国家遗址（美国国家公园，位于俄勒冈州）"
+            },
+            {
+              "id": "B2U2-names-8",
+              "num": 8,
+              "en": "John Ruskin",
+              "pos": "",
+              "zh": "约翰·罗斯金（英国艺术评论家）"
+            },
+            {
+              "id": "B2U2-names-9",
+              "num": 9,
+              "en": "Le Cheylard",
+              "pos": "",
+              "zh": "勒谢拉尔（法国市镇，位于法国南部）"
+            },
+            {
+              "id": "B2U2-names-10",
+              "num": 10,
+              "en": "Luc",
+              "pos": "",
+              "zh": "吕克（法国市镇，位于法国南部）"
+            },
+            {
+              "id": "B2U2-names-11",
+              "num": 11,
+              "en": "Oregon",
+              "pos": "",
+              "zh": "俄勒冈州（位于美国西北部）"
+            },
+            {
+              "id": "B2U2-names-12",
+              "num": 12,
+              "en": "Oslo",
+              "pos": "",
+              "zh": "奥斯陆（挪威首都）"
+            },
+            {
+              "id": "B2U2-names-13",
+              "num": 13,
+              "en": "Robert Louis Stevenson",
+              "pos": "",
+              "zh": "罗伯特· 路易·史蒂文森（英国作家）"
+            },
+            {
+              "id": "B2U2-names-14",
+              "num": 14,
+              "en": "Russia",
+              "pos": "",
+              "zh": "俄罗斯（欧洲国家）"
+            },
+            {
+              "id": "B2U2-names-15",
+              "num": 15,
+              "en": "the Netherlands",
+              "pos": "",
+              "zh": "荷兰（欧洲国家）"
+            },
+            {
+              "id": "B2U2-names-16",
+              "num": 16,
+              "en": "Vidin",
+              "pos": "",
+              "zh": "维丁（保加利亚城市）"
+            },
+            {
+              "id": "B2U2-names-17",
+              "num": 17,
+              "en": "Vietnam",
+              "pos": "",
+              "zh": "越南（亚洲国家）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B2U3",
+      "book": 2,
+      "unit": 3,
+      "label": "第2册 Unit 3",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New words)",
+          "entries": [
+            {
+              "id": "B2U3-words-1",
+              "num": 1,
+              "en": "accessible",
+              "pos": "a.",
+              "zh": "易得到的；易使用的；易到达的；易进入的"
+            },
+            {
+              "id": "B2U3-words-2",
+              "num": 2,
+              "en": "addiction",
+              "pos": "n.",
+              "zh": "上瘾"
+            },
+            {
+              "id": "B2U3-words-3",
+              "num": 3,
+              "en": "alongside",
+              "pos": "prep. / ad. & prep.",
+              "zh": "与……一起；与……同时；在（……）旁边"
+            },
+            {
+              "id": "B2U3-words-4",
+              "num": 4,
+              "en": "amusement park",
+              "pos": "n.",
+              "zh": "游乐场"
+            },
+            {
+              "id": "B2U3-words-5",
+              "num": 5,
+              "en": "automatic",
+              "pos": "a.",
+              "zh": "（装置或流程）自动的"
+            },
+            {
+              "id": "B2U3-words-6",
+              "num": 6,
+              "en": "botany",
+              "pos": "n.",
+              "zh": "植物学"
+            },
+            {
+              "id": "B2U3-words-7",
+              "num": 7,
+              "en": "boundary",
+              "pos": "n.",
+              "zh": "（不同情感、思想、品质等之间的）分界，分界线；边界"
+            },
+            {
+              "id": "B2U3-words-8",
+              "num": 8,
+              "en": "breath-taking",
+              "pos": "a.",
+              "zh": "使人喘不过气来的；激动人心的；惊人的；令人惊叹的"
+            },
+            {
+              "id": "B2U3-words-9",
+              "num": 9,
+              "en": "brutal",
+              "pos": "a.",
+              "zh": "伤人的；不顾他人感受的；野蛮的；凶残的"
+            },
+            {
+              "id": "B2U3-words-10",
+              "num": 10,
+              "en": "bump",
+              "pos": "n. / v.",
+              "zh": "凸起；隆起；鼓包；碰；撞"
+            },
+            {
+              "id": "B2U3-words-11",
+              "num": 11,
+              "en": "celebration",
+              "pos": "n.",
+              "zh": "庆祝；祝贺；颂扬；庆祝会；庆祝活动"
+            },
+            {
+              "id": "B2U3-words-12",
+              "num": 12,
+              "en": "corporation",
+              "pos": "n.",
+              "zh": "大型公司；企业集团"
+            },
+            {
+              "id": "B2U3-words-13",
+              "num": 13,
+              "en": "crack",
+              "pos": "v.",
+              "zh": "（使）破裂；（使）裂开"
+            },
+            {
+              "id": "B2U3-words-14",
+              "num": 14,
+              "en": "cracked",
+              "pos": "a.",
+              "zh": "有裂缝的；有裂痕的"
+            },
+            {
+              "id": "B2U3-words-15",
+              "num": 15,
+              "en": "curve",
+              "pos": "n.",
+              "zh": "（道路、河流等的）弯曲处；曲线；弧线"
+            },
+            {
+              "id": "B2U3-words-16",
+              "num": 16,
+              "en": "disposable",
+              "pos": "a.",
+              "zh": "可以使用的；一次性的；用完即弃的"
+            },
+            {
+              "id": "B2U3-words-17",
+              "num": 17,
+              "en": "discontented",
+              "pos": "a.",
+              "zh": "不满的；不满足的；不愉快的"
+            },
+            {
+              "id": "B2U3-words-18",
+              "num": 18,
+              "en": "distraction",
+              "pos": "n.",
+              "zh": "娱乐；消遣；使人分心的事物"
+            },
+            {
+              "id": "B2U3-words-19",
+              "num": 19,
+              "en": "drip",
+              "pos": "vi. / v.",
+              "zh": "（液体）滴下，沥下；滴下（液体）"
+            },
+            {
+              "id": "B2U3-words-20",
+              "num": 20,
+              "en": "dual",
+              "pos": "a.",
+              "zh": "双的；双重的；两部分的"
+            },
+            {
+              "id": "B2U3-words-21",
+              "num": 21,
+              "en": "duality",
+              "pos": "n.",
+              "zh": "双重性"
+            },
+            {
+              "id": "B2U3-words-22",
+              "num": 22,
+              "en": "emerge",
+              "pos": "vi.",
+              "zh": "兴起；开始被人所知；出现；浮现"
+            },
+            {
+              "id": "B2U3-words-23",
+              "num": 23,
+              "en": "enhance",
+              "pos": "vt.",
+              "zh": "改善；改进"
+            },
+            {
+              "id": "B2U3-words-24",
+              "num": 24,
+              "en": "enjoyable",
+              "pos": "a.",
+              "zh": "令人愉快的；令人快乐的"
+            },
+            {
+              "id": "B2U3-words-25",
+              "num": 25,
+              "en": "equate",
+              "pos": "vt.",
+              "zh": "等同；同等看待"
+            },
+            {
+              "id": "B2U3-words-26",
+              "num": 26,
+              "en": "fore-shadow",
+              "pos": "vt.",
+              "zh": "预示；是……的预兆"
+            },
+            {
+              "id": "B2U3-words-27",
+              "num": 27,
+              "en": "fragility",
+              "pos": "n.",
+              "zh": "（形式）脆弱，不稳定；脆弱；易碎；易损坏"
+            },
+            {
+              "id": "B2U3-words-28",
+              "num": 28,
+              "en": "fulfillment",
+              "pos": "n.",
+              "zh": "成就感；充实感"
+            },
+            {
+              "id": "B2U3-words-29",
+              "num": 29,
+              "en": "graciously",
+              "pos": "ad.",
+              "zh": "有礼貌地，仁慈地，和蔼地，亲切地（尤指对较低阶层的人们）"
+            },
+            {
+              "id": "B2U3-words-30",
+              "num": 30,
+              "en": "hike",
+              "pos": "v. / n.",
+              "zh": "（在……）徒步旅行，远足；（在山区或乡间的）徒步旅行，远足"
+            },
+            {
+              "id": "B2U3-words-31",
+              "num": 31,
+              "en": "hobbyist",
+              "pos": "n.",
+              "zh": "爱好者"
+            },
+            {
+              "id": "B2U3-words-32",
+              "num": 32,
+              "en": "honesty",
+              "pos": "n.",
+              "zh": "诚实；正直；坦诚"
+            },
+            {
+              "id": "B2U3-words-33",
+              "num": 33,
+              "en": "hurdle",
+              "pos": "n.",
+              "zh": "（跨栏赛跑或马术比赛中用的）栏架；障碍；困难"
+            },
+            {
+              "id": "B2U3-words-34",
+              "num": 34,
+              "en": "indistinguishable",
+              "pos": "a.",
+              "zh": "难以分辨的；难以区分的"
+            },
+            {
+              "id": "B2U3-words-35",
+              "num": 35,
+              "en": "inevitable",
+              "pos": "a.",
+              "zh": "必然的；不可避免的"
+            },
+            {
+              "id": "B2U3-words-36",
+              "num": 36,
+              "en": "joyful",
+              "pos": "a.",
+              "zh": "欢乐的；令人高兴的"
+            },
+            {
+              "id": "B2U3-words-37",
+              "num": 37,
+              "en": "lead",
+              "pos": "vt.",
+              "zh": "导致某人做某事(注：此处取自短语lead sb. to do sth.)"
+            },
+            {
+              "id": "B2U3-words-38",
+              "num": 38,
+              "en": "loyal",
+              "pos": "a.",
+              "zh": "忠贞的；忠实的；忠诚的"
+            },
+            {
+              "id": "B2U3-words-39",
+              "num": 39,
+              "en": "meditative",
+              "pos": "a.",
+              "zh": "冥想的；默想的；深思的；沉思的；思考的"
+            },
+            {
+              "id": "B2U3-words-40",
+              "num": 40,
+              "en": "merge",
+              "pos": "vi. / v.",
+              "zh": "相融；融入；渐渐消失在另一物中；合并；融合"
+            },
+            {
+              "id": "B2U3-words-41",
+              "num": 41,
+              "en": "parallel",
+              "pos": "a.",
+              "zh": "相似的；同时发生的；平行的"
+            },
+            {
+              "id": "B2U3-words-42",
+              "num": 42,
+              "en": "paycheck",
+              "pos": "n.",
+              "zh": "薪金；工资"
+            },
+            {
+              "id": "B2U3-words-43",
+              "num": 43,
+              "en": "permanently",
+              "pos": "ad.",
+              "zh": "永久地；长久地"
+            },
+            {
+              "id": "B2U3-words-44",
+              "num": 44,
+              "en": "pine needle",
+              "pos": "n.",
+              "zh": "松针；松叶"
+            },
+            {
+              "id": "B2U3-words-45",
+              "num": 45,
+              "en": "privilege",
+              "pos": "n.",
+              "zh": "特权；特殊待遇"
+            },
+            {
+              "id": "B2U3-words-46",
+              "num": 46,
+              "en": "productivity",
+              "pos": "n.",
+              "zh": "生产率；生产效率；生产量；生产力"
+            },
+            {
+              "id": "B2U3-words-47",
+              "num": 47,
+              "en": "prosperity",
+              "pos": "n.",
+              "zh": "兴隆；发达；繁荣；昌盛"
+            },
+            {
+              "id": "B2U3-words-48",
+              "num": 48,
+              "en": "prospect",
+              "pos": "n.",
+              "zh": "可能性；希望"
+            },
+            {
+              "id": "B2U3-words-49",
+              "num": 49,
+              "en": "purity",
+              "pos": "n.",
+              "zh": "纯；纯洁；洁净；纯正；纯粹"
+            },
+            {
+              "id": "B2U3-words-50",
+              "num": 50,
+              "en": "recession",
+              "pos": "n.",
+              "zh": "（经济）衰退，萧条"
+            },
+            {
+              "id": "B2U3-words-51",
+              "num": 51,
+              "en": "regarding",
+              "pos": "prep.",
+              "zh": "关于"
+            },
+            {
+              "id": "B2U3-words-52",
+              "num": 52,
+              "en": "resist",
+              "pos": "v.",
+              "zh": "忍住；按捺"
+            },
+            {
+              "id": "B2U3-words-53",
+              "num": 53,
+              "en": "ruin",
+              "pos": "vt.",
+              "zh": "毁坏；毁掉；糟蹋"
+            },
+            {
+              "id": "B2U3-words-54",
+              "num": 54,
+              "en": "safekeeping",
+              "pos": "n.",
+              "zh": "安全保管；妥善保管"
+            },
+            {
+              "id": "B2U3-words-55",
+              "num": 55,
+              "en": "shortage",
+              "pos": "n.",
+              "zh": "短缺；不足；缺乏"
+            },
+            {
+              "id": "B2U3-words-56",
+              "num": 56,
+              "en": "shrink",
+              "pos": "vi. / v.",
+              "zh": "（尤因恐惧而）退缩，畏缩；（使）缩小；（使）收缩"
+            },
+            {
+              "id": "B2U3-words-57",
+              "num": 57,
+              "en": "side hustle",
+              "pos": "n.",
+              "zh": "副业"
+            },
+            {
+              "id": "B2U3-words-58",
+              "num": 58,
+              "en": "sideline",
+              "pos": "n.",
+              "zh": "（运动场的）场，边；副业；兼职"
+            },
+            {
+              "id": "B2U3-words-59",
+              "num": 59,
+              "en": "split",
+              "pos": "n. / v.",
+              "zh": "离婚，分手；（组织内部）产生分歧，分裂"
+            },
+            {
+              "id": "B2U3-words-60",
+              "num": 60,
+              "en": "sunrise",
+              "pos": "n.",
+              "zh": "日出；晨曦；朝霞；日出（时分）；黎明；拂晓"
+            },
+            {
+              "id": "B2U3-words-61",
+              "num": 61,
+              "en": "tackle",
+              "pos": "vt.",
+              "zh": "处理，对付（难题）"
+            },
+            {
+              "id": "B2U3-words-62",
+              "num": 62,
+              "en": "taunt",
+              "pos": "vt.",
+              "zh": "（用语言）挑衅，侮辱，嘲弄，奚落"
+            },
+            {
+              "id": "B2U3-words-63",
+              "num": 63,
+              "en": "tease",
+              "pos": "v.",
+              "zh": "戏弄；逗弄；拿……取笑（开玩笑）"
+            },
+            {
+              "id": "B2U3-words-64",
+              "num": 64,
+              "en": "tempt",
+              "pos": "vt.",
+              "zh": "诱惑；引诱；诱使；劝说；鼓励"
+            },
+            {
+              "id": "B2U3-words-65",
+              "num": 65,
+              "en": "unbearable",
+              "pos": "a.",
+              "zh": "难以忍受的；承受不住的；无法容忍的"
+            },
+            {
+              "id": "B2U3-words-66",
+              "num": 66,
+              "en": "unparalleled",
+              "pos": "a.",
+              "zh": "无比的；无双的；空前的"
+            },
+            {
+              "id": "B2U3-words-67",
+              "num": 67,
+              "en": "unrest",
+              "pos": "n.",
+              "zh": "动荡；动乱；骚动"
+            },
+            {
+              "id": "B2U3-words-68",
+              "num": 68,
+              "en": "utopian",
+              "pos": "a.",
+              "zh": "乌托邦的；空想完美主义的"
+            },
+            {
+              "id": "B2U3-words-69",
+              "num": 69,
+              "en": "venture",
+              "pos": "n.",
+              "zh": "风险项目；风险投资；冒险事业"
+            },
+            {
+              "id": "B2U3-words-70",
+              "num": 70,
+              "en": "weak-en",
+              "pos": "v.",
+              "zh": "（使）（某人）虚弱（衰弱）；（使）变弱，削弱，减弱"
+            },
+            {
+              "id": "B2U3-words-71",
+              "num": 71,
+              "en": "wealthy",
+              "pos": "a.",
+              "zh": "（the ~）有钱人；富人；富有的；有钱的"
+            },
+            {
+              "id": "B2U3-words-72",
+              "num": 72,
+              "en": "weave",
+              "pos": "v.",
+              "zh": "编；织"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B2U3-phrases-1",
+              "num": 1,
+              "en": "(all) to oneself",
+              "pos": "",
+              "zh": "独有；专用"
+            },
+            {
+              "id": "B2U3-phrases-2",
+              "num": 2,
+              "en": "a bump in the road",
+              "pos": "",
+              "zh": "前进中的问题（通常是暂时的）"
+            },
+            {
+              "id": "B2U3-phrases-3",
+              "num": 3,
+              "en": "be sick (and tired) of",
+              "pos": "",
+              "zh": "对某事感到气愤（厌倦）"
+            },
+            {
+              "id": "B2U3-phrases-4",
+              "num": 4,
+              "en": "by choice",
+              "pos": "",
+              "zh": "选择的；自愿的"
+            },
+            {
+              "id": "B2U3-phrases-5",
+              "num": 5,
+              "en": "by nature",
+              "pos": "",
+              "zh": "生性"
+            },
+            {
+              "id": "B2U3-phrases-6",
+              "num": 6,
+              "en": "have a hard time doing sth.",
+              "pos": "",
+              "zh": "做某事很难"
+            },
+            {
+              "id": "B2U3-phrases-7",
+              "num": 7,
+              "en": "lead sb. to do sth.",
+              "pos": "",
+              "zh": "导致某人做某事"
+            },
+            {
+              "id": "B2U3-phrases-8",
+              "num": 8,
+              "en": "look to",
+              "pos": "",
+              "zh": "指望；依靠"
+            },
+            {
+              "id": "B2U3-phrases-9",
+              "num": 9,
+              "en": "move on",
+              "pos": "",
+              "zh": "开始做（别的事）；换话题"
+            },
+            {
+              "id": "B2U3-phrases-10",
+              "num": 10,
+              "en": "run out (of)",
+              "pos": "",
+              "zh": "用完，耗尽（某物）；（供应品）被用完，被耗尽"
+            },
+            {
+              "id": "B2U3-phrases-11",
+              "num": 11,
+              "en": "stand on one's own (two) feet",
+              "pos": "",
+              "zh": "自立；独立自主"
+            },
+            {
+              "id": "B2U3-phrases-12",
+              "num": 12,
+              "en": "take sth. out on sb.",
+              "pos": "",
+              "zh": "向（某人）发泄（不满等）；拿（某人）出气"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B2U4",
+      "book": 2,
+      "unit": 4,
+      "label": "第2册 Unit 4",
+      "sections": [
+        {
+          "match": {},
+          "key": "words",
+          "label": "单词",
+          "title": "单词(New words)",
+          "entries": [
+            {
+              "id": "B2U4-words-1",
+              "num": 1,
+              "en": "acquisition",
+              "pos": "n.",
+              "zh": "购置物；获得物；（知识、技能的）获得，习得"
+            },
+            {
+              "id": "B2U4-words-2",
+              "num": 2,
+              "en": "ancestral",
+              "pos": "a.",
+              "zh": "祖先的"
+            },
+            {
+              "id": "B2U4-words-3",
+              "num": 3,
+              "en": "ancestor",
+              "pos": "n.",
+              "zh": "祖先；祖宗"
+            },
+            {
+              "id": "B2U4-words-4",
+              "num": 4,
+              "en": "analyze",
+              "pos": "vt.",
+              "zh": "分析；剖析"
+            },
+            {
+              "id": "B2U4-words-5",
+              "num": 5,
+              "en": "anthropologist",
+              "pos": "n.",
+              "zh": "人类学家"
+            },
+            {
+              "id": "B2U4-words-6",
+              "num": 6,
+              "en": "bias",
+              "pos": "n.",
+              "zh": "偏见；成见；偏心"
+            },
+            {
+              "id": "B2U4-words-7",
+              "num": 7,
+              "en": "concerted",
+              "pos": "a.",
+              "zh": "齐心协力的；一致的"
+            },
+            {
+              "id": "B2U4-words-8",
+              "num": 8,
+              "en": "confirmation",
+              "pos": "n.",
+              "zh": "证实；证明"
+            },
+            {
+              "id": "B2U4-words-9",
+              "num": 9,
+              "en": "discard",
+              "pos": "vt.",
+              "zh": "扔掉；弃置"
+            },
+            {
+              "id": "B2U4-words-10",
+              "num": 10,
+              "en": "discourse",
+              "pos": "n.",
+              "zh": "（关于某主题的）演讲，论述，著述"
+            },
+            {
+              "id": "B2U4-words-11",
+              "num": 11,
+              "en": "discrimination",
+              "pos": "n.",
+              "zh": "歧视"
+            },
+            {
+              "id": "B2U4-words-12",
+              "num": 12,
+              "en": "disguise",
+              "pos": "vt.",
+              "zh": "掩蔽；掩饰；装扮；假扮"
+            },
+            {
+              "id": "B2U4-words-13",
+              "num": 13,
+              "en": "distinctive",
+              "pos": "a.",
+              "zh": "特有的；特别的；有特色的"
+            },
+            {
+              "id": "B2U4-words-14",
+              "num": 14,
+              "en": "edible",
+              "pos": "a.",
+              "zh": "适宜食用的；（无毒而）可以吃的"
+            },
+            {
+              "id": "B2U4-words-15",
+              "num": 15,
+              "en": "empirical",
+              "pos": "a.",
+              "zh": "以实验（或经验）为依据的；经验主义的"
+            },
+            {
+              "id": "B2U4-words-16",
+              "num": 16,
+              "en": "excessively",
+              "pos": "ad.",
+              "zh": "过度地；过多地"
+            },
+            {
+              "id": "B2U4-words-17",
+              "num": 17,
+              "en": "extended",
+              "pos": "a.",
+              "zh": "较长时间的；延期的"
+            },
+            {
+              "id": "B2U4-words-18",
+              "num": 18,
+              "en": "feminine",
+              "pos": "a.",
+              "zh": "（指气质或外貌）女性特有的；女性的"
+            },
+            {
+              "id": "B2U4-words-19",
+              "num": 19,
+              "en": "forage",
+              "pos": "vi.",
+              "zh": "（为找到食物、补给等）四处搜寻"
+            },
+            {
+              "id": "B2U4-words-20",
+              "num": 20,
+              "en": "frustrated",
+              "pos": "a.",
+              "zh": "懊丧的；懊恼的；沮丧的"
+            },
+            {
+              "id": "B2U4-words-21",
+              "num": 21,
+              "en": "gender",
+              "pos": "n.",
+              "zh": "性别"
+            },
+            {
+              "id": "B2U4-words-22",
+              "num": 22,
+              "en": "generalization",
+              "pos": "n.",
+              "zh": "（片面的）概括，泛论"
+            },
+            {
+              "id": "B2U4-words-23",
+              "num": 23,
+              "en": "heritage",
+              "pos": "n.",
+              "zh": "（文化）遗产；传统"
+            },
+            {
+              "id": "B2U4-words-24",
+              "num": 24,
+              "en": "humid",
+              "pos": "a.",
+              "zh": "（空气或气候）温暖潮湿的，湿热的"
+            },
+            {
+              "id": "B2U4-words-25",
+              "num": 25,
+              "en": "identical",
+              "pos": "a.",
+              "zh": "完全相同的；极为相似的"
+            },
+            {
+              "id": "B2U4-words-26",
+              "num": 26,
+              "en": "identify",
+              "pos": "vt.",
+              "zh": "认出，识别（某人或某物）"
+            },
+            {
+              "id": "B2U4-words-27",
+              "num": 27,
+              "en": "inclined",
+              "pos": "a.",
+              "zh": "有做某事的意向；倾向于做某事"
+            },
+            {
+              "id": "B2U4-words-28",
+              "num": 28,
+              "en": "inequality",
+              "pos": "n.",
+              "zh": "不平等；不平衡；不平均"
+            },
+            {
+              "id": "B2U4-words-29",
+              "num": 29,
+              "en": "inherit",
+              "pos": "vt.",
+              "zh": "经遗传获得（品质、身体特征等）；继承（金钱、财产等）"
+            },
+            {
+              "id": "B2U4-words-30",
+              "num": 30,
+              "en": "instinctive",
+              "pos": "a.",
+              "zh": "本能的；直觉的；天性的"
+            },
+            {
+              "id": "B2U4-words-31",
+              "num": 31,
+              "en": "justification",
+              "pos": "n.",
+              "zh": "正当理由"
+            },
+            {
+              "id": "B2U4-words-32",
+              "num": 32,
+              "en": "laden",
+              "pos": "a.",
+              "zh": "载满的；装满的"
+            },
+            {
+              "id": "B2U4-words-33",
+              "num": 33,
+              "en": "literary",
+              "pos": "a.",
+              "zh": "文学的；文学上的"
+            },
+            {
+              "id": "B2U4-words-34",
+              "num": 34,
+              "en": "maternal",
+              "pos": "a.",
+              "zh": "母性的；母亲般慈爱的"
+            },
+            {
+              "id": "B2U4-words-35",
+              "num": 35,
+              "en": "millennium",
+              "pos": "n.",
+              "zh": "一千年；千年期"
+            },
+            {
+              "id": "B2U4-words-36",
+              "num": 36,
+              "en": "mode",
+              "pos": "n.",
+              "zh": "方式；方法；做法"
+            },
+            {
+              "id": "B2U4-words-37",
+              "num": 37,
+              "en": "myth",
+              "pos": "n.",
+              "zh": "（许多人相信的）错误观念，荒诞说法"
+            },
+            {
+              "id": "B2U4-words-38",
+              "num": 38,
+              "en": "noticeable",
+              "pos": "a.",
+              "zh": "显著的；显而易见的"
+            },
+            {
+              "id": "B2U4-words-39",
+              "num": 39,
+              "en": "nutrition",
+              "pos": "n.",
+              "zh": "营养（作用）；滋养"
+            },
+            {
+              "id": "B2U4-words-40",
+              "num": 40,
+              "en": "nutritious",
+              "pos": "a.",
+              "zh": "（食物）有营养的，营养丰富的"
+            },
+            {
+              "id": "B2U4-words-41",
+              "num": 41,
+              "en": "periodical",
+              "pos": "n.",
+              "zh": "期刊"
+            },
+            {
+              "id": "B2U4-words-42",
+              "num": 42,
+              "en": "predictable",
+              "pos": "a.",
+              "zh": "可预料的；可预见的"
+            },
+            {
+              "id": "B2U4-words-43",
+              "num": 43,
+              "en": "prehistoric",
+              "pos": "a.",
+              "zh": "史前的；有历史记载以前的"
+            },
+            {
+              "id": "B2U4-words-44",
+              "num": 44,
+              "en": "prominence",
+              "pos": "n.",
+              "zh": "重要；杰出；著名"
+            },
+            {
+              "id": "B2U4-words-45",
+              "num": 45,
+              "en": "publication",
+              "pos": "n.",
+              "zh": "（书刊等的）出版，发行；出版物"
+            },
+            {
+              "id": "B2U4-words-46",
+              "num": 46,
+              "en": "publisher",
+              "pos": "n.",
+              "zh": "（书、报纸等的）出版者，出版商；出版社"
+            },
+            {
+              "id": "B2U4-words-47",
+              "num": 47,
+              "en": "pursue",
+              "pos": "vt.",
+              "zh": "追求；继续进行"
+            },
+            {
+              "id": "B2U4-words-48",
+              "num": 48,
+              "en": "quantitative",
+              "pos": "a.",
+              "zh": "（数）量的；与数量有关的；定量的"
+            },
+            {
+              "id": "B2U4-words-49",
+              "num": 49,
+              "en": "representation",
+              "pos": "n.",
+              "zh": "代理；代表"
+            },
+            {
+              "id": "B2U4-words-50",
+              "num": 50,
+              "en": "sensible",
+              "pos": "a.",
+              "zh": "明智的；合理的；实际的；有判断力的"
+            },
+            {
+              "id": "B2U4-words-51",
+              "num": 51,
+              "en": "sentiment",
+              "pos": "n.",
+              "zh": "多愁善感；感情因素；意见；观点；感想"
+            },
+            {
+              "id": "B2U4-words-52",
+              "num": 52,
+              "en": "similarity",
+              "pos": "n.",
+              "zh": "相似性；类似性；相似处；相似点"
+            },
+            {
+              "id": "B2U4-words-53",
+              "num": 53,
+              "en": "spouse",
+              "pos": "n.",
+              "zh": "配偶"
+            },
+            {
+              "id": "B2U4-words-54",
+              "num": 54,
+              "en": "spousal",
+              "pos": "a.",
+              "zh": "配偶的"
+            },
+            {
+              "id": "B2U4-words-55",
+              "num": 55,
+              "en": "startling",
+              "pos": "a.",
+              "zh": "异乎寻常的；令人惊讶的"
+            },
+            {
+              "id": "B2U4-words-56",
+              "num": 56,
+              "en": "stem",
+              "pos": "vi. / n.",
+              "zh": "源于；来自；由……引起；（植物的）茎，梗，柄"
+            },
+            {
+              "id": "B2U4-words-57",
+              "num": 57,
+              "en": "stereotype",
+              "pos": "n.",
+              "zh": "模式化的思想；老一套；旧框框"
+            },
+            {
+              "id": "B2U4-words-58",
+              "num": 58,
+              "en": "tendency",
+              "pos": "n.",
+              "zh": "趋势；趋向；倾向"
+            },
+            {
+              "id": "B2U4-words-59",
+              "num": 59,
+              "en": "trait",
+              "pos": "n.",
+              "zh": "（某人性格中的）特性，品质"
+            },
+            {
+              "id": "B2U4-words-60",
+              "num": 60,
+              "en": "trivial",
+              "pos": "a.",
+              "zh": "微不足道的；没有什么价值的"
+            },
+            {
+              "id": "B2U4-words-61",
+              "num": 61,
+              "en": "unconscious",
+              "pos": "a.",
+              "zh": "（感情、思想等）无意识的，未意识到的；不省人事的；失去知觉的"
+            },
+            {
+              "id": "B2U4-words-62",
+              "num": 62,
+              "en": "validity",
+              "pos": "n.",
+              "zh": "符合逻辑；正当；正确"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "phrases",
+          "label": "词语",
+          "title": "词语(Phrases and expressions)",
+          "entries": [
+            {
+              "id": "B2U4-phrases-1",
+              "num": 1,
+              "en": "apply to",
+              "pos": "",
+              "zh": "适用于；对……有效"
+            },
+            {
+              "id": "B2U4-phrases-2",
+              "num": 2,
+              "en": "at all costs / cost",
+              "pos": "",
+              "zh": "不惜一切代价"
+            },
+            {
+              "id": "B2U4-phrases-3",
+              "num": 3,
+              "en": "at stake",
+              "pos": "",
+              "zh": "待解决的；成问题的"
+            },
+            {
+              "id": "B2U4-phrases-4",
+              "num": 4,
+              "en": "in line with",
+              "pos": "",
+              "zh": "与……相似；与……水平一致"
+            },
+            {
+              "id": "B2U4-phrases-5",
+              "num": 5,
+              "en": "in terms of",
+              "pos": "",
+              "zh": "谈及；就……而言；在……方面；从……方面来说"
+            },
+            {
+              "id": "B2U4-phrases-6",
+              "num": 6,
+              "en": "rise to prominence / fame / power, etc.",
+              "pos": "",
+              "zh": "变得杰出、著名、强大等"
+            },
+            {
+              "id": "B2U4-phrases-7",
+              "num": 7,
+              "en": "straight away / off",
+              "pos": "",
+              "zh": "立刻；马上"
+            },
+            {
+              "id": "B2U4-phrases-8",
+              "num": 8,
+              "en": "with respect to",
+              "pos": "",
+              "zh": "关于……；就……而言"
+            }
+          ]
+        },
+        {
+          "match": {},
+          "key": "names",
+          "label": "专有名词",
+          "title": "专有名词(Proper names)",
+          "entries": [
+            {
+              "id": "B2U4-names-1",
+              "num": 1,
+              "en": "B.C.E (before common era)",
+              "pos": "",
+              "zh": "公元前"
+            },
+            {
+              "id": "B2U4-names-2",
+              "num": 2,
+              "en": "Byker",
+              "pos": "",
+              "zh": "拜克（人名）"
+            },
+            {
+              "id": "B2U4-names-3",
+              "num": 3,
+              "en": "G. H. Lewes (George Henry Lewes)",
+              "pos": "",
+              "zh": "乔治·亨利·刘易斯（英国哲学家、文学评论家和剧作家）"
+            },
+            {
+              "id": "B2U4-names-4",
+              "num": 4,
+              "en": "George Eliot",
+              "pos": "",
+              "zh": "乔治·艾略特（英国小说家）"
+            },
+            {
+              "id": "B2U4-names-5",
+              "num": 5,
+              "en": "Jane Austen",
+              "pos": "",
+              "zh": "简·奥斯汀（英国小说家）"
+            },
+            {
+              "id": "B2U4-names-6",
+              "num": 6,
+              "en": "Kruger",
+              "pos": "",
+              "zh": "克鲁格（人名）"
+            },
+            {
+              "id": "B2U4-names-7",
+              "num": 7,
+              "en": "the Middle East",
+              "pos": "",
+              "zh": "中东（一般泛指欧、亚、非三洲连接的地区）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
