@@ -1,18 +1,12 @@
+import { Capacitor } from '@capacitor/core'
+import { TextToSpeech } from '@capacitor-community/text-to-speech'
+
 const webTts = typeof window !== 'undefined' && 'speechSynthesis' in window
 
-/** APK 里的原生朗读：桥上有插件就走系统 TTS 引擎，网页那套在 Android WebView 里根本不可用 */
-interface NativeTts {
-  speak(opts: { text: string; lang: string; rate: number; pitch: number; volume: number }): Promise<void>
-  stop(): Promise<void>
-}
+/** Android WebView 里没有 speechSynthesis，装机的 App 走系统 TTS 引擎 */
+const native = (): boolean => Capacitor.isNativePlatform()
 
-const native = (): NativeTts | undefined => {
-  if (typeof window === 'undefined') return undefined
-  const w = window as Window & { Capacitor?: { Plugins?: { TextToSpeech?: NativeTts } } }
-  return w.Capacitor?.Plugins?.TextToSpeech
-}
-
-export const canSpeak = (): boolean => Boolean(native()) || webTts
+export const canSpeak = (): boolean => native() || webTts
 
 let voices: SpeechSynthesisVoice[] = []
 
@@ -41,9 +35,8 @@ const clampRate = (r: number): number => Math.min(2, Math.max(0.5, r))
 
 export function speak(text: string, opt: SpeakOptions): void {
   if (!text) return
-  const p = native()
-  if (p) {
-    void p.speak({ text, lang: 'en-US', rate: clampRate(opt.rate), pitch: 1, volume: 1 }).catch(() => undefined)
+  if (native()) {
+    void TextToSpeech.speak({ text, lang: 'en-US', rate: clampRate(opt.rate), pitch: 1, volume: 1 }).catch(() => undefined)
     return
   }
   if (!webTts) return
@@ -57,7 +50,6 @@ export function speak(text: string, opt: SpeakOptions): void {
 }
 
 export function stopSpeak(): void {
-  const p = native()
-  if (p) void p.stop().catch(() => undefined)
+  if (native()) void TextToSpeech.stop().catch(() => undefined)
   if (webTts) window.speechSynthesis.cancel()
 }
