@@ -1,13 +1,12 @@
 name: 打包并发布安卓 APK
 
-# 跑之前需要五个 secret：ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD /
-# ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD（由「生成签名用的 keystore」那条工作流产出），
-# 外加 PUBLISH_APK_TOKEN（一个只能写 APK_REPO 那个公开仓库的 fine-grained PAT）。
+# 跑之前需要四个 secret：ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD /
+# ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD（由「生成签名用的 keystore」那条工作流产出）。
 # 版本号取 package.json，先跑这条工作流出包，再把 public/app.json 发布到站点，
 # 顺序反了的话 App 会提示有新包却下不到对应版本。
 #
-# 源码仓库是私有的，Release 故意发到公开仓库：私有仓库的下载地址要点开的人登录 GitHub，
-# 没被邀请的人直接 404。公开仓库那边只有一枚 APK，词库和源码留在私库里。
+# 仓库是公开的，所以 Release 下载地址任何人点开就能下、不用登录（私有仓库反过来：owner 也要先登录，
+# 没被邀请的人直接 404）。公开代价是词库和脚本一起见光——里面没有任何凭据，模型 key 只存在各人浏览器。
 
 on:
   workflow_dispatch:
@@ -18,7 +17,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: apk-release
@@ -27,8 +26,6 @@ concurrency:
 jobs:
   apk:
     runs-on: ubuntu-latest
-    env:
-      APK_REPO: Ayin-ay/vocab-sprint-apk
     steps:
       - uses: actions/checkout@v4
 
@@ -89,31 +86,27 @@ jobs:
           cp "$src" apk/vocab-sprint.apk
           "$ANDROID_HOME"/build-tools/35.0.0/apksigner verify --print-certs apk/vocab-sprint.apk | head -3
 
-      - name: 把 APK 发到公开仓库
+      - name: 建 Release 并传 APK
         env:
-          GH_TOKEN: ${{ secrets.PUBLISH_APK_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           NOTES: ${{ inputs.notes }}
         run: |
           set -euo pipefail
-          if [ -z "$GH_TOKEN" ]; then
-            echo "缺少 secret PUBLISH_APK_TOKEN：在 $APK_REPO 建一个 fine-grained PAT（只勾这一个仓库、Contents: Read and write），填进本仓库的 Secrets 后重跑" >&2
-            exit 1
-          fi
           version=$(node -p "require('./package.json').version")
           tag="v$version"
           body="词汇冲刺 $version
-          
+
           $NOTES
-          
+
           直接覆盖安装即可，进度不会动；先卸载再装会清掉这台设备上的记录。
           装完第一次打开请在「设置 → 存档码」里贴一次浏览器导出的存档码。"
-          if gh release view "$tag" --repo "$APK_REPO" > /dev/null 2>&1; then
-            gh release upload "$tag" apk/vocab-sprint.apk --clobber --repo "$APK_REPO"
-            gh release edit "$tag" --notes "$body" --repo "$APK_REPO"
+          if gh release view "$tag" > /dev/null 2>&1; then
+            gh release upload "$tag" apk/vocab-sprint.apk --clobber
+            gh release edit "$tag" --notes "$body"
           else
-            gh release create "$tag" apk/vocab-sprint.apk --repo "$APK_REPO" --title "词汇冲刺 $tag" --notes "$body" --latest
+            gh release create "$tag" apk/vocab-sprint.apk --title "词汇冲刺 $tag" --notes "$body" --latest
           fi
-          echo "下载地址：https://github.com/$APK_REPO/releases/latest/download/vocab-sprint.apk"
+          echo "下载地址：https://github.com/${{ github.repository }}/releases/latest/download/vocab-sprint.apk"
 
       - uses: actions/upload-artifact@v4
         with:

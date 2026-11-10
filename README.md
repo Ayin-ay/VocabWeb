@@ -114,15 +114,14 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 - **App 与浏览器是两份 localStorage**，装 App 不会带过来浏览器里的进度，第一次要在设置页贴一次存档码。
 - 版本号只有 `package.json` 一处：`android/app/build.gradle` 读它算 `versionName` / `versionCode`，站点里 `__APP_VERSION__` 也来自它。发版顺序是「跑 `release.yml` 出包 → 再更新 `public/app.json` 发布站点」，反了会提示有新包却下不到对应版本。
 
-出包（GitHub Actions，源码仓库私有，APK 发到一个公开仓库）：
+出包（GitHub Actions，仓库公开）：
 
-拆两个仓库是因为私有仓库的 Release 下载要登录，没被邀请的人点开直接 404；把 APK 单独放进公开仓库，别人不用登录也能装，词库和源码仍然关在私库里。公开仓库固定名 `Ayin-ay/vocab-sprint-apk`，里面只有 Release，不需要任何文件。
+仓库建成 Public 而不是 Private，是为了 Release 的下载地址谁点开都能直接下载——私有仓库反过来要登录才能取，没被邀请的人干脆 404。公开的是词库和脚本，不是任何凭据：模型 key 只存在各人浏览器的 localStorage，签名密钥全在仓库 secret 里。
 
-1. 建两个仓库，都别勾选初始化 README：私有的 `Ayin-ay/VocabWeb`（推这份源码），公开的 `Ayin-ay/vocab-sprint-apk`（只放包）。
-2. 在公开仓库建一个 fine-grained PAT：Repository access 选 Only select repositories → 只勾这个仓库，Permissions 里 Contents 给 Read and write。这个 token 就是第五个 secret `PUBLISH_APK_TOKEN`。
-3. Actions → 「生成签名用的 keystore」→ Run workflow，下载 artifact 里的 `release.keystore` / `release.keystore.base64` / `keystore-info.txt`，自己留一份 keystore。
-4. 按 `keystore-info.txt` 往**私有仓库**填五个 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`、`PUBLISH_APK_TOKEN`。
-5. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在公开仓库的 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/vocab-sprint-apk/releases/latest/download/vocab-sprint.apk` 永远指向最新一版；`public/app.json` 的 `download` 就是这一条。
+1. 建一个空仓库 `Ayin-ay/VocabWeb`（Public，**别勾初始化 README**），remote 指过来推上去。
+2. Actions → 「生成签名用的 keystore」→ Run workflow，下载 artifact 里的 `release.keystore` / `release.keystore.base64` / `keystore-info.txt`，自己留一份 keystore。
+3. 按 `keystore-info.txt` 建四个仓库 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`（Settings → Secrets and variables → Actions）。
+4. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/VocabWeb/releases/latest/download/vocab-sprint.apk` 永远指向最新一版；`public/app.json` 的 `download` 就是这一条。
 
 签名换了就等于换了另一个应用：覆盖安装会失败，只能卸载重装，而卸载会清掉那台设备上的进度。所以 keystore 丢了必须重新走一遍 1–2，并提前导出存档码。
 
