@@ -120,7 +120,7 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 
 1. 建一个空仓库 `Ayin-ay/VocabWeb`（Public，**别勾初始化 README**），remote 指过来推上去。
 2. Actions → 「生成签名用的 keystore」→ Run workflow，下载 artifact 里的 `release.keystore` / `release.keystore.base64` / `keystore-info.txt`，自己留一份 keystore。
-3. 按 `keystore-info.txt` 建四个仓库 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`（Settings → Secrets and variables → Actions）。
+3. 按 `keystore-info.txt` 建四个仓库 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`（Settings → Secrets and variables → Actions）。PKCS12 里 **key 口令必须等于 store 口令**（新版 keytool 忽略 `-keypass`），所以 `ANDROID_KEY_PASSWORD` 抄 `ANDROID_KEYSTORE_PASSWORD` 那行的值；填成两样会在 `:app:packageRelease` 炸 `Given final block not properly padded`。
 4. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/VocabWeb/releases/latest/download/vocab-sprint.apk` 永远指向最新一版；`public/app.json` 的 `download` 就是这一条。
 
 签名换了就等于换了另一个应用：覆盖安装会失败，只能卸载重装，而卸载会清掉那台设备上的进度。所以 keystore 丢了必须重新走一遍 1–2，并提前导出存档码。
