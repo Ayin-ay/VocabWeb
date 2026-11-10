@@ -108,17 +108,21 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 `android/` 是 Capacitor 7 的壳，**不含任何业务代码**：`server.url` 直接加载上面那个线上地址，所以改了站点就是改了 App，只有壳本身（图标、权限、版本号）需要重新出包。
 
 - `capacitor.config.ts` 里 `allowNavigation` 必须带上这个域：安卓那侧靠它把远程 HTML 走本地代理并注入桥，桥在才有原生朗读、返回键和 `App.getInfo()`。
-- 桥只从 `window.Capacitor.Plugins` 动态取，Web 代码不 import 任何 Capacitor 包，所以站点 bundle 里没多一行壳代码（`npm run smoke` 里那条 `inApp() === false` 就是守这个的）。
+- 桥靠 `src/lib/appshell.ts` 和 `src/lib/tts.ts` 里显式 `import` 的 `@capacitor/core` / `@capacitor/app` / `@capacitor-community/text-to-speech` 注册（`cap.Plugins` 只认 JS 侧的 `registerPlugin`，光靠运行时探测取不到东西）。`inApp()` 为 false 时这些路径全部短路，浏览器行为不变；`npm run smoke` 里那条 `inApp() === false` 守的就是这一点。
 - 朗读优先走 `@capacitor-community/text-to-speech`（Android WebView 里没有 `speechSynthesis`），网页那套只作回退；App 里音色跟随系统的「文字转语音」，设置页的音色下拉只在浏览器出现。
 - 返回键：判定卡正在显示 → 关掉判定卡；不在冲刺页 → 回冲刺页；否则退出应用。
 - **App 与浏览器是两份 localStorage**，装 App 不会带过来浏览器里的进度，第一次要在设置页贴一次存档码。
 - 版本号只有 `package.json` 一处：`android/app/build.gradle` 读它算 `versionName` / `versionCode`，站点里 `__APP_VERSION__` 也来自它。发版顺序是「跑 `release.yml` 出包 → 再更新 `public/app.json` 发布站点」，反了会提示有新包却下不到对应版本。
 
-出包（GitHub Actions，仓库私有）：
+出包（GitHub Actions，源码仓库私有，APK 发到一个公开仓库）：
 
-1. Actions → 「生成签名用的 keystore」→ Run workflow，下载 artifact 里的 `release.keystore` / `release.keystore.base64` / `keystore-info.txt`，自己留一份 keystore。
-2. 按 `keystore-info.txt` 建四个仓库 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`。
-3. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/VocabWeb/releases/latest/download/vocab-sprint.apk` 永远指向最新一版。
+拆两个仓库是因为私有仓库的 Release 下载要登录，没被邀请的人点开直接 404；把 APK 单独放进公开仓库，别人不用登录也能装，词库和源码仍然关在私库里。公开仓库固定名 `Ayin-ay/vocab-sprint-apk`，里面只有 Release，不需要任何文件。
+
+1. 建两个仓库，都别勾选初始化 README：私有的 `Ayin-ay/VocabWeb`（推这份源码），公开的 `Ayin-ay/vocab-sprint-apk`（只放包）。
+2. 在公开仓库建一个 fine-grained PAT：Repository access 选 Only select repositories → 只勾这个仓库，Permissions 里 Contents 给 Read and write。这个 token 就是第五个 secret `PUBLISH_APK_TOKEN`。
+3. Actions → 「生成签名用的 keystore」→ Run workflow，下载 artifact 里的 `release.keystore` / `release.keystore.base64` / `keystore-info.txt`，自己留一份 keystore。
+4. 按 `keystore-info.txt` 往**私有仓库**填五个 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`、`PUBLISH_APK_TOKEN`。
+5. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在公开仓库的 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/vocab-sprint-apk/releases/latest/download/vocab-sprint.apk` 永远指向最新一版；`public/app.json` 的 `download` 就是这一条。
 
 签名换了就等于换了另一个应用：覆盖安装会失败，只能卸载重装，而卸载会清掉那台设备上的进度。所以 keystore 丢了必须重新走一遍 1–2，并提前导出存档码。
 
