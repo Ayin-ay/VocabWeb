@@ -82,9 +82,22 @@ jobs:
 
       - name: gradle 打包
         run: |
+          set -uo pipefail
           chmod +x android/gradlew
           cd android
-          ./gradlew assembleRelease --no-daemon
+          if ./gradlew assembleRelease --no-daemon --stacktrace 2>&1 | tee "$RUNNER_TEMP/gradle.log"; then
+            exit 0
+          fi
+          {
+            echo "### gradle 失败摘要"
+            echo ""
+            echo '```'
+            grep -nE "FAILURE:|What went wrong|> Task .*FAILED|^Caused by|^e: |error:|Could not|Execution failed" "$RUNNER_TEMP/gradle.log" | head -30
+            echo "----- 末尾 40 行 -----"
+            tail -40 "$RUNNER_TEMP/gradle.log"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit 1
 
       - name: 收 APK
         run: |
