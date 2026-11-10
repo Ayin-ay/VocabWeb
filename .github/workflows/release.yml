@@ -50,10 +50,12 @@ jobs:
           sdk="$root/cmdline-tools/latest/bin/sdkmanager"
           export ANDROID_HOME="$root"
           yes | "$sdk" --licenses > /dev/null 2>&1 || true
-          "$sdk" "platforms;android-35" "build-tools;35.0.0" > /dev/null
+          "$sdk" "platforms;android-35" "build-tools;35.0.0" "build-tools;34.0.0" "platform-tools" > /dev/null
           echo "ANDROID_HOME=$root" >> "$GITHUB_ENV"
           echo "ANDROID_SDK_ROOT=$root" >> "$GITHUB_ENV"
           echo "$root/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+          # AGP 找 SDK 先看 local.properties，写死省得它只认环境变量
+          echo "sdk.dir=$root" > android/local.properties
 
       - run: npm ci
 
