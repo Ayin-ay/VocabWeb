@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
-  "notes": "首个安卓包：页面内键盘、系统朗读、滑动切题",
+  "version": "1.1.0",
+  "notes": "新图标：四块瓷砖透明底。词库：四级 4537 条并入为第 9 个词库，冲刺可按库选、跑到一半也能整库加减，新增单词本按词库筛。",
   "download": "https://github.com/Ayin-ay/VocabWeb/releases/latest/download/vocab-sprint.apk"
 }
