@@ -6,9 +6,10 @@ B2U1 words:80 phrases:9 names:5
 B2U2 words:83 phrases:18 names:17
 B2U3 words:72 phrases:12
 B2U4 words:62 phrases:8 names:7
+CET4 words:4478 names:59
 
-total=679
-pos=a. a. & ad. a. / n. ad. ad. / a. ad./prep. n. n. / v. n. / vi. n. / vt. prep. prep. / ad. & prep. v. v. / a. v. / n. vi. vi. / n. vi. / v. vi. / vt. vt. vt. / n. vt. / v. vt. / vi.
+total=5216
+pos=a. a. & ad. a. & n. a. & n. / vi. a. & pron. a. & vi. / ad. a. & vt. a. & vt. & n. / n. a. / ad. a. / int. a. / n. a. / prep. a. / pron. a. / pron. / ad. a. / vi. a. / vt. ad. ad. & a. ad. / a. ad. / conj. ad. / n. ad. / prep. ad. / pron. ad./prep. art. aux. & v. aux. & v. & n. aux. & v. & vi. aux. & v. / vt. conj. conj. & n. conj. / ad. int. int. & n. & vt. int. / n. n. n. & a. n. & ad. n. & ad. / int. n. & v. n. & v. & aux. n. & vi. n. & vi. / n. n. & vi. / vt. n. & vt. n. & vt. & vi. n. & vt. / vi. n. / a. n. / ad. n. / v. n. / vi. n. / vi. & vt. n. / vi. / vt. n. / vt. n. / vt. & vi. num. num. & n. / a. num. / ad. num. / n. num. / pron. prep. prep. & conj. prep. / a. prep. / ad. prep. / ad. & prep. prep. / n. pron. pron. & n. pron. / a. pron. / ad. v. v. & aux. v. & aux. & n. v. & aux. / vt. v. / a. v. / n. vi. vi. & a. vi. & n. vi. & n. / n. vi. & vt. vi. & vt. & n. vi. / a. vi. / n. vi. / v. vi. / vt. vi. / vt. / n. vt. vt. & a. / n. vt. & aux. & v. vt. & n. vt. & n. / vi. vt. & prep. vt. & vi. vt. & vi. & n. vt. & vi. & n. / vt. vt. & vi. / n. vt. / a. vt. / n. vt. / v. vt. / vi. vt. / vi. & n. vt. / vi. / n.
 
 skipped=1
 B2U1 words #67：simultaneously (原图无，跳过)

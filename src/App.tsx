@@ -3,6 +3,7 @@ import { CompositionView } from './views/CompositionView'
 import { DepositView } from './views/DepositView'
 import { SettingsView } from './views/SettingsView'
 import { SprintView } from './views/SprintView'
+import { WordbookView } from './views/WordbookView'
 import { useAppState } from './state'
 import { COUNT } from './lib/lexicon'
 import { CORPUS_TOTAL } from './lib/composition'
@@ -11,7 +12,7 @@ import { onBackPress } from './lib/appshell'
 
 export default function App() {
   const app = useAppState()
-  const [tab, setTab] = useState<'sprint' | 'deposit' | 'composition' | 'settings'>('sprint')
+  const [tab, setTab] = useState<'sprint' | 'wordbook' | 'deposit' | 'composition' | 'settings'>('sprint')
   const tabRef = useRef(tab)
   tabRef.current = tab
 
@@ -31,11 +32,14 @@ export default function App() {
     <>
       <header className="topbar" data-tab={tab}>
         <div className="brand">
-          词汇冲刺<small>{COUNT.total} 条 · B1U1–B2U4</small>
+          词汇冲刺<small>{COUNT.total} 条 · {COUNT.units} 个词库</small>
         </div>
         <nav className="tabs">
           <button type="button" data-on={tab === 'sprint' ? '1' : '0'} onClick={() => setTab('sprint')}>
             冲刺
+          </button>
+          <button type="button" data-on={tab === 'wordbook' ? '1' : '0'} onClick={() => setTab('wordbook')}>
+            单词本
           </button>
           <button type="button" data-on={tab === 'deposit' ? '1' : '0'} onClick={() => setTab('deposit')}>
             {app.deposit ? `沉淀 ${app.deposit.queue.length}` : '沉淀'}
@@ -55,6 +59,8 @@ export default function App() {
           <DepositView app={app} />
         ) : tab === 'composition' ? (
           <CompositionView />
+        ) : tab === 'wordbook' ? (
+          <WordbookView app={app} />
         ) : (
           <SprintView app={app} />
         )}

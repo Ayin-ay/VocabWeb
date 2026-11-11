@@ -1,10 +1,10 @@
-import { ALL, COUNT, WORD_BY_ID, wordsOf } from '../src/lib/lexicon'
+import { ALL, COUNT, LIBS, SHARED_COUNT, WORD_BY_ID, libOf, libsOf, wordsOf } from '../src/lib/lexicon'
 import { generate } from '../src/lib/quiz'
 import type { QuizKind } from '../src/lib/quiz'
 import { emptyBoard, hasMoves, move, newGame, spawn } from '../src/lib/game2048'
-import { FRONT, answer, front, initSprint, normalize, stats } from '../src/lib/sprint'
-import type { ItemState } from '../src/lib/sprint'
-import { lexiconFingerprint, unwrapBackup, wrapBackup } from '../src/lib/backup'
+import { FRONT, addLib, answer, front, initSprint, normalize, removeLib, scopeIds, stats } from '../src/lib/sprint'
+import type { ItemState, SprintState } from '../src/lib/sprint'
+import { DriftError, lexiconFingerprint, libFingerprints, unwrapBackup, wrapBackup } from '../src/lib/backup'
 import { answer as depositAnswer, newDeposit, normalize as normalizeDeposit, requeue, rosterOf, stats as depositStats } from '../src/lib/deposit'
 import { CAT_ORDER, CORPUS_TOTAL, CORPUS_UNITS, cardsOf, unitOfCard } from '../src/lib/composition'
 import { KEYS } from '../src/lib/store'
@@ -18,7 +18,10 @@ const ok = (cond: boolean, msg: string) => {
   if (!cond) fails.push(msg)
 }
 
-ok(COUNT.total === ALL.length && ALL.length === 679, `词条数 ${ALL.length}，期望 679`)
+// 教材八单元是拍照录进来的基准，条数一动就说明解析出过问题；四级这类新词库只要求成库
+const TEXTBOOK = ALL.filter((w) => w.unitId !== 'CET4')
+ok(TEXTBOOK.length === 679, `拍照录入的教材词条 ${TEXTBOOK.length} 条，应为 679`)
+ok(COUNT.total === ALL.length && COUNT.units === LIBS.length, '词条总数或词库数与词表不一致')
 ok(new Set(ALL.map((w) => w.id)).size === ALL.length, '存在重复 id')
 ok(ALL.every((w) => w.en && w.zh), '有空字段')
 
@@ -50,6 +53,36 @@ for (const kind of KINDS) {
     }
   }
 }
+
+// ---- 词库切分与单词本归属 ----
+const libIds = LIBS.flatMap((l) => l.ids)
+ok(new Set(libIds).size === libIds.length && libIds.length === ALL.length, '词库必须把全库不重不漏地切一遍')
+ok(ALL.every((w) => libOf(w.id) === w.unitId), `id 反查词库跟单元号对不上：${ALL.find((w) => libOf(w.id) !== w.unitId)?.id}`)
+ok(LIBS.every((l) => l.ids.length > 0 && l.label), '有词库是空的或缺名字')
+ok(wordsOf('CET4', 'words').length >= 4000, `四级单词只有 ${wordsOf('CET4', 'words').length} 条`)
+ok(wordsOf('CET4', 'names').length >= 1, '四级专名要单独成节，跟教材一样走选择题')
+// 四级单词和教材单词一样要能用页面内键盘敲出来（字母 / 撇号 / 连字符 / 空格，上限 40 字符）
+const TYPABLE = /^[A-Za-z' -]{1,40}$/
+const untypable = ALL.filter((w) => w.section === 'words' && !TYPABLE.test(w.en))
+ok(untypable.length === 0, `拼写关卡敲不出来：${untypable.slice(0, 5).map((w) => w.id + ' ' + w.en).join(' | ')}`)
+
+const sharedRows = ALL.filter((w) => libsOf(w).length > 1)
+ok(SHARED_COUNT > 0 && sharedRows.length > 0, '教材单元与四级没有判出任何共有词，单词本的「共有」筛选会空')
+const sharedProbe = sharedRows.find((w) => w.unitId === 'CET4') ?? sharedRows[0]!
+ok(
+  Boolean(sharedProbe) && libsOf(sharedProbe).includes(sharedProbe.unitId) && libsOf(sharedProbe).some((id) => id !== sharedProbe.unitId),
+  '共有词必须在两边筛选里都查得到'
+)
+// 单词本按词形归库：一个词形被判成共有时，教材和四级各自那条都要带上两份归属
+const formRows = new Map<string, number>()
+for (const w of ALL) {
+  const key = w.en.toLowerCase()
+  formRows.set(key, (formRows.get(key) ?? 0) + 1)
+}
+ok(
+  sharedRows.every((w) => (formRows.get(w.en.toLowerCase()) ?? 0) >= 2),
+  '共有词形底下不足两条条目，归属算漏了'
+)
 
 // 只有拼写类题型时，纯专名池应出不了题而不是崩掉
 ok(generate(wordsOf('B1U4', 'names'), { kinds: ['spelling'], count: 10, all: ALL }).length === 0, '纯专名池不该出拼写题')
@@ -94,13 +127,20 @@ ok(!hasMoves([2, 4, 2, 4, 4, 2, 4, 2, 2, 4, 2, 4, 4, 2, 4, 2]), '棋盘死局判
 ok(stuck.moved, '对照：可移动的盘必须报 moved')
 
 // ---- 冲刺队列 ----
-const s0 = initSprint(0)
-ok(s0.queue.length === COUNT.total && new Set(s0.queue).size === COUNT.total, `初始队列应装下全库 ${COUNT.total} 条`)
+/** 长局只跑两个单元：全库五千条在 node 里从头点一遍太慢，全库口径由下面两条单独钉住 */
+const SCOPE = ['B1U1', 'B2U2']
+const TOTAL = scopeIds({ scope: SCOPE }).length
+ok(TOTAL > 100 && TOTAL < ALL.length, `作用域词条数 ${TOTAL} 不对劲`)
+
+const freshAll = initSprint()
+ok(freshAll.queue.length === ALL.length && new Set(freshAll.queue).size === ALL.length, `默认开局队列应装下全库 ${ALL.length} 条`)
+ok(freshAll.scope.length === LIBS.length, '默认开局应把所有词库都选上')
+
 const nonWordsNeverSpell = (items: Record<string, ItemState>) =>
-  ALL.every((w) => w.section === 'words' || items[w.id]?.stage !== 'spell')
+  scopeIds({ scope: SCOPE }).every((id) => WORD_BY_ID.get(id)!.section === 'words' || items[id]?.stage !== 'spell')
 
 // 全对：必须走到完成，且每个词都经过拼写关
-let perfect = initSprint(0)
+let perfect = initSprint(SCOPE)
 let guard = 0
 while (!perfect.finishedAt && guard < 200000) {
   const w = front(perfect)!
@@ -108,14 +148,15 @@ while (!perfect.finishedAt && guard < 200000) {
   guard += 1
 }
 ok(Boolean(perfect.finishedAt), `全对局没走到完成（${guard} 步）`)
-ok(stats(perfect).mastered === COUNT.total, `全对局掌握数 ${stats(perfect).mastered}，应为 ${COUNT.total}`)
-ok(perfect.queue.length === COUNT.total && new Set(perfect.queue).size === COUNT.total, '全对局队列长度/去重被破坏')
-ok(ALL.filter((w) => w.section === 'words').every((w) => perfect.items[w.id]?.right >= 2), '单词至少要被考两次（选择 + 拼写）')
+ok(stats(perfect).mastered === TOTAL, `全对局掌握数 ${stats(perfect).mastered}，应为 ${TOTAL}`)
+ok(perfect.queue.length === TOTAL && new Set(perfect.queue).size === TOTAL, '全对局队列长度/去重被破坏')
+ok(scopeIds(perfect).filter((id) => WORD_BY_ID.get(id)!.section === 'words').every((id) => perfect.items[id]?.right >= 2), '单词至少要被考两次（选择 + 拼写）')
 ok(nonWordsNeverSpell(perfect.items), '词组或专名不该进拼写关')
+ok(stats(perfect).spellDone === scopeIds(perfect).filter((id) => WORD_BY_ID.get(id)!.section === 'words').length, '报告里的拼写过关数应等于作用域内单词数')
 ok(perfect.canMove, '答对后应拿到一步 2048')
 
 // 全错：永远不完成，队列不丢条目，2048 被锁死
-let wrongRun = initSprint(0)
+let wrongRun = initSprint(SCOPE)
 const boardBefore = wrongRun.game.board.filter((v) => v !== 0).length
 for (let i = 0; i < 500; i += 1) {
   const w = front(wrongRun)!
@@ -125,16 +166,16 @@ for (let i = 0; i < 500; i += 1) {
 }
 ok(!wrongRun.finishedAt, '全错局不该完成')
 ok(stats(wrongRun).mastered === 0, '全错局不该有任何掌握')
-ok(wrongRun.queue.length === COUNT.total && new Set(wrongRun.queue).size === COUNT.total, '全错局队列被破坏')
+ok(wrongRun.queue.length === TOTAL && new Set(wrongRun.queue).size === TOTAL, '全错局队列被破坏')
 ok(!wrongRun.canMove, '答错后应禁止移动')
 ok(wrongRun.game.board.filter((v) => v !== 0).length > boardBefore, '答错应生成新数字')
 
 // 随机局：不变量始终成立
-let random = initSprint(0)
+let random = initSprint(SCOPE)
 for (let i = 0; i < 5000; i += 1) {
   const w = front(random)!
   random = answer(random, w.id, Math.random() < 0.7).state
-  if (random.queue.length !== COUNT.total || new Set(random.queue).size !== COUNT.total) {
+  if (random.queue.length !== TOTAL || new Set(random.queue).size !== TOTAL) {
     fails.push(`随机局第 ${i} 步队列不合法`)
     break
   }
@@ -146,7 +187,7 @@ for (let i = 0; i < 5000; i += 1) {
 
 // 拼错插前、拼对插尾
 const seededRun = (() => {
-  let st = initSprint(0)
+  let st = initSprint(SCOPE)
   const target = ALL.find((w) => w.section === 'words')!
   st = { ...st, queue: [target.id, ...st.queue.filter((x) => x !== target.id)], items: { [target.id]: { stage: 'spell', mastered: false, streak: 0, right: 1, wrong: 0 } } }
   const afterWrong = answer(st, target.id, false).state
@@ -161,14 +202,60 @@ ok(seededRun.mastered === true, '拼对应标记已掌握')
 // 已掌握后再答错要撤销掌握
 const revoke = (() => {
   const target = ALL.find((w) => w.section === 'words')!
-  let st = initSprint(0)
+  let st = initSprint(SCOPE)
   st = { ...st, queue: [target.id, ...st.queue.filter((x) => x !== target.id)], items: { [target.id]: { stage: 'spell', mastered: true, streak: 1, right: 2, wrong: 0 } } }
   return answer(st, target.id, false).state.items[target.id]?.mastered
 })()
 ok(revoke === false, '已掌握的词再答错必须撤销掌握')
 
-ok(normalize(null).queue.length === COUNT.total, 'normalize(null) 应重建队列')
-ok(normalize({ ...(perfect), queue: perfect.queue.slice(0, 10) }).queue.length === COUNT.total, '残缺存档应被重建')
+// ---- 冲刺中途整库加减：当前这题不许被换掉，答过的记录不许丢 ----
+const libOps = (() => {
+  let st = initSprint(['B1U1'])
+  for (let i = 0; i < 20; i += 1) st = answer(st, st.queue[0]!, i % 2 === 0).state
+  const head = st.queue[0]!
+  const answered = Object.keys(st.items).length
+  const before = st.queue.join()
+  const withCet = addLib(st, 'CET4')
+  const tail = st.queue.length
+  const dropped = removeLib(withCet, 'CET4')
+  const emptyScope = removeLib(st, 'B1U1')
+  return {
+    headKept: withCet.queue[0] === head,
+    appended: withCet.queue.slice(0, tail).join() === before,
+    added: withCet.queue.length - tail,
+    tailIsCet: withCet.queue.slice(tail).every((id) => libOf(id) === 'CET4'),
+    scopeGrew: withCet.scope.join() === 'B1U1,CET4',
+    restored: dropped.queue.join() === before,
+    itemsKept: Object.keys(dropped.items).length === answered,
+    scopeShrank: dropped.scope.join() === 'B1U1',
+    statsScoped: stats(withCet).total === wordsOf('B1U1').length + wordsOf('CET4').length && stats(dropped).total === wordsOf('B1U1').length,
+    clearedAll: emptyScope.queue.length === 0 && emptyScope.scope.length === 0
+  }
+})()
+ok(libOps.headKept && libOps.appended && libOps.added > 0 && libOps.tailIsCet && libOps.scopeGrew, '添加词库要整批接在现有队列后面，不能动当前这题')
+ok(libOps.restored && libOps.itemsKept && libOps.scopeShrank, '移除词库只撤掉还没轮到它的词，已答记录保留')
+ok(libOps.statsScoped, '本轮总数的口径应当跟着选中的词库走')
+ok(libOps.clearedAll, '把唯一选中的词库撤掉后队列应清空，而不是偷偷塞回全库')
+
+// normalize 只修认不出的部分：一次词库更新绝不能把正在跑的这轮重开
+ok(normalize(null).queue.length === ALL.length, '没有存档时该按全库开新一轮')
+const truncated = normalize({ ...perfect, queue: perfect.queue.slice(0, 10) })
+ok(
+  truncated.queue.length === 10 && JSON.stringify(truncated.queue) === JSON.stringify(perfect.queue.slice(0, 10)),
+  '存档被截断也只是截断，normalize 不许重排或补满队列'
+)
+const { scope: _legacyScope, ...legacyBase } = perfect
+// 老存档没有 scope 字段：按这一轮实际碰过的词反推，跑空的那一轮要退到已答记录
+const legacy = normalize({ ...legacyBase, queue: perfect.queue.slice(0, 10) } as SprintState)
+ok(legacy.scope.length > 0 && legacy.scope.every((id) => SCOPE.includes(id)), `老存档应按队列反推出词库：${legacy.scope}`)
+const legacyDone = normalize({ ...legacyBase, queue: [] } as SprintState)
+ok(
+  [...legacyDone.scope].sort().join() === [...SCOPE].sort().join() && stats(legacyDone).total === TOTAL,
+  `跑空的一轮也要认得出原来选了哪些词库：${legacyDone.scope}`
+)
+const dirty = normalize({ ...perfect, queue: ['不存在-words-1', ...perfect.queue] } as unknown as SprintState)
+ok(dirty.queue[0] === perfect.queue[0] && !dirty.queue.includes('不存在-words-1'), '库外 id 要剔掉，其余顺序不动')
+ok(JSON.stringify(normalize(truncated).queue) === JSON.stringify(truncated.queue), 'normalize 反复跑要稳定')
 
 // 词头里不许残留词性或间隔号，否则拼写关卡要敲进中文才能过
 const HEAD_POS = /(?:^|[\s(（])(?:modal v|nan|abbr|prep|conj|pron|aux|adv|adj|num|int|vt|vi|a|ad|n|v)\./i
@@ -179,11 +266,13 @@ ok(ALL.every((w) => w.section !== 'words' || w.pos), '有单词没有词性')
 // 备份文件：指纹必须认，坏文件必须拒（放在沉淀数据齐了之后一起测）
 const settings = { showZh: true, ttsRate: 0.9, voiceURI: 'Google US English' }
 
+// 半程局跨教材单元与四级：备份与沉淀都要在混合词库下跑一遍
 const midway = (() => {
-  let st = initSprint(7)
+  let st = initSprint([...SCOPE, 'CET4'], 7)
   for (let i = 0; i < 120; i += 1) st = answer(st, st.queue[0]!, i % 3 !== 0).state
   return st
 })()
+ok(Object.keys(midway.items).some((id) => libOf(id) === 'CET4'), '混合词库的半程局里一个四级词都没碰到')
 
 // ---- 沉淀名单 ----
 const missedIds = rosterOf(midway)
@@ -273,6 +362,34 @@ for (const [label, fn] of rejects) {
   ok(threw, `备份文件「${label}」应该被拒收`)
 }
 
+// 词库换版分两档：有认不出的词条就硬拒，只是版本不同则让玩家确认一次再收
+ok(Object.keys(libFingerprints()).length === LIBS.length, '逐库指纹要一个词库一条')
+const ghostId = 'B9U9-words-1'
+const ghostBackup = JSON.stringify({ settings, ai: { [ghostId]: { eg: 'x' } }, k: 'stale', libs: libFingerprints() })
+let ghostErr: unknown = null
+try {
+  unwrapBackup(ghostBackup)
+} catch (e) {
+  ghostErr = e
+}
+ok(
+  ghostErr instanceof Error && !(ghostErr instanceof DriftError) && ghostErr.message.includes('1 个词条'),
+  `备份里混进库外词条时必须硬拒，不许只是问一句：${ghostErr}`
+)
+const movedBackup = JSON.stringify({ ...(JSON.parse(backup) as object), k: 'stale', libs: { ...libFingerprints(), B1U1: 'old' } })
+let drift: unknown = null
+try {
+  unwrapBackup(movedBackup)
+} catch (e) {
+  drift = e
+}
+ok(drift instanceof DriftError, '词条都认得、只是词库换过版：应是确认一次就能放行的 DriftError')
+ok(
+  drift instanceof DriftError && drift.message.includes('第1册 Unit 1'),
+  `换版提示要点名是哪个词库动的：${drift instanceof Error ? drift.message : String(drift)}`
+)
+ok(unwrapBackup(movedBackup, true).settings !== undefined, '确认之后要原样收下这份备份')
+
 // ---- App 壳：版本比较、返回键、桥缺失时的退化，以及存储 key 不许漂 ----
 ok(siteVersion === 'dev' || /^\d+\.\d+\.\d+$/.test(siteVersion), `站点版本号不像版本号：${siteVersion}`)
 ok(isNewer('1.10.0', '1.9.0') && !isNewer('1.0.1', '1.0.10'), '版本按点位比，不该按字符串比')
@@ -334,5 +451,5 @@ const noSent = cardsOf('B2U2', CAT_ORDER.filter((c) => c !== 'sentence'))
 ok(noSent.length === 56 && noSent.every((c) => c.cat !== 'sentence'), '筛掉例句类没生效')
 ok(cardsOf('不存在', CAT_ORDER).length === 0, '库外单元应返回空列表')
 
-console.log(fails.length ? `FAIL ${fails.length}\n${fails.slice(0, 12).join('\n')}` : `PASS 词条 ${ALL.length} · 题型 ${KINDS.length} · 单元 ${new Set(ALL.map((w) => w.unitId)).size} · 冲刺全对 ${guard} 步完成 · 沉淀 ${missedIds.length} 词 ${firstPass.steps} 题 · 语料 ${CORPUS_UNITS.length} 单元 ${CORPUS_TOTAL} 卡 · 备份文件 ${(backup.length / 1024).toFixed(1)} KB`)
+console.log(fails.length ? `FAIL ${fails.length}\n${fails.slice(0, 12).join('\n')}` : `PASS 词条 ${ALL.length} · 词库 ${LIBS.length}（共有词形 ${SHARED_COUNT}）· 题型 ${KINDS.length} · 单元 ${new Set(ALL.map((w) => w.unitId)).size} · 冲刺全对 ${guard} 步完成 · 沉淀 ${missedIds.length} 词 ${firstPass.steps} 题 · 语料 ${CORPUS_UNITS.length} 单元 ${CORPUS_TOTAL} 卡 · 备份文件 ${(backup.length / 1024).toFixed(1)} KB`)
 process.exitCode = fails.length ? 1 : 0

@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Game2048 } from '../components/Game2048'
 import { Keyboard } from '../components/Keyboard'
-import { ALL, POS_LABELS } from '../lib/lexicon'
+import { ALL, LIBS, POS_LABELS } from '../lib/lexicon'
 import { generate, sameSpelling } from '../lib/quiz'
 import type { Question } from '../lib/quiz'
-import { front, stats } from '../lib/sprint'
+import { ALL_LIBS, front, stats } from '../lib/sprint'
 import { speak } from '../lib/tts'
 import { registerBack } from '../lib/backstack'
 import { useSwipeNext } from '../lib/swipe'
@@ -30,23 +30,32 @@ export function SprintView({ app }: { app: App }) {
   const [verdict, setVerdict] = useState<Verdict | null>(null)
   const [kbOpen, setKbOpen] = useState(false)
   const [reportSeen, setReportSeen] = useState(false)
+  const [libOpen, setLibOpen] = useState(false)
   const timer = useRef<number | null>(null)
   const verdictRef = useRef<Verdict | null>(null)
   verdictRef.current = verdict
+  const libRef = useRef(libOpen)
+  libRef.current = libOpen
   const swipe = useSwipeNext(() => setVerdict(null), Boolean(verdict))
 
-  /** 判定卡还挂着时，返回键先把它关掉而不是退到别的屏 */
+  /** 判定卡、词库面板还挂着时，返回键先把它们关掉而不是退到别的屏 */
   useEffect(
     () =>
       registerBack(() => {
-        if (!verdictRef.current) return false
-        setVerdict(null)
-        return true
+        if (verdictRef.current) {
+          setVerdict(null)
+          return true
+        }
+        if (libRef.current) {
+          setLibOpen(false)
+          return true
+        }
+        return false
       }),
     []
   )
 
-  const word = sprint && !verdict ? front(sprint) : null
+  const word = sprint && !verdict && !libOpen ? front(sprint) : null
   const item = word && sprint ? sprint.items[word.id] : undefined
   const stage = item?.stage ?? 'choice'
 
@@ -87,6 +96,17 @@ export function SprintView({ app }: { app: App }) {
 
   const finished = Boolean(sprint.finishedAt) && !reportSeen
 
+  const queued = new Set(sprint.queue)
+  const libRows = LIBS.map((l) => {
+    let mastered = 0
+    let inQueue = 0
+    for (const id of l.ids) {
+      if (sprint.items[id]?.mastered) mastered += 1
+      if (queued.has(id)) inQueue += 1
+    }
+    return { id: l.id, label: l.label, total: l.ids.length, mastered, inQueue, on: sprint.scope.includes(l.id) }
+  })
+
   return (
     <div className="sprint" data-stage={verdict ? 'verdict' : stage}>
       <div className="panel sprint-head">
@@ -103,10 +123,13 @@ export function SprintView({ app }: { app: App }) {
             </span>
           </div>
           {!app.storageOk && <span className="tag" data-tone="warn">存储不可写</span>}
+          <button type="button" data-on={libOpen ? '1' : '0'} onClick={() => setLibOpen((v) => !v)}>
+            词库 {sprint.scope.length}/{LIBS.length}
+          </button>
           <button
             type="button"
             onClick={() => {
-              if (!confirm('重新开始会清空这一轮的队列与掌握标记，2048 最高分保留。')) return
+              if (!confirm('重新开始会把选中的词库重新洗牌、清掉这一轮的掌握标记，2048 最高分与词库选择保留。')) return
               app.sprintRestart()
               setVerdict(null)
               setReportSeen(false)
@@ -116,27 +139,80 @@ export function SprintView({ app }: { app: App }) {
           </button>
         </div>
         <div className="bar">
-          <i style={{ width: `${(s.mastered / s.total) * 100}%` }} />
+          <i style={{ width: `${s.total ? (s.mastered / s.total) * 100 : 0}%` }} />
         </div>
       </div>
 
-      {finished && (
+      {libOpen && (
+        <section className="panel lib-panel">
+          <div className="row-between">
+            <span className="muted">选中即加入本轮：新加的词排到队尾，取消只是撤掉还没轮到它的</span>
+            <div className="row">
+              <button type="button" className="chip" onClick={() => ALL_LIBS.forEach((id) => app.sprintSetLib(id, true))}>
+                全选
+              </button>
+              <button type="button" className="chip" onClick={() => [...sprint.scope].forEach((id) => app.sprintSetLib(id, false))}>
+                全不选
+              </button>
+            </div>
+          </div>
+          <div className="lib-list">
+            {libRows.map((l) => (
+              <button
+                key={l.id}
+                type="button"
+                className="lib-item"
+                data-on={l.on ? '1' : '0'}
+                onClick={() => app.sprintSetLib(l.id, !l.on)}
+              >
+                <span className="lib-name">
+                  {l.label}
+                  <small className="mono">{l.id}</small>
+                </span>
+                <span className="muted mono">{l.total} 词</span>
+                <span className="tag" data-tone={l.mastered === l.total ? 'ok' : undefined}>
+                  掌握 {l.mastered}
+                </span>
+                {l.on ? <span className="muted">在队 {l.inQueue}</span> : null}
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!libOpen && finished && s.total > 0 && (
         <section className="panel">
-          <h3>全库冲刺完成</h3>
+          <h3>本轮冲刺完成</h3>
           <div className="row">
             <span className="kpi">
               {s.accuracy}%<small>正确率</small>
             </span>
+            <span className="tag">本轮 {s.total} 词</span>
             <span className="tag">用时 {elapsed(sprint.startedAt, sprint.finishedAt!)}</span>
-            <span className="tag">拼写关通过 {ALL.filter((w) => w.section === 'words' && sprint.items[w.id]?.mastered).length}</span>
+            <span className="tag">拼写关通过 {s.spellDone}</span>
             <span className="tag">2048 最高 {sprint.game.best}</span>
           </div>
           <div className="row sprint-actions">
             <button type="button" className="btn-primary" onClick={() => setReportSeen(true)}>
               继续抽查
             </button>
+            <button type="button" onClick={() => setLibOpen(true)}>
+              换词库
+            </button>
             <button type="button" onClick={() => { app.sprintRestart(); setReportSeen(false); setVerdict(null) }}>
               再来一轮
+            </button>
+          </div>
+        </section>
+      )}
+
+      {/* 一个词库都不选时 removeLib 会把这一轮标成完成，那种「完成」是 0 词，该提示选词库而不是出报告 */}
+      {!libOpen && !word && !verdict && (!finished || s.total === 0) && (
+        <section className="panel sprint-q">
+          <div className="muted">本轮队列空了：这一轮取消的词库还没补回来，去「词库」里选一批就能继续。</div>
+          <div className="row sprint-actions">
+            <button type="button" className="btn-primary" onClick={() => setLibOpen(true)}>
+              选词库
             </button>
           </div>
         </section>
@@ -187,7 +263,7 @@ export function SprintView({ app }: { app: App }) {
         </section>
       )}
 
-      {verdict && (
+      {verdict && !libOpen && (
         <section className="panel sprint-q" {...swipe}>
           <div className="row-between">
             <span className="tag" data-tone={verdict.correct ? undefined : 'warn'}>

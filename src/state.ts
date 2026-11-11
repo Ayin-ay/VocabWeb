@@ -3,11 +3,11 @@ import { KEYS, loadMap, probeStorage, save, useJson, useMap, useObject } from '.
 import { DEFAULT_LLM } from './lib/llm'
 import { move as move2048, newGame } from './lib/game2048'
 import type { Dir } from './lib/game2048'
-import { answer as sprintAnswerOf, initSprint, normalize as normalizeSprint, rewardOf } from './lib/sprint'
+import { answer as sprintAnswerOf, addLib, initSprint, normalize as normalizeSprint, removeLib, rewardOf } from './lib/sprint'
 import type { SprintState } from './lib/sprint'
 import { answer as depositAnswerOf, newDeposit, normalize as normalizeDeposit, requeue as depositRequeue, rosterOf } from './lib/deposit'
 import type { DepositState } from './lib/deposit'
-import { wrapBackup, unwrapBackup } from './lib/backup'
+import { DriftError, wrapBackup, unwrapBackup } from './lib/backup'
 import { grade as srsGrade, newCard } from './lib/srs'
 import type { AiNote, CardState, Grade, LlmConfig, QuizRecord, Settings } from './lib/types'
 
@@ -65,9 +65,22 @@ export function useAppState() {
     [setSprintRaw]
   )
 
+  /** 重新开始只重洗当前选中的词库：一个都没选就留空，不许偷偷把全库塞回去 */
   const sprintRestart = useCallback(
-    () => setSprintRaw(initSprint(sprintRaw?.game.best ?? 0)),
-    [setSprintRaw, sprintRaw]
+    () => setSprintRaw(initSprint(sprint ? sprint.scope : undefined, sprintRaw?.game.best ?? 0)),
+    [setSprintRaw, sprintRaw, sprint]
+  )
+
+  /** 词库整取整放：加进来的排到队尾，撤掉的只取消还没轮到的那些，已答记录一律保留 */
+  const sprintSetLib = useCallback(
+    (libId: string, on: boolean) => {
+      setSprintRaw((s) => {
+        if (!s) return s
+        const next = normalizeSprint(s)
+        return on ? addLib(next, libId) : removeLib(next, libId)
+      })
+    },
+    [setSprintRaw]
   )
 
   const sprintNewBoard = useCallback(
@@ -122,7 +135,14 @@ export function useAppState() {
   )
 
   const importAll = useCallback((text: string) => {
-    const parsed = unwrapBackup(text)
+    let parsed: Record<string, unknown>
+    try {
+      parsed = unwrapBackup(text)
+    } catch (e) {
+      if (!(e instanceof DriftError)) throw e
+      if (!confirm(`${e.message}？`)) throw new Error('已取消，进度没动')
+      parsed = unwrapBackup(text, true)
+    }
     for (const [k, key] of Object.entries(KEYS)) if (parsed[k] !== undefined) save(key, parsed[k])
     location.reload()
   }, [])
@@ -135,7 +155,7 @@ export function useAppState() {
     llm, setLlm,
     ai, mergeAi, setAi,
     records, setRecords, addRecord,
-    sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard,
+    sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard, sprintSetLib,
     deposit, missed, depositCollect, depositAnswer, depositAgain, depositClear,
     exportAll, importAll,
     storageOk

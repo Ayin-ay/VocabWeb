@@ -10,8 +10,8 @@
  *   aboard ad./prep. 在船……上             —— 一个词位写成两个词性
  *   grasp n.（……）理解力，领悟力vt. 抓牢    —— 第二个词性块混在释义里
  *
- * 用法：node scripts/build-lexicon.mjs [--raw scripts/wordlist_raw.txt]
- * 自检：每个分节的序号必须 1..N 连续，每条必须有英文和释义，词头不许残留词性或间隔号，否则退出码 1。
+ * 用法：node scripts/build-lexicon.mjs [--raw scripts/wordlist_raw.txt,scripts/cet4_raw.txt]
+ * 自检：每个分节的序号必须递增且不超过 4 位，每条必须有英文和释义，词头不许残留词性或间隔号，否则退出码 1。
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
@@ -19,12 +19,14 @@ import { dirname, join, resolve } from 'node:path'
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)))
 const argv = process.argv.slice(2)
-const rawPath = resolve(ROOT, argv[argv.indexOf('--raw') + 1] || 'scripts/wordlist_raw.txt')
+const rawPaths = (argv[argv.indexOf('--raw') + 1] || 'scripts/wordlist_raw.txt,scripts/cet4_raw.txt')
+  .split(',')
+  .map((p) => resolve(ROOT, p.trim()))
 
 // 词性 token 必须按长度降序排，否则 n\. 会抢在 nan\. 前面命中
-const POS_ALT = 'modal v|nan|abbr|prep|conj|pron|aux|adv|adj|num|int|vt|vi|a|ad|n|v'
+const POS_ALT = 'modal v|nan|abbr|prep|art|conj|pron|aux|adv|adj|num|int|vt|vi|a|ad|n|v'
 // abbr. 不算词性分界：它只会以 (abbr. AI) 的括注出现，切开会破坏释义
-const POS_ALT_NO_ABBR = 'modal v|nan|prep|conj|pron|aux|adv|adj|num|int|vt|vi|a|ad|n|v'
+const POS_ALT_NO_ABBR = 'modal v|nan|prep|art|conj|pron|aux|adv|adj|num|int|vt|vi|a|ad|n|v'
 const posTok = (alt) => `(?:${alt})\\.`
 /** 一整串词性：n. / ad./prep. / a. & ad. */
 const posRun = (alt) => `(?:${posTok(alt)}(?:\\s*(?:&|/)\\s*${posTok(alt)})*)`
@@ -34,9 +36,10 @@ const HEAD_POS_RE = new RegExp(`(^|[\\s(（])(${posRun(POS_ALT)})`, 'i')
 const TAIL_POS_RE = new RegExp(`(^|[\\s(（一-鿿])(${posRun(POS_ALT_NO_ABBR)})(?=[^A-Za-z0-9]|$)`, 'i')
 
 const PLACEHOLDER_RE = /^[（(][^）)]*(原图无|缺|跳过)[^）)]*[）)]?$/
-const UNIT_RE = /^B(\d)U(\d)$/
+const UNIT_RE = /^(?:B(\d)U(\d)|CET(\d))$/
+const LEVEL_CN = { 4: '四', 6: '六' }
 const SECTION_RE = /^[一二三四五六]、\s*(.+)$/
-const ENTRY_RE = /^(\d{1,3})[.、]\s*(.*)$/
+const ENTRY_RE = /^(\d{1,4})[.、]\s*(.*)$/
 const CJK_RE = /[　-〿一-鿿＀-￯]/
 
 const SECTION_KEYS = [
@@ -95,10 +98,13 @@ function splitHead(text) {
   return { en: headWord(en), pos: posList.join(' / '), zh: [...zhParts, rest].filter(Boolean).join('；') }
 }
 
-const lines = readFileSync(rawPath, 'utf8')
-  .split(/\r?\n/)
-  .map((l) => l.trim())
-  .filter(Boolean)
+const lines = rawPaths
+  .flatMap((p) =>
+    readFileSync(p, 'utf8')
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .filter(Boolean)
+  )
 
 const units = []
 let unit = null
@@ -130,7 +136,11 @@ for (const line of lines) {
   if (u) {
     flush()
     section = null
-    unit = { id: line, book: Number(u[1]), unit: Number(u[2]), label: `第${u[1]}册 Unit ${u[2]}`, sections: [] }
+    // 单元号是全库 id 的前缀，两份 raw 撞号会让词条 id 重复、进度互相顶掉
+    if (units.some((x) => x.id === line)) problems.push(`单元号重复：${line}`)
+    unit = u[1]
+      ? { id: line, book: Number(u[1]), unit: Number(u[2]), label: `第${u[1]}册 Unit ${u[2]}`, sections: [] }
+      : { id: line, book: Number(u[3]), unit: Number(u[3]), label: `${LEVEL_CN[u[3]] ?? u[3]}级词汇`, sections: [] }
     units.push(unit)
     continue
   }
@@ -165,7 +175,7 @@ for (const u of units) {
 
 const flat = units.flatMap((u) => u.sections.flatMap((s) => s.entries))
 const lexicon = {
-  source: '《新视野大学英语》B1U1–B2U4 课后词表（PDF 提取）',
+  source: '《新视野大学英语》B1U1–B2U4 课后词表（拍照提取）+ 大学英语四级大纲词表（CET4）',
   builtAt: new Date().toISOString().slice(0, 10),
   total: flat.length,
   units
