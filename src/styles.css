@@ -307,10 +307,12 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
 /* 手机 */
 @media (max-width: 680px) {
   main { padding: 12px; }
-  .topbar { gap: 8px; padding: 10px 12px; flex-wrap: wrap; }
+  /* 四个 tab 共用同一条顶栏排版：以前冲刺单独收紧、作文/设置换行成两排，切 tab 就整条移位 */
+  .topbar { gap: 8px; padding: calc(10px + env(safe-area-inset-top)) 12px 5px; flex-wrap: nowrap; }
+  .brand { font-size: 13px; white-space: nowrap; }
   .brand small { display: none; }
-  .tabs { width: 100%; margin-left: 0; overflow-x: auto; }
-  .tabs button { padding: 6px 10px; white-space: nowrap; }
+  .tabs { margin-left: auto; min-width: 0; overflow-x: auto; }
+  .tabs button { padding: 6px 7px; font-size: 12px; white-space: nowrap; }
   .panel { padding: 13px 14px; }
   .card { padding: 18px 16px; min-height: 180px; }
   .kpi { font-size: 22px; }
@@ -320,15 +322,6 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
 
 /* 冲刺：一屏内答完，手机上不上下滚动 */
 @media (max-width: 680px) {
-  /* 这里必须自己带 safe-area：简写 padding 会盖掉下面那条 padding-top，导航就被压在状态栏底下点不到 */
-  .topbar[data-tab='sprint'],
-  .topbar[data-tab='deposit'] { flex-wrap: nowrap; gap: 8px; padding: calc(5px + env(safe-area-inset-top)) 10px 5px; }
-  .topbar[data-tab='sprint'] .brand,
-  .topbar[data-tab='deposit'] .brand { font-size: 13px; }
-  .topbar[data-tab='sprint'] .tabs,
-  .topbar[data-tab='deposit'] .tabs { width: auto; margin-left: auto; }
-  .topbar[data-tab='sprint'] .tabs button,
-  .topbar[data-tab='deposit'] .tabs button { padding: 6px 7px; font-size: 12px; }
   main[data-tab='sprint'],
   main[data-tab='deposit'] { padding: 8px 10px; }
 
