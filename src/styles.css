@@ -203,7 +203,6 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
 .sprint-typed[data-empty='1'] { color: var(--ink-2); font-family: var(--sans); font-size: 14px; letter-spacing: 0; }
 .sprint-q .option { margin-bottom: 6px; }
 .card-ai { border-top: 1px dashed var(--line); margin-top: 8px; padding-top: 8px; font-size: 14px; }
-.code-box { width: 100%; margin-top: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-size: 12px; line-height: 1.5; word-break: break-all; resize: vertical; }
 
 /* 页面内键盘 */
 .kb-wrap { position: sticky; bottom: 0; padding: 6px 0 calc(6px + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--bg) 78%, rgba(246, 246, 244, 0)); }

@@ -127,7 +127,7 @@ jobs:
           $NOTES
 
           直接覆盖安装即可，进度不会动；先卸载再装会清掉这台设备上的记录。
-          装完第一次打开请在「设置 → 存档码」里贴一次浏览器导出的存档码。"
+          装完第一次打开：先在浏览器「设置 → 学习数据 → 导出全部进度」存一个 .json，再到 App 里同位置「导入并覆盖」。"
           if gh release view "$tag" > /dev/null 2>&1; then
             gh release upload "$tag" apk/vocab-sprint.apk --clobber
             gh release edit "$tag" --notes "$body"

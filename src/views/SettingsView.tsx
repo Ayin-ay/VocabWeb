@@ -16,8 +16,6 @@ export function SettingsView({ app }: { app: App }) {
   const [busy, setBusy] = useState(false)
   const [log, setLog] = useState<string[]>([])
   const [probe, setProbe] = useState('')
-  const [code, setCode] = useState('')
-  const [note, setNote] = useState('')
   const [err, setErr] = useState('')
   const abortRef = useRef<AbortController | null>(null)
   const fileRef = useRef<HTMLInputElement>(null)
@@ -32,34 +30,6 @@ export function SettingsView({ app }: { app: App }) {
     void apkVersion().then(setApk)
     void fetchRelease().then(setRel)
   }, [])
-
-  const makeCode = async () => {
-    setErr('')
-    setNote('')
-    try {
-      const text = app.saveCode()
-      setCode(text)
-      try {
-        await navigator.clipboard.writeText(text)
-        setNote(`已复制 ${(text.length / 1024).toFixed(1)} KB`)
-      } catch {
-        setNote('剪贴板不可用，选中上面这串手动复制')
-      }
-    } catch (e) {
-      setErr((e as Error).message)
-    }
-  }
-
-  const applyCode = () => {
-    setErr('')
-    setNote('')
-    try {
-      app.restoreCode(code)
-      setNote('已恢复到这份存档')
-    } catch (e) {
-      setErr((e as Error).message)
-    }
-  }
 
   const todo = ALL.filter((w) => (regen || !app.ai[w.id]) && (w.section !== 'names' || regen) && units.includes(w.unitId))
   const generated = ALL.filter((w) => app.ai[w.id]).length
@@ -90,33 +60,6 @@ export function SettingsView({ app }: { app: App }) {
 
   return (
     <div className="grid">
-      <section className="panel">
-        <h3>存档码</h3>
-        <div className="row">
-          <button type="button" className="btn-primary" onClick={makeCode}>
-            生成并复制
-          </button>
-          <button type="button" onClick={applyCode} disabled={!code.trim()}>
-            用上面这串恢复
-          </button>
-          {note && <span className="muted">{note}</span>}
-          {err && <span className="tag" data-tone="warn">{err}</span>}
-          {!app.storageOk && <span className="tag" data-tone="warn">本机存储写不进去</span>}
-        </div>
-        {wrapped && !hasProgress && (
-          <div className="notice" data-tone="warn" style={{ marginTop: 8 }}>
-            App 和浏览器各存各的进度，装好包不会自动带过来。先在浏览器里「生成并复制」存档码，再回到这里贴进上面这格恢复。
-          </div>
-        )}
-        <textarea
-          className="code-box mono"
-          rows={4}
-          value={code}
-          onChange={(e) => setCode(e.target.value)}
-          spellCheck={false}
-        />
-      </section>
-
       <section className="panel">
         <h3>显示与发音</h3>
         <div className="row">
@@ -247,7 +190,8 @@ export function SettingsView({ app }: { app: App }) {
 
       <section className="panel">
         <h3>学习数据</h3>
-        <div className="row">
+        <div className="muted">进度每答完一题就自动存在本机，下面两个按钮只在换设备或换浏览器时用。</div>
+        <div className="row" style={{ marginTop: 8 }}>
           <button type="button" onClick={() => download(`vocab-backup-${new Date().toISOString().slice(0, 10)}.json`, app.exportAll())}>
             导出全部进度
           </button>
@@ -261,7 +205,14 @@ export function SettingsView({ app }: { app: App }) {
             hidden
             onChange={async (e) => {
               const f = e.target.files?.[0]
-              if (f) app.importAll(await f.text())
+              e.target.value = ''
+              if (!f) return
+              setErr('')
+              try {
+                app.importAll(await f.text())
+              } catch (err) {
+                setErr((err as Error).message)
+              }
             }}
           />
           <button
@@ -276,7 +227,14 @@ export function SettingsView({ app }: { app: App }) {
           >
             清空学习进度
           </button>
+          {err && <span className="tag" data-tone="warn">{err}</span>}
+          {!app.storageOk && <span className="tag" data-tone="warn">本机存储写不进去</span>}
         </div>
+        {wrapped && !hasProgress && (
+          <div className="notice" data-tone="warn" style={{ marginTop: 8 }}>
+            App 和浏览器各存各的进度，装好包不会自动带过来。先在原来那侧「导出全部进度」存一个 .json，再回到这里「导入并覆盖」。
+          </div>
+        )}
         <p className="muted" style={{ marginTop: 8 }}>
           词库 {ALL.length} 条来自 {units.length ? units.map((u) => wordsOf(u).length).join(' + ') : '全部单元'}；数据只存在
           {wrapped ? '这台设备的 App 里，和浏览器那份各记各的' : '这台机器的浏览器里'}。

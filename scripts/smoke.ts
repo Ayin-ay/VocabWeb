@@ -4,7 +4,7 @@ import type { QuizKind } from '../src/lib/quiz'
 import { emptyBoard, hasMoves, move, newGame, spawn } from '../src/lib/game2048'
 import { FRONT, answer, front, initSprint, normalize, stats } from '../src/lib/sprint'
 import type { ItemState } from '../src/lib/sprint'
-import { MAGIC, decodeSave, encodeSave } from '../src/lib/savecode'
+import { lexiconFingerprint, unwrapBackup, wrapBackup } from '../src/lib/backup'
 import { answer as depositAnswer, newDeposit, normalize as normalizeDeposit, requeue, rosterOf, stats as depositStats } from '../src/lib/deposit'
 import { CAT_ORDER, CORPUS_TOTAL, CORPUS_UNITS, cardsOf, unitOfCard } from '../src/lib/composition'
 import { KEYS } from '../src/lib/store'
@@ -176,20 +176,14 @@ ok(ALL.every((w) => !HEAD_POS.test(w.en)), `词头残留词性：${ALL.filter((w
 ok(ALL.every((w) => !/[·・]/.test(w.en)), `词头残留间隔号：${ALL.filter((w) => /[·]/.test(w.en)).map((w) => w.id).join(',')}`)
 ok(ALL.every((w) => w.section !== 'words' || w.pos), '有单词没有词性')
 
-// 存档码：往返必须逐字节等价，坏码必须被拒
+// 备份文件：指纹必须认，坏文件必须拒（放在沉淀数据齐了之后一起测）
 const settings = { showZh: true, ttsRate: 0.9, voiceURI: 'Google US English' }
-const roundTrip = decodeSave(encodeSave(perfect, settings))
-ok(JSON.stringify(roundTrip.sprint) === JSON.stringify(perfect), '存档码往返后进度变了样')
-ok(JSON.stringify(roundTrip.settings) === JSON.stringify(settings), '存档码往返后设置变了样')
 
 const midway = (() => {
   let st = initSprint(7)
   for (let i = 0; i < 120; i += 1) st = answer(st, st.queue[0]!, i % 3 !== 0).state
   return st
 })()
-const midwayCode = encodeSave(midway, settings)
-ok(JSON.stringify(decodeSave(midwayCode).sprint) === JSON.stringify(midway), '半程存档码往返不一致')
-ok(JSON.stringify(decodeSave(`  ${midwayCode.replace(/(.{60})/g, '$1\n')}  `).sprint) === JSON.stringify(midway), '存档码换行后应能恢复')
 
 // ---- 沉淀名单 ----
 const missedIds = rosterOf(midway)
@@ -236,10 +230,12 @@ ok(partial.queue.length + ps.done === partial.roster.length, '待过 + 已完成
 ok(partial.queue.every((id) => partial.roster.includes(id)), '沉淀队列跑出了名单')
 ok(new Set(partial.queue).size === partial.queue.length, '沉淀队列出现重复')
 
-const depositCode = encodeSave(midway, settings, partial)
-ok(JSON.stringify(decodeSave(depositCode).deposit) === JSON.stringify(partial), '沉淀进度往返不一致')
-ok(JSON.stringify(decodeSave(depositCode).sprint) === JSON.stringify(midway), '带沉淀的码把冲刺进度改动了')
-ok(decodeSave(midwayCode).deposit === undefined, '老码没有沉淀段，应保持未读而不是报错')
+const backup = wrapBackup({ sprint: midway, settings, deposit: partial })
+const restored = unwrapBackup(backup)
+ok(JSON.stringify(restored.sprint) === JSON.stringify(midway), '备份往返后冲刺进度变了样')
+ok(JSON.stringify(restored.deposit) === JSON.stringify(partial), '备份往返后沉淀进度变了样')
+ok(JSON.stringify(restored.settings) === JSON.stringify(settings), '备份往返后设置变了样')
+ok((JSON.parse(backup) as { k: string }).k === lexiconFingerprint(), '备份里要带上当前词库指纹')
 
 ok(normalizeDeposit(null) === null, '没名单时不该凭空造一份')
 ok(normalizeDeposit({ roster: ['不存在'], queue: ['不存在'], items: {}, round: 1, startedAt: 'x', finishedAt: null }) === null, '库外名单应判空')
@@ -259,19 +255,13 @@ ok(JSON.stringify(normalizeDeposit(steady)?.queue) === JSON.stringify(oneOut.que
 ok(normalizeDeposit(firstPass.d)?.queue.length === 0, '练空的名单 normalize 之后不该再冒出词')
 
 const rejects: Array<[string, () => void]> = [
-  ['不是存档码', () => decodeSave('hello world')],
-  ['被截断', () => decodeSave(midwayCode.slice(0, midwayCode.length - 20))],
-  ['中间掉字符', () => decodeSave(`${midwayCode.slice(0, 400)}!${midwayCode.slice(401)}`)],
-  ['词库换版', () => {
-    const raw = JSON.parse(atob(midwayCode.slice(MAGIC.length))) as { k: string }
-    raw.k = 'zzzzzz'
-    decodeSave(`${MAGIC}${btoa(JSON.stringify(raw))}`)
-  }],
-  ['沉淀队列对不上名单', () => {
-    const raw = JSON.parse(atob(depositCode.slice(MAGIC.length))) as { d: { r: number[] } }
-    raw.d.r = raw.d.r.slice(1)
-    decodeSave(`${MAGIC}${btoa(JSON.stringify(raw))}`)
-  }]
+  ['不是备份文件', () => unwrapBackup('hello world')],
+  ['空对象', () => unwrapBackup('{}')],
+  ['被截断', () => unwrapBackup(backup.slice(0, backup.length - 20))],
+  ['中间多出一个字符', () => unwrapBackup(backup.replace('{', '{,'))],
+  ['词库换版', () => unwrapBackup(JSON.stringify({ ...(JSON.parse(backup) as object), k: 'zzzzzz' }))],
+  ['有指纹但没学习数据', () => unwrapBackup(JSON.stringify({ k: lexiconFingerprint() }))],
+  ['没有指纹的 AI 资料', () => unwrapBackup(JSON.stringify({ [ALL[0]!.id]: { eg: 'x', note: 'y' } }))]
 ]
 for (const [label, fn] of rejects) {
   let threw = false
@@ -280,7 +270,7 @@ for (const [label, fn] of rejects) {
   } catch {
     threw = true
   }
-  ok(threw, `存档码「${label}」应该被拒收`)
+  ok(threw, `备份文件「${label}」应该被拒收`)
 }
 
 // ---- App 壳：版本比较、返回键、桥缺失时的退化，以及存储 key 不许漂 ----
@@ -316,7 +306,6 @@ ok(
     }),
   `存储 key 漂了，旧存档会被当成空档：${JSON.stringify(KEYS)}`
 )
-ok(MAGIC === 'VSW1.', `存档码前缀漂了：${MAGIC}`)
 
 // ---- 作文语料 ----
 ok(CORPUS_UNITS.length === 4 && CORPUS_TOTAL === 272, `语料单元 ${CORPUS_UNITS.length} / 卡片 ${CORPUS_TOTAL}，应为 4 / 272`)
@@ -345,5 +334,5 @@ const noSent = cardsOf('B2U2', CAT_ORDER.filter((c) => c !== 'sentence'))
 ok(noSent.length === 56 && noSent.every((c) => c.cat !== 'sentence'), '筛掉例句类没生效')
 ok(cardsOf('不存在', CAT_ORDER).length === 0, '库外单元应返回空列表')
 
-console.log(fails.length ? `FAIL ${fails.length}\n${fails.slice(0, 12).join('\n')}` : `PASS 词条 ${ALL.length} · 题型 ${KINDS.length} · 单元 ${new Set(ALL.map((w) => w.unitId)).size} · 冲刺全对 ${guard} 步完成 · 沉淀 ${missedIds.length} 词 ${firstPass.steps} 题 · 语料 ${CORPUS_UNITS.length} 单元 ${CORPUS_TOTAL} 卡 · 存档码 ${(midwayCode.length / 1024).toFixed(1)} KB / 带沉淀 ${(depositCode.length / 1024).toFixed(1)} KB`)
+console.log(fails.length ? `FAIL ${fails.length}\n${fails.slice(0, 12).join('\n')}` : `PASS 词条 ${ALL.length} · 题型 ${KINDS.length} · 单元 ${new Set(ALL.map((w) => w.unitId)).size} · 冲刺全对 ${guard} 步完成 · 沉淀 ${missedIds.length} 词 ${firstPass.steps} 题 · 语料 ${CORPUS_UNITS.length} 单元 ${CORPUS_TOTAL} 卡 · 备份文件 ${(backup.length / 1024).toFixed(1)} KB`)
 process.exitCode = fails.length ? 1 : 0

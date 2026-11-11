@@ -7,7 +7,7 @@ import { answer as sprintAnswerOf, initSprint, normalize as normalizeSprint, rew
 import type { SprintState } from './lib/sprint'
 import { answer as depositAnswerOf, newDeposit, normalize as normalizeDeposit, requeue as depositRequeue, rosterOf } from './lib/deposit'
 import type { DepositState } from './lib/deposit'
-import { decodeSave, encodeSave } from './lib/savecode'
+import { wrapBackup, unwrapBackup } from './lib/backup'
 import { grade as srsGrade, newCard } from './lib/srs'
 import type { AiNote, CardState, Grade, LlmConfig, QuizRecord, Settings } from './lib/types'
 
@@ -111,41 +111,23 @@ export function useAppState() {
   /** 备份文件里不许带 apiKey，所以模型通道整段排除在导出之外 */
   const exportAll = useCallback(
     () =>
-      JSON.stringify(
+      wrapBackup(
         Object.fromEntries(
           Object.entries(KEYS)
             .filter(([name]) => name !== 'llm')
             .map(([name, key]) => [name, loadMap<unknown>(key)])
-        ),
-        null,
-        2
+        )
       ),
     []
   )
 
   const importAll = useCallback((text: string) => {
-    const parsed = JSON.parse(text) as Record<string, unknown>
+    const parsed = unwrapBackup(text)
     for (const [k, key] of Object.entries(KEYS)) if (parsed[k] !== undefined) save(key, parsed[k])
     location.reload()
   }, [])
 
   const storageOk = useMemo(probeStorage, [])
-
-  const saveCode = useCallback(() => {
-    if (!sprintRaw) throw new Error('还没有可导出的进度')
-    return encodeSave(sprintRaw, settings, depositRaw)
-  }, [sprintRaw, depositRaw, settings])
-
-  const restoreCode = useCallback(
-    (text: string) => {
-      const bundle = decodeSave(text)
-      setSprintRaw(bundle.sprint)
-      setSettings(bundle.settings)
-      // 老码里没有沉淀那一段，就别把本机正在练的名单抹掉
-      if (bundle.deposit) setDepositRaw(bundle.deposit)
-    },
-    [setSprintRaw, setSettings, setDepositRaw]
-  )
 
   return {
     progress, setProgress, bump, setKnown,
@@ -156,7 +138,7 @@ export function useAppState() {
     sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard,
     deposit, missed, depositCollect, depositAnswer, depositAgain, depositClear,
     exportAll, importAll,
-    storageOk, saveCode, restoreCode
+    storageOk
   }
 }
 

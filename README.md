@@ -14,7 +14,7 @@ npm run dev      # http://127.0.0.1:5174
 ```bash
 npm run lexicon  # 重新解析 scripts/wordlist_raw.txt → src/data/lexicon.json
 npm run corpus   # 合并 scripts/corpus_src/B2U*.json → src/data/composition.json
-npm run smoke    # 出题、拼写判定、冲刺/沉淀状态机、存档码、语料卡的自检（无浏览器）
+npm run smoke    # 出题、拼写判定、冲刺/沉淀状态机、备份文件、语料卡的自检（无浏览器）
 npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 ```
 
@@ -54,19 +54,22 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 
 - 卡片**正面只有中文含义**，点一下翻出英文，再点翻回；英文面还会带「怎么用」（搭配、替换哪个朴素说法）和例句。
 - 列表按类别分成几段，自上而下连续滑动即可翻找；手机上单列铺满宽度。顶部两行筛选：单元、类别（至少留一类）。
-- 语料是只读数据，不进 localStorage、不进存档码，所以翻卡状态刷新会重置，进度也永远不会被它影响。
+- 语料是只读数据，不进 localStorage、不进备份文件，所以翻卡状态刷新会重置，进度也永远不会被它影响。
 
 ## 设置
 
-显示与发音（音色、语速）、存档码、模型通道（MiniMax 国内/国际、OpenAI、DeepSeek、通义、Kimi、本机 Ollama 预设）、批量生成例句与助记、清空进度、版本（站点 / App 版本号与新包提醒）。
+显示与发音（音色、语速）、学习数据（导出 / 导入备份、清空进度）、模型通道（MiniMax 国内/国际、OpenAI、DeepSeek、通义、Kimi、本机 Ollama 预设）、批量生成例句与助记、清空进度、版本（站点 / App 版本号与新包提醒）。
 
 ## 进度保存
 
-浏览器（尤其手机 WebView、无痕模式）会随时清掉 localStorage，所以退出重进可能回到零。当前方案是**手动存档码**，不依赖任何后端：
+进度是**自动保存**的：每答完一题就把冲刺队列、掌握标记、沉淀名单与计数、2048 棋盘写进本机 localStorage（`src/lib/store.ts`），站内没有任何「保存」按钮，也不需要用户做保存动作。
 
-- 设置页「生成存档码」把冲刺队列、掌握标记、沉淀名单与计数、2048 棋盘和显示设置压成一串 base64（约 4–5 KB，带沉淀名单多约 0.4 KB），复制走即可。
-- 「恢复」粘回同一串就接着上次继续。存档码开头带词库指纹（对全部条目 `id` 做 FNV-1a），换过词表后旧码会被明确拒绝，不会静默错位恢复；沉淀那一段是后加的，老码里没有就跳过、不动本机名单。
-- 模型通道的 `apiKey` 永不进存档码，也不进「导出全部进度」的 JSON。
+跨设备、跨浏览器搬运走**备份文件**，同样不依赖任何后端：
+
+- 设置页「学习数据 → 导出全部进度」下载一个 `vocab-backup-日期.json`，内容是那几个 `vocab.*` key 的原样快照；在另一侧「导入并覆盖」选回这个文件就接着上次继续。
+- 文件里带词库指纹（对全部条目 `id` 做 FNV-1a，见 `src/lib/backup.ts`）。词表重新解析过、条目顺序变过的旧文件会被明确拒绝，不会静默把进度安到别的单词上。
+- 模型通道的 `apiKey` 永不进备份文件。
+- 无痕模式、微信内置浏览器、手动清站点数据都会把 localStorage 整份抹掉，所以常用那台设备建议隔段时间导一份留底。
 
 ## 词表数据
 
@@ -99,7 +102,7 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 
 ## 云端版本
 
-`dist/` 镜像到 `D:\StudyWeb\.sites\vocab\dist` 后通过 Qoder Sites 发布，公开地址：<https://vocab-sprint-yc5z6ejvpmh.qoder.website>。纯静态站点，没有账号与远端数据库，所以手机上的进度依然只在那台设备的浏览器里——换设备靠存档码。
+`dist/` 镜像到 `D:\StudyWeb\.sites\vocab\dist` 后通过 Qoder Sites 发布，公开地址：<https://vocab-sprint-yc5z6ejvpmh.qoder.website>。纯静态站点，没有账号与远端数据库，所以手机上的进度依然只在那台设备的浏览器里——换设备靠导出 / 导入备份文件。
 
 `public/app.json`（`{version, notes, download}`）随站点一起发布，是 App 里「有新包」提醒的唯一来源。
 
@@ -111,7 +114,7 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 - 桥靠 `src/lib/appshell.ts` 和 `src/lib/tts.ts` 里显式 `import` 的 `@capacitor/core` / `@capacitor/app` / `@capacitor-community/text-to-speech` 注册（`cap.Plugins` 只认 JS 侧的 `registerPlugin`，光靠运行时探测取不到东西）。`inApp()` 为 false 时这些路径全部短路，浏览器行为不变；`npm run smoke` 里那条 `inApp() === false` 守的就是这一点。
 - 朗读优先走 `@capacitor-community/text-to-speech`（Android WebView 里没有 `speechSynthesis`），网页那套只作回退；App 里音色跟随系统的「文字转语音」，设置页的音色下拉只在浏览器出现。
 - 返回键：判定卡正在显示 → 关掉判定卡；不在冲刺页 → 回冲刺页；否则退出应用。
-- **App 与浏览器是两份 localStorage**，装 App 不会带过来浏览器里的进度，第一次要在设置页贴一次存档码。
+- **App 与浏览器是两份 localStorage**，装 App 不会带过来浏览器里的进度，第一次要在「设置 → 学习数据」导入浏览器那侧导出的 .json。
 - 版本号只有 `package.json` 一处：`android/app/build.gradle` 读它算 `versionName` / `versionCode`，站点里 `__APP_VERSION__` 也来自它。发版顺序是「跑 `release.yml` 出包 → 再更新 `public/app.json` 发布站点」，反了会提示有新包却下不到对应版本。
 
 出包（GitHub Actions，仓库公开）：
@@ -123,6 +126,6 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 3. 按 `keystore-info.txt` 建四个仓库 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`（Settings → Secrets and variables → Actions）。PKCS12 里 **key 口令必须等于 store 口令**（新版 keytool 忽略 `-keypass`），所以 `ANDROID_KEY_PASSWORD` 抄 `ANDROID_KEYSTORE_PASSWORD` 那行的值；填成两样会在 `:app:packageRelease` 炸 `Given final block not properly padded`。
 4. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/VocabWeb/releases/latest/download/vocab-sprint.apk` 永远指向最新一版；`public/app.json` 的 `download` 就是这一条。
 
-签名换了就等于换了另一个应用：覆盖安装会失败，只能卸载重装，而卸载会清掉那台设备上的进度。所以 keystore 丢了必须重新走一遍 1–2，并提前导出存档码。
+签名换了就等于换了另一个应用：覆盖安装会失败，只能卸载重装，而卸载会清掉那台设备上的进度。所以 keystore 丢了必须重新走一遍 1–2，并提前导出一份备份文件。
 
 图标与启动屏由 `python scripts/make-icons.py` 从 `app-assets/icon-master.png` 生成 `android/app/src/main/res` 下的 27 个 PNG（主图要改就换主图再跑一次；CI 不重跑这步，产物直接进仓库）。
