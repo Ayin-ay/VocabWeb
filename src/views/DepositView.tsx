@@ -29,7 +29,7 @@ export function DepositView({ app }: { app: App }) {
   const { deposit, sprint } = app
   const [given, setGiven] = useState('')
   const [verdict, setVerdict] = useState<Verdict | null>(null)
-  const [kbOpen, setKbOpen] = useState(true)
+  const [kbOpen, setKbOpen] = useState(false)
   const timer = useRef<number | null>(null)
   const verdictRef = useRef<Verdict | null>(null)
   verdictRef.current = verdict
@@ -196,9 +196,9 @@ export function DepositView({ app }: { app: App }) {
                 </span>
                 {deposit.items[word.id]?.wrong ? <span className="tag" data-tone="warn">已错 {deposit.items[word.id]?.wrong} 次</span> : null}
               </div>
-              <div className="sprint-typed" data-empty={given ? undefined : '1'}>
-                {given || '用下面的键盘拼写'}
-              </div>
+              <button type="button" className="sprint-typed" data-empty={given ? undefined : '1'} onClick={() => setKbOpen(true)}>
+                {given || (kbOpen ? '用下面的键盘拼写' : '点这里打开键盘')}
+              </button>
             </>
           )}
         </section>

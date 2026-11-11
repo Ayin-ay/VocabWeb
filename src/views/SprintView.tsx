@@ -28,7 +28,7 @@ export function SprintView({ app }: { app: App }) {
   const sprint = app.sprint
   const [given, setGiven] = useState('')
   const [verdict, setVerdict] = useState<Verdict | null>(null)
-  const [kbOpen, setKbOpen] = useState(true)
+  const [kbOpen, setKbOpen] = useState(false)
   const [reportSeen, setReportSeen] = useState(false)
   const timer = useRef<number | null>(null)
   const verdictRef = useRef<Verdict | null>(null)
@@ -179,9 +179,9 @@ export function SprintView({ app }: { app: App }) {
                 </span>
                 {item?.mastered ? <span className="tag">已掌握</span> : null}
               </div>
-              <div className="sprint-typed" data-empty={given ? undefined : '1'}>
-                {given || '用下面的键盘拼写'}
-              </div>
+              <button type="button" className="sprint-typed" data-empty={given ? undefined : '1'} onClick={() => setKbOpen(true)}>
+                {given || (kbOpen ? '用下面的键盘拼写' : '点这里打开键盘')}
+              </button>
             </>
           )}
         </section>

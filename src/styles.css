@@ -191,6 +191,9 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
 .sprint-pos { font-size: 14px; color: var(--accent); font-weight: 400; margin-left: 10px; }
 .sprint-zh { font-size: clamp(18px, 5vw, 24px); }
 .sprint-typed {
+  width: 100%;
+  text-align: left;
+  background: transparent;
   font-family: var(--mono);
   font-size: 22px;
   letter-spacing: 2px;
@@ -321,10 +324,14 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
 
 /* 冲刺：一屏内答完，手机上不上下滚动 */
 @media (max-width: 680px) {
+  #root { min-height: 100dvh; }
   main[data-tab='sprint'],
-  main[data-tab='deposit'] { padding: 8px 10px; }
+  main[data-tab='deposit'] { padding: 8px 10px; display: flex; flex-direction: column; }
 
-  .sprint { gap: 7px; }
+  /* 棋盘钉死：题目/判定卡吃掉整段余量，2048 永远贴着同一行，答题前后不跳；
+     拼写关的键盘浮在屏幕底部盖住棋盘，所以棋盘不必再为键盘让位缩小 */
+  .sprint { flex: 1; min-height: calc(100dvh - 150px); gap: 7px; grid-template-rows: auto minmax(0, 1fr) auto; }
+  .sprint-q { overflow-y: auto; }
 
   .sprint-head { padding: 7px 11px; }
   .sprint-head .row-between { flex-wrap: nowrap; gap: 8px; }
@@ -353,6 +360,16 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
   .sprint-actions { margin-top: 7px; gap: 7px; }
   .sprint-actions button { padding: 5px 12px; }
 
+  .kb-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    padding: 7px 10px calc(7px + env(safe-area-inset-bottom));
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+  }
   .kb-bar { margin-bottom: 5px; }
   .kb-bar .chip { padding: 2px 10px; font-size: 12px; }
   .kb { padding: 6px; gap: 4px; border-radius: 10px; }
@@ -380,7 +397,6 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
     padding: 4px;
     border-radius: 8px;
   }
-  .sprint[data-stage='spell'] .board { width: min(100%, 22dvh, 122px); }
   .tile { border-radius: 5px; font-size: clamp(12px, 3.6vw, 17px); }
   .t128, .t256, .t512 { font-size: clamp(11px, 3.2vw, 15px); }
   .t1024, .t2048 { font-size: clamp(9px, 2.6vw, 13px); }
