@@ -151,4 +151,4 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 
 签名换了就等于换了另一个应用：覆盖安装会失败，只能卸载重装，而卸载会清掉那台设备上的进度。所以 keystore 丢了必须重新走一遍 1–2，并提前导出一份备份文件。
 
-图标与启动屏由 `python scripts/make-icons.py` 从 `app-assets/icon-master.png` 生成 `android/app/src/main/res` 下的 27 个 PNG（主图要改就换主图再跑一次；CI 不重跑这步，产物直接进仓库）。
+图标与启动屏由 `python scripts/make-icons.py` 从 `app-assets/icon-master.png` 生成 `android/app/src/main/res` 下的 26 个 PNG 加一个 `values/ic_launcher_background.xml`（主图要改就换主图再跑一次；CI 不重跑这步，产物直接进仓库）。主图是「四块瓷砖 + 浅灰底」的位图，脚本先按饱和度找出色底、再从画布四边做连通域抠成透明——白 V 自己也是低饱和的，但它被深绿块围住、不连通到边缘，所以不会被吃掉。自适应图标的背景层是 `#00000000`，桌面壁纸直接透过来，只有四块瓷砖浮着；前景按 66dp 安全区的**对角线**缩放（占画布 43%），按 61% 铺满会被圆形遮罩把四个外角削成花瓣。
