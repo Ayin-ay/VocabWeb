@@ -232,7 +232,9 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
 .game-panel h3 { margin: 0; }
 .board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* 1fr 的下限是内容宽度，有数字的格会把空格挤窄，所以两轴都锁成 minmax(0,1fr) */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
   gap: 6px;
   background: #e6e3d9;
   border-radius: 10px;
@@ -318,8 +320,9 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
 
 /* 冲刺：一屏内答完，手机上不上下滚动 */
 @media (max-width: 680px) {
+  /* 这里必须自己带 safe-area：简写 padding 会盖掉下面那条 padding-top，导航就被压在状态栏底下点不到 */
   .topbar[data-tab='sprint'],
-  .topbar[data-tab='deposit'] { flex-wrap: nowrap; gap: 8px; padding: 5px 10px; }
+  .topbar[data-tab='deposit'] { flex-wrap: nowrap; gap: 8px; padding: calc(5px + env(safe-area-inset-top)) 10px 5px; }
   .topbar[data-tab='sprint'] .brand,
   .topbar[data-tab='deposit'] .brand { font-size: 13px; }
   .topbar[data-tab='sprint'] .tabs,
