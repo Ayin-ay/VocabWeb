@@ -61,10 +61,10 @@ export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameStat
       <div className="row-between game-pad">
         <span className="muted game-max">最大 {maxValue(game.board)}</span>
         <div className="dpad">
-          <button type="button" aria-label="上" disabled={!canMove} onClick={() => onMove('up')}>↑</button>
-          <button type="button" aria-label="左" disabled={!canMove} onClick={() => onMove('left')}>←</button>
-          <button type="button" aria-label="下" disabled={!canMove} onClick={() => onMove('down')}>↓</button>
-          <button type="button" aria-label="右" disabled={!canMove} onClick={() => onMove('right')}>→</button>
+          <button type="button" data-d="up" aria-label="上" disabled={!canMove} onClick={() => onMove('up')}>↑</button>
+          <button type="button" data-d="left" aria-label="左" disabled={!canMove} onClick={() => onMove('left')}>←</button>
+          <button type="button" data-d="right" aria-label="右" disabled={!canMove} onClick={() => onMove('right')}>→</button>
+          <button type="button" data-d="down" aria-label="下" disabled={!canMove} onClick={() => onMove('down')}>↓</button>
         </div>
       </div>
     </section>

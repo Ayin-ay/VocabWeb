@@ -240,6 +240,11 @@ ok(libOps.restored && libOps.itemsKept && libOps.scopeShrank, '移除词库只�
 ok(libOps.statsScoped, '本轮总数的口径应当跟着选中的词库走')
 ok(libOps.clearedAll, '把唯一选中的词库撤掉后队列应清空，而不是偷偷塞回全库')
 
+// 手机端实测到的 bug：4 个词库全点掉，下一次渲染又被已答记录反推回 4 个。
+// 存档里写了 scope 且是空数组＝玩家真的一个都没选，normalize 不许拿 items 把它塞回去。
+const keptOff = normalize({ ...perfect, scope: [], queue: [] })
+ok(keptOff.scope.length === 0, `全不选的那轮 normalize 不许反推词库：${keptOff.scope}`)
+
 // normalize 只修认不出的部分：一次词库更新绝不能把正在跑的这轮重开
 ok(normalize(null).queue.length === ALL.length, '没有存档时该按全库开新一轮')
 const truncated = normalize({ ...perfect, queue: perfect.queue.slice(0, 10) })

@@ -213,10 +213,12 @@ export function normalize(state: SprintState | null | undefined, best = 0): Spri
   for (const [id, s] of Object.entries(state.items)) {
     if (WORD_BY_ID.has(id) && s && typeof s === 'object') items[id] = { ...blank(), ...s }
   }
-  // 老存档没有 scope 字段：按这一轮实际碰过的词反推词库。队列跑空的那一轮要退到已答记录里看，
+  // 只有老存档根本没有 scope 字段时才反推词库：按这一轮实际碰过的词补一份，
   // 否则一轮练完之后作用域变成 0，报告就成了「本轮 0 词」。
-  const saved = (Array.isArray(state.scope) ? state.scope : []).filter(isLib)
-  const scope = saved.length ? saved : [...new Set((queue.length ? queue : Object.keys(items)).map(libOf))].filter(isLib)
+  // 存档里写了 scope 却是个空数组，那是玩家真的一个词库都没选，绝不许拿已答记录把它塞回去。
+  const infer = () =>
+    [...new Set((queue.length ? queue : Object.keys(items)).map(libOf))].filter(isLib)
+  const scope = Array.isArray(state.scope) ? state.scope.filter(isLib) : infer()
   return {
     ...state,
     queue,
