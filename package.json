@@ -10,7 +10,8 @@
     "corpus": "node scripts/build-corpus.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "smoke": "esbuild scripts/smoke.ts --bundle --platform=node --format=esm --outfile=.tmp/smoke.mjs --log-level=warning && node .tmp/smoke.mjs"
+    "smoke": "esbuild scripts/smoke.ts --bundle --platform=node --format=esm --outfile=.tmp/smoke.mjs --log-level=warning && node .tmp/smoke.mjs",
+    "stage": "node scripts/stage-site.mjs"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^6.1.0",

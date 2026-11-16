@@ -145,7 +145,7 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 - 剩下的引擎侧限制：专有名词（`Dhahran`、`Eldar Shafir`）和 `Cévennes` 只能听引擎自己的读法，站内不做音标转写。
 - 返回键：判定卡或词库面板开着 → 先关掉它（判定卡优先）；不在冲刺页 → 回冲刺页；否则退出应用。
 - **App 与浏览器是两份 localStorage**，装 App 不会带过来浏览器里的进度，第一次要在「设置 → 学习数据」导入浏览器那侧导出的 .json。
-- 版本号只有 `package.json` 一处：`android/app/build.gradle` 读它算 `versionName` / `versionCode`，站点里 `__APP_VERSION__` 也来自它。发版顺序是「跑 `release.yml` 出包 → 再更新 `public/app.json` 发布站点」，反了会提示有新包却下不到对应版本。
+- 版本号只有 `package.json` 一处：`android/app/build.gradle` 读它算 `versionName` / `versionCode`，站点里 `__APP_VERSION__` 也来自它。发版顺序是「跑 `release.yml` 出包 → 把新包下到本地 `apk/vocab-sprint.apk` → 更新 `public/app.json` → `npm run build && npm run stage` 发布站点」，反了会提示有新包却下不到对应版本。
 
 出包（GitHub Actions，仓库公开）：
 
@@ -154,8 +154,9 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 1. 建一个空仓库 `Ayin-ay/VocabWeb`（Public，**别勾初始化 README**），remote 指过来推上去。
 2. Actions → 「生成签名用的 keystore」→ Run workflow，下载 artifact 里的 `release.keystore` / `release.keystore.base64` / `keystore-info.txt`，自己留一份 keystore。
 3. 按 `keystore-info.txt` 建四个仓库 secret：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`（Settings → Secrets and variables → Actions）。PKCS12 里 **key 口令必须等于 store 口令**（新版 keytool 忽略 `-keypass`），所以 `ANDROID_KEY_PASSWORD` 抄 `ANDROID_KEYSTORE_PASSWORD` 那行的值；填成两样会在 `:app:packageRelease` 炸 `Given final block not properly padded`。
-4. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/VocabWeb/releases/latest/download/vocab-sprint.apk` 永远指向最新一版；`public/app.json` 的 `download` 就是这一条。
+4. Actions → 「打包并发布安卓 APK」→ Run workflow（可填本版改了啥）。产物挂在 Release 上，固定名 `vocab-sprint.apk`，`https://github.com/Ayin-ay/VocabWeb/releases/latest/download/vocab-sprint.apk` 永远指向最新一版。
+5. 把那一版 APK 下到 `apk/vocab-sprint.apk`（这个目录不进 git），`npm run stage` 会连着 dist 一起放进发布目录，站点上就有一条 `https://vocab-sprint-yc5z6ejvpmh.qoder.website/vocab-sprint.apk`。`public/app.json` 的 `download` 指的是**站点这条**，不是 GitHub 那条：github.com 在国内经常连不上，而同学点的是 App 里那个下载按钮。GitHub 的 Release 仍然留着，当第二个入口。
 
 签名换了就等于换了另一个应用：覆盖安装会失败，只能卸载重装，而卸载会清掉那台设备上的进度。所以 keystore 丢了必须重新走一遍 1–2，并提前导出一份备份文件。
 
-图标与启动屏由 `python scripts/make-icons.py` 从 `app-assets/icon-master.png` 生成 `android/app/src/main/res` 下的 26 个 PNG 加一个 `values/ic_launcher_background.xml`（主图要改就换主图再跑一次；CI 不重跑这步，产物直接进仓库）。主图是「四块瓷砖 + 浅灰底」的位图，脚本先按饱和度找出色底、再从画布四边做连通域抠成透明——白 V 自己也是低饱和的，但它被深绿块围住、不连通到边缘，所以不会被吃掉。自适应图标的背景层是 `#00000000`，桌面壁纸直接透过来，只有四块瓷砖浮着；前景按 66dp 安全区的**对角线**缩放（占画布 43%），按 61% 铺满会被圆形遮罩把四个外角削成花瓣。
+图标与启动屏由 `python scripts/make-icons.py` 从 `app-assets/icon-master.png` 生成 `android/app/src/main/res` 下的 26 个 PNG 加一个 `values/ic_launcher_background.xml`（主图要改就换主图再跑一次；CI 不重跑这步，产物直接进仓库）。主图是「四块瓷砖 + 浅灰底」的位图，脚本先按饱和度找出色底、再从画布四边做连通域抠成透明——白 V 自己也是低饱和的，但它被深绿块围住、不连通到边缘，所以不会被吃掉。自适应图标的背景层**必须是实色**（现在是启动屏同款 `#F6F6F4`）：启动器不会让壁纸透到图标底下，透明像素一律按黑色合成——上一版写成 `#00000000` 就是桌面整块发黑的原因，前景四块瓷砖中间那道缝也是空的，于是黑底贴深绿块几乎看不见。老式 `mipmap-*/ic_launcher.png` 同样要自带底色。前景按 66dp 安全区的**对角线**缩放（占画布 43%），按 61% 铺满会被圆形遮罩把四个外角削成花瓣。
