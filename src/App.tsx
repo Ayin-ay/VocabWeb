@@ -32,7 +32,7 @@ export default function App() {
     <>
       <header className="topbar" data-tab={tab}>
         <div className="brand">
-          词汇冲刺<small>{COUNT.total} 条 · {COUNT.units} 个词库</small>
+          词力2048<small>{COUNT.total} 条 · {COUNT.units} 个词库</small>
         </div>
         <nav className="tabs">
           <button type="button" data-on={tab === 'sprint' ? '1' : '0'} onClick={() => setTab('sprint')}>

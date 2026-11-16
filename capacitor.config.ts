@@ -5,7 +5,7 @@ const HOST = 'vocab-sprint-yc5z6ejvpmh.qoder.website'
 
 const config: CapacitorConfig = {
   appId: 'com.vocab.sprint',
-  appName: '词汇冲刺',
+  appName: '词力2048',
   webDir: 'dist',
   server: {
     url: `https://${HOST}`,

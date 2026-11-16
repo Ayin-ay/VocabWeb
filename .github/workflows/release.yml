@@ -122,7 +122,7 @@ jobs:
           set -euo pipefail
           version=$(node -p "require('./package.json').version")
           tag="v$version"
-          body="词汇冲刺 $version
+          body="词力2048 $version
 
           $NOTES
 
@@ -132,7 +132,7 @@ jobs:
             gh release upload "$tag" apk/vocab-sprint.apk --clobber
             gh release edit "$tag" --notes "$body"
           else
-            gh release create "$tag" apk/vocab-sprint.apk --title "词汇冲刺 $tag" --notes "$body" --latest
+            gh release create "$tag" apk/vocab-sprint.apk --title "词力2048 $tag" --notes "$body" --latest
           fi
           echo "下载地址：https://github.com/${{ github.repository }}/releases/latest/download/vocab-sprint.apk"
 
