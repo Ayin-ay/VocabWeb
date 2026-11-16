@@ -1,10 +1,25 @@
 import { useEffect, useRef } from 'react'
 import { maxValue, WARN_LIMIT } from '../lib/game2048'
 import type { Dir, GameState } from '../lib/game2048'
+import { COMBO_MERGES, COMBO_STREAK } from '../lib/gamefx'
+import type { GameFx } from '../lib/gamefx'
+import { sfx } from '../lib/sfx'
 
 const ARROWS: Record<string, Dir> = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' }
 
-export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameState; canMove: boolean; onMove: (d: Dir) => void; onNewBoard: () => void }) {
+export function Game2048({
+  game,
+  canMove,
+  fx,
+  onMove,
+  onNewBoard
+}: {
+  game: GameState
+  canMove: boolean
+  fx: GameFx | null
+  onMove: (d: Dir) => void
+  onNewBoard: () => void
+}) {
   const start = useRef<{ x: number; y: number } | null>(null)
 
   useEffect(() => {
@@ -18,6 +33,16 @@ export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameStat
     return () => window.removeEventListener('keydown', onKey)
   }, [canMove, onMove])
 
+  // 音效跟着 fx 的 seq 走：同一个 seq 只响一次，重渲染不会重复播
+  useEffect(() => {
+    if (!fx) return
+    if (fx.milestone) sfx.milestone(fx.milestone)
+    else if (fx.combo >= COMBO_MERGES) sfx.merge(fx.combo)
+    else if (fx.streak >= COMBO_STREAK) sfx.streak(fx.streak)
+    else if (fx.combo > 0) sfx.merge(1)
+    if (fx.warned) sfx.warn()
+  }, [fx?.seq])
+
   const endSwipe = (x: number, y: number) => {
     const s = start.current
     start.current = null
@@ -27,6 +52,9 @@ export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameStat
     if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) return
     onMove(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 'right' : 'left') : dy > 0 ? 'down' : 'up')
   }
+
+  const popped = (i: number) => Boolean(fx?.pop.includes(i))
+  const born = (i: number) => fx?.spawn === i
 
   return (
     <section className="panel game-panel">
@@ -45,6 +73,7 @@ export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameStat
       </div>
       <div
         className="board"
+        key={game.over ? 'dead' : 'live'}
         data-over={game.over ? '1' : '0'}
         data-warn={game.warn}
         data-shake={game.warn > 0 ? (game.warn % 2 === 1 ? 'a' : 'b') : undefined}
@@ -53,10 +82,39 @@ export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameStat
         onPointerCancel={() => { start.current = null }}
       >
         {game.board.map((v, i) => (
-          <div className={`tile${v ? ` t${Math.min(v, 2048)}` : ''}`} key={i}>
+          <div
+            className={`tile${v ? ` t${Math.min(v, 2048)}` : ''}`}
+            // 换 key 是为了让这一格整个重挂一次，CSS 动画才会重新起播；fx.seq 每步都在变
+            key={popped(i) ? `p${i}-${fx?.seq}` : born(i) ? `n${i}-${fx?.seq}` : i}
+            data-pop={popped(i) ? '1' : undefined}
+            data-new={born(i) ? '1' : undefined}
+          >
             {v || ''}
           </div>
         ))}
+        {fx && fx.gained > 0 && (
+          <span className="float-score" key={`f${fx.seq}`}>
+            +{fx.gained}
+          </span>
+        )}
+        {fx && fx.combo >= COMBO_MERGES && (
+          <span className="fx-badge" key={`c${fx.seq}`}>
+            {fx.combo} 对合并
+          </span>
+        )}
+        {fx && fx.combo < COMBO_MERGES && fx.streak >= COMBO_STREAK && (
+          <span className="fx-badge" key={`s${fx.seq}`}>
+            连击 {fx.streak}
+          </span>
+        )}
+        {fx?.milestone && (
+          <>
+            <span className="fx-flash" key={`x${fx.seq}`} />
+            <span className="fx-milestone" key={`m${fx.seq}`}>
+              合成 {fx.milestone}
+            </span>
+          </>
+        )}
         {game.over && (
           <div className="board-over">
             <button type="button" className="btn-primary" onClick={onNewBoard}>

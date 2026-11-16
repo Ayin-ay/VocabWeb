@@ -2,6 +2,8 @@ import { ALL, COUNT, LIBS, SHARED_COUNT, WORD_BY_ID, libOf, libsOf, wordsOf } fr
 import { generate } from '../src/lib/quiz'
 import type { QuizKind } from '../src/lib/quiz'
 import { emptyBoard, hasMoves, isFull, move, newGame, spawn, WARN_LIMIT } from '../src/lib/game2048'
+import type { MoveResult } from '../src/lib/game2048'
+import { COMBO_MERGES, emptyFx, fxMemory, fxMove, fxPenalty } from '../src/lib/gamefx'
 import { FRONT, addLib, answer, front, initSprint, normalize, removeLib, rewardOf, scopeIds, setMark, stats } from '../src/lib/sprint'
 import type { ItemState, SprintState } from '../src/lib/sprint'
 import { DriftError, lexiconFingerprint, libFingerprints, unwrapBackup, wrapBackup } from '../src/lib/backup'
@@ -143,6 +145,36 @@ const holed = rewardOf({ board: [2, 0, 4, 8, 16, 32, 64, 128, 2, 4, 8, 16, 32, 6
 ok(holed.game.warn === 2 && holed.game.board.every((v) => v !== 0), '不满格时答错落新数字、警示不涨')
 const movedKeeps = move({ board: fullWarn, score: 0, best: 0, over: false, warn: 2 }, 'left', () => 0.99)
 ok(movedKeeps.state.warn === 2, '移动本身不该清掉警示，只有答对才清')
+
+// ---- 动效判定层：合并落在哪几格、补的新数字在哪一格、连击与里程碑 ----
+ok(mv.fx.merged.length === 1 && mv.fx.merged[0]!.at === 0 && mv.fx.merged[0]!.value === 4, `横向合并的落点应是 0 格：${JSON.stringify(mv.fx.merged)}`)
+ok(mv.fx.spawnAt === 15, `rand 恒为 0.99 时新数字应落 15 格，实际 ${mv.fx.spawnAt}`)
+const up2 = move({ board: [2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], score: 0, best: 0, over: false, warn: 0 }, 'up', () => 0)
+ok(up2.fx.merged.length === 1 && up2.fx.merged[0]!.at === 0, `纵向合并的下标要按方向映射回棋盘：${JSON.stringify(up2.fx.merged)}`)
+
+const fake = (merged: { at: number; value: number }[], at: number | null, board: number[]): MoveResult => ({
+  state: { board, score: 0, best: 0, over: false, warn: 0 },
+  moved: true,
+  gained: merged.reduce((s, m) => s + m.value, 0),
+  fx: { merged, spawnAt: at }
+})
+const B128 = [128, 2, 4, 8, 16, 32, 64, 8, 2, 4, 8, 16, 32, 64, 128, 64]
+const B256 = [128, 2, 4, 8, 16, 256, 64, 8, 2, 4, 8, 16, 32, 64, 128, 64]
+const f1 = fxMove(emptyFx(), fake([{ at: 0, value: 128 }, { at: 7, value: 8 }], 3, B128))
+ok(f1.fx.combo === COMBO_MERGES && f1.fx.streak === 1 && f1.fx.milestone === 128 && f1.fx.pop[0] === 0 && f1.fx.spawn === 3, `双合并应报连击和 128 里程碑：${JSON.stringify(f1.fx)}`)
+const f2 = fxMove(f1.mem, fake([{ at: 5, value: 256 }], 9, B256))
+ok(f2.fx.streak === 2 && f2.fx.milestone === 256, `第二步又合并就该续上连击：${f2.fx.streak}/${f2.fx.milestone}`)
+const f3 = fxMove(f2.mem, fake([], 1, B256))
+ok(f3.fx.streak === 0 && f3.fx.combo === 0 && f3.fx.milestone === null, '这一步没合并，连击必须断')
+const f4 = fxMove(f3.mem, fake([{ at: 0, value: 128 }], 2, B256))
+ok(f4.fx.milestone === null, '128 这一轮已经摸过，不许再报一次里程碑')
+const f5 = fxPenalty(f4.mem, null, true)
+ok(f5.fx.warned && f5.fx.spawn === null && f5.fx.streak === f4.mem.streak, `满格警示不该带落子、也不该断连击：${JSON.stringify(f5.fx)}`)
+const f6 = fxPenalty(f4.mem, 6, false)
+ok(f6.fx.spawn === 6 && !f6.fx.warned, '不满格答错的 fx 应指向落子那一格')
+const loaded = fxMemory(B256)
+ok(loaded.seenMax === 256, `读档初始化要把盘面最大值当作已摸过，实际 ${loaded.seenMax}`)
+ok(fxMove(loaded, fake([{ at: 1, value: 128 }], 5, B256)).fx.milestone === null, '读档后重复合成同一个大数不该再报里程碑')
 
 // ---- 冲刺队列 ----
 /** 长局只跑两个单元：全库五千条在 node 里从头点一遍太慢，全库口径由下面两条单独钉住 */

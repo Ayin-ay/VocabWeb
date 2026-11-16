@@ -235,7 +235,7 @@ export function DepositView({ app }: { app: App }) {
       )}
 
       {sprint && (
-        <Game2048 game={sprint.game} canMove={sprint.canMove} onMove={app.sprintMove} onNewBoard={app.sprintNewBoard} />
+        <Game2048 game={sprint.game} canMove={sprint.canMove} fx={app.gameFx} onMove={app.sprintMove} onNewBoard={app.sprintNewBoard} />
       )}
 
       {!done && word && stage === 'spell' && !verdict && (

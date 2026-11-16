@@ -1,8 +1,10 @@
-import { useCallback, useEffect, useMemo } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { KEYS, loadMap, probeStorage, save, useJson, useMap, useObject } from './lib/store'
 import { DEFAULT_LLM } from './lib/llm'
 import { move as move2048, newGame } from './lib/game2048'
 import type { Dir } from './lib/game2048'
+import { fxMemory, fxMove, fxPenalty } from './lib/gamefx'
+import type { FxMemory, GameFx } from './lib/gamefx'
 import { answer as sprintAnswerOf, addLib, initSprint, normalize as normalizeSprint, removeLib, rewardOf, setMark } from './lib/sprint'
 import type { SprintState } from './lib/sprint'
 import { answer as depositAnswerOf, DEPOSIT_STREAK, newDeposit, normalize as normalizeDeposit, requeue as depositRequeue, rosterOf } from './lib/deposit'
@@ -47,6 +49,24 @@ export function useAppState() {
 
   const sprint = sprintRaw ? normalizeSprint(sprintRaw) : null
 
+  /**
+   * 2048 的动效信号：只活在内存里，一个字都不进存档，所以刷新页面最多丢掉连击计数。
+   * seq 每发生一次就加一，Game2048 拿它当 key 让动画重新起播。
+   */
+  const [gameFx, setGameFx] = useState<GameFx | null>(null)
+  const fxMem = useRef<FxMemory | null>(null)
+
+  const fxBump = useCallback((step: (mem: FxMemory) => { fx: GameFx; mem: FxMemory }, board: number[]) => {
+    const r = step(fxMem.current ?? fxMemory(board))
+    fxMem.current = r.mem
+    setGameFx(r.fx)
+  }, [])
+
+  const fxReset = useCallback((board: number[]) => {
+    fxMem.current = fxMemory(board)
+    setGameFx(null)
+  }, [])
+
   /** 按天计数：卷王榜的数据源，先从今天起记 */
   const [daysRaw, setDaysRaw] = useJson<Days>(KEYS.days, {})
   const days = useMemo(() => normalizeDays(daysRaw), [daysRaw])
@@ -62,6 +82,7 @@ export function useAppState() {
       if (!sprint) return
       const next = sprintAnswerOf(sprint, id, correct)
       setSprintRaw(next.state)
+      if (!correct) fxBump((mem) => fxPenalty(mem, next.spawned, next.warned), next.state.game.board)
       const before = sprint.items[id]?.mastered ?? false
       const after = next.state.items[id]?.mastered ?? false
       bumpDay({
@@ -72,7 +93,7 @@ export function useAppState() {
         best: next.state.game.score,
       })
     },
-    [sprint, setSprintRaw, bumpDay]
+    [sprint, setSprintRaw, bumpDay, fxBump]
   )
 
   /** 答对换来的那一步；方向无效则不消耗 */
@@ -82,9 +103,10 @@ export function useAppState() {
       const r = move2048(sprint.game, dir)
       if (!r.moved) return
       setSprintRaw({ ...sprint, game: r.state, canMove: false })
+      fxBump((mem) => fxMove(mem, r), r.state.board)
       bumpDay({ best: r.state.score })
     },
-    [sprint, setSprintRaw, bumpDay]
+    [sprint, setSprintRaw, bumpDay, fxBump]
   )
 
   /** 词库整取整放：加进来的排到队尾，撤掉的只取消还没轮到的那些，已答记录一律保留 */
@@ -107,10 +129,12 @@ export function useAppState() {
     [setSprintRaw]
   )
 
-  const sprintNewBoard = useCallback(
-    () => setSprintRaw((s) => (s ? { ...s, game: newGame(s.game.best) } : s)),
-    [setSprintRaw]
-  )
+  const sprintNewBoard = useCallback(() => {
+    if (!sprint) return
+    const game = newGame(sprint.game.best)
+    setSprintRaw({ ...sprint, game })
+    fxReset(game.board)
+  }, [sprint, setSprintRaw, fxReset])
 
   const [depositRaw, setDepositRaw] = useJson<DepositState | null>(KEYS.deposit, null)
 
@@ -134,8 +158,10 @@ export function useAppState() {
    */
   const sprintRestart = useCallback(() => {
     if (!deposit) depositCollect()
-    setSprintRaw(initSprint(sprint ? sprint.scope : undefined, sprintRaw?.game.best ?? 0))
-  }, [deposit, depositCollect, setSprintRaw, sprintRaw, sprint])
+    const next = initSprint(sprint ? sprint.scope : undefined, sprintRaw?.game.best ?? 0)
+    setSprintRaw(next)
+    fxReset(next.game.board)
+  }, [deposit, depositCollect, setSprintRaw, sprintRaw, sprint, fxReset])
 
   /** 棋盘仍然归冲刺那份档管，沉淀只负责自己的名单与计数 */
   const depositAnswer = useCallback(
@@ -149,6 +175,7 @@ export function useAppState() {
         const r = rewardOf(s.game, correct)
         return { ...s, game: r.game, canMove: r.canMove }
       })
+      if (reward && !correct) fxBump((mem) => fxPenalty(mem, reward.spawned, reward.warned), reward.game.board)
       bumpDay({
         answered: 1,
         right: correct ? 1 : 0,
@@ -157,7 +184,7 @@ export function useAppState() {
         best: reward ? reward.game.score : 0
       })
     },
-    [deposit, sprint, setDepositRaw, setSprintRaw, bumpDay]
+    [deposit, sprint, setDepositRaw, setSprintRaw, bumpDay, fxBump]
   )
 
   const depositAgain = useCallback(() => setDepositRaw((d) => (d ? depositRequeue(d) : d)), [setDepositRaw])
@@ -198,7 +225,7 @@ export function useAppState() {
     llm, setLlm,
     ai, mergeAi, setAi,
     records, setRecords, addRecord,
-    sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard, sprintSetLib, sprintMark,
+    sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard, sprintSetLib, sprintMark, gameFx,
     deposit, missed, depositCollect, depositAnswer, depositAgain, depositClear,
     days, dayToday, dayWeek,
     exportAll, importAll,

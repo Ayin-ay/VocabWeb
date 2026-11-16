@@ -315,7 +315,7 @@ export function SprintView({ app }: { app: App }) {
         </section>
       )}
 
-      <Game2048 game={sprint.game} canMove={sprint.canMove} onMove={app.sprintMove} onNewBoard={app.sprintNewBoard} />
+      <Game2048 game={sprint.game} canMove={sprint.canMove} fx={app.gameFx} onMove={app.sprintMove} onNewBoard={app.sprintNewBoard} />
 
       {word && stage === 'spell' && !verdict && (
         <div className="kb-wrap">

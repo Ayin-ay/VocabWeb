@@ -31,83 +31,100 @@ export function emptyBoard(): number[] {
   return Array.from({ length: SIZE * SIZE }, () => 0)
 }
 
-export function spawn(board: number[], rand: () => number = Math.random): number[] {
+export function spawnAt(board: number[], rand: () => number = Math.random): { board: number[]; at: number | null } {
   const holes = board.map((v, i) => (v === 0 ? i : -1)).filter((i) => i >= 0)
-  if (!holes.length) return board.slice()
+  if (!holes.length) return { board: board.slice(), at: null }
   const at = holes[Math.floor(rand() * holes.length)]!
   const next = board.slice()
   next[at] = rand() < 0.9 ? 2 : 4
-  return next
+  return { board: next, at }
+}
+
+export function spawn(board: number[], rand: () => number = Math.random): number[] {
+  return spawnAt(board, rand).board
 }
 
 /** 一行向左滑动并合并：每个数字一次只合并一对，合并得分等于合成后的值 */
-function slide(line: number[]): { line: number[]; gained: number } {
+function slide(line: number[]): { line: number[]; gained: number; merged: boolean[] } {
   const tiles = line.filter((v) => v !== 0)
   const out: number[] = []
+  const merged: boolean[] = []
   let gained = 0
   for (let i = 0; i < tiles.length; i += 1) {
     if (i + 1 < tiles.length && tiles[i] === tiles[i + 1]) {
-      const merged = tiles[i]! * 2
-      out.push(merged)
-      gained += merged
+      const value = tiles[i]! * 2
+      out.push(value)
+      merged.push(true)
+      gained += value
       i += 1
     } else {
       out.push(tiles[i]!)
+      merged.push(false)
     }
   }
-  while (out.length < SIZE) out.push(0)
-  return { line: out, gained }
+  while (out.length < SIZE) {
+    out.push(0)
+    merged.push(false)
+  }
+  return { line: out, gained, merged }
 }
 
-/** 按方向取出四条线（统一成「向左滑」的朝向），算完再写回 */
+/** 第 i 条线第 j 个位置对应哪个棋盘格：四条线统一成「向左滑」的朝向来算，算完按同一张表写回 */
+function cellOf(i: number, j: number, dir: Dir): number {
+  const [r, c] =
+    dir === 'left' ? [i, j] : dir === 'right' ? [i, SIZE - 1 - j] : dir === 'up' ? [j, i] : [SIZE - 1 - j, i]
+  return r! * SIZE + c!
+}
+
 function lines(board: number[], dir: Dir): number[][] {
-  const idx = (r: number, c: number) => r * SIZE + c
-  const out: number[][] = []
-  for (let i = 0; i < SIZE; i += 1) {
-    const line: number[] = []
-    for (let j = 0; j < SIZE; j += 1) {
-      const [r, c] =
-        dir === 'left' ? [i, j] : dir === 'right' ? [i, SIZE - 1 - j] : dir === 'up' ? [j, i] : [SIZE - 1 - j, i]
-      line.push(board[idx(r!, c!)]!)
-    }
-    out.push(line)
-  }
-  return out
+  return Array.from({ length: SIZE }, (_, i) => Array.from({ length: SIZE }, (_, j) => board[cellOf(i, j, dir)]!))
 }
 
 function writeBack(next: number[][], dir: Dir): number[] {
   const board = emptyBoard()
-  const idx = (r: number, c: number) => r * SIZE + c
   for (let i = 0; i < SIZE; i += 1) {
-    for (let j = 0; j < SIZE; j += 1) {
-      const [r, c] =
-        dir === 'left' ? [i, j] : dir === 'right' ? [i, SIZE - 1 - j] : dir === 'up' ? [j, i] : [SIZE - 1 - j, i]
-      board[idx(r!, c!)] = next[i]![j]!
-    }
+    for (let j = 0; j < SIZE; j += 1) board[cellOf(i, j, dir)] = next[i]![j]!
   }
   return board
+}
+
+export interface MoveFx {
+  /** 这一步新合成出来的格子：棋盘下标 + 合成后的值 */
+  merged: { at: number; value: number }[]
+  /** 补的那个新数字落在哪一格，满盘时是 null */
+  spawnAt: number | null
 }
 
 export interface MoveResult {
   state: GameState
   moved: boolean
   gained: number
+  fx: MoveFx
 }
+
+const NO_FX: MoveFx = { merged: [], spawnAt: null }
 
 /** 答对换来的那一步：滑动 → 合并 → 补一个新数字。无效方向不消耗这一步。 */
 export function move(state: GameState, dir: Dir, rand: () => number = Math.random): MoveResult {
-  if (state.over) return { state, moved: false, gained: 0 }
+  if (state.over) return { state, moved: false, gained: 0, fx: NO_FX }
   const slid = lines(state.board, dir).map(slide)
   const board = writeBack(slid.map((s) => s.line), dir)
   const moved = board.some((v, i) => v !== state.board[i])
-  if (!moved) return { state, moved: false, gained: 0 }
+  if (!moved) return { state, moved: false, gained: 0, fx: NO_FX }
+  const merged: { at: number; value: number }[] = []
+  slid.forEach((s, i) =>
+    s.merged.forEach((m, j) => {
+      if (m) merged.push({ at: cellOf(i, j, dir), value: board[cellOf(i, j, dir)]! })
+    })
+  )
   const gained = slid.reduce((sum, s) => sum + s.gained, 0)
-  const withSpawn = spawn(board, rand)
+  const born = spawnAt(board, rand)
   const score = state.score + gained
   return {
-    state: { board: withSpawn, score, best: Math.max(state.best, score), over: !hasMoves(withSpawn), warn: state.warn },
+    state: { board: born.board, score, best: Math.max(state.best, score), over: !hasMoves(born.board), warn: state.warn },
     moved: true,
-    gained
+    gained,
+    fx: { merged, spawnAt: born.at }
   }
 }
 

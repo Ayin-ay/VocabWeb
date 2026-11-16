@@ -304,6 +304,93 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
   position: relative;
   touch-action: none;
 }
+/* A1 合并弹一下 / A2 新数字淡入：Game2048 靠换 key 重挂那一格来重新起播，所以一条动画名就够 */
+.tile[data-pop] { animation: tilePop 0.24s ease-out; }
+.tile[data-new] { animation: tileIn 0.22s ease-out; }
+@keyframes tilePop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.22); }
+  100% { transform: scale(1); }
+}
+@keyframes tileIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+/* A3 这一步的得分从棋盘右上角飘起来 */
+.float-score {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2f5d50;
+  pointer-events: none;
+  animation: floatUp 0.8s ease-out forwards;
+}
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(6px); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-22px); }
+}
+/* C1「n 对合并」/ C3「连击 n」角标 */
+.fx-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgba(47, 93, 80, 0.92);
+  color: #fff;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: badgePop 0.7s ease-out forwards;
+}
+@keyframes badgePop {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
+  20% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+  75% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -62%) scale(1); }
+}
+/* A4 里程碑：整盘白光一下 + 大字飘过 */
+.fx-flash {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: #fff;
+  pointer-events: none;
+  animation: msFlash 0.5s ease-out forwards;
+}
+@keyframes msFlash {
+  0% { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+.fx-milestone {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  font-size: 22px;
+  font-weight: 800;
+  color: #b8860b;
+  text-shadow: 0 1px 0 #fff;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: msRise 1s ease-out forwards;
+}
+@keyframes msRise {
+  0% { opacity: 0; transform: translate(-50%, -30%) scale(0.8); }
+  25% { opacity: 1; transform: translate(-50%, -50%) scale(1.12); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -70%) scale(1); }
+}
+/* A5 判负那一下棋盘塌一下。写在警示规则之前：靠警示死的盘要抖要红，塌让位给抖 */
+.board[data-over='1'] { animation: boardDrop 0.5s ease-in; }
+@keyframes boardDrop {
+  0% { transform: none; }
+  35% { transform: translateY(6px) scale(0.97); }
+  100% { transform: none; }
+}
 /* 满格警示：答错一次整盘泛红抖一下。data-shake 在 a/b 之间来回换，动画名才会每次警示都重新触发；
    警示没清零之前盘沿留一圈红，配合右上角「警示 n/3」的计数。 */
 .board[data-warn='1'], .board[data-warn='2'], .board[data-warn='3'] {
@@ -501,7 +588,7 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
   .game-panel .board {
     grid-area: board;
     margin: 0;
-    width: min(100%, 30dvh, 150px);
+    width: min(100%, 34dvh, 200px);
     gap: 4px;
     padding: 4px;
     border-radius: 8px;

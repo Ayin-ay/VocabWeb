@@ -1,6 +1,6 @@
 import { LIBS, WORD_BY_ID, libOf } from './lexicon'
 import { shuffle } from './quiz'
-import { hasMoves, isFull, newGame, spawn, WARN_LIMIT } from './game2048'
+import { hasMoves, isFull, newGame, spawnAt, WARN_LIMIT } from './game2048'
 import type { GameState } from './game2048'
 import type { Word } from './types'
 
@@ -67,25 +67,36 @@ export interface AnswerResult {
   state: SprintState
   /** 这次答题有没有换来一步 2048 */
   earnedMove: boolean
+  /** 答错落进来的那个新数字在哪一格（动效要让它淡入） */
+  spawned: number | null
+  /** 这次答错是不是满格警示 */
+  warned: boolean
+}
+
+export interface Reward {
+  game: GameState
+  canMove: boolean
+  spawned: number | null
+  warned: boolean
 }
 
 /**
  * 答对换一步可移动并把满格警示清零；答错落一个新数字并锁住。
  * 格子全满时落不进新数字，答错本来毫无代价，所以那种局面改成记一次满格警示，攒满判负。
  */
-export function rewardOf(game: GameState, correct: boolean): { game: GameState; canMove: boolean } {
-  if (correct) return { game: { ...game, warn: 0 }, canMove: !game.over }
+export function rewardOf(game: GameState, correct: boolean): Reward {
+  if (correct) return { game: { ...game, warn: 0 }, canMove: !game.over, spawned: null, warned: false }
   if (isFull(game.board)) {
     const warn = game.warn + 1
-    return { game: { ...game, warn, over: warn >= WARN_LIMIT }, canMove: false }
+    return { game: { ...game, warn, over: warn >= WARN_LIMIT }, canMove: false, spawned: null, warned: true }
   }
-  const board = spawn(game.board)
-  return { game: { ...game, board, over: !hasMoves(board) }, canMove: false }
+  const born = spawnAt(game.board)
+  return { game: { ...game, board: born.board, over: !hasMoves(born.board) }, canMove: false, spawned: born.at, warned: false }
 }
 
 export function answer(state: SprintState, id: string, correct: boolean): AnswerResult {
   const w = WORD_BY_ID.get(id)
-  if (!w || state.queue[0] !== id) return { state, earnedMove: false }
+  if (!w || state.queue[0] !== id) return { state, earnedMove: false, spawned: null, warned: false }
 
   const queue = state.queue.slice(1)
   const items = { ...state.items }
@@ -131,7 +142,9 @@ export function answer(state: SprintState, id: string, correct: boolean): Answer
       canMove: reward.canMove,
       finishedAt: state.finishedAt ?? (masteredAll ? new Date().toISOString() : null)
     },
-    earnedMove: reward.canMove
+    earnedMove: reward.canMove,
+    spawned: reward.spawned,
+    warned: reward.warned
   }
 }
 
