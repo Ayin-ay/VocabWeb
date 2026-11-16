@@ -87,12 +87,6 @@ export function useAppState() {
     [sprint, setSprintRaw, bumpDay]
   )
 
-  /** 重新开始只重洗当前选中的词库：一个都没选就留空，不许偷偷把全库塞回去 */
-  const sprintRestart = useCallback(
-    () => setSprintRaw(initSprint(sprint ? sprint.scope : undefined, sprintRaw?.game.best ?? 0)),
-    [setSprintRaw, sprintRaw, sprint]
-  )
-
   /** 词库整取整放：加进来的排到队尾，撤掉的只取消还没轮到的那些，已答记录一律保留 */
   const sprintSetLib = useCallback(
     (libId: string, on: boolean) => {
@@ -132,6 +126,16 @@ export function useAppState() {
     setDepositRaw(newDeposit(ids))
     return ids.length
   }, [sprint, setDepositRaw])
+
+  /**
+   * 重新开始只重洗当前选中的词库：一个都没选就留空，不许偷偷把全库塞回去。
+   * 答错记录只存在冲刺这一份档里，重洗就把本轮的错题来源一起抹掉，所以先替它收进沉淀；
+   * 沉淀里已经有一批在练时不动那批，免得把正在做的名单换掉。
+   */
+  const sprintRestart = useCallback(() => {
+    if (!deposit) depositCollect()
+    setSprintRaw(initSprint(sprint ? sprint.scope : undefined, sprintRaw?.game.best ?? 0))
+  }, [deposit, depositCollect, setSprintRaw, sprintRaw, sprint])
 
   /** 棋盘仍然归冲刺那份档管，沉淀只负责自己的名单与计数 */
   const depositAnswer = useCallback(

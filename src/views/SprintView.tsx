@@ -132,7 +132,10 @@ export function SprintView({ app }: { app: App }) {
           <button
             type="button"
             onClick={() => {
-              if (!confirm('重新开始会把选中的词库重新洗牌、清掉这一轮的掌握标记，2048 最高分与词库选择保留。')) return
+              const tip =
+                '重新开始会把选中的词库重新洗牌、清掉这一轮的掌握标记，2048 最高分与词库选择保留。' +
+                (app.missed && !app.deposit ? `本轮错过还没沉淀的 ${app.missed} 个词会先自动收进沉淀。` : '')
+              if (!confirm(tip)) return
               app.sprintRestart()
               setVerdict(null)
               setReportSeen(false)
