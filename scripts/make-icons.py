@@ -18,8 +18,9 @@ ROOT = Path(__file__).resolve().parent.parent
 MASTER = ROOT / "app-assets" / "icon-master.png"
 RES = ROOT / "android" / "app" / "src" / "main" / "res"
 
-# 自适应图标的背景层：整张图就是四块浮空的瓷砖，底色要透明，让桌面壁纸透出来
-BG = "#00000000"
+# 自适应图标的背景层必须是实色：安卓桌面不会让壁纸透到图标底下，透明像素一律按黑色合成，
+# 上次写 #00000000 就是桌面整块发黑的原因。底色取启动屏同一个浅灰，图标和开屏是一套。
+BG = "#F6F6F4"
 SPLASH_BG = "#f6f6f4"
 
 # 饱和度低于这个值算底色/投影（灰底 3、投影 0–2，米白块 15、薄荷块 26、深绿块 48）
@@ -99,7 +100,9 @@ MARK = KEYED.crop(bbox)
 print(f"抠底后保留 {MARK.size[0]}x{MARK.size[1]}，占画布 {(bbox[2] - bbox[0]) * (bbox[3] - bbox[1]) / (master.width * master.height):.0%}")
 
 for d, s in LEGACY.items():
-    tile = KEYED.resize((s, s), Image.LANCZOS)
+    # 老式图标（不支持自适应图标的桌面会退回这张）也得自带底色，否则同样被合成成黑的
+    tile = Image.new("RGBA", (s, s), BG)
+    tile.alpha_composite(KEYED.resize((s, s), Image.LANCZOS))
     png(tile, RES / f"mipmap-{d}" / "ic_launcher.png")
     round_im = Image.new("RGBA", (s, s), (0, 0, 0, 0))
     mask = Image.new("L", (s, s), 0)
