@@ -5,8 +5,10 @@ import { move as move2048, newGame } from './lib/game2048'
 import type { Dir } from './lib/game2048'
 import { answer as sprintAnswerOf, addLib, initSprint, normalize as normalizeSprint, removeLib, rewardOf, setMark } from './lib/sprint'
 import type { SprintState } from './lib/sprint'
-import { answer as depositAnswerOf, newDeposit, normalize as normalizeDeposit, requeue as depositRequeue, rosterOf } from './lib/deposit'
+import { answer as depositAnswerOf, DEPOSIT_STREAK, newDeposit, normalize as normalizeDeposit, requeue as depositRequeue, rosterOf } from './lib/deposit'
 import type { DepositState } from './lib/deposit'
+import { add as addDay, dayKey, normalize as normalizeDays, todayRow, weekRow } from './lib/days'
+import type { Days } from './lib/days'
 import { DriftError, wrapBackup, unwrapBackup } from './lib/backup'
 import { grade as srsGrade, newCard } from './lib/srs'
 import type { AiNote, CardState, Grade, LlmConfig, QuizRecord, Settings } from './lib/types'
@@ -45,24 +47,44 @@ export function useAppState() {
 
   const sprint = sprintRaw ? normalizeSprint(sprintRaw) : null
 
+  /** 按天计数：卷王榜的数据源，先从今天起记 */
+  const [daysRaw, setDaysRaw] = useJson<Days>(KEYS.days, {})
+  const days = useMemo(() => normalizeDays(daysRaw), [daysRaw])
+  const dayToday = useMemo(() => todayRow(days), [days])
+  const dayWeek = useMemo(() => weekRow(days), [days])
+  const bumpDay = useCallback(
+    (d: Parameters<typeof addDay>[2]) => setDaysRaw((prev) => addDay(normalizeDays(prev), dayKey(), d)),
+    [setDaysRaw]
+  )
+
   const sprintAnswer = useCallback(
     (id: string, correct: boolean) => {
       if (!sprint) return
-      setSprintRaw(sprintAnswerOf(sprint, id, correct).state)
+      const next = sprintAnswerOf(sprint, id, correct)
+      setSprintRaw(next.state)
+      const before = sprint.items[id]?.mastered ?? false
+      const after = next.state.items[id]?.mastered ?? false
+      bumpDay({
+        answered: 1,
+        right: correct ? 1 : 0,
+        wrong: correct ? 0 : 1,
+        mastered: (after ? 1 : 0) - (before ? 1 : 0),
+        best: next.state.game.score,
+      })
     },
-    [sprint, setSprintRaw]
+    [sprint, setSprintRaw, bumpDay]
   )
 
   /** 答对换来的那一步；方向无效则不消耗 */
   const sprintMove = useCallback(
     (dir: Dir) => {
-      setSprintRaw((s) => {
-        if (!s || !s.canMove) return s
-        const r = move2048(s.game, dir)
-        return r.moved ? { ...s, game: r.state, canMove: false } : s
-      })
+      if (!sprint || !sprint.canMove) return
+      const r = move2048(sprint.game, dir)
+      if (!r.moved) return
+      setSprintRaw({ ...sprint, game: r.state, canMove: false })
+      bumpDay({ best: r.state.score })
     },
-    [setSprintRaw]
+    [sprint, setSprintRaw, bumpDay]
   )
 
   /** 重新开始只重洗当前选中的词库：一个都没选就留空，不许偷偷把全库塞回去 */
@@ -115,14 +137,23 @@ export function useAppState() {
   const depositAnswer = useCallback(
     (id: string, correct: boolean) => {
       if (!deposit) return
-      setDepositRaw(depositAnswerOf(deposit, id, correct))
+      const next = depositAnswerOf(deposit, id, correct)
+      setDepositRaw(next)
+      const reward = sprint ? rewardOf(sprint.game, correct) : null
       setSprintRaw((s) => {
         if (!s) return s
         const r = rewardOf(s.game, correct)
         return { ...s, game: r.game, canMove: r.canMove }
       })
+      bumpDay({
+        answered: 1,
+        right: correct ? 1 : 0,
+        wrong: correct ? 0 : 1,
+        deposited: (next.items[id]?.streak ?? 0) >= DEPOSIT_STREAK ? 1 : 0,
+        best: reward ? reward.game.score : 0
+      })
     },
-    [deposit, setDepositRaw, setSprintRaw]
+    [deposit, sprint, setDepositRaw, setSprintRaw, bumpDay]
   )
 
   const depositAgain = useCallback(() => setDepositRaw((d) => (d ? depositRequeue(d) : d)), [setDepositRaw])
@@ -165,6 +196,7 @@ export function useAppState() {
     records, setRecords, addRecord,
     sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard, sprintSetLib, sprintMark,
     deposit, missed, depositCollect, depositAnswer, depositAgain, depositClear,
+    days, dayToday, dayWeek,
     exportAll, importAll,
     storageOk
   }

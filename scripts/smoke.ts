@@ -7,6 +7,8 @@ import type { ItemState, SprintState } from '../src/lib/sprint'
 import { DriftError, lexiconFingerprint, libFingerprints, unwrapBackup, wrapBackup } from '../src/lib/backup'
 import { DEPOSIT_STREAK, answer as depositAnswer, defaultMark, newDeposit, normalize as normalizeDeposit, requeue, rosterOf, stats as depositStats } from '../src/lib/deposit'
 import { speechText } from '../src/lib/ttstext'
+import { accuracy, add, dayKey, normalize as normalizeDays, sum, weekKeys, weekRow, weekStart } from '../src/lib/days'
+import type { Days } from '../src/lib/days'
 import { CAT_ORDER, CORPUS_TOTAL, CORPUS_UNITS, cardsOf, unitOfCard } from '../src/lib/composition'
 import { KEYS } from '../src/lib/store'
 import { inApp, isNewer, siteVersion } from '../src/lib/appshell'
@@ -397,6 +399,42 @@ const HAZARD = /[()[\]{}]|\/|\bsb\.|\bsth\.|etc\.|\.{2,}|\d|,,/
 const dirtySay = ALL.filter((w) => HAZARD.test(SAY(w.en)))
 ok(dirtySay.length === 0, `朗读文本还有排版符号：${dirtySay.slice(0, 5).map((w) => w.id + ' ' + w.en).join(' | ')}`)
 
+// ---- 按天计数：今日榜与本周榜的口径 ----
+const CN = (iso: string): number => Date.parse(iso)
+ok(dayKey(CN('2026-11-15T23:30:00+08:00')) === '2026-11-15', '北京 23:30 还在今天，不许算成明天')
+ok(dayKey(CN('2026-11-16T00:10:00+08:00')) === '2026-11-16', '北京 00:10 已经是新的一天')
+ok(dayKey(CN('2026-11-15T16:30:00Z')) === '2026-11-16', 'UTC 16:30 换算是北京次日')
+ok(weekStart('2026-11-15') === '2026-11-09', `周日要归到上一个周一：${weekStart('2026-11-15')}`)
+ok(weekStart('2026-11-16') === '2026-11-16', '周一自己就是本周第一天')
+ok(weekStart('2027-01-01') === '2026-12-28', `跨年的一周要连着去年：${weekStart('2027-01-01')}`)
+ok(weekKeys('2026-11-16').length === 1, '周一当天本周只有一天')
+ok(weekKeys('2026-11-22').length === 7 && weekKeys('2026-11-22')[6] === '2026-11-22', '周日应该攒满七天')
+ok(weekKeys('2026-11-17').join(',') === '2026-11-16,2026-11-17', `本周的键要连着排：${weekKeys('2026-11-17')}`)
+
+let dd: Days = {}
+dd = add(dd, '2026-11-16', { answered: 1, right: 1, best: 40 })
+dd = add(dd, '2026-11-16', { answered: 1, wrong: 1, mastered: 1, best: 12 })
+dd = add(dd, '2026-11-16', { answered: 1, right: 1, mastered: -1, best: 96 })
+const drow = dd['2026-11-16']!
+ok(drow.answered === 3 && drow.right === 2 && drow.wrong === 1, `答题计数没按次累加：${JSON.stringify(drow)}`)
+ok(drow.best === 96, `2048 要取当天峰值：${drow.best}`)
+ok(drow.mastered === 0, '拼错撤销再拼对不该重复计一次掌握')
+ok(accuracy(drow) === 67, `正确率按作答数算：${accuracy(drow)}`)
+ok(sum(dd, ['2026-11-16', '2026-11-17']).answered === 3, '求和把没记录的日期当 0')
+const wk = add(add({}, '2026-11-16', { answered: 5, deposited: 2, mastered: 3 }), '2026-11-17', { answered: 4, deposited: 1, mastered: -1 })
+ok(weekRow(wk, '2026-11-17').answered === 9, `本周答题数应是两天之和：${weekRow(wk, '2026-11-17').answered}`)
+ok(weekRow(wk, '2026-11-17').mastered === 2 && weekRow(wk, '2026-11-17').deposited === 3, '本周掌握与沉淀通关口径不对')
+ok(weekRow(wk, '2026-11-18').answered === 9, '本周还没走到的那几天不该多算')
+
+const junk = normalizeDays({ '2026-11-16': { answered: 3 }, '2026/11/16': { answered: 9 }, '1999-01-01': { answered: 7 }, nothing: 1, '2026-11-17': { answered: 'x', best: 5 } } as unknown)
+ok(junk['2026-11-16']?.answered === 3, '合法的那一格要留下')
+ok(!('2026/11/16' in junk) && !('nothing' in junk), '日期格式不对或来路不明的键要丢掉')
+ok(junk['1999-01-01'] === undefined, '太老的格子直接剪掉，别跟着存档一起搬')
+ok(junk['2026-11-17']?.answered === 0 && junk['2026-11-17']?.best === 5, '格子里坏掉的字段退化成 0，别把整格扔了')
+ok(Object.keys(normalizeDays(null)).length === 0 && Object.keys(normalizeDays([])).length === 0, '没存档时按天空对象')
+ok(KEYS.days === 'vocab.days.v1', '按天计数的存档键名不能改，改了老计数就丢')
+
+
 const rejects: Array<[string, () => void]> = [
   ['不是备份文件', () => unwrapBackup('hello world')],
   ['空对象', () => unwrapBackup('{}')],
@@ -473,7 +511,8 @@ ok(
       ai: 'vocab.ai.v1',
       records: 'vocab.records.v1',
       sprint: 'vocab.sprint.v1',
-      deposit: 'vocab.deposit.v1'
+      deposit: 'vocab.deposit.v1',
+      days: 'vocab.days.v1'
     }),
   `存储 key 漂了，旧存档会被当成空档：${JSON.stringify(KEYS)}`
 )

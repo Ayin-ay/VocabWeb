@@ -9,7 +9,8 @@ export const KEYS = {
   ai: `${PREFIX}ai.v1`,
   records: `${PREFIX}records.v1`,
   sprint: `${PREFIX}sprint.v1`,
-  deposit: `${PREFIX}deposit.v1`
+  deposit: `${PREFIX}deposit.v1`,
+  days: `${PREFIX}days.v1`
 } as const
 
 export function load<T>(key: string, fallback: T): T {
