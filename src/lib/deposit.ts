@@ -1,13 +1,13 @@
 import { ALL, WORD_BY_ID } from './lexicon'
 import { shuffle } from './quiz'
 import { stageFor } from './sprint'
-import type { SprintState } from './sprint'
+import type { ItemState, SprintState } from './sprint'
 import type { Word } from './types'
 
 /** 答错插回靠前的位置，马上重考一次 */
 export const DEPOSIT_FRONT = 3
-/** 连对一次算沉淀完成，移出队列 */
-export const DEPOSIT_STREAK = 1
+/** 连对两次算沉淀完成，移出队列 */
+export const DEPOSIT_STREAK = 2
 
 export interface DepositItem {
   right: number
@@ -27,11 +27,16 @@ export interface DepositState {
 
 const blank = (): DepositItem => ({ right: 0, wrong: 0, streak: 0 })
 
-/** 沉淀名单 = 这一轮冲刺里答错过至少一次的词 */
+/** 默认判据：这一轮答错过至少一次就进沉淀 */
+export const defaultMark = (it: ItemState | undefined): 'in' | 'out' => ((it?.wrong ?? 0) > 0 ? 'in' : 'out')
+
+/** 沉淀名单：先看玩家在判定卡上的自评，没自评才按「答错过」这条默认 */
 export function rosterOf(sprint: SprintState): string[] {
   const ids: string[] = []
   for (const w of ALL) {
-    if ((sprint.items[w.id]?.wrong ?? 0) > 0) ids.push(w.id)
+    const it = sprint.items[w.id]
+    if (!it) continue
+    if (it.mark ? it.mark === 'in' : defaultMark(it) === 'in') ids.push(w.id)
   }
   return ids
 }

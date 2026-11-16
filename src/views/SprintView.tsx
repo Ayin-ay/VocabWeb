@@ -5,6 +5,7 @@ import { ALL, LIBS, POS_LABELS } from '../lib/lexicon'
 import { generate, sameSpelling } from '../lib/quiz'
 import type { Question } from '../lib/quiz'
 import { ALL_LIBS, front, stats } from '../lib/sprint'
+import { defaultMark } from '../lib/deposit'
 import { speak } from '../lib/tts'
 import { registerBack } from '../lib/backstack'
 import { useSwipeNext } from '../lib/swipe'
@@ -87,6 +88,8 @@ export function SprintView({ app }: { app: App }) {
     app.sprintAnswer(word.id, correct)
     setVerdict({ word, stage, correct, given: text })
     setGiven('')
+    // 不管对错都念一遍：答错时更需要听到正确读音，光看拼写纠不过来
+    say(word.en)
   }
 
   const submitSpell = () => {
@@ -287,6 +290,17 @@ export function SprintView({ app }: { app: App }) {
               <div className="muted">{app.ai[verdict.word.id]?.translation}</div>
             </div>
           )}
+          <div className="row mark-row">
+            {(['in', 'out'] as const).map((m) => {
+              const cur = sprint.items[verdict.word.id]
+              const on = (cur?.mark ?? defaultMark(cur)) === m
+              return (
+                <button key={m} type="button" className="chip" data-on={on ? '1' : '0'} onClick={() => app.sprintMark(verdict.word.id, m)}>
+                  {m === 'in' ? '进沉淀' : '不进沉淀'}
+                </button>
+              )
+            })}
+          </div>
           <div className="row sprint-actions">
             <button type="button" className="btn-primary" onClick={() => setVerdict(null)}>
               下一题

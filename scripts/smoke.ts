@@ -2,10 +2,11 @@ import { ALL, COUNT, LIBS, SHARED_COUNT, WORD_BY_ID, libOf, libsOf, wordsOf } fr
 import { generate } from '../src/lib/quiz'
 import type { QuizKind } from '../src/lib/quiz'
 import { emptyBoard, hasMoves, move, newGame, spawn } from '../src/lib/game2048'
-import { FRONT, addLib, answer, front, initSprint, normalize, removeLib, scopeIds, stats } from '../src/lib/sprint'
+import { FRONT, addLib, answer, front, initSprint, normalize, removeLib, scopeIds, setMark, stats } from '../src/lib/sprint'
 import type { ItemState, SprintState } from '../src/lib/sprint'
 import { DriftError, lexiconFingerprint, libFingerprints, unwrapBackup, wrapBackup } from '../src/lib/backup'
-import { answer as depositAnswer, newDeposit, normalize as normalizeDeposit, requeue, rosterOf, stats as depositStats } from '../src/lib/deposit'
+import { DEPOSIT_STREAK, answer as depositAnswer, defaultMark, newDeposit, normalize as normalizeDeposit, requeue, rosterOf, stats as depositStats } from '../src/lib/deposit'
+import { speechText } from '../src/lib/ttstext'
 import { CAT_ORDER, CORPUS_TOTAL, CORPUS_UNITS, cardsOf, unitOfCard } from '../src/lib/composition'
 import { KEYS } from '../src/lib/store'
 import { inApp, isNewer, siteVersion } from '../src/lib/appshell'
@@ -280,17 +281,55 @@ ok(missedIds.length > 0, '每三题错一次的半程局必然留下错过的词
 ok(missedIds.every((id) => (midway.items[id]?.wrong ?? 0) > 0), '名单里混进了没答错过的词')
 ok(new Set(missedIds).size === missedIds.length, '名单里有重复条目')
 
-// 单元素名单把「连对一次就出名单」的节奏钉死
+// ---- 判定卡上的自评：答对也能判不熟，答错也能判手滑 ----
+const cleanId = Object.keys(midway.items).find((id) => midway.items[id]!.wrong === 0)!
+const rustyId = missedIds[0]!
+ok(defaultMark(midway.items[cleanId]) === 'out', '没答错过的词默认不该进沉淀')
+ok(defaultMark(midway.items[rustyId]) === 'in', '答错过的词默认该进沉淀')
+const selfReport = setMark(setMark(midway, cleanId, 'in'), rustyId, 'out')
+const selfRoster = rosterOf(selfReport)
+ok(selfRoster.includes(cleanId), '自评「进沉淀」要把只答对过的词也收进名单')
+ok(!selfRoster.includes(rustyId), '自评「不进沉淀」要把答错过的词判成手滑')
+ok(selfRoster.length === missedIds.length, '一进一出之后名单总数不该变')
+// 自评只改名单去向：队列、2048、掌握标记一律不动
+ok(
+  selfReport.queue.length === midway.queue.length && selfReport.game.board === midway.game.board && selfReport.canMove === midway.canMove,
+  '自评改动了冲刺进度或 2048'
+)
+ok(selfReport.items[rustyId]!.wrong === midway.items[rustyId]!.wrong, '自评不该改写答题计数')
+
+// 重新作答必须把上一次的自评清掉，让最新那一次的说法说话
+let selfRun = initSprint(SCOPE, 5)
+const selfId = selfRun.queue[0]!
+selfRun = answer(selfRun, selfId, true).state
+let selfSteps = 0
+while (selfRun.queue[0] !== selfId && selfSteps < 20) {
+  selfRun = answer(selfRun, selfRun.queue[0]!, true).state
+  selfSteps += 1
+}
+ok(selfRun.queue[0] === selfId && selfRun.items[selfId] !== undefined, `测试前提没成立：${selfSteps} 步内没轮回这道题`)
+const selfMarked = setMark(selfRun, selfId, 'in')
+ok(selfMarked.items[selfId]!.mark === 'in', '自评要写在条目的 mark 上')
+ok(answer(selfMarked, selfId, true).state.items[selfId]!.mark === null, '重新作答必须清掉上一次的自评')
+
+// 单元素名单把「连对两次才出名单」的节奏钉死
 const soloId = ALL.find((w) => w.section === 'words')!.id
 const solo1 = newDeposit([soloId])
 const solo2 = depositAnswer(solo1, soloId, false)
 ok(solo2.queue[0] === soloId && solo2.items[soloId]!.wrong === 1, '答错要留在队首马上重考')
 const solo3 = depositAnswer(solo2, soloId, true)
-ok(solo3.queue.length === 0 && Boolean(solo3.finishedAt), '连对一次应移出并记完成')
-ok(solo3.items[soloId]!.streak === 1 && solo3.items[soloId]!.right === 1, '移出后这条词的计数要留下')
-const solo5 = requeue(solo3)
-ok(solo5.round === 2 && solo5.queue.length === 1 && !solo5.finishedAt, '再练一轮要重新排队')
-ok(solo5.items[soloId]!.streak === 0 && solo5.items[soloId]!.right === 1, '新一轮清连对、留累计')
+ok(solo3.queue.length === 1 && solo3.items[soloId]!.streak === 1, `连对 ${DEPOSIT_STREAK - 1} 次还不该移出`)
+ok(!solo3.finishedAt, '没连对到位不该记完成')
+const solo4 = depositAnswer(solo3, soloId, true)
+ok(solo4.queue.length === 0 && Boolean(solo4.finishedAt), `连对 ${DEPOSIT_STREAK} 次应移出并记完成`)
+ok(solo4.items[soloId]!.streak === DEPOSIT_STREAK && solo4.items[soloId]!.right === 2, '移出后这条词的计数要留下')
+// 中途答错一次，连对清零、重新数
+const solo5 = depositAnswer(solo1, soloId, true)
+const solo6 = depositAnswer(solo5, soloId, false)
+ok(solo6.items[soloId]!.streak === 0 && solo6.queue[0] === soloId, '答错要把连对清零并插回队首')
+const solo7 = requeue(solo4)
+ok(solo7.round === 2 && solo7.queue.length === 1 && !solo7.finishedAt, '再练一轮要重新排队')
+ok(solo7.items[soloId]!.streak === 0 && solo7.items[soloId]!.right === 2, '新一轮清连对、留累计')
 
 // 整批全对：每个词恰好一题，队列必须练空
 const firstPass = (() => {
@@ -303,7 +342,7 @@ const firstPass = (() => {
   return { d, steps }
 })()
 ok(firstPass.d.queue.length === 0, `全对应该把名单练空，还剩 ${firstPass.d.queue.length}`)
-ok(firstPass.steps === missedIds.length, `全对局每词恰好一题，实际 ${firstPass.steps} / ${missedIds.length}`)
+ok(firstPass.steps === DEPOSIT_STREAK * missedIds.length, `全对局每词恰好 ${DEPOSIT_STREAK} 题，实际 ${firstPass.steps} / ${missedIds.length}`)
 const fs = depositStats(firstPass.d)
 ok(fs.done === missedIds.length && fs.pending === 0 && fs.total === missedIds.length, `沉淀统计口径不对：${JSON.stringify(fs)}`)
 
@@ -334,14 +373,29 @@ ok(repaired?.queue.length === 2 && repaired.round === 1 && !repaired.finishedAt,
 // normalize 是每次渲染都跑的，绝不能换题，也绝不能把已经移出的词捞回来
 const two = newDeposit([missedIds[0]!, missedIds[1]!])
 const goneId = two.queue[0]!
-const oneOut = depositAnswer(two, goneId, true)
-ok(oneOut.queue.length === 1 && oneOut.queue[0] !== goneId, '移出后队列要少一个，且队首换成别的词')
+let twiceRight = depositAnswer(two, goneId, true)
+ok(twiceRight.queue.length === 2 && !twiceRight.finishedAt, `连对 ${DEPOSIT_STREAK - 1} 次不该把人放走`)
+while (twiceRight.queue[0] !== goneId) twiceRight = depositAnswer(twiceRight, twiceRight.queue[0]!, true)
+const oneOut = depositAnswer(twiceRight, goneId, true)
+ok(oneOut.queue.length === 1 && !oneOut.queue.includes(goneId), '移出后队列要少一个，且剩下的必须是别的词')
 ok(depositStats(oneOut).done === 1, '移出之后「已沉淀」计数要跟上')
 const steady = normalizeDeposit(oneOut)
 ok(steady?.queue.length === 1 && !steady?.queue.includes(goneId), 'normalize 把已沉淀的词又捞回队列了')
 ok(JSON.stringify(steady?.queue) === JSON.stringify(oneOut.queue), 'normalize 重排了队列，等于换掉当前这道题')
 ok(JSON.stringify(normalizeDeposit(steady)?.queue) === JSON.stringify(oneOut.queue), 'normalize 反复跑要稳定')
 ok(normalizeDeposit(firstPass.d)?.queue.length === 0, '练空的名单 normalize 之后不该再冒出词')
+
+// ---- 朗读文本清洗 ----
+const SAY = (t: string): string => speechText(t)
+ok(SAY('in advance (of sth.)') === 'in advance of something', `括号里的 sth. 要展开：${SAY('in advance (of sth.)')}`)
+ok(SAY('be / get / feel burned out') === 'be, get, feel burned out', `并列斜杠要念成停顿：${SAY('be / get / feel burned out')}`)
+ok(SAY('no more ... than') === 'no more than', `省略号要当成没写过：${SAY('no more ... than')}`)
+ok(SAY('rise to prominence / fame / power, etc.') === 'rise to prominence, fame, power, et cetera', `etc. 要念全称：${SAY('rise to prominence / fame / power, etc.')}`)
+ok(SAY('') === '' && SAY('   ') === '', '空白别交给引擎')
+// 全库过一遍：清洗后不许再留下任何引擎会念崩的排版符号
+const HAZARD = /[()[\]{}]|\/|\bsb\.|\bsth\.|etc\.|\.{2,}|\d|,,/
+const dirtySay = ALL.filter((w) => HAZARD.test(SAY(w.en)))
+ok(dirtySay.length === 0, `朗读文本还有排版符号：${dirtySay.slice(0, 5).map((w) => w.id + ' ' + w.en).join(' | ')}`)
 
 const rejects: Array<[string, () => void]> = [
   ['不是备份文件', () => unwrapBackup('hello world')],

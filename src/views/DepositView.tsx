@@ -75,6 +75,7 @@ export function DepositView({ app }: { app: App }) {
     app.depositAnswer(word.id, correct)
     setVerdict({ word, stage, correct, given: text })
     setGiven('')
+    say(word.en)
   }
 
   const submitSpell = () => {

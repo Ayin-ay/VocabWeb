@@ -26,6 +26,8 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 - 单词第二次遇见改用页面内键盘拼写（不走系统输入法，避免联想提示答案）；词组和专有名词永远停在选择题，连对两次算掌握。
 - 拼对排到队尾并标记已掌握，之后再错立刻撤销；拼错插回队列第 3 位马上重考。
 - 答对换来 2048 的一步移动（方向自选，无效方向不消耗这一步），答错立刻生成一个新数字并锁住移动。
+- 每答完一题**不管对错都自动朗读一遍英文单词**，判定卡上的「朗读」按钮再听一次。
+- 判定卡下面那对「进沉淀 / 不进沉淀」是自评：答对了仍觉得自己没掌握就点「进沉淀」，答错了认定是手滑就点「不进沉淀」。它**只改沉淀名单的去向**，本轮队列、掌握标记、2048 一律不动；同一道题再次作答会把自评清回默认（答错过就进）。
 - 全部词条掌握一次即出完成报告（本轮词条数、用时、正确率、拼写关通过数、2048 最高分），可选择继续抽查。
 
 顶栏「词库 N/9」那个按钮打开词库面板，**冲刺跑到一半也能加减**：
@@ -48,10 +50,10 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 
 ## 沉淀
 
-顶栏第三个入口。名单来源是**当前这轮冲刺里答错过至少一次的词**（`sprint.items[id].wrong > 0`），把它们收进 `vocab.deposit.v1` 单独多轮反复练：
+顶栏第三个入口。名单来源是**当前这轮冲刺里答错过至少一次的词**（`sprint.items[id].wrong > 0`），再按判定卡上的自评覆盖一次（`items[id].mark`：`'in'` 硬拉进来、`'out'` 判成手滑踢出去），把它们收进 `vocab.deposit.v1` 单独多轮反复练：
 
-- 题型沿用冲刺：单词拼写，词组与专有名词看英文选中文。
-- 答对一次即算沉淀到位并移出名单（`DEPOSIT_STREAK = 1`）；答错连对清零并插回队列第 3 位马上重考。
+- 题型沿用冲刺：单词拼写，词组与专有名词看英文选中文。答完同样自动朗读。
+- **连对两次**才算沉淀到位并移出名单（`DEPOSIT_STREAK = 2`）；中途答错连对清零并插回队列第 3 位马上重考，答对则排到队尾换点间隔。
 - 名单练空出本轮报告，可「再练一轮」（重洗队列、连对清零、累计对错保留）或「重收名单」（按冲刺现在的错过词重建）。
 - 2048 与冲刺共用同一份棋盘（仍存在 `vocab.sprint.v1`），所以沉淀里答对同样能推动那一步。
 - 冲刺重开、继续抽查都不会改动已经收进来的名单；只有点「重收名单」才会覆盖它。
@@ -135,7 +137,11 @@ npm run build    # 解析词表 + 校验语料 → 类型检查 → 打包 dist/
 
 - `capacitor.config.ts` 里 `allowNavigation` 必须带上这个域：安卓那侧靠它把远程 HTML 走本地代理并注入桥，桥在才有原生朗读、返回键和 `App.getInfo()`。
 - 桥靠 `src/lib/appshell.ts` 和 `src/lib/tts.ts` 里显式 `import` 的 `@capacitor/core` / `@capacitor/app` / `@capacitor-community/text-to-speech` 注册（`cap.Plugins` 只认 JS 侧的 `registerPlugin`，光靠运行时探测取不到东西）。`inApp()` 为 false 时这些路径全部短路，浏览器行为不变；`npm run smoke` 里那条 `inApp() === false` 守的就是这一点。
-- 朗读优先走 `@capacitor-community/text-to-speech`（Android WebView 里没有 `speechSynthesis`），网页那套只作回退；App 里音色跟随系统的「文字转语音」，设置页的音色下拉只在浏览器出现。
+- 朗读优先走 `@capacitor-community/text-to-speech`（Android WebView 里没有 `speechSynthesis`），网页那套只作回退。
+- **App 里不跟随系统默认音色**：安卓音色表排第一的经常是中文引擎，拿它念英文就是「hobby 读成哈比」。`src/lib/tts.ts` 在第一次朗读时探一次 `getSupportedVoices()`，挑 `lang` 以 `en` 开头、名字带 Google / Natural / Neural 的那一个，探不到才退回系统默认。设置页的音色下拉仍只在浏览器出现。
+- 浏览器侧同理：没手动选音色时不交给页面默认音色，`pickVoice()` 按「设置里选的那条 → 在线/神经类英文音色 → 表头」挑。
+- 进引擎前还有一层文本清洗（`src/lib/ttstext.ts`，纯函数、被 `npm run smoke` 直接调用）：`sb.` / `sth.` / `etc.` / `e.g.` 展开成全称，`be / get / feel burned out` 的并列斜杠读成停顿，`no more ... than` 的省略号整段删掉，括号只脱壳不删内容（`in advance (of sth.)` → `in advance of something`）。自检要求 5216 条词头清洗后不再残留任何括号、斜杠、缩写或省略号。
+- 剩下的引擎侧限制：专有名词（`Dhahran`、`Eldar Shafir`）和 `Cévennes` 只能听引擎自己的读法，站内不做音标转写。
 - 返回键：判定卡或词库面板开着 → 先关掉它（判定卡优先）；不在冲刺页 → 回冲刺页；否则退出应用。
 - **App 与浏览器是两份 localStorage**，装 App 不会带过来浏览器里的进度，第一次要在「设置 → 学习数据」导入浏览器那侧导出的 .json。
 - 版本号只有 `package.json` 一处：`android/app/build.gradle` 读它算 `versionName` / `versionCode`，站点里 `__APP_VERSION__` 也来自它。发版顺序是「跑 `release.yml` 出包 → 再更新 `public/app.json` 发布站点」，反了会提示有新包却下不到对应版本。

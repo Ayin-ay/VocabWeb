@@ -3,7 +3,7 @@ import { KEYS, loadMap, probeStorage, save, useJson, useMap, useObject } from '.
 import { DEFAULT_LLM } from './lib/llm'
 import { move as move2048, newGame } from './lib/game2048'
 import type { Dir } from './lib/game2048'
-import { answer as sprintAnswerOf, addLib, initSprint, normalize as normalizeSprint, removeLib, rewardOf } from './lib/sprint'
+import { answer as sprintAnswerOf, addLib, initSprint, normalize as normalizeSprint, removeLib, rewardOf, setMark } from './lib/sprint'
 import type { SprintState } from './lib/sprint'
 import { answer as depositAnswerOf, newDeposit, normalize as normalizeDeposit, requeue as depositRequeue, rosterOf } from './lib/deposit'
 import type { DepositState } from './lib/deposit'
@@ -83,6 +83,14 @@ export function useAppState() {
     [setSprintRaw]
   )
 
+  /** 判定卡上的「进沉淀 / 不进沉淀」自评，只影响名单去向 */
+  const sprintMark = useCallback(
+    (id: string, mark: 'in' | 'out') => {
+      setSprintRaw((s) => (s ? setMark(normalizeSprint(s), id, mark) : s))
+    },
+    [setSprintRaw]
+  )
+
   const sprintNewBoard = useCallback(
     () => setSprintRaw((s) => (s ? { ...s, game: newGame(s.game.best) } : s)),
     [setSprintRaw]
@@ -155,7 +163,7 @@ export function useAppState() {
     llm, setLlm,
     ai, mergeAi, setAi,
     records, setRecords, addRecord,
-    sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard, sprintSetLib,
+    sprint, sprintAnswer, sprintMove, sprintRestart, sprintNewBoard, sprintSetLib, sprintMark,
     deposit, missed, depositCollect, depositAnswer, depositAgain, depositClear,
     exportAll, importAll,
     storageOk

@@ -20,6 +20,12 @@ export interface ItemState {
   streak: number
   right: number
   wrong: number
+  /**
+   * 玩家在判定卡上对「这个词要不要进沉淀」的裁决，覆盖默认判据（答过错就进）。
+   * 'in' = 答对了也觉得自己没掌握；'out' = 答错了但认定是手滑。
+   * 每次重新作答都会清回 null，让最新那一次的自评说话。
+   */
+  mark: 'in' | 'out' | null
 }
 
 export interface SprintState {
@@ -34,7 +40,7 @@ export interface SprintState {
   finishedAt: string | null
 }
 
-const blank = (): ItemState => ({ stage: 'choice', mastered: false, streak: 0, right: 0, wrong: 0 })
+const blank = (): ItemState => ({ stage: 'choice', mastered: false, streak: 0, right: 0, wrong: 0, mark: null })
 
 /** 只有「单词」这一节会进到拼写关；词组和专有名词始终看英文选中文 */
 export const stageFor = (w: Word): ItemState['stage'] => (w.section === 'words' ? 'spell' : 'choice')
@@ -76,6 +82,7 @@ export function answer(state: SprintState, id: string, correct: boolean): Answer
   const queue = state.queue.slice(1)
   const items = { ...state.items }
   const item: ItemState = { ...(items[id] ?? blank()) }
+  item.mark = null
   item.right += correct ? 1 : 0
   item.wrong += correct ? 0 : 1
 
@@ -118,6 +125,13 @@ export function answer(state: SprintState, id: string, correct: boolean): Answer
     },
     earnedMove: reward.canMove
   }
+}
+
+/** 判定卡上的自评：只改沉淀名单的去向，不动队列、不动掌握标记，也不动 2048 */
+export function setMark(state: SprintState, id: string, mark: ItemState['mark']): SprintState {
+  const item = state.items[id]
+  if (!item || item.mark === mark) return state
+  return { ...state, items: { ...state.items, [id]: { ...item, mark } } }
 }
 
 /** 选中一个词库：没答过的词一律排到队尾，当前这道题和已答记录都不动 */
