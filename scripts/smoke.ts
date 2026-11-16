@@ -1,8 +1,8 @@
 import { ALL, COUNT, LIBS, SHARED_COUNT, WORD_BY_ID, libOf, libsOf, wordsOf } from '../src/lib/lexicon'
 import { generate } from '../src/lib/quiz'
 import type { QuizKind } from '../src/lib/quiz'
-import { emptyBoard, hasMoves, move, newGame, spawn } from '../src/lib/game2048'
-import { FRONT, addLib, answer, front, initSprint, normalize, removeLib, scopeIds, setMark, stats } from '../src/lib/sprint'
+import { emptyBoard, hasMoves, isFull, move, newGame, spawn, WARN_LIMIT } from '../src/lib/game2048'
+import { FRONT, addLib, answer, front, initSprint, normalize, removeLib, rewardOf, scopeIds, setMark, stats } from '../src/lib/sprint'
 import type { ItemState, SprintState } from '../src/lib/sprint'
 import { DriftError, lexiconFingerprint, libFingerprints, unwrapBackup, wrapBackup } from '../src/lib/backup'
 import { DEPOSIT_STREAK, answer as depositAnswer, defaultMark, newDeposit, normalize as normalizeDeposit, requeue, rosterOf, stats as depositStats } from '../src/lib/deposit'
@@ -120,14 +120,29 @@ ok(g0.board.every((v) => v === 0 || v === 2 || v === 4), '新开局只该出现 
 const seeded = spawn(emptyBoard(), () => 0)
 ok(seeded.filter((v) => v === 2).length === 1, 'spawn 应落一个 2')
 const row = [2, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-const mv = move({ board: row, score: 0, best: 0, over: false }, 'left', () => 0.99)
+const mv = move({ board: row, score: 0, best: 0, over: false, warn: 0 }, 'left', () => 0.99)
 ok(mv.moved && mv.state.board[0] === 4 && mv.state.board[1] === 4, `向左合并应得 4,4：${mv.state.board.slice(0, 4)}`)
 ok(mv.gained === 4 && mv.state.score === 4, `合并得分应是 4，实际 ${mv.gained}`)
 ok(mv.state.board.filter((v) => v !== 0).length === 3, '移动后应补一个新数字')
-const stuck = move({ board: row, score: 0, best: 0, over: false }, 'left', () => 0)
-ok(move({ board: [2, 4, 8, 16, 32, 64, 128, 256, 2, 4, 8, 16, 32, 64, 128, 256], score: 0, best: 0, over: false }, 'left').moved === false, '没有可合并的满盘不该移动')
+const stuck = move({ board: row, score: 0, best: 0, over: false, warn: 0 }, 'left', () => 0)
+ok(move({ board: [2, 4, 8, 16, 32, 64, 128, 256, 2, 4, 8, 16, 32, 64, 128, 256], score: 0, best: 0, over: false, warn: 0 }, 'left').moved === false, '没有可合并的满盘不该移动')
 ok(!hasMoves([2, 4, 2, 4, 4, 2, 4, 2, 2, 4, 2, 4, 4, 2, 4, 2]), '棋盘死局判定失败')
 ok(stuck.moved, '对照：可移动的盘必须报 moved')
+
+// 满格警示：格子全满时答错落不进新数字，本来毫无代价，改成记一次警示，攒满判负，答对清零
+const fullWarn = [2, 2, 4, 8, 16, 32, 64, 128, 2, 4, 8, 16, 32, 64, 128, 256]
+ok(isFull(fullWarn) && hasMoves(fullWarn), '警示用例要一张满格但还能合并的盘')
+const w1 = rewardOf({ board: fullWarn, score: 0, best: 0, over: false, warn: 0 }, false)
+ok(w1.game.warn === 1 && !w1.game.over && !w1.canMove, `第一次满格警示不该判负：${w1.game.warn}/${w1.game.over}`)
+const w2 = rewardOf(w1.game, false)
+const w3 = rewardOf(w2.game, false)
+ok(w3.game.warn === WARN_LIMIT && w3.game.over, `第三次满格警示应直接判负：warn=${w3.game.warn} over=${w3.game.over}`)
+const cleared = rewardOf(w2.game, true)
+ok(cleared.game.warn === 0 && cleared.canMove, '答对必须把警示清零并放出这一步')
+const holed = rewardOf({ board: [2, 0, 4, 8, 16, 32, 64, 128, 2, 4, 8, 16, 32, 64, 128, 256], score: 0, best: 0, over: false, warn: 2 }, false)
+ok(holed.game.warn === 2 && holed.game.board.every((v) => v !== 0), '不满格时答错落新数字、警示不涨')
+const movedKeeps = move({ board: fullWarn, score: 0, best: 0, over: false, warn: 2 }, 'left', () => 0.99)
+ok(movedKeeps.state.warn === 2, '移动本身不该清掉警示，只有答对才清')
 
 // ---- 冲刺队列 ----
 /** 长局只跑两个单元：全库五千条在 node 里从头点一遍太慢，全库口径由下面两条单独钉住 */
@@ -244,6 +259,10 @@ ok(libOps.clearedAll, '把唯一选中的词库撤掉后队列应清空，而不
 // 存档里写了 scope 且是空数组＝玩家真的一个都没选，normalize 不许拿 items 把它塞回去。
 const keptOff = normalize({ ...perfect, scope: [], queue: [] })
 ok(keptOff.scope.length === 0, `全不选的那轮 normalize 不许反推词库：${keptOff.scope}`)
+const legacyGame: Record<string, unknown> = { ...perfect.game }
+delete legacyGame.warn
+const noWarn = normalize({ ...perfect, game: legacyGame as unknown as SprintState['game'] })
+ok(noWarn.game.warn === 0, `旧存档没有 warn 字段必须补 0，实际 ${noWarn.game.warn}`)
 
 // normalize 只修认不出的部分：一次词库更新绝不能把正在跑的这轮重开
 ok(normalize(null).queue.length === ALL.length, '没有存档时该按全库开新一轮')

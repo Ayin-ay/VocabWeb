@@ -304,6 +304,41 @@ th { color: var(--ink-2); font-weight: 600; font-size: 13px; }
   position: relative;
   touch-action: none;
 }
+/* 满格警示：答错一次整盘泛红抖一下。data-shake 在 a/b 之间来回换，动画名才会每次警示都重新触发；
+   警示没清零之前盘沿留一圈红，配合右上角「警示 n/3」的计数。 */
+.board[data-warn='1'], .board[data-warn='2'], .board[data-warn='3'] {
+  box-shadow: inset 0 0 0 2px #c0392b;
+}
+.board[data-shake='a']::after, .board[data-shake='b']::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: #c62c24;
+  pointer-events: none;
+  animation: warnFlash 0.5s ease-out forwards;
+}
+.board[data-shake='a'] { animation: warnShakeA 0.4s ease-out; }
+.board[data-shake='b'] { animation: warnShakeB 0.4s ease-out; }
+@keyframes warnFlash {
+  0% { opacity: 0.55; }
+  70% { opacity: 0.28; }
+  100% { opacity: 0; }
+}
+@keyframes warnShakeA {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-6px); }
+  35% { transform: translateX(6px); }
+  55% { transform: translateX(-4px); }
+  75% { transform: translateX(3px); }
+}
+@keyframes warnShakeB {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-6px); }
+  35% { transform: translateX(6px); }
+  55% { transform: translateX(-4px); }
+  75% { transform: translateX(3px); }
+}
 .tile {
   display: flex;
   align-items: center;

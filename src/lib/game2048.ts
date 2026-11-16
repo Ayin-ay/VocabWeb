@@ -6,15 +6,25 @@ export interface GameState {
   score: number
   best: number
   over: boolean
+  /**
+   * 满格警示的次数：格子全满时答错一次 +1（那种情况下落不进新数字，答错本来零成本）。
+   * 攒到 WARN_LIMIT 直接判负，答对一次清零。
+   */
+  warn: number
 }
 
 export const SIZE = 4
+
+/** 满格警示攒到几次判负 */
+export const WARN_LIMIT = 3
+
+export const isFull = (board: number[]): boolean => board.every((v) => v !== 0)
 
 export function newGame(best = 0): GameState {
   let board = emptyBoard()
   board = spawn(board)
   board = spawn(board)
-  return { board, score: 0, best, over: false }
+  return { board, score: 0, best, over: false, warn: 0 }
 }
 
 export function emptyBoard(): number[] {
@@ -95,7 +105,7 @@ export function move(state: GameState, dir: Dir, rand: () => number = Math.rando
   const withSpawn = spawn(board, rand)
   const score = state.score + gained
   return {
-    state: { board: withSpawn, score, best: Math.max(state.best, score), over: !hasMoves(withSpawn) },
+    state: { board: withSpawn, score, best: Math.max(state.best, score), over: !hasMoves(withSpawn), warn: state.warn },
     moved: true,
     gained
   }

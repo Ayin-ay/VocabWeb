@@ -1,6 +1,6 @@
 import { LIBS, WORD_BY_ID, libOf } from './lexicon'
 import { shuffle } from './quiz'
-import { hasMoves, newGame, spawn } from './game2048'
+import { hasMoves, isFull, newGame, spawn, WARN_LIMIT } from './game2048'
 import type { GameState } from './game2048'
 import type { Word } from './types'
 
@@ -69,8 +69,16 @@ export interface AnswerResult {
   earnedMove: boolean
 }
 
+/**
+ * 答对换一步可移动并把满格警示清零；答错落一个新数字并锁住。
+ * 格子全满时落不进新数字，答错本来毫无代价，所以那种局面改成记一次满格警示，攒满判负。
+ */
 export function rewardOf(game: GameState, correct: boolean): { game: GameState; canMove: boolean } {
-  if (correct) return { game, canMove: !game.over }
+  if (correct) return { game: { ...game, warn: 0 }, canMove: !game.over }
+  if (isFull(game.board)) {
+    const warn = game.warn + 1
+    return { game: { ...game, warn, over: warn >= WARN_LIMIT }, canMove: false }
+  }
   const board = spawn(game.board)
   return { game: { ...game, board, over: !hasMoves(board) }, canMove: false }
 }
@@ -224,7 +232,8 @@ export function normalize(state: SprintState | null | undefined, best = 0): Spri
     queue,
     items,
     scope,
-    game: { ...state.game, best: state.game.best ?? best },
+    // 满格警示是这轮新加的字段，旧存档里没有，一律当 0 次
+    game: { ...state.game, best: state.game.best ?? best, warn: state.game.warn ?? 0 },
     startedAt: typeof state.startedAt === 'string' ? state.startedAt : new Date().toISOString()
   }
 }

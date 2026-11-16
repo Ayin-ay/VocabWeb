@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { maxValue } from '../lib/game2048'
+import { maxValue, WARN_LIMIT } from '../lib/game2048'
 import type { Dir, GameState } from '../lib/game2048'
 
 const ARROWS: Record<string, Dir> = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' }
@@ -36,11 +36,18 @@ export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameStat
           <span className="tag">{game.score}</span>
           <span className="tag">最高 {game.best}</span>
           <span className="tag" data-tone={canMove ? undefined : 'warn'}>{canMove ? '可移动一步' : '锁定'}</span>
+          {game.warn > 0 && (
+            <span className="tag" data-tone="warn">
+              警示 {Math.min(game.warn, WARN_LIMIT)}/{WARN_LIMIT}
+            </span>
+          )}
         </div>
       </div>
       <div
         className="board"
         data-over={game.over ? '1' : '0'}
+        data-warn={game.warn}
+        data-shake={game.warn > 0 ? (game.warn % 2 === 1 ? 'a' : 'b') : undefined}
         onPointerDown={(e) => { start.current = { x: e.clientX, y: e.clientY } }}
         onPointerUp={(e) => endSwipe(e.clientX, e.clientY)}
         onPointerCancel={() => { start.current = null }}
@@ -53,7 +60,7 @@ export function Game2048({ game, canMove, onMove, onNewBoard }: { game: GameStat
         {game.over && (
           <div className="board-over">
             <button type="button" className="btn-primary" onClick={onNewBoard}>
-              棋盘满了，重开
+              {game.warn >= WARN_LIMIT ? '满格三次警示，重开' : '棋盘满了，重开'}
             </button>
           </div>
         )}
